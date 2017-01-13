@@ -1,0 +1,38 @@
+# humans.txt content - more information here: http://humanstxt.org/
+team:
+  - name: Corey Ginnivan
+    role: Organiser
+    contact: "@CoreyGinnivan"
+  - name: David (DT) Thomas
+    role: Organiser
+    contact: "@thedavidthomas1"
+  - name: Patima Tantiprasut
+    role: Organiser
+    contact: "@the_patima"
+  - name: Teegan Lincoln
+    role: Organiser
+    contact: "@teeganlincoln"
+  - name: Urvin Seeburuth
+    role: Organiser
+    contact: "@urvinseeburuth "
+
+# shoutouts:
+#   - name: Example company
+#     contact: http://www.example.com
+
+languages:
+  - English
+
+standards_used:
+  - CSS3
+  - HTML5
+  - JavaScript
+
+components_used:
+  - Apache Server Configs
+  - Modernizr
+  - Normalize.css
+  - html5shiv
+
+software_used:
+  - Sublime Text
