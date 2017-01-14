@@ -4,17 +4,13 @@ title: Localhost
 
 <div class="welcome">
   <div class="logo">
-    <%= image_tag "localhost-logo-black.svg" %>
+    <%= image_tag("localhost-logo-black.svg", alt: "Localhost Logo", width: '500') %>
   </div>
-  <h2>Subscribe Form</h2>
+  meetup
+  twitter
 
-  <!-- Begin MailChimp Signup Form -->
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-  /* Add your own MailChimp form style overrides in your site stylesheet or in this style block.
-     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
+  <h2>Subscribe Form</h2>
+<!-- Begin MailChimp Signup Form -->
 <div id="mc_embed_signup">
 <form action="//events.us14.list-manage.com/subscribe/post?u=7d24e0b9476a06b7262b18263&amp;id=6417baf3c2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
     <div id="mc_embed_signup_scroll">
@@ -30,6 +26,10 @@ title: Localhost
 </label>
   <input type="text" value="" name="FNAME" class="required" id="mce-FNAME">
 </div>
+<div class="mc-field-group">
+  <label for="mce-LNAME">Last Name </label>
+  <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
+</div>
   <div id="mce-responses" class="clear">
     <div class="response" id="mce-error-response" style="display:none"></div>
     <div class="response" id="mce-success-response" style="display:none"></div>
@@ -39,7 +39,7 @@ title: Localhost
     </div>
 </form>
 </div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+
 <!--End mc_embed_signup-->
 
 </div><!-- .welcome -->

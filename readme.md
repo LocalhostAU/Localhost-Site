@@ -1,17 +1,17 @@
 # todo
-- [ ] environments
+- [X] environments
 - [ ] google analytics
 - [X] humans.txt
 - [X] robots.txt
 - [X] sitemap.xml
 - [ ] 404
-- [ ] server setup
+- [X] server setup
 - [X] minify html
 - [ ] favicons
 - [ ] social metadata
 - [X] cache busting - asset pipeline
 - [ ] image optimisation
-- [ ] continuous integration
+- [X] continuous integration
 - [ ] logo animating
 - [ ] twitter
 - [ ]   https://twitter.com/localhostau
@@ -23,12 +23,9 @@
 - [ ] recap of first meetup/blog
 - [ ] about/contact/blog.
 - [ ] email subscript (mailchimp)
-- [ ] email accounts
-- [ ] 
-
+- [X] email accounts
+-  
 - [ ] event date
 - [ ] event title
 - [ ] event description
 - [ ] event location
-- [ ] 
-- 
