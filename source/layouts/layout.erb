@@ -23,7 +23,9 @@
   <body class="<%= page_classes %>">
     <%= yield %>
     <%= javascript_include_tag :all %>
-    <%= partial "partials/tracking" %>
+    <% if build? %>
+      <%= partial "partials/tracking" %>
+    <% end %>
   </body>
 </html>
 
