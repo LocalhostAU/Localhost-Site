@@ -24,3 +24,11 @@
 - [ ] about/contact/blog.
 - [ ] email subscript (mailchimp)
 - [ ] email accounts
+- [ ] 
+
+- [ ] event date
+- [ ] event title
+- [ ] event description
+- [ ] event location
+- [ ] 
+- 
