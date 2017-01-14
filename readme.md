@@ -1,13 +1,13 @@
 # todo
 - [X] environments
-- [ ] google analytics
+- [X] google analytics
 - [X] humans.txt
 - [X] robots.txt
 - [X] sitemap.xml
 - [ ] 404
 - [X] server setup
 - [X] minify html
-- [ ] favicons
+- [X] favicons
 - [ ] social metadata
 - [X] cache busting - asset pipeline
 - [ ] image optimisation

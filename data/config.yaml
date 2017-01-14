@@ -1,0 +1,17 @@
+# Site wide settings
+site:
+  root_url: https://localhost.events/
+  title: Localhost
+  title_separator: " &mdash; "
+  meta_description: Connecting web, creative and digital communities &amp; unearthing local talent across Australia.
+  meta_keywords:
+    -
+  author: Localhost
+  active_navigation_item_class: current
+  analytics_id: UA-90368229-1
+
+# Author of CSS & JavaScript
+source:
+  author:
+    name: David Thomas (DT)
+    uri: https://dt.id.au

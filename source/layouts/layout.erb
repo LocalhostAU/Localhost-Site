@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <title><%= current_page.data.title || "Middleman" %></title>
+    <meta content="<%= current_page.data.meta_description %>" name="description"/>
 
     <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
 
@@ -23,6 +24,7 @@
   <body class="<%= page_classes %>">
     <%= yield %>
     <%= javascript_include_tag :all %>
+
     <% if build? %>
       <%= partial "partials/tracking" %>
     <% end %>
