@@ -12,4 +12,15 @@
 - [X] cache busting - asset pipeline
 - [ ] image optimisation
 - [ ] continuous integration
+- [ ] logo animating
+- [ ] twitter
+- [ ]   https://twitter.com/localhostau
+- [ ]   Meetup
+- [ ] about contact
+- [ ] team///
+- [ ] schedule/upcoming events list///localhost or aus
+- [ ] cfp... speakers interest
+- [ ] recap of first meetup/blog
+- [ ] about/contact/blog.
+- [ ] email subscript (mailchimp)
 - [ ] 
