@@ -3,10 +3,13 @@
 - [ ] google analytics
 - [X] humans.txt
 - [X] robots.txt
-- [ ] sitemap.xml
+- [X] sitemap.xml
 - [ ] 404
 - [ ] server setup
-- [ ] minify html
+- [X] minify html
 - [ ] favicons
 - [ ] social metadata
-- [ ] cache busting - asset pipeline
+- [X] cache busting - asset pipeline
+- [ ] image optimisation
+- [ ] continuous integration
+- [ ] 
