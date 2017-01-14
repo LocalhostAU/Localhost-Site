@@ -23,4 +23,4 @@
 - [ ] recap of first meetup/blog
 - [ ] about/contact/blog.
 - [ ] email subscript (mailchimp)
-- [ ] 
+- [ ] email accounts
