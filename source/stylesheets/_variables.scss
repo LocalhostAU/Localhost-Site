@@ -4,7 +4,60 @@ $screen-md-min: 992px;
 $screen-lg-min: 1200px;
 
 
-$burnt-sienna: #F27959;
-$pastel-green: #74DE7D;
-$malibu: #79B9F6;
-$alabaster: #F7F7F7;
+$burnt-sienna: #F27959; // Pink
+$pastel-green: #74DE7D; // Green
+$malibu: #79B9F6; // Blue
+$turbo: #EDE600; // yellow
+$lavendar: #C980EA; // purple
+$tulip-tree: #EFB348; // Orange
+$alabaster: #F7F7F7; // light gray
+
+
+@mixin transform($transforms) {
+	-moz-transform: $transforms;
+	-o-transform: $transforms;
+	-ms-transform: $transforms;
+	-webkit-transform: $transforms;
+	transform: $transforms;
+}
+
+@mixin transform-origin ($origin) {
+	moz-transform-origin: $origin;
+	-o-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	-webkit-transform-origin: $origin;
+	transform-origin: $origin;
+}
+
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+@mixin animation-delay($str) {
+  -webkit-animation-delay: #{$str};
+  -moz-animation-delay: #{$str};
+  -ms-animation-delay: #{$str};
+  -o-animation-delay: #{$str};
+  animation-delay: #{$str};
+}

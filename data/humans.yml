@@ -16,9 +16,9 @@ team:
     role: Organiser
     contact: "@urvinseeburuth "
 
-# shoutouts:
-#   - name: Example company
-#     contact: http://www.example.com
+shoutouts:
+  - name: Bounce.js
+    contact: http://bouncejs.com/
 
 languages:
   - English
