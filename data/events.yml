@@ -15,7 +15,7 @@ events:
   - title: This is an event somewhere
     location: mel
   - title: This is an event somewhere
-    role: Fri 22
+    date: Fri 22
   - title: This is an event somewhere and it has a really long title
     date: Fri 22
   - title: This is an event somewhere

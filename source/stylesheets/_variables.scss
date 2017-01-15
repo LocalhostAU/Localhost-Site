@@ -15,7 +15,6 @@ $alabaster: #F7F7F7; // light gray
 
 @mixin transform($transforms) {
 	-moz-transform: $transforms;
-	-o-transform: $transforms;
 	-ms-transform: $transforms;
 	-webkit-transform: $transforms;
 	transform: $transforms;
@@ -23,10 +22,15 @@ $alabaster: #F7F7F7; // light gray
 
 @mixin transform-origin ($origin) {
 	moz-transform-origin: $origin;
-	-o-transform-origin: $origin;
 	-ms-transform-origin: $origin;
 	-webkit-transform-origin: $origin;
 	transform-origin: $origin;
+}
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
 }
 
 @mixin keyframes($animation-name) {
@@ -39,9 +43,6 @@ $alabaster: #F7F7F7; // light gray
     @-ms-keyframes #{$animation-name} {
         @content;
     }
-    @-o-keyframes #{$animation-name} {
-        @content;
-    }
     @keyframes #{$animation-name} {
         @content;
     }
@@ -51,13 +52,11 @@ $alabaster: #F7F7F7; // light gray
   -webkit-animation: #{$str};
   -moz-animation: #{$str};
   -ms-animation: #{$str};
-  -o-animation: #{$str};
   animation: #{$str};
 }
 @mixin animation-delay($str) {
   -webkit-animation-delay: #{$str};
   -moz-animation-delay: #{$str};
   -ms-animation-delay: #{$str};
-  -o-animation-delay: #{$str};
   animation-delay: #{$str};
 }

@@ -12,35 +12,37 @@ meta_description: Connecting web, creative and digital communities &amp; unearth
   </header>
 
   <section class="events">
-    <div class="upcoming-event">
-      <p class="date">
-        <span class="month"><%= data.events.nextevent.month %></span>
-        <span class="weekday"><%= data.events.nextevent.weekday %></span>
-        <span class="day"><%= data.events.nextevent.day %></span>
-      </p>
-      <h2 class="title"><a href="#" title="Find out about <%= data.events.nextevent.title %>">
-      <%= data.events.nextevent.title %></a></h2>
-      <p class="speaker"><%= data.events.nextevent.speaker %>
-        <span class="from"><%= data.events.nextevent.speaker_company %></span>
-      </p>
+    <div class="container">
+      <div class="upcoming-event">
+        <p class="date">
+          <span class="month"><%= data.events.nextevent.month %></span>
+          <span class="weekday"><%= data.events.nextevent.weekday %></span>
+          <span class="day"><%= data.events.nextevent.day %></span>
+        </p>
+        <h2 class="title"><a href="#" title="Find out about <%= data.events.nextevent.title %>">
+        <%= data.events.nextevent.title %></a></h2>
+        <p class="speaker"><%= data.events.nextevent.speaker %>
+          <span class="from"><%= data.events.nextevent.speaker_company %></span>
+        </p>
 
-      <p class="location"><%= data.events.nextevent.location %></p>
-    </div>
-    <div class="future-events">
-      <ul>
-          <% data.events.events.each do |event| %>
-            <li>
-              <% if event.date? %>
-                <span class="date"><%= event.date %></span>
-              <% end %>
-              <% if event.link? %><a href="<%= event.link %>"><% end %><%= event.title %>
-                <% if event.location? %>
-                  <span class="location">(<%= event.location %>)</span>
-                <% end %>
-               <% if event.link? %></a><% end %>
-            </li>
-          <% end %>
-      </ul>
+        <p class="location"><%= data.events.nextevent.location %></p>
+      </div>
+      <div class="future-events">
+        <ul>
+            <% data.events.events.each do |event| %>
+              <li>
+                <span class="date">
+                  <% if event.date? %><%= event.date %><% end %>
+                </span>
+                <% if event.link? %><a href="<%= event.link %>" class="title"><% else %><span class="title"><% end %><%= event.title %>
+                  <% if event.location? %>
+                    <span class="location">(<%= event.location %>)</span>
+                  <% end %>
+                 <% if event.link? %></a><% else %></span><% end %>
+              </li>
+            <% end %>
+        </ul>
+      </div>
     </div>
   </section>
 
