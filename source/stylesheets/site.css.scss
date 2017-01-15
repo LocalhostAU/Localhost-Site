@@ -1,23 +1,21 @@
 @charset "utf-8";
 @import "normalize";
 @import "variables";
+@import "type";
 
 * {
   box-sizing:border-box;
 }
 
-body {
-  text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
-}
-
 header {
-  padding-top: 21.3%;
-  padding-bottom: 10%;
+  padding-top: 19.7%;
+  //padding-top: 284px;
+  padding-bottom: 18%;
+  padding-top: 283px;
+  padding-bottom: 254px;
 
   .logo {
-    max-width: 720px;
+    max-width: 718px;
     margin: 0 auto;
   	padding:20px;
   	width:100%;
@@ -40,23 +38,57 @@ section.events {
     clear: both;
   }
 
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display:flex;
+    flex-direction: column;
+
+    @media (min-width: $screen-sm-min) {
+      flex-direction: row;
+    }
+  }
+
   .upcoming-event, .future-events {
+    padding: 0 30px;
+
 
     @media (min-width: $screen-sm-min) {
       width:50%;
-      float:left;
+      flex-grow:1;
     }
   }
 
   .upcoming-event {
+    position:relative;
+    padding-left: 12.5%;
+    padding-top: 8px;
+
+    &:after {
+      content:"";
+      width: 46.5%;
+      padding-bottom: 61%;
+      display:block;
+      background: url('../images/zig-zag.svg'), $alabaster;
+      background-position: bottom center;
+      background-repeat: repeat-x;
+      position: absolute;
+      right:-4px;
+      top:0;
+      z-index:-1;
+    }
+
     p.date {
 
       span {
         display:block;
 
         &.month {
-          font-size:2.5em; // 40px
+          //font-size:2.5em; // 40px
+          font-size:3em;
+          letter-spacing: 0.127em;
           text-transform:uppercase;
+          margin-bottom: 74px;
         }
 
         &.weekday {
@@ -100,6 +132,49 @@ section.events {
   }
 
   .future-events {
+    padding-top: 14.8%;
+
+    ul {
+      list-style:none;
+      max-width: 367px;
+      margin-left: 12.2%;
+
+      li {
+        text-transform:uppercase;
+        font-size: 0.6875em; // 11px
+        display:flex;
+
+        .date {
+          width: 20%;
+        }
+
+        a {
+          position:relative;
+          padding-right:12px;
+          display:block;
+          border-bottom:1px solid #979797;
+          color: #000000;
+          letter-spacing: 1.57px;
+          width:80%;
+          flex-grow:1;
+          text-decoration:none;
+
+          &:after {
+            content:"";
+            width:12px;
+            height:7px;
+            display: inline-block;
+            background:url('../images/arrow-green.svg');
+            background-repeat:no-repeat;
+            background-size:contain;
+            background-position:top right;
+            position:absolute;
+            bottom:0;
+            right:0;
+          }
+        }
+      }
+    }
 
   }
 }
