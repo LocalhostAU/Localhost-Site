@@ -1,5 +1,11 @@
-languages:
-  - English
+nextevent:
+  title: Super special launch event or the title of talk
+  month: January
+  weekday: Thurs
+  day: 19
+  speaker: Georgie Lumer (SYD)
+  speaker_company: Campaign Monitor
+  location: Perth
 
 events:
   - title: This is an event somewhere
@@ -8,7 +14,6 @@ events:
     link: https://www.google.com/
   - title: This is an event somewhere
     location: mel
-    date:
   - title: This is an event somewhere
     role: Fri 22
   - title: This is an event somewhere and it has a really long title
@@ -17,3 +22,6 @@ events:
     date: TBA
   - title: This is an event somewhere
     date: TBA
+  - title: my super rad event
+    date: hkweh
+    link: https://google.lol
