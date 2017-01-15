@@ -119,14 +119,47 @@ section.events {
       font-size:28px;
       font-weight:normal;
       margin-top: -21%;
-      padding: 0 15% 0 33%;
+      padding: 0 11% 0 32.8%;
       position:relative;
       z-index:3;
       line-height:1em;
+      margin-bottom: 4px;
+
+      a {
+        border-bottom:1px solid #979797;
+        display:block;
+        padding-right:20px;
+        padding-bottom: 21px;
+        position:relative;
+
+        &:hover, &:focus {
+          color: $pastel-green;
+        }
+
+        &:after {
+          content:"";
+          width:12px;
+          height:7px;
+          display: inline-block;
+          background:url('../images/arrow-green.svg');
+          background-repeat:no-repeat;
+          background-size:contain;
+          background-position:top right;
+          position:absolute;
+          bottom: 20px;
+          right:0;
+        }
+      }
     }
 
     .speaker {
       text-transform:uppercase;
+      padding-left: 33.4%;
+      //font-size:0.6875em; //11px
+      font-size:13px;
+      line-height: 1em;
+      letter-spacing: 0.127em;
+      margin-bottom: 17px;
 
       span {
         display:block;
@@ -136,15 +169,22 @@ section.events {
     .location {
       font-size:0.6875em; //11px
       text-transform:uppercase;
+      margin-left:33.4%;
+      font-size:13px;
+      line-height:14px;
+      color: $burnt-sienna;
+      letter-spacing:0.127em;
 
       &:before {
         content:"";
-        width:8px;
-        height:12px;
+        width: 10px;
+        height: 14px;
         background-size:contain;
-        display:block;
+        display:inline-block;
+        margin-right:11px;
         background: url('../images/pin.svg');
         background-repeat:no-repeat;
+        float: left;
       }
     }
   }
