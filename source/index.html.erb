@@ -46,18 +46,24 @@ meta_description: Connecting web, creative and digital communities &amp; unearth
     </div>
   </section>
 
-<ul class="social">
-  <li>
-    <% link_to 'https://www.meetup.com/web-industry-meetup/' do %>
-      <%= image_tag 'social/logo-meetup.jpg', alt: "Meetup" %>
-    <% end %>
-  </li>
-  <li>
-    <% link_to 'https://twitter.com/localhostau' do %>
-      <%= image_tag 'social/logo-twitter.svg', alt: "Twitter" %>
-    <% end %>
-  </li>
-</ul>
+<section class="follow">
+  <ul class="social">
+    <li>
+      <% link_to 'https://twitter.com/localhostau' do %>
+        Twitter <span class="sm-icon"><%= image_tag 'social/logo-twitter.svg', alt: "Twitter" %></span>
+      <% end %>
+    </li>
+    <li class="meetup">
+      <% link_to 'https://www.meetup.com/web-industry-meetup/' do %>
+        Meetup <span class="sm-icon meetup"><%= image_tag 'social/logo-meetup.jpg', alt: "Meetup" %></span>
+      <% end %>
+    </li>
+  </ul>
+</section>
+
+<section class="mission">
+<p>Connecting <span class="brand-pink">web</span>, <span class="brand-blue">creative</span> and <span class="brand-green">digital communities</span> &amp; unearthing local talent across Australia.</p>
+</div>
 
 
 
