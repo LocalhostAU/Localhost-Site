@@ -228,7 +228,10 @@ section.events {
     			letter-spacing: 0.13em;
 
           &:hover, &:focus {
-            color: $pastel-green;
+            //color: $pastel-green;
+
+            color: #fff;
+            background: #000;
           }
 
           &:after {
@@ -280,7 +283,7 @@ section.events {
 }
 
 section.follow {
-  padding: 6.9% 30px;
+  padding: 6.9% 30px 16.4%;
 }
 
 .social {
@@ -345,7 +348,38 @@ section.follow {
 
 section.mission {
   text-align:center;
-  padding: 18.2% 30px;
+  padding: 8.7% 30px 7.13%;
+  position:relative;
+
+  &:before {
+    content:"";
+    width:77px;
+    height:76px;
+    background: url(../images/bits-t.svg);
+    background-repeat:no-repeat;
+    display:block;
+    position:absolute;
+    top:0;
+    right:43.78%;
+  }
+
+  &:after {
+    content:"";
+    width:38px;
+    height:34px;
+    background: url(../images/bits/t-line.svg);
+    background-repeat:no-repeat;
+    display:block;
+    position:absolute;
+    bottom:0;
+    right:39%;
+  }
+
+  .container {
+    width:100%;
+    max-width:1000px;
+    margin: 0 auto;
+  }
 
   p {
     font-size:3.5em; // 56px
@@ -362,6 +396,50 @@ section.mission {
 
   .brand-green {
     color: $pastel-green;
+  }
+}
+
+section.subscribe {
+  padding: 20.74% 30px 10%;
+
+  .container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  h2 {
+    text-transform:uppercase;
+    font-weight:bold;
+    font-size:2.5em; // 40px
+    letter-spacing: 0.18525em;
+    text-align:center;
+    line-height:1em;
+
+    span {
+      font-size:0.5em;
+      margin-top:1.01em;
+      letter-spacing:0.3705em;
+      display:block;
+      line-height:1em;
+    }
+  }
+
+  #mc_embed_signup {
+    position:relative;
+
+    &:before {
+      background: $alabaster;
+      content:"";
+      width:60.5%;
+      height:301px;
+      position:absolute;
+      top: -72%;
+      left: 48.7%;
+      @include transform(translateX(-50%));
+      z-index:-1;
+    }
+
   }
 }
 
