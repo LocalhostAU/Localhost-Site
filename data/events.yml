@@ -14,7 +14,6 @@ events:
     link: https://www.google.com/
   - title: This is an event somewhere
     location: mel
-    date:
   - title: This is an event somewhere
     role: Fri 22
   - title: This is an event somewhere and it has a really long title
@@ -23,3 +22,6 @@ events:
     date: TBA
   - title: This is an event somewhere
     date: TBA
+  - title: my super rad event
+    date: hkweh
+    link: https://google.lol
