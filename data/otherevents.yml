@@ -1,8 +1,13 @@
+languages:
+  - English
+
 events:
-  - title: This is an event somewhere (syd)
+  - title: This is an event somewhere
+    location: syd
     date: Fri 22
-    link: hekrjht
-  - title: This is an event somewhere (mel)
+    link: https://www.google.com/
+  - title: This is an event somewhere
+    location: mel
     date:
   - title: This is an event somewhere
     role: Fri 22

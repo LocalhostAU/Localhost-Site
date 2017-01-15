@@ -28,42 +28,18 @@ meta_description: Connecting web, creative and digital communities &amp; unearth
     </div>
     <div class="future-events">
       <ul>
-        <li>
-          <span class="date">Fri 22</span>
-          <a href="#">This is an event somewhere
-            <span class="location">(SYD)</span>
-          </a>
-        </li>
-        <li>
-          <span class="date">Fri 22</span>
-          <a href="#">This is an event somewhere
-            <span class="location">(MEL)</span>
-          </a>
-        </li>
-        <li>
-          <span class="date">Fri 22</span>
-          <a href="#">This is an event somewhere
-            <span class="location"></span>
-          </a>
-        </li>
-        <li>
-          <span class="date">Fri 22</span>
-          <a href="#">This is an event somewhere Corey likes the calendar thing
-            <span class="location">(PER)</span>
-          </a>
-        </li>
-        <li>
-          <span class="date">Fri 22</span>
-          <a href="#">This is an event somewhere
-            <span class="location"></span>
-          </a>
-        </li>
-        <li>
-          <span class="date">Fri 22</span>
-          <a href="#">This is an event somewhere
-            <span class="location"></span>
-          </a>
-        </li>
+          <% data.otherevents.events.each do |event| %>
+            <li>
+              <% if event.date? %>
+                <span class="date"><%= event.date %></span>
+              <% end %>
+              <a href="<%= event.link %>"><%= event.title %>
+                <% if event.location? %>
+                  <span class="location">(<%= event.location %>)</span>
+                <% end %>
+              </a>
+            </li>
+          <% end %>
       </ul>
     </div>
   </section>
@@ -81,11 +57,8 @@ meta_description: Connecting web, creative and digital communities &amp; unearth
   </li>
 </ul>
 
-<ol>
-  <% data.otherevents.events.each do |event| %>
-  <li><%= event.link %>  <%= event.date %> - <%= event.title %></li>
-  <% end %>
-</ol>
+
+
 
   <h2>Subscribe Form</h2>
 <!-- Begin MailChimp Signup Form -->
