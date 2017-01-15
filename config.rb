@@ -40,6 +40,10 @@ configure :build do
   activate :asset_hash
 end
 
+activate :blog do |blog|
+  # set options on blog
+end
+
 configure :production do
   activate :minify_html
   activate :minify_css

@@ -12,20 +12,20 @@
 - [X] cache busting - asset pipeline
 - [ ] image optimisation
 - [X] continuous integration
-- [ ] logo animating
-- [ ] twitter
-- [ ]   https://twitter.com/localhostau
-- [ ]   Meetup
+- [x] logo animating
+- [x] twitter
+- [x]   https://twitter.com/localhostau
+- [x]   Meetup
 - [ ] about contact
 - [ ] team///
-- [ ] schedule/upcoming events list///localhost or aus
+- [x] schedule/upcoming events list///localhost or aus
 - [ ] cfp... speakers interest
 - [ ] recap of first meetup/blog
 - [ ] about/contact/blog.
 - [ ] email subscript (mailchimp)
 - [X] email accounts
 -  
-- [ ] event date
-- [ ] event title
-- [ ] event description
-- [ ] event location
+- [x] event date
+- [x] event title
+- [x] event description
+- [x] event location
