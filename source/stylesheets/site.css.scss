@@ -1,15 +1,102 @@
 @charset "utf-8";
 @import "normalize";
+@import "variables";
 
 body {
   text-align: center;
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em;
+  font-size: 16px;
 }
 
-.logo img {
-  height: 18.75em;
-  margin-top: 6em;
+header {
+  padding-top: 21.3%;
+  padding-bottom: 10%;
+
+  .logo {
+    max-width: 635px;
+    width:100%;
+    margin: 0 auto;
+
+    img {
+      width:100%;
+      height:auto;
+    }
+  }
+}
+
+section.events {
+  clear:both;
+  float:none;
+  width:100%;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .upcoming-event, .future-events {
+
+    @media (min-width: $screen-sm-min) {
+      width:50%;
+      float:left;
+    }
+  }
+
+  .upcoming-event {
+    p.date {
+
+      span {
+        display:block;
+
+        &.month {
+          font-size:2.5em; // 40px
+          text-transform:uppercase;
+        }
+
+        &.weekday {
+          font-size:1.125em; // 18px
+          text-transform:uppercase;
+        }
+
+        &.day {
+          font-size:9em; // 144px
+          color: $burnt-sienna;
+        }
+      }
+    }
+
+    h2.title {
+      font-size:1.5em; // 24px
+    }
+
+    .speaker {
+      text-transform:uppercase;
+
+      span {
+        display:block;
+      }
+    }
+
+    .location {
+      font-size:0.6875em; //11px
+      text-transform:uppercase;
+
+      &:before {
+        content:"";
+        width:8px;
+        height:12px;
+        background-size:contain;
+        display:block;
+        background: url('../images/pin.svg');
+        background-repeat:no-repeat;
+      }
+    }
+  }
+
+  .future-events {
+
+  }
 }
 
 .sr-only {
@@ -30,14 +117,26 @@ body {
 
   li {
     display:inline-block;
+    width:41px;
+
+    img {
+      width: 100%;
+      height:auto;
+    }
 
     a {
       position:relative;
+      display:block;
+
       &:after {
         content:"";
         position:absolute;
         top:3px;
         left:3px;
+        width: 35px;
+        height: 35px;
+        border: 2px solid #000;
+        border-radius:100%;
       }
     }
   }
