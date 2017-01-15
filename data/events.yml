@@ -1,5 +1,11 @@
-languages:
-  - English
+nextevent:
+  title: Super special launch event or the title of talk
+  month: January
+  weekday: Thurs
+  day: 19
+  speaker: Georgie Lumer (SYD)
+  speaker_company: Campaign Monitor
+  location: Perth
 
 events:
   - title: This is an event somewhere
