@@ -3,32 +3,24 @@
 @import "variables";
 @import "type";
 
+@import "layout/header";
+@import "layout/footer";
+
+@import "components/form";
+
 * {
   box-sizing:border-box;
 }
 
-header {
-  padding-top: 19.7%;
-  //padding-top: 284px;
-  padding-bottom: 18%;
-  padding-top: 283px;
-  padding-bottom: 254px;
-
-  .logo {
-    max-width: 718px;
-    margin: 0 auto;
-  	padding:20px;
-  	width:100%;
-
-    img {
-      width:100%;
-      height:auto;
-    }
-  }
+::-moz-selection {
+  background: $lavendar;
+  color: #fff;
 }
 
-::-moz-selection { background: $lavendar; color: #fff; }
-::selection { background: $lavendar; color: #fff; }
+::selection {
+  background: $lavendar;
+  color: #fff;
+}
 
 section.events {
   clear:both;
@@ -70,15 +62,22 @@ section.events {
     &:after {
       content:"";
       width: 46.7%;
-      padding-bottom: 72.8%;
       display:block;
+      height:385px;
       background: url('../images/zig-zag.svg'), $alabaster;
-      background-position: bottom center;
+      background-position: center calc(100% + 1px);
       background-repeat: repeat-x;
+      background-size: auto 20px;
       position: absolute;
-      right:-4px;
       top:1px;
+      right:0;
       z-index:-1;
+
+      @media (min-width: $screen-sm-min) {
+        right:-4px;
+        height:0;
+        padding-bottom: 72.8%;
+      }
     }
 
     p.date {
@@ -122,11 +121,15 @@ section.events {
       font-weight:normal;
       margin-top: -22.8%;
 			letter-spacing: -0.02em;
-      padding: 0 10.1% 0 32.8%;
+      padding: 0 0 0 32.8%;
       position:relative;
       z-index:3;
       line-height:1em;
       margin-bottom: 3%;
+
+      @media (min-width: $screen-sm-min) {
+        padding-right:10.1%;
+      }
 
       a {
         border-bottom:1px solid #979797;
@@ -137,20 +140,6 @@ section.events {
 
         &:hover, &:focus {
           color: $pastel-green;
-        }
-
-        &:after {
-          // content:"";
-          // width:12px;
-          // height:7px;
-          // display: inline-block;
-          // background:url('../images/arrow-green.svg');
-          // background-repeat:no-repeat;
-          // background-size:contain;
-          // background-position:top right;
-          // position:absolute;
-          // bottom: 20px;
-          // right:0;
         }
       }
     }
@@ -197,8 +186,12 @@ section.events {
 
     ul {
       list-style:none;
-      max-width: 367px;
-      margin-left: 12.2%;
+      padding:0;
+
+      @media (min-width: $screen-sm-min) {
+        margin-left: 12.2%;
+        max-width: 367px;
+      }
 
       li {
         text-transform:uppercase;
@@ -303,28 +296,24 @@ section.follow {
 
     .sm-icon {
       display:inline-block;
-      width:35px;
-      margin:8px 0 0 16px;
+      width: 51px;
+      padding: 8px 0 0 16px;
       float:right;
-
-
     }
 
     &.meetup {
       .sm-icon {
-        margin: 1px 0 0 11px;
-        width: 39px;
-      }
+        padding: 1px 0 0 11px;
+        width: 52px;
 
-      a {
         &:after {
-          right: -2px;
+          right: -1px;
+          top: 1px;
         }
       }
     }
 
     a {
-      position:relative;
       display:block;
 			text-transform:uppercase;
       font-size:1.25em ;//20px;
@@ -332,15 +321,20 @@ section.follow {
       letter-spacing: 0.18em;
       line-height:2.05em; //41px;
 
-      &:after {
-        content:"";
-        position:absolute;
-        top: 0px;
-        right: -7px;
-        width: 33px;
-        height: 33px;
-        border: 2px solid #000;
-        border-radius:100%;
+      span {
+
+        position:relative;
+
+        &:after {
+          content:"";
+          position:absolute;
+          top: 0px;
+          right: -7px;
+          width: 33px;
+          height: 33px;
+          border: 2px solid #000;
+          border-radius:100%;
+        }
       }
     }
   }
@@ -348,8 +342,13 @@ section.follow {
 
 section.mission {
   text-align:center;
-  padding: 8.7% 30px 7.13%;
+  padding: 80px 30px 20px;
   position:relative;
+
+
+  @media (min-width: $screen-sm-min) {
+    padding: 8.7% 30px 7.13%;
+  }
 
   &:before {
     content:"";
@@ -382,8 +381,12 @@ section.mission {
   }
 
   p {
-    font-size:3.5em; // 56px
     line-height:1em;
+    font-size:1.75em;
+
+    @media (min-width: $screen-sm-min) {
+      font-size:3.5em; // 56px
+    }
   }
 
   .brand-pink {
@@ -400,7 +403,7 @@ section.mission {
 }
 
 section.subscribe {
-  padding: 20.74% 30px 10%;
+  padding: 20.74% 30px 12.4%;
 
   .container {
     width: 100%;
@@ -411,10 +414,14 @@ section.subscribe {
   h2 {
     text-transform:uppercase;
     font-weight:bold;
-    font-size:2.5em; // 40px
     letter-spacing: 0.18525em;
     text-align:center;
+    font-size:1.5em; // 40px
     line-height:1em;
+
+    @media (min-width: $screen-sm-min) {
+      font-size:2.5em; // 40px
+    }
 
     span {
       font-size:0.5em;
@@ -424,157 +431,4 @@ section.subscribe {
       line-height:1em;
     }
   }
-
-  #mc_embed_signup {
-    position:relative;
-
-    &:before {
-      background: $alabaster;
-      content:"";
-      width:60.5%;
-      height:301px;
-      position:absolute;
-      top: -72%;
-      left: 48.7%;
-      @include transform(translateX(-50%));
-      z-index:-1;
-    }
-
-  }
 }
-
-// Logo Animation
-
-.logo {
-
-	.line {
-		fill: none;
-		stroke: #1D1D1B;
-		stroke-miterlimit: 10;
-		stroke-linecap: round;
-		stroke-linejoin: round;
-	}
-
-  &:hover {
-    .block {
-      //@include transform(translate(10px, 10px));
-    }
-  }
-
-	.block {
-    @include transition(0.2s ease-in-out all);
-    @include transform(scale(0,0));
-    @include transform-origin(50%);
-
-		&.green {
-			fill: $pastel-green;
-		}
-
-		&.yellow {
-			fill: $turbo;
-		}
-
-		&.purple {
-			fill: $lavendar;
-		}
-
-		&.orange {
-			fill: $tulip-tree;
-		}
-
-		&.blue {
-			fill: $malibu;
-		}
-	}
-}
-
-.logo g {
-	@for $i from 1 to 10 {
-		&:nth-child(#{$i}) {
-			.line {
-				@include animation-delay($i * 0.25s);
-			}
-		}
-	}
-
-	&.l-green .block {
-		@include animation-delay(3.5 + (3 * 0.125s));
-	}
-
-	&.o-yellow .block {
-		@include animation-delay(3.5 + (5 * 0.125s));
-	}
-
-	&.c-purple .block {
-		@include animation-delay(3.5 + (6 * 0.125s));
-	}
-
-	&.a-orange .block {
-		@include animation-delay(3.5 + (1 * 0.125s));
-	}
-
-	&.l-blue .block {
-		@include animation-delay(3.5 + (2 * 0.125s));
-	}
-
-	&.h-yellow .block {
-		@include animation-delay(3.5 + (7 * 0.125s));
-	}
-
-	&.o-purple .block {
-		@include animation-delay(3.5 + (4 * 0.125s));
-	}
-
-	&.s-orange .block {
-		@include animation-delay(3.5 + (1 * 0.125s));
-	}
-
-	&.t-green .block {
-		@include animation-delay(3.5 + (8 * 0.125s));
-	}
-}
-
-.line {
-	stroke-dasharray: 1000;
-	stroke-dashoffset: 1000;
-	@include animation(dash 10s linear forwards);
-}
-
-.block {
-	@include animation(bounceIn 1.5s linear both);
-	@include transform-origin(50% 50%);
-}
-
-
-
-@include keyframes(dash) {
-	to {
-		stroke-dashoffset: 0;
-	}
-}
-
-@include keyframes(bounceIn) {
-	0% { @include transform(matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
-    3.1% { @include transform(matrix3d(0.219, 0, 0, 0, 0, 0.219, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));}
-    3.6% { @include transform(matrix3d(0.29, 0, 0, 0, 0, 0.29, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
-    6.21% { @include transform(matrix3d(0.707, 0, 0, 0, 0, 0.707, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
-    7.11% { @include transform(matrix3d(0.842, 0, 0, 0, 0, 0.842, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));  }
-    9.31% { @include transform(matrix3d(1.095, 0, 0, 0, 0, 1.095, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
-    10.61% { @include transform(matrix3d(1.183, 0, 0, 0, 0, 1.183, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
-    12.41% { @include transform(matrix3d(1.238, 0, 0, 0, 0, 1.238, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
-    14.11% { @include transform(matrix3d(1.236, 0, 0, 0, 0, 1.236, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
-    20.12% { @include transform(matrix3d(1.084, 0, 0, 0, 0, 1.084, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
-    23.22% { @include transform(matrix3d(1.021, 0, 0, 0, 0, 1.021, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));}
-    27.73% { @include transform(matrix3d(0.984, 0, 0, 0, 0, 0.984, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));}
-    32.33% { @include transform(matrix3d(0.984, 0, 0, 0, 0, 0.984, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));}
-    43.14% { @include transform(matrix3d(1.001, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));}
-    50.55% { @include transform(matrix3d(1.001, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));}
-    58.56% { @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
-    68.77% { @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));}
-    73.97% { @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
-    86.99% { @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
-    89.39% { @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
-    100% { @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));  }
-}
-
-// ------

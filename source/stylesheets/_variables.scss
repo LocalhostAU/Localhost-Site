@@ -12,6 +12,10 @@ $lavendar: #C980EA; // purple
 $tulip-tree: #EFB348; // Orange
 $alabaster: #F7F7F7; // light gray
 
+$font-family-sans-serif:"freight-sans-pro", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$link-transition: 0.2s ease-in-out all;
+
 
 @mixin transform($transforms) {
 	-moz-transform: $transforms;
