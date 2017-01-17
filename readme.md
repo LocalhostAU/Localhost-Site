@@ -29,3 +29,4 @@
 - [x] event title
 - [x] event description
 - [x] event location
+- [ ] Logo animation color block translate

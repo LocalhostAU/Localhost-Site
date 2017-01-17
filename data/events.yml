@@ -1,9 +1,9 @@
 nextevent:
-  title: Super special launch event or the title of talk
-  month: January
-  weekday: Thurs
-  day: 19
-  speaker: Georgie Lumer (SYD)
+  title: Creative ways to style figures & figcaptions
+  month: February
+  weekday: Wednesday
+  day: "01"
+  speaker: Georgie Luhur (SYD)
   speaker_company: Campaign Monitor
   location: Perth
 
@@ -15,7 +15,7 @@ events:
   - title: This is an event somewhere
     location: mel
   - title: This is an event somewhere
-    role: Fri 22
+    date: Fri 22
   - title: This is an event somewhere and it has a really long title
     date: Fri 22
   - title: This is an event somewhere
