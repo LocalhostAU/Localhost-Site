@@ -80,6 +80,27 @@ section.events {
       }
     }
 
+    &:before {
+      content:"";
+      width: 46.7%;
+      display:block;
+      height:385px;
+      background: url('../images/bits-color.svg');
+      background-position: top right;
+      background-repeat: no-repeat;
+      background-size: 40% auto;
+      position: absolute;
+      top: -20px;
+      z-index:2;
+      right: 5px;
+
+      @media (min-width: $screen-sm-min) {
+        right: -5.5%;
+        top: 10px;
+        background-size: 28% auto;
+      }
+    }
+
     p.date {
 
       span {
