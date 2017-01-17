@@ -24,6 +24,7 @@ configure :development do
   activate :autoprefixer
 end
 
+activate :directory_indexes
 ###
 # Helpers
 ###
