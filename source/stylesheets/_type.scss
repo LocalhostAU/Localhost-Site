@@ -29,7 +29,7 @@ a {
   @include transition(0.2s ease-in-out all);
   text-decoration:none;
 
-  .internal & {
+  .internal .main & {
     color:$burnt-sienna;
     border-bottom:1px solid rgba($burnt-sienna, 0.5);
 
@@ -121,7 +121,7 @@ blockquote {
 }
 
 ol, ul {
-  .internal & {
+  .internal .main & {
     margin:0;
     margin-bottom:15px;
     //padding:0;
@@ -137,7 +137,7 @@ ol, ul {
 }
 
 ul {
-  .internal & {
+  .internal .main & {
     list-style:none;
 
     li {
