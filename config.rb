@@ -25,7 +25,10 @@ configure :development do
 end
 
 activate :directory_indexes
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7a873f561eacfe4f83aafea9d05763aad5dc49d0
 ###
 # Helpers
 ###
