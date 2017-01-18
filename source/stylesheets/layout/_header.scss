@@ -16,11 +16,34 @@ header {
       height:auto;
     }
   }
+
+	.internal & {
+		padding: 30px 0;
+	}
+
+  .home & {
+    position:relative;
+    margin-top: 19.7%;
+    margin-bottom: 18%;
+    padding:0;
+    height: 110px;
+
+    .logo {
+      position:absolute;
+      top:0;
+      left: 50%;
+      @include transform(translateX(-50%));
+    }
+  }
 }
 
 // Logo Animation
 
 .logo {
+
+  a {
+    display:block;
+  }
 
 	.line {
 		fill: none;
@@ -32,7 +55,7 @@ header {
 
   &:hover {
     .block {
-      //@include transform(translate(10px, 10px));
+
     }
   }
 
@@ -61,65 +84,64 @@ header {
 			fill: $malibu;
 		}
 	}
+
+  .letters g {
+  	@for $i from 1 to 10 {
+  		&:nth-child(#{$i}) {
+  			.line {
+  				@include animation-delay($i * 0.25s);
+  			}
+  		}
+  	}
+
+  	&.l-green .block {
+  		@include animation-delay(3.5 + (3 * 0.125s));
+  	}
+
+  	&.o-yellow .block {
+  		@include animation-delay(3.5 + (5 * 0.125s));
+  	}
+
+  	&.c-purple .block {
+  		@include animation-delay(3.5 + (6 * 0.125s));
+  	}
+
+  	&.a-orange .block {
+  		@include animation-delay(3.5 + (1 * 0.125s));
+  	}
+
+  	&.l-blue .block {
+  		@include animation-delay(3.5 + (2 * 0.125s));
+  	}
+
+  	&.h-yellow .block {
+  		@include animation-delay(3.5 + (7 * 0.125s));
+  	}
+
+  	&.o-purple .block {
+  		@include animation-delay(3.5 + (4 * 0.125s));
+  	}
+
+  	&.s-orange .block {
+  		@include animation-delay(3.5 + (1 * 0.125s));
+  	}
+
+  	&.t-green .block {
+  		@include animation-delay(3.5 + (8 * 0.125s));
+  	}
+  }
+
+  .line {
+  	stroke-dasharray: 1000;
+  	stroke-dashoffset: 1000;
+  	@include animation(dash 10s linear forwards);
+  }
+
+  .block {
+  	@include animation(bounceIn 1.5s linear both);
+  	@include transform-origin(50% 50%);
+  }
 }
-
-.logo g {
-	@for $i from 1 to 10 {
-		&:nth-child(#{$i}) {
-			.line {
-				@include animation-delay($i * 0.25s);
-			}
-		}
-	}
-
-	&.l-green .block {
-		@include animation-delay(3.5 + (3 * 0.125s));
-	}
-
-	&.o-yellow .block {
-		@include animation-delay(3.5 + (5 * 0.125s));
-	}
-
-	&.c-purple .block {
-		@include animation-delay(3.5 + (6 * 0.125s));
-	}
-
-	&.a-orange .block {
-		@include animation-delay(3.5 + (1 * 0.125s));
-	}
-
-	&.l-blue .block {
-		@include animation-delay(3.5 + (2 * 0.125s));
-	}
-
-	&.h-yellow .block {
-		@include animation-delay(3.5 + (7 * 0.125s));
-	}
-
-	&.o-purple .block {
-		@include animation-delay(3.5 + (4 * 0.125s));
-	}
-
-	&.s-orange .block {
-		@include animation-delay(3.5 + (1 * 0.125s));
-	}
-
-	&.t-green .block {
-		@include animation-delay(3.5 + (8 * 0.125s));
-	}
-}
-
-.line {
-	stroke-dasharray: 1000;
-	stroke-dashoffset: 1000;
-	@include animation(dash 10s linear forwards);
-}
-
-.block {
-	@include animation(bounceIn 1.5s linear both);
-	@include transform-origin(50% 50%);
-}
-
 
 
 @include keyframes(dash) {
@@ -150,6 +172,11 @@ header {
     86.99% { @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
     89.39% { @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
     100% { @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));  }
+}
+
+@include keyframes(translateDown) {
+	0% { @include transform(translate(0, 0)); }
+  100% { @include transform(translate(10px, 10px));  }
 }
 
 // ------

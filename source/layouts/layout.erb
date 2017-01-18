@@ -24,13 +24,21 @@
     <%= stylesheet_link_tag :site %>
   </head>
 
-  <body class="<%= page_classes %>">
+  <body class="<%= page_classes %> <%= current_page.data.body_classes %>">
     <%= partial "partials/header" %>
-    <%= yield %>
-    <%= javascript_include_tag :all %>
+
+    <div class="main">
+      <%= yield %>
+      <%= javascript_include_tag :all %>
+
+    </div><!-- .welcome -->
+    <%= partial "partials/footer" %>
 
     <% if build? %>
       <%= partial "partials/tracking" %>
     <% end %>
+
+    <%= javascript_include_tag('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js') %>
+    <%= javascript_include_tag('site.js') %>
   </body>
 </html>

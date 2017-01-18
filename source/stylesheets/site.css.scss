@@ -22,6 +22,15 @@
   color: #fff;
 }
 
+.main {
+	.internal & {
+		max-width: 1200px;
+		width:100%;
+		margin: 0 auto;
+		padding: 0 30px;
+	}
+}
+
 section.events {
   clear:both;
   float:none;
