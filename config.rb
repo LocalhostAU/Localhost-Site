@@ -25,20 +25,6 @@ configure :development do
 end
 
 activate :directory_indexes
-<<<<<<< HEAD
-
-=======
->>>>>>> 7a873f561eacfe4f83aafea9d05763aad5dc49d0
-###
-# Helpers
-###
-
-# Methods defined in the helpers block are available in templates
-# helpers do
-#   def some_helper
-#     "Helping"
-#   end
-# end
 
 # Build-specific configuration
 configure :build do
