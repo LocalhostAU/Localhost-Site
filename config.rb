@@ -37,6 +37,7 @@ activate :directory_indexes
 #   end
 # end
 
+
 # Build-specific configuration
 configure :build do
   activate :asset_hash
