@@ -72,12 +72,18 @@ footer {
         }
 
         @media (min-width: $screen-md-min) {
-          width:20%;
+          width:16.66666666666667%;
         }
 
         img {
           width:100%;
           height:auto;
+          opacity:0.5;
+          @include transition($link-transition);
+
+          &:hover {
+            opacity:0.8;
+          }
         }
       }
     }
