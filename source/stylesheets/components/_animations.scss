@@ -1,0 +1,45 @@
+
+@-webkit-keyframes Floating{
+    from {-webkit-transform:translate(0, 0px);}
+    65% {-webkit-transform:translate(0, 5px);}
+    to {-webkit-transform: translate(0, -0px);    }
+}
+
+
+// Logo
+
+
+@include keyframes(dash) {
+	to {
+		stroke-dashoffset: 0;
+	}
+}
+
+@include keyframes(bounceIn) {
+	0% { @include transform(matrix3d(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
+    3.1% { @include transform(matrix3d(0.219, 0, 0, 0, 0, 0.219, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));}
+    3.6% { @include transform(matrix3d(0.29, 0, 0, 0, 0, 0.29, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
+    6.21% { @include transform(matrix3d(0.707, 0, 0, 0, 0, 0.707, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
+    7.11% { @include transform(matrix3d(0.842, 0, 0, 0, 0, 0.842, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));  }
+    9.31% { @include transform(matrix3d(1.095, 0, 0, 0, 0, 1.095, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
+    10.61% { @include transform(matrix3d(1.183, 0, 0, 0, 0, 1.183, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
+    12.41% { @include transform(matrix3d(1.238, 0, 0, 0, 0, 1.238, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
+    14.11% { @include transform(matrix3d(1.236, 0, 0, 0, 0, 1.236, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
+    20.12% { @include transform(matrix3d(1.084, 0, 0, 0, 0, 1.084, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
+    23.22% { @include transform(matrix3d(1.021, 0, 0, 0, 0, 1.021, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));}
+    27.73% { @include transform(matrix3d(0.984, 0, 0, 0, 0, 0.984, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));}
+    32.33% { @include transform(matrix3d(0.984, 0, 0, 0, 0, 0.984, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));}
+    43.14% { @include transform(matrix3d(1.001, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));}
+    50.55% { @include transform(matrix3d(1.001, 0, 0, 0, 0, 1.001, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));}
+    58.56% { @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
+    68.77% { @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));}
+    73.97% { @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
+    86.99% { @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
+    89.39% { @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1)); }
+    100% { @include transform(matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1));  }
+}
+
+@include keyframes(translateDown) {
+	0% { @include transform(translate(0, 0)); }
+  100% { @include transform(translate(10px, 10px));  }
+}
