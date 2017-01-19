@@ -12,10 +12,13 @@ $lavendar: #C980EA; // purple
 $tulip-tree: #EFB348; // Orange
 $alabaster: #F7F7F7; // light gray
 
+$font-family-sans-serif:"freight-sans-pro", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+$link-transition: 0.2s ease-in-out all;
+
 
 @mixin transform($transforms) {
 	-moz-transform: $transforms;
-	-o-transform: $transforms;
 	-ms-transform: $transforms;
 	-webkit-transform: $transforms;
 	transform: $transforms;
@@ -23,10 +26,15 @@ $alabaster: #F7F7F7; // light gray
 
 @mixin transform-origin ($origin) {
 	moz-transform-origin: $origin;
-	-o-transform-origin: $origin;
 	-ms-transform-origin: $origin;
 	-webkit-transform-origin: $origin;
 	transform-origin: $origin;
+}
+
+@mixin transition($transition...) {
+    -moz-transition:    $transition;
+    -webkit-transition: $transition;
+    transition:         $transition;
 }
 
 @mixin keyframes($animation-name) {
@@ -39,9 +47,6 @@ $alabaster: #F7F7F7; // light gray
     @-ms-keyframes #{$animation-name} {
         @content;
     }
-    @-o-keyframes #{$animation-name} {
-        @content;
-    }
     @keyframes #{$animation-name} {
         @content;
     }
@@ -51,13 +56,19 @@ $alabaster: #F7F7F7; // light gray
   -webkit-animation: #{$str};
   -moz-animation: #{$str};
   -ms-animation: #{$str};
-  -o-animation: #{$str};
   animation: #{$str};
 }
 @mixin animation-delay($str) {
   -webkit-animation-delay: #{$str};
   -moz-animation-delay: #{$str};
   -ms-animation-delay: #{$str};
-  -o-animation-delay: #{$str};
   animation-delay: #{$str};
 }
+
+// Type
+$font-size-h1:6.854em;
+$font-size-h2:4.236em;
+$font-size-h3:2.618em;
+$font-size-h4:1.618em;
+$font-size-h5:1.25em;
+$font-size-h6:1.125em;

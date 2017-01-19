@@ -1,0 +1,146 @@
+header {
+  padding-top: 19.7%;
+  //padding-top: 284px;
+  padding-bottom: 18%;
+  //padding-top: 283px;
+  //padding-bottom: 254px;
+
+  .logo {
+    max-width: 718px;
+    margin: 0 auto;
+  	padding:20px;
+  	width:100%;
+
+    img {
+      width:100%;
+      height:auto;
+    }
+  }
+
+	.internal & {
+		padding: 30px 0;
+	}
+
+  .home & {
+    position:relative;
+    margin-top: 19.7%;
+    margin-bottom: 18%;
+    padding:0;
+    height: 110px;
+
+    .logo {
+      position:absolute;
+      top:0;
+      left: 50%;
+      @include transform(translateX(-50%));
+    }
+  }
+}
+
+// Logo Animation
+
+.logo {
+
+  a {
+    display:block;
+  }
+
+	.line {
+		fill: none;
+		stroke: #1D1D1B;
+		stroke-miterlimit: 10;
+		stroke-linecap: round;
+		stroke-linejoin: round;
+	}
+
+  &:hover {
+    .block {
+
+    }
+  }
+
+	.block {
+    @include transition(0.2s ease-in-out all);
+    @include transform(scale(0,0));
+    @include transform-origin(50%);
+
+		&.green {
+			fill: $pastel-green;
+		}
+
+		&.yellow {
+			fill: $turbo;
+		}
+
+		&.purple {
+			fill: $lavendar;
+		}
+
+		&.orange {
+			fill: $tulip-tree;
+		}
+
+		&.blue {
+			fill: $malibu;
+		}
+	}
+
+  .letters g {
+  	@for $i from 1 to 10 {
+  		&:nth-child(#{$i}) {
+  			.line {
+  				@include animation-delay($i * 0.25s);
+  			}
+  		}
+  	}
+
+  	&.l-green .block {
+  		@include animation-delay(3.5 + (3 * 0.125s));
+  	}
+
+  	&.o-yellow .block {
+  		@include animation-delay(3.5 + (5 * 0.125s));
+  	}
+
+  	&.c-purple .block {
+  		@include animation-delay(3.5 + (6 * 0.125s));
+  	}
+
+  	&.a-orange .block {
+  		@include animation-delay(3.5 + (1 * 0.125s));
+  	}
+
+  	&.l-blue .block {
+  		@include animation-delay(3.5 + (2 * 0.125s));
+  	}
+
+  	&.h-yellow .block {
+  		@include animation-delay(3.5 + (7 * 0.125s));
+  	}
+
+  	&.o-purple .block {
+  		@include animation-delay(3.5 + (4 * 0.125s));
+  	}
+
+  	&.s-orange .block {
+  		@include animation-delay(3.5 + (1 * 0.125s));
+  	}
+
+  	&.t-green .block {
+  		@include animation-delay(3.5 + (8 * 0.125s));
+  	}
+  }
+
+  .line {
+  	stroke-dasharray: 1000;
+  	stroke-dashoffset: 1000;
+  	@include animation(dash 10s linear forwards);
+  }
+
+  .block {
+  	@include animation(bounceIn 1.5s linear both);
+  	@include transform-origin(50% 50%);
+  }
+}
+
+// ------

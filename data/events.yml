@@ -1,27 +1,30 @@
 nextevent:
-  title: Super special launch event or the title of talk
-  month: January
-  weekday: Thurs
-  day: 19
-  speaker: Georgie Lumer (SYD)
+  title: Creative ways to style figures & figcaptions
+  month: February
+  weekday: Wednesday
+  day: "01"
+  speaker: Georgie Luhur (SYD)
   speaker_company: Campaign Monitor
   location: Perth
 
 events:
-  - title: This is an event somewhere
-    location: syd
-    date: Fri 22
-    link: https://www.google.com/
-  - title: This is an event somewhere
-    location: mel
-  - title: This is an event somewhere
-    role: Fri 22
-  - title: This is an event somewhere and it has a really long title
-    date: Fri 22
-  - title: This is an event somewhere
-    date: TBA
-  - title: This is an event somewhere
-    date: TBA
-  - title: my super rad event
-    date: hkweh
-    link: https://google.lol
+  - title: SydCSS February
+    location: SYD
+    date: Thu 02
+    link: https://www.meetup.com/SydCSS/events/236934679/
+  - title: Fenders Casual Catch Up
+    location: PER
+    date: Wed 08
+    link: https://www.meetup.com/Front-End-Web-Developers-Perth/events/236694848/
+  - title: Webstock (13-17)
+    location: NZ
+    date: Mon 13
+    link: http://www.webstock.org.nz/17/
+  - title: Bikeshedding Quiz Night
+    location: PER
+    date: Wed 15
+    link: https://www.meetup.com/Front-End-Web-Developers-Perth/events/236790263/
+  - title: Playgrounds Swift and Apple Developers Conference
+    location: MEL
+    date: Thu 23
+    link: http://www.playgroundscon.com/

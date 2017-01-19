@@ -24,6 +24,8 @@ configure :development do
   activate :autoprefixer
 end
 
+activate :directory_indexes
+
 ###
 # Helpers
 ###
@@ -34,6 +36,7 @@ end
 #     "Helping"
 #   end
 # end
+
 
 # Build-specific configuration
 configure :build do

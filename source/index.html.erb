@@ -4,10 +4,130 @@ body_classes: home
 meta_description: Connecting web, creative and digital communities &amp; unearthing local talent across Australia.
 ---
 
-<div class="welcome">
-  <header>
-    <div class="logo">
-      <%= partial "partials/logo" %>
+<section class="events">
+  <div class="container">
+    <div class="upcoming-event">
+      <div class="event-bits">
+        <span id="bit-blue">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="20 -1 20 19">
+            <g fill="none" fill-rule="evenodd">
+              <path class="block" fill="#79B9F6" d="M28 2c4.42 0 8 3.57 8 7.97s-3.58 7.97-8 7.97-8-3.57-8-7.97S23.58 2 28 2z"/>
+              <path class="line" stroke="#1D1D1B" stroke-width="2" d="M30 0c4.42 0 8 3.57 8 7.97s-3.58 7.97-8 7.97-8-3.57-8-7.97S25.58 0 30 0z" stroke-linecap="round"/>
+            </g>
+          </svg>
+        </span>
+        <span id="bit-green">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 25 19 20">
+            <g fill="none" fill-rule="evenodd">
+              <path class="block" fill="#74DE7D" d="M10.35 37.6l5.3 5.28c.47.47.47 1.24 0 1.7-.23.23-.53.36-.85.36H1.2c-.66 0-1.2-.54-1.2-1.2v-13.6c0-1.06 1.3-1.53 2.05-.76l5.3 5.2"/>
+              <path class="line" stroke="#1D1D1B" stroke-width="2" d="M11.35 35.6l5.3 5.28c.47.47.47 1.24 0 1.7-.23.23-.53.36-.85.36H2.2c-.66 0-1.2-.54-1.2-1.2v-13.6c0-1.06 1.3-1.53 2.05-.76l5.3 5.2" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+          </svg>
+        </span>
+        <span id="bit-purple">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="55 42 22 19">
+              <g fill="none" fill-rule="evenodd">
+                <path class="block" fill="#C980EA" d="M59.26 53.9l3.68 6.5c.33.57 1.07.77 1.65.44.17-.1.32-.26.43-.44l7.84-13.57c.33-.58.13-1.32-.45-1.64-.18-.1-.38-.17-.58-.17L56.2 45c-.66 0-1.2.54-1.2 1.2 0 .22.05.42.16.6l1.64 2.8c.2.36.6.6 1.03.6h2.9"/>
+                <path class="line" stroke="#1D1D1B" stroke-width="2" d="M61.26 51.9l3.68 6.5c.33.57 1.07.77 1.65.44.17-.1.32-.26.43-.44l7.84-13.57c.33-.58.13-1.32-.45-1.64-.18-.1-.38-.17-.58-.17L58.2 43c-.66 0-1.2.54-1.2 1.2 0 .22.05.42.16.6l1.64 2.8c.2.36.6.6 1.03.6h2.9" stroke-linecap="round" stroke-linejoin="round"/>
+              </g>
+            </svg>
+        </span>
+
+      </div>
+      <p class="date">
+        <span class="month"><%= data.events.nextevent.month %></span>
+        <span class="weekday"><%= data.events.nextevent.weekday %></span>
+        <span class="day"><%= data.events.nextevent.day %></span>
+      </p>
+      <h2 class="title"><a href="#" title="Find out about <%= data.events.nextevent.title %>">
+      <%= data.events.nextevent.title %></a></h2>
+      <p class="speaker"><%= data.events.nextevent.speaker %>
+        <span class="from"><%= data.events.nextevent.speaker_company %></span>
+      </p>
+
+      <p class="location"><%= data.events.nextevent.location %></p>
     </div>
-  </header>
-</div><!-- .welcome -->
+    <div class="future-events">
+      <ul>
+          <% data.events.events.each do |event| %>
+            <li>
+              <span class="date">
+                <% if event.date? %><%= event.date %><% end %>
+              </span>
+              <% if event.link? %><a href="<%= event.link %>" class="title"><% else %><span class="title"><% end %><%= event.title %>
+                <% if event.location? %>
+                  <span class="location">(<%= event.location %>)</span>
+                <% end %>
+               <% if event.link? %></a><% else %></span><% end %>
+            </li>
+          <% end %>
+      </ul>
+    </div>
+  </div>
+</section><!-- events section -->
+
+<section class="follow">
+  <ul class="social">
+    <li>
+      <% link_to 'https://twitter.com/localhostau' do %>
+        Twitter <span class="sm-icon"><%= image_tag 'social/logo-twitter.svg', alt: "Twitter" %></span>
+      <% end %>
+    </li>
+    <li class="meetup">
+      <% link_to 'https://www.meetup.com/web-industry-meetup/' do %>
+        Meetup <span class="sm-icon meetup"><%= image_tag 'social/logo-meetup.jpg', alt: "Meetup" %></span>
+      <% end %>
+    </li>
+  </ul>
+</section><!-- follow section i -->
+
+<section class="mission">
+  <div class="bits-draw">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 -1 77 76">
+      <g fill="none" fill-rule="evenodd" stroke="#1D1D1B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path class="bit-line" d="M8.28 59.27L15.4 71.9c.66 1.1 2.1 1.5 3.2.84.37-.2.67-.5.87-.85L34.7 45.55c.63-1.13.24-2.56-.9-3.2-.33-.2-.72-.3-1.1-.3L2.33 42C1.04 42 0 43.06 0 44.35c0 .4.1.8.3 1.15l3.2 5.4c.4.72 1.16 1.17 2 1.18l5.62.04"/>
+        <path class="bit-line" d="M47.28 17.27L54.4 29.9c.66 1.1 2.1 1.5 3.2.84.37-.2.67-.5.87-.85L73.7 3.55c.63-1.13.24-2.56-.9-3.2-.33-.2-.72-.3-1.1-.3L41.33 0C40.04 0 39 1.06 39 2.35c0 .4.1.8.3 1.15l3.2 5.4c.4.72 1.16 1.17 2 1.18l5.62.04"/>
+      </g>
+    </svg>
+  </div>
+  <div class="container">
+    <p>Connecting <span class="brand-pink">web</span>, <span class="brand-blue">creative</span> and <span class="brand-green">digital communities</span> &amp; unearthing local talent across Australia.</p>
+  </div>
+  <div class="bit-draw">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="-2 124 38 34">
+      <path class="bit-line" fill="none" stroke="#1D1D1B" stroke-width="2" d="M8.28 142.27l7.13 12.62c.66 1.1 2.1 1.5 3.2.84.37-.2.67-.5.87-.85l15.23-26.34c.63-1.13.24-2.56-.9-3.2-.33-.2-.72-.3-1.1-.3L2.33 125c-1.3 0-2.34 1.06-2.34 2.35 0 .4.1.8.3 1.15l3.2 5.4c.4.72 1.16 1.17 2 1.18l5.62.04" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section><!-- mission section -->
+
+<section class="subscribe">
+  <div class="container">
+    <h2>News.<br /> Updates. Stories.
+      <span>and sweet whispers.</span>
+    </h2>
+    <!-- Begin MailChimp Signup Form -->
+    <div id="mc_embed_signup">
+      <form action="//events.us14.list-manage.com/subscribe/post?u=7d24e0b9476a06b7262b18263&amp;id=6417baf3c2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+        <div id="mc_embed_signup_scroll">
+          <!--<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>-->
+          <div class="mc-field-group">
+            <label class="sr-only" for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
+            </label>
+            <input type="email" value="" name="EMAIL" placeholder="Enter email to subscribe to our newsletter" class="required email form-control" id="mce-EMAIL">
+          </div>
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7d24e0b9476a06b7262b18263_6417baf3c2" tabindex="-1" value=""></div>
+          <div class="clear">
+            <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn-submit">
+              <%= partial "partials/arrow-right" %>
+              <span class="sr-only">Subscribe to our newsletter</span>
+            </button>
+          </div>
+        </div>
+      </form>
+    </div><!--End mc_embed_signup-->
+  </div><!--container -->
+</section><!-- subscribe section -->
