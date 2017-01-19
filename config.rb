@@ -41,7 +41,6 @@ activate :directory_indexes
 # Build-specific configuration
 configure :build do
   activate :asset_hash
-  activate :directory_indexes
 end
 
 activate :blog do |blog|
