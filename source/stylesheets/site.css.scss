@@ -10,7 +10,7 @@
 @import "components/animations";
 
 * {
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 ::-moz-selection {
@@ -91,18 +91,21 @@ section.events {
     }
 
     .event-bits {
-      width: 46.7%;
+      width:100%;
       display:block;
-      height:385px;
       position: absolute;
-      top: -20px;
+      left: 0;
+      right: 0;
       z-index:2;
-      right: 5px;
+
+      @media (min-width: $screen-sm-min) {
+
+      }
 
       svg {
         //padding: 60px;
         //width:100%;
-        padding:10px;
+        //padding:10px;
 
         .block {
           @include transition(0.2s ease-in-out all);
@@ -125,20 +128,26 @@ section.events {
       }
 
       span {
-        width:30px;
-        height:30px;
         display:block;
         position:absolute;
-        top:0;
-        right:0;
+
+        svg {
+          padding:10px;
+        }
       }
 
       #bit-green {
-        top:0;
-        margin-top: 18px;
-        right: 25%;
-        width:18px;
-        height:17px;
+        right: 58px;
+        margin-top: 19px;
+
+        @media (min-width: $screen-sm-min) {
+          right: 17px;
+        }
+
+        svg {
+          width: 37px;
+          height: 38px;
+        }
 
         .line {
           @include animation-delay(1.15s);
@@ -150,11 +159,18 @@ section.events {
       }
 
       #bit-purple {
-        top:0;
+        right:0;
         margin-top: 35px;
-        right: 4%;
-        width: 18px;
-        height: 23px;
+        right:0;
+
+        svg {
+          width: 41px;
+          height: 38px;
+        }
+
+        @media (min-width: $screen-sm-min) {
+          right: -42px;
+        }
 
         .line {
           @include animation-delay(0.95s);
@@ -166,11 +182,17 @@ section.events {
       }
 
       #bit-blue {
-        top:0;
-        margin-top: -8px;
-        right: 17%;
-        width:18px;
-        height:18px;
+        margin-top: -7px;
+        right:37px;
+
+        @media (min-width: $screen-sm-min) {
+          right: -4px;
+        }
+
+        svg {
+          width: 38px;
+          height: 38px;
+        }
 
         .line {
           @include animation-delay(0.5s);
@@ -199,8 +221,11 @@ section.events {
           letter-spacing:0.14em;
           text-transform:uppercase;
           margin-bottom: 19%;
-          padding-left: 20%;
           z-index:2;
+
+          @media (min-width: $screen-sm-min) {
+            padding-left: 20%;
+          }
         }
 
         &.weekday {
