@@ -273,6 +273,8 @@ section.events {
 
         &:hover, &:focus {
           color: $pastel-green;
+          border: 1px solid black;
+          padding: 4px 0 4px 10px;
         }
       }
     }
@@ -357,9 +359,8 @@ section.events {
 
           &:hover, &:focus {
             color: $pastel-green;
-
-            //color: #fff;
-            //background: #000;
+            border: 1px solid black;
+            padding: 14px 0 10px 10px;
           }
 
           &:after {
