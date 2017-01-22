@@ -56,8 +56,30 @@ $(window).on('scroll', function() {
   }
 });
 
-var tlBlock = new TimelineMax({delay:3});
+var tlBlock = new TimelineMax({delay:3}),
+	tlHover = new TimelineMax({paused:true}),
+	tlActive = new TimelineMax({paused:true});
 
-tlBlock.staggerFrom(".logo .block", 1, {ease: Elastic.easeOut, scale:0, transformOrigin:"50% 50%"}, 0.125)
+tlBlock.staggerFrom(".block", 1, {ease: Elastic.easeOut.config(1, 0.3), scale:0, transformOrigin:"50% 50%"}, 0.125);
 
-tlBlock.staggerTo(".logo .block", 1, {ease: Elastic.easeOut, scale:1, transformOrigin:"50% 50%"}, 0.125);
+tlBlock.staggerTo(".block", 1, {ease: Elastic.easeOut.config(1, 0.3), scale:1, transformOrigin:"50% 50%"}, 0.125);
+
+tlHover.from(".block", 0.25, {ease: Power1.easeOut, x: 0, y: 0});
+tlHover.to(".block", 0.25, {ease: Power1.easeOut, x: '-1px', y: '1px'});
+tlActive.to(".block", 0.25, {ease: Power1.easeOut, x: '-0.5px', y: '0.5px'});
+
+$('.logo').on('mouseover',function(){
+	tlHover.play();
+});
+
+$('.logo').on('mouseout',function(){
+	tlHover.reverse();
+});
+
+$('.logo').on('mousedown',function(){
+	tlActive.play();
+});
+
+$('.logo').on('mouseup',function(){
+	tlActive.reverse();
+});
