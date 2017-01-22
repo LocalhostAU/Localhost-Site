@@ -98,14 +98,7 @@ section.events {
       right: 0;
       z-index:2;
 
-      @media (min-width: $screen-sm-min) {
-
-      }
-
       svg {
-        //padding: 60px;
-        //width:100%;
-        //padding:10px;
 
         .block {
           @include transition(0.2s ease-in-out all);
@@ -265,15 +258,19 @@ section.events {
       }
 
       a {
+
+
+        &:hover, &:focus {
+          color: $pastel-green;
+        }
+      }
+
+      a, .title-link {
         border-bottom:1px solid #979797;
         display:block;
         padding-right:7%;
         padding-bottom: 6.4%;
         position:relative;
-
-        &:hover, &:focus {
-          color: $pastel-green;
-        }
       }
     }
 
@@ -329,7 +326,6 @@ section.events {
 
       li {
         text-transform:uppercase;
-        //font-size: 0.6875em; // 11px
         font-size: 0.8em;
         display:flex;
 
