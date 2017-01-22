@@ -68,18 +68,18 @@ tlHover.from(".block", 0.25, {ease: Power1.easeOut, x: 0, y: 0});
 tlHover.to(".block", 0.25, {ease: Power1.easeOut, x: '-1px', y: '1px'});
 tlActive.to(".block", 0.25, {ease: Power1.easeOut, x: '-0.5px', y: '0.5px'});
 
-$('.logo').on('mouseover',function(){
+$('.logo a').on('mouseover focus',function(){
 	tlHover.play();
 });
 
-$('.logo').on('mouseout',function(){
+$('.logo a').on('mouseout focusout',function(){
 	tlHover.reverse();
 });
 
-$('.logo').on('mousedown',function(){
+$('.logo a').on('mousedown',function(){
 	tlActive.play();
 });
 
-$('.logo').on('mouseup',function(){
+$('.logo a').on('mouseup',function(){
 	tlActive.reverse();
 });
