@@ -60,9 +60,9 @@ header {
   }
 
 	.block {
-    @include transition(0.2s ease-in-out all);
-    @include transform(scale(0,0));
-    @include transform-origin(50%);
+    // @include transition(0.2s ease-in-out all);
+    // @include transform(scale(0,0));
+    // @include transform-origin(50%);
 
 		&.green {
 			fill: $pastel-green;
@@ -85,7 +85,7 @@ header {
 		}
 	}
 
-  .letters g {
+  .lines g {
   	@for $i from 1 to 10 {
   		&:nth-child(#{$i}) {
   			.line {
@@ -93,42 +93,42 @@ header {
   			}
   		}
   	}
-
-  	&.l-green .block {
-  		@include animation-delay(3.5 + (3 * 0.125s));
-  	}
-
-  	&.o-yellow .block {
-  		@include animation-delay(3.5 + (5 * 0.125s));
-  	}
-
-  	&.c-purple .block {
-  		@include animation-delay(3.5 + (6 * 0.125s));
-  	}
-
-  	&.a-orange .block {
-  		@include animation-delay(3.5 + (1 * 0.125s));
-  	}
-
-  	&.l-blue .block {
-  		@include animation-delay(3.5 + (2 * 0.125s));
-  	}
-
-  	&.h-yellow .block {
-  		@include animation-delay(3.5 + (7 * 0.125s));
-  	}
-
-  	&.o-purple .block {
-  		@include animation-delay(3.5 + (4 * 0.125s));
-  	}
-
-  	&.s-orange .block {
-  		@include animation-delay(3.5 + (1 * 0.125s));
-  	}
-
-  	&.t-green .block {
-  		@include animation-delay(3.5 + (8 * 0.125s));
-  	}
+    //
+  	// &.l-green .block {
+  	// 	@include animation-delay(3.5 + (3 * 0.125s));
+  	// }
+    //
+  	// &.o-yellow .block {
+  	// 	@include animation-delay(3.5 + (5 * 0.125s));
+  	// }
+    //
+  	// &.c-purple .block {
+  	// 	@include animation-delay(3.5 + (6 * 0.125s));
+  	// }
+    //
+  	// &.a-orange .block {
+  	// 	@include animation-delay(3.5 + (1 * 0.125s));
+  	// }
+    //
+  	// &.l-blue .block {
+  	// 	@include animation-delay(3.5 + (2 * 0.125s));
+  	// }
+    //
+  	// &.h-yellow .block {
+  	// 	@include animation-delay(3.5 + (7 * 0.125s));
+  	// }
+    //
+  	// &.o-purple .block {
+  	// 	@include animation-delay(3.5 + (4 * 0.125s));
+  	// }
+    //
+  	// &.s-orange .block {
+  	// 	@include animation-delay(3.5 + (1 * 0.125s));
+  	// }
+    //
+  	// &.t-green .block {
+  	// 	@include animation-delay(3.5 + (8 * 0.125s));
+  	// }
   }
 
   .line {
@@ -138,8 +138,8 @@ header {
   }
 
   .block {
-  	@include animation(bounceIn 1.5s linear both);
-  	@include transform-origin(50% 50%);
+  	// @include animation(bounceIn 1.5s linear both);
+  	// @include transform-origin(50% 50%);
   }
 }
 

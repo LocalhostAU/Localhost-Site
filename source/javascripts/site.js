@@ -55,3 +55,9 @@ $(window).on('scroll', function() {
       $('.mission').addClass('inview');
   }
 });
+
+var tlBlock = new TimelineMax({delay:3});
+
+tlBlock.staggerFrom(".logo .block", 1, {ease: Elastic.easeOut, scale:0, transformOrigin:"50% 50%"}, 0.125)
+
+tlBlock.staggerTo(".logo .block", 1, {ease: Elastic.easeOut, scale:1, transformOrigin:"50% 50%"}, 0.125);
