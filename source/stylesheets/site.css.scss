@@ -301,10 +301,9 @@ section.events {
         padding-right:7%;
         padding-bottom: 6.4%;
         position:relative;
+
         &:hover, &:focus {
           color: $pastel-green;
-          border: 1px solid black;
-          padding: 4px 0 4px 10px;
         }
 
       }
@@ -366,7 +365,7 @@ section.events {
 
         .date {
           width: 17%;
-          padding: 28px 0 6px;
+          padding:6px 0 6px;
 					letter-spacing:0.14em;
         }
 
@@ -378,7 +377,7 @@ section.events {
           width:83%;
           flex-grow:1;
           text-decoration:none;
-          padding:28px 0 6px;
+          padding:6px 0 6px;
 					padding-right: 12px;
           @include transition($link-transition);
         }
@@ -387,12 +386,15 @@ section.events {
     			letter-spacing: 0.13em;
           display:flex;
           position:relative;
+          margin-top:22px;
 
           &:hover, &:focus {
-            color: #000000;
+            color: #fff;
+            background: #000;
 
             span.title {
-              color: $pastel-green;
+              color: #fff;
+              border-color: #000;
             }
           }
 
