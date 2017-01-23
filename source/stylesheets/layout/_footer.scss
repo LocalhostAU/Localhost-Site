@@ -48,7 +48,7 @@ footer {
 
   .footer-logos {
     flex-grow:1;
-    padding: 1.5% 12px 1%;
+    padding: 4.5% 12px 1%;
 
     @media (min-width: $screen-sm-min) {
       //max-width: 900px;
@@ -72,12 +72,26 @@ footer {
         }
 
         @media (min-width: $screen-md-min) {
-          width:20%;
+          width:16.66666666666667%;
         }
 
         img {
-          width:100%;
+          width:50%;
           height:auto;
+          //opacity:0.5;
+          @include transition($link-transition);
+
+          @media (min-width: $screen-sm-min) {
+            width:100%;
+          }
+
+          @media (min-width: $screen-md-min) {
+            width:100%;
+          }
+
+          &:hover {
+            //opacity:0.8;
+          }
         }
       }
     }

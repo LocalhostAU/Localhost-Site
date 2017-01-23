@@ -1,19 +1,19 @@
 # humans.txt content - more information here: http://humanstxt.org/
 team:
+  - name: Patima Tantiprasut
+    role: Founder, Host, Organiser
+    contact: "@the_patima"
   - name: Corey Ginnivan
-    role: Organiser
+    role: Co-organiser
     contact: "@CoreyGinnivan"
   - name: David (DT) Thomas
-    role: Organiser
+    role: Co-organiser
     contact: "@thedavidthomas1"
-  - name: Patima Tantiprasut
-    role: Organiser
-    contact: "@the_patima"
   - name: Teegan Lincoln
-    role: Organiser
+    role: Co-organiser
     contact: "@teeganlincoln"
   - name: Urvin Seeburuth
-    role: Organiser
+    role: Photography, Videography
     contact: "@urvinseeburuth "
 
 shoutouts:
@@ -36,3 +36,4 @@ components_used:
 
 software_used:
   - Sublime Text
+  - Atom 

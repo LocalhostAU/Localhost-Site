@@ -7,9 +7,10 @@
 @import "layout/footer";
 
 @import "components/form";
+@import "components/animations";
 
 * {
-  box-sizing:border-box;
+  box-sizing: border-box;
 }
 
 ::-moz-selection {
@@ -20,6 +21,15 @@
 ::selection {
   background: $lavendar;
   color: #fff;
+}
+
+.main {
+	.internal & {
+		max-width: 1200px;
+		width:100%;
+		margin: 0 auto;
+		padding: 0 30px;
+	}
 }
 
 section.events {
@@ -80,19 +90,118 @@ section.events {
       }
     }
 
-    &:before {
-      content:"";
-      width: 46.7%;
+    .event-bits {
+      width:100%;
       display:block;
-      height:385px;
-      background: url('../images/bits-color.svg');
-      background-position: top right;
-      background-repeat: no-repeat;
-      background-size: 40% auto;
       position: absolute;
-      top: -20px;
+      left: 0;
+      right: 0;
       z-index:2;
-      right: 5px;
+
+      @media (min-width: $screen-sm-min) {
+
+      }
+
+      svg {
+        //padding: 60px;
+        //width:100%;
+        //padding:10px;
+
+        .block {
+          @include transition(0.2s ease-in-out all);
+          @include transform(scale(0,0));
+          @include transform-origin(50%);
+          @include animation(bounceIn 1.5s linear both);
+          @include transform-origin(50% 50%);
+        }
+
+        .line {
+      		fill: none;
+      		stroke: #1D1D1B;
+      		stroke-miterlimit: 10;
+      		stroke-linecap: round;
+      		stroke-linejoin: round;
+          stroke-dasharray: 1000;
+        	stroke-dashoffset: 1000;
+        	@include animation(dash 10s linear forwards);
+        }
+      }
+
+      span {
+        display:block;
+        position:absolute;
+
+        svg {
+          padding:10px;
+        }
+      }
+
+      #bit-green {
+        right: 58px;
+        margin-top: 19px;
+
+        @media (min-width: $screen-sm-min) {
+          right: 17px;
+        }
+
+        svg {
+          width: 37px;
+          height: 38px;
+        }
+
+        .line {
+          @include animation-delay(1.15s);
+        }
+
+        .block {
+          @include animation-delay(1.35s);
+        }
+      }
+
+      #bit-purple {
+        right:0;
+        margin-top: 35px;
+        right:0;
+
+        svg {
+          width: 41px;
+          height: 38px;
+        }
+
+        @media (min-width: $screen-sm-min) {
+          right: -42px;
+        }
+
+        .line {
+          @include animation-delay(0.95s);
+        }
+
+        .block {
+          @include animation-delay(1.05s);
+        }
+      }
+
+      #bit-blue {
+        margin-top: -7px;
+        right:37px;
+
+        @media (min-width: $screen-sm-min) {
+          right: -4px;
+        }
+
+        svg {
+          width: 38px;
+          height: 38px;
+        }
+
+        .line {
+          @include animation-delay(0.5s);
+        }
+
+        .block {
+          @include animation-delay(0.75s);
+        }
+      }
 
       @media (min-width: $screen-sm-min) {
         right: -5.5%;
@@ -112,8 +221,11 @@ section.events {
           letter-spacing:0.14em;
           text-transform:uppercase;
           margin-bottom: 19%;
-          padding-left: 20%;
           z-index:2;
+
+          @media (min-width: $screen-sm-min) {
+            padding-left: 20%;
+          }
         }
 
         &.weekday {
@@ -161,6 +273,8 @@ section.events {
 
         &:hover, &:focus {
           color: $pastel-green;
+          border: 1px solid black;
+          padding: 4px 0 4px 10px;
         }
       }
     }
@@ -245,9 +359,8 @@ section.events {
 
           &:hover, &:focus {
             color: $pastel-green;
-
-            //color: #fff;
-            //background: #000;
+            border: 1px solid black;
+            padding: 14px 0 10px 10px;
           }
 
           &:after {
@@ -368,29 +481,27 @@ section.mission {
   padding: 80px 30px 20px;
   position:relative;
 
+  .bit-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+
 
   @media (min-width: $screen-sm-min) {
     padding: 8.7% 30px 7.13%;
   }
 
-  &:before {
-    content:"";
+  .bits-draw {
     width:77px;
     height:76px;
-    background: url(../images/bits-t.svg);
-    background-repeat:no-repeat;
-    display:block;
     position:absolute;
     top:0;
     right:43.78%;
   }
 
-  &:after {
-    content:"";
+  .bit-draw {
     width:38px;
     height:34px;
-    background: url(../images/bits/t-line.svg);
-    background-repeat:no-repeat;
     display:block;
     position:absolute;
     bottom:0;
@@ -452,6 +563,26 @@ section.subscribe {
       letter-spacing:0.3705em;
       display:block;
       line-height:1em;
+    }
+  }
+}
+
+.inview {
+
+  &.mission {
+    .bits-draw .bit-line {
+    	@include animation(dash 10s linear forwards);
+
+      @for $i from 1 to 2 {
+  		  &:nth-child(#{$i}) {
+  				@include animation-delay($i * 1s);
+    		}
+      }
+    }
+
+    .bit-draw .bit-line {
+      @include animation(dash 10s linear forwards);
+      @include animation-delay(2s);
     }
   }
 }

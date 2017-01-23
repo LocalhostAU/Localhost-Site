@@ -25,15 +25,8 @@
   </head>
 
   <body class="<%= page_classes %> <%= current_page.data.body_classes %>">
-    <%= partial "partials/header" %>
-
-    <div class="main">
       <%= yield %>
       <%= javascript_include_tag :all %>
-
-    </div><!-- .welcome -->
-    <%= partial "partials/footer" %>
-
     <% if build? %>
       <%= partial "partials/tracking" %>
     <% end %>
