@@ -301,6 +301,12 @@ section.events {
         padding-right:7%;
         padding-bottom: 6.4%;
         position:relative;
+        &:hover, &:focus {
+          color: $pastel-green;
+          border: 1px solid black;
+          padding: 4px 0 4px 10px;
+        }
+
       }
     }
 
