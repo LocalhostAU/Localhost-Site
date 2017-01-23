@@ -64,14 +64,16 @@ meta_description: Connecting web, creative and digital communities &amp; unearth
       <ul>
           <% data.events.events.each do |event| %>
             <li>
+							<% if event.link? %><a href="<%= event.link %>" class="title"><% end %>
               <span class="date">
                 <% if event.date? %><%= event.date %><% end %>
               </span>
-              <% if event.link? %><a href="<%= event.link %>" class="title"><% else %><span class="title"><% end %><%= event.title %>
+              <span class="title"><%= event.title %>
                 <% if event.location? %>
                   <span class="location">(<%= event.location %>)</span>
                 <% end %>
-               <% if event.link? %></a><% else %></span><% end %>
+							</span>
+             <% if event.link? %></a><% end %>
             </li>
           <% end %>
       </ul>
@@ -80,18 +82,7 @@ meta_description: Connecting web, creative and digital communities &amp; unearth
 </section><!-- events section -->
 
 <section class="follow">
-  <ul class="social">
-    <li>
-      <% link_to 'https://twitter.com/localhostau' do %>
-        Twitter <span class="sm-icon"><%= image_tag 'social/logo-twitter.svg', alt: "Twitter" %></span>
-      <% end %>
-    </li>
-    <li class="meetup">
-      <% link_to 'https://www.meetup.com/web-industry-meetup/' do %>
-        Meetup <span class="sm-icon meetup"><%= image_tag 'social/logo-meetup.jpg', alt: "Meetup" %></span>
-      <% end %>
-    </li>
-  </ul>
+    <%= partial "partials/social-links" %>
 </section><!-- follow section i -->
 
 <section class="mission">
@@ -112,35 +103,3 @@ meta_description: Connecting web, creative and digital communities &amp; unearth
     </svg>
   </div>
 </section><!-- mission section -->
-
-<section class="subscribe">
-  <div class="container">
-    <h2>News.<br /> Updates. Stories.
-      <span>and sweet whispers.</span>
-    </h2>
-    <!-- Begin MailChimp Signup Form -->
-    <div id="mc_embed_signup">
-      <form action="//events.us14.list-manage.com/subscribe/post?u=7d24e0b9476a06b7262b18263&amp;id=6417baf3c2" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-        <div id="mc_embed_signup_scroll">
-          <!--<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>-->
-          <div class="mc-field-group">
-            <label class="sr-only" for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-            </label>
-            <input type="email" value="" name="EMAIL" placeholder="Enter email to subscribe to our newsletter" class="required email form-control" id="mce-EMAIL">
-          </div>
-          <div id="mce-responses" class="clear">
-            <div class="response" id="mce-error-response" style="display:none"></div>
-            <div class="response" id="mce-success-response" style="display:none"></div>
-          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_7d24e0b9476a06b7262b18263_6417baf3c2" tabindex="-1" value=""></div>
-          <div class="clear">
-            <button type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn-submit">
-              <%= partial "partials/arrow-right" %>
-              <span class="sr-only">Subscribe to our newsletter</span>
-            </button>
-          </div>
-        </div>
-      </form>
-    </div><!--End mc_embed_signup-->
-  </div><!--container -->
-</section><!-- subscribe section -->

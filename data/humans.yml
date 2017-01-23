@@ -14,7 +14,7 @@ team:
     contact: "@teeganlincoln"
   - name: Urvin Seeburuth
     role: Organiser
-    contact: "@urvinseeburuth "
+    contact: "@urvinseeburuth"
 
 shoutouts:
   - name: Bounce.js
@@ -33,6 +33,8 @@ components_used:
   - Modernizr
   - Normalize.css
   - html5shiv
+  - GreenSock
 
 software_used:
   - Sublime Text
+  - Atom

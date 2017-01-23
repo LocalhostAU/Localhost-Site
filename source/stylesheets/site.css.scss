@@ -25,10 +25,40 @@
 
 .main {
 	.internal & {
-		max-width: 1200px;
+		max-width: 1134px;
 		width:100%;
 		margin: 0 auto;
 		padding: 0 30px;
+    position:relative;
+
+    &:after {
+      content:"";
+      width: 46.7%;
+      display:block;
+      height:385px;
+      left: 12%;
+      height: 0;
+      padding-bottom: 38.8%;
+      width: 24.7%;
+      background: url('../images/zig-zag.svg'), $alabaster;
+      background-position: center calc(100% + 1px);
+      background-repeat: repeat-x;
+      background-size: auto 20px;
+      position: absolute;
+      top:1px;
+      z-index:-1;
+
+      @media (min-width: $screen-sm-min) {
+
+        top: -20px;
+      }
+    }
+
+    .column-content {
+      @media (min-width: $screen-sm-min) {
+        padding-left: 45.3%;
+      }
+    }
 	}
 }
 
@@ -327,7 +357,6 @@ section.events {
       li {
         text-transform:uppercase;
         font-size: 0.8em;
-        display:flex;
 
         .date {
           width: 17%;
@@ -335,8 +364,7 @@ section.events {
 					letter-spacing:0.14em;
         }
 
-        .title {
-          position:relative;
+        span.title {
           display:block;
           border-bottom:1px solid #979797;
           color: #000000;
@@ -345,17 +373,21 @@ section.events {
           flex-grow:1;
           text-decoration:none;
           padding:28px 0 6px;
+					padding-right: 12px;
+          @include transition($link-transition);
         }
 
         a.title {
-					padding-right: 12px;
     			letter-spacing: 0.13em;
+          display:flex;
+          position:relative;
 
           &:hover, &:focus {
-            color: $pastel-green;
+            color: #000000;
 
-            //color: #fff;
-            //background: #000;
+            span.title {
+              color: $pastel-green;
+            }
           }
 
           &:after {
@@ -578,6 +610,60 @@ section.subscribe {
     .bit-draw .bit-line {
       @include animation(dash 10s linear forwards);
       @include animation-delay(2s);
+    }
+  }
+}
+
+.your-team {
+  margin-top: 15.4%;
+  position: relative;
+
+  h2 {
+    letter-spacing: 0.175em;
+
+    @media (min-width: $screen-sm-min) {
+      position: absolute;
+      top: 10.4%;
+      left: 0;
+    }
+  }
+
+  .profiles {
+    border:2px solid #000;
+
+    @media (min-width: $screen-sm-min) {
+      margin-right: -1.5%;
+      margin-left: 19.9%;
+      padding-left:14%;
+      min-height:444px;
+    }
+
+    .row {
+      display:flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profile {
+      text-align:center;
+      padding: 15px;
+
+      @media (min-width: $screen-sm-min) {
+        padding: 60px;
+      }
+
+      .caption {
+        h3 {
+          text-transform:none;
+          font-weight: normal;
+          margin:0;
+        }
+
+        p {
+          color: #888;
+        }
+      }
     }
   }
 }
