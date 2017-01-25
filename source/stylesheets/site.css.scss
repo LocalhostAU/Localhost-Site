@@ -661,6 +661,12 @@ section.subscribe {
         padding: 60px;
       }
 
+
+      .image img {
+        width:100%;
+        max-width: 90px;
+      }
+
       .caption {
         h3 {
           text-transform:none;

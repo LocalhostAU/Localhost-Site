@@ -44,7 +44,9 @@ configure :build do
 end
 
 activate :blog do |blog|
-  # set options on blog
+  blog.prefix = "blog"
+  blog.layout = "blog"
+  blog.permalink = "{year}/{title}.html"
 end
 
 configure :production do

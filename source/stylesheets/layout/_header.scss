@@ -39,6 +39,13 @@ header {
 
 // Logo Animation
 
+.wf-loading {
+  .logo .block {
+    //@include transform(scale(0,0));
+    //@include transform-origin(50%);
+  }
+}
+
 .logo {
 
   a {
@@ -61,8 +68,6 @@ header {
 
 	.block {
     // @include transition(0.2s ease-in-out all);
-    // @include transform(scale(0,0));
-    // @include transform-origin(50%);
 
 		&.green {
 			fill: $pastel-green;
