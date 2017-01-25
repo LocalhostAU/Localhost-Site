@@ -23,6 +23,6 @@ pages:
   - bundle exec middleman build
   artifacts:
     paths:
-    - public
+    - build
   only:
   - master
