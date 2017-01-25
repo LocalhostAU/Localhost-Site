@@ -23,6 +23,9 @@ deploy_staging:
   stage: deploy
   script:
     - echo "Deploy to staging server"
+    - apt-get update -yqqq
+    - apt-get install -y nodejs
+    - bundle install --path vendor
     - bundle exec middleman build -e staging
     - pip install awscli
     - aws s3 rm s3://staging.localhost.events --recursive
