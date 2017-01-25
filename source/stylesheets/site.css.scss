@@ -638,19 +638,25 @@ section.subscribe {
 
   .profiles {
     border:2px solid #000;
+		padding: 20px 20px 0 20px;
 
     @media (min-width: $screen-sm-min) {
       margin-right: -1.5%;
       margin-left: 19.9%;
-      padding-left:14%;
+      padding-left:15%;
       min-height:444px;
+			padding: 48px 20px 0 20px;
     }
 
     .row {
       display:flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
+
+			@media (min-width: $screen-sm-min) {
+      	flex-direction: row;
+			}
     }
 
     .profile {
@@ -658,7 +664,7 @@ section.subscribe {
       padding: 15px;
 
       @media (min-width: $screen-sm-min) {
-        padding: 60px;
+				padding: 0 55px 30px;
       }
 
 
@@ -667,11 +673,14 @@ section.subscribe {
         max-width: 90px;
       }
 
-      .caption {
+			.caption {
+		    padding-top: 10px;
+
         h3 {
           text-transform:none;
           font-weight: normal;
           margin:0;
+					font-size: 1.5em;
         }
 
         p {
