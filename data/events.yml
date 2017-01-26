@@ -9,6 +9,14 @@ nextevent:
   link: https://www.meetup.com/web-industry-meetup/events/236333320/
 
 events:
+  - title: Big Data (Next Gen Hadoop) Ingest and Transform
+    location: MEL
+    date: Mon 30
+    link: https://www.meetup.com/en-AU/Big-Data-Next-Gen-Hadoop-Ingest-Transform-Melbourne/events/237058528/
+  - title: Tech Talks @ Pivotal Labs
+    location: SYD
+    date: Tues 31
+    link: https://www.meetup.com/PivotalSydney-Tech-Talks/events/235721025/
   - title: SydCSS February
     location: SYD
     date: Thu 02

@@ -5,14 +5,17 @@ meta_description: Connecting web, creative and digital communities &amp; unearth
 noindex: true
 ---
 
+# Blog
+
 
 <% blog.articles.each do |article| %>
   <article>
-    <h1>
+    <h2>
       <a href="<%= article.url %>"><%= article.title %></a>
-      <time><%= article.date.strftime('%b %e %Y') %></time>
-    </h1>
+    </h2>
 
+    <time><%= article.date.strftime('%b %e %Y') %></time>
+    <% if article.data.image? %><img src="<%= article.data.image %>" /><% end %>
     <%= article.summary %>
 
     <a href="<%= article.url %>">Read more</a>

@@ -24,42 +24,49 @@
 }
 
 .main {
-	.internal & {
-		max-width: 1134px;
-		width:100%;
-		margin: 0 auto;
-		padding: 0 30px;
-    position:relative;
+	max-width: 1134px;
+	width:100%;
+	margin: 0 auto;
+	padding: 0 30px;
+  position:relative;
+
+  &:after {
+    content:"";
+    width: 46.7%;
+    display:block;
+    height:385px;
+    left: 12%;
+    height: 0;
+    padding-bottom: 38.8%;
+    width: 24.7%;
+    background: url('../images/zig-zag.svg'), $alabaster;
+    background-position: center calc(100% + 1px);
+    background-repeat: repeat-x;
+    background-size: auto 20px;
+    position: absolute;
+    top:1px;
+    z-index:-1;
+
+    @media (min-width: $screen-sm-min) {
+
+      top: -20px;
+    }
+  }
+
+  .column-content {
+    @media (min-width: $screen-sm-min) {
+      padding-left: 45.3%;
+    }
+  }
+
+
+  .home & {
+    max-width:100%;
 
     &:after {
-      content:"";
-      width: 46.7%;
-      display:block;
-      height:385px;
-      left: 12%;
-      height: 0;
-      padding-bottom: 38.8%;
-      width: 24.7%;
-      background: url('../images/zig-zag.svg'), $alabaster;
-      background-position: center calc(100% + 1px);
-      background-repeat: repeat-x;
-      background-size: auto 20px;
-      position: absolute;
-      top:1px;
-      z-index:-1;
-
-      @media (min-width: $screen-sm-min) {
-
-        top: -20px;
-      }
+      content:none;
     }
-
-    .column-content {
-      @media (min-width: $screen-sm-min) {
-        padding-left: 45.3%;
-      }
-    }
-	}
+  }
 }
 
 section.events {
@@ -461,27 +468,15 @@ section.follow {
     margin: 0px 4.1%;
 
     img {
-      width: 100%;
-      height:auto;
+      height: 100%;
+      width: auto;
     }
 
     .sm-icon {
       display:inline-block;
-      width: 51px;
-      padding: 8px 0 0 16px;
+      height: 39px;
+      padding: 0 0 0 13px;
       float:right;
-    }
-
-    &.meetup {
-      .sm-icon {
-        padding: 1px 0 0 11px;
-        width: 52px;
-
-        &:after {
-          right: -1px;
-          top: 1px;
-        }
-      }
     }
 
     a {
@@ -492,12 +487,11 @@ section.follow {
       letter-spacing: 0.18em;
       line-height:2.05em; //41px;
 
-      span {
-
+      .sm-icon {
         position:relative;
 
         &:after {
-          content:"";
+          //content:"";
           position:absolute;
           top: 0px;
           right: -7px;
@@ -628,24 +622,26 @@ section.subscribe {
 
   h2 {
     letter-spacing: 0.175em;
+    margin-bottom: -0.5em;
 
     @media (min-width: $screen-sm-min) {
       position: absolute;
       top: 10.4%;
       left: 0;
+      margin-bottom: 15px;
     }
   }
 
   .profiles {
     border:2px solid #000;
 		padding: 20px 20px 0 20px;
+    margin: 0 30px;
 
     @media (min-width: $screen-sm-min) {
       margin-right: -1.5%;
       margin-left: 19.9%;
-      padding-left:15%;
+			padding: 48px 20px 0 15%;
       min-height:444px;
-			padding: 48px 20px 0 20px;
     }
 
     .row {
@@ -670,7 +666,10 @@ section.subscribe {
 
       .image img {
         width:100%;
-        max-width: 90px;
+
+        @media (min-width: $screen-sm-min) {
+          max-width: 90px;
+        }
       }
 
 			.caption {

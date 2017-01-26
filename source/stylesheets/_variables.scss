@@ -65,6 +65,17 @@ $link-transition: 0.2s ease-in-out all;
   animation-delay: #{$str};
 }
 
+@mixin sr-only {
+	position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+  border: 0;
+}
+
 // Type
 $font-size-h1:2.85714285714286em; //40px
 $font-size-h2:1.57142857142857em; //22px
