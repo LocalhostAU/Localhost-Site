@@ -3,9 +3,9 @@ title: Example Article
 date: 2017-01-25
 tags: example
 image: /images/blog/jan-event.jpg
+leadParagraph: Localhost is a meetup designed to connect web, creative and digital communities, unearthing local talent across Australia. Prior to it’s inception, Localhost was formerly known as Port80, a community meetup that ran monthly in Perth for 15 years.
+layout: blog-post
 ---
-
-<p class="lead-paragraph">Localhost is a meetup designed to connect web, creative and digital communities, unearthing local talent across Australia. Prior to it’s inception, Localhost was formerly known as Port80, a community meetup that ran monthly in Perth for 15 years.</p>
 
 Localhost is a meetup designed to connect web, creative and digital communities, unearthing local talent across Australia. Prior to it’s inception, Localhost was formerly known as Port80, a community meetup that ran monthly in Perth for 15 years.
 
@@ -20,3 +20,7 @@ Talks will be recorded and published soon after the event/s to enable reflection
 The slides from the launch event held in Perth, 19th January 2017 are available for viewing and comments via slides.com.
 
 \* Stage one will include Perth, Sydney and Melbourne as the deployment locations, with the goal to expand out to more … “branches” in future.
+
+<div class="image">
+  <img src="/images/blog/jan-event.jpg" title="Example Blog" />
+</div>

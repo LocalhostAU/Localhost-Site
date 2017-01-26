@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <title><%= current_page.data.title || "Middleman" %></title>
+    <meta content="<%= current_page.data.meta_description %>" name="description"/>
+
+    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#74de7d">
+    <meta name="theme-color" content="#ffffff">
+
+    <script src="https://use.typekit.net/wze4wrh.js"></script>
+    <script>try{Typekit.load({ async: true });}catch(e){}</script>
+
+    <%= stylesheet_link_tag :site %>
+  </head>
+
+  <body class="<%= page_classes %> <%= current_page.data.body_classes %>">
+    <%= partial "partials/header-internal" %>
+
+    <div class="main">
+      <h1><span>Blog</span></h1>
+
+      <article>
+        <div class="article-header">
+          <h1>
+            <%= current_page.data.title %>
+          </h1>
+
+          <% if current_page.data.image? %>
+            <div class="image">
+              <img src="<%= current_page.data.image %>" alt="<%= current_page.data.title %>" />
+            </div>
+          <% end %>
+
+          <time><%= current_page.data.date.strftime('%d.%m.%Y') %></time>
+
+          <% if current_page.data.leadParagraph? %>
+            <p class="lead-paragraph"><%= current_page.data.leadParagraph %></p>
+          <% end %>
+        </div>
+        <div class="article-body">
+          <%= yield %>
+        </div>
+      </article>
+    </div><!-- .main -->
+
+    <div class="pagination">
+      <ul>
+        <li><a href="">Previous Post</a></li>
+        <li><a href="">Next Post</a></li>
+      </ul>
+    </div>
+
+    <%= partial "partials/subscription-form" %>
+    <%= partial "partials/footer" %>
+
+    <% if build? %>
+      <%= partial "partials/tracking" %>
+    <% end %>
+
+    <%= javascript_include_tag('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js') %>
+    <%= javascript_include_tag('https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/TweenMax-latest-beta.js') %>
+    <%= javascript_include_tag('site.js') %>
+  </body>
+</html>
