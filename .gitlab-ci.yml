@@ -50,6 +50,7 @@ build_prod:
 
 deploy_prod:
   stage: deploy
+  image: python:latest
   script:
     - echo "Deploy to production server"
     - pip install awscli
