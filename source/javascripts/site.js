@@ -32,26 +32,49 @@ $(document).ready(function(){
        $('section.mission').addClass('inview');
     }
   });
-
-
 });
 
-$(function() {
-  if ($('.mission').is(':visible')) {
-    //$('.mission').addClass('red');
-  }
-});
 $(window).on('scroll', function() {
   var $elem = $('.mission');
-  var $window = $(window);
 
-  var docViewTop = $window.scrollTop();
-  var docViewBottom = docViewTop + $window.height();
-  var elemTop = (($elem.offset().top) - ($window.height()/2));
-  var elemBottom = elemTop + $elem.height();
+  if ($elem.length) {
+    var $window = $(window);
 
-  if (elemTop <= docViewTop) {
-      //alert('hi');
+    var docViewTop = $window.scrollTop();
+    var docViewBottom = docViewTop + $window.height();
+    var elemTop = (($elem.offset().top) - ($window.height()/2));
+    var elemBottom = elemTop + $elem.height();
+
+    if (elemTop <= docViewTop) {
       $('.mission').addClass('inview');
+    }
   }
+});
+
+var tlBlock = new TimelineMax({delay:3}),
+	  tlHover = new TimelineMax({paused:true}),
+	  tlActive = new TimelineMax({paused:true});
+
+tlBlock.staggerFrom(".block", 1, {ease: Elastic.easeOut.config(1, 0.3), scale:0, transformOrigin:"50% 50%"}, 0.125);
+
+tlBlock.staggerTo(".block", 1, {ease: Elastic.easeOut.config(1, 0.3), scale:1, transformOrigin:"50% 50%"}, 0.125);
+
+tlHover.from(".block", 0.25, {ease: Power1.easeOut, x: 0, y: 0});
+tlHover.to(".block", 0.25, {ease: Power1.easeOut, x: '-1px', y: '1px'});
+tlActive.to(".block", 0.25, {ease: Power1.easeOut, x: '-0.5px', y: '0.5px'});
+
+$('.logo a').on('mouseover focus',function(){
+	tlHover.play();
+});
+
+$('.logo a').on('mouseout focusout',function(){
+	tlHover.reverse();
+});
+
+$('.logo a').on('mousedown',function(){
+	tlActive.play();
+});
+
+$('.logo a').on('mouseup',function(){
+	tlActive.reverse();
 });

@@ -1,0 +1,23 @@
+---
+title: Blog
+body_classes: blog
+meta_description: Connecting web, creative and digital communities &amp; unearthing local talent across Australia.
+noindex: true
+---
+
+# Blog
+
+
+<% blog.articles.each do |article| %>
+  <article>
+    <h2>
+      <a href="<%= article.url %>"><%= article.title %></a>
+    </h2>
+
+    <time><%= article.date.strftime('%b %e %Y') %></time>
+    <% if article.data.image? %><img src="<%= article.data.image %>" /><% end %>
+    <%= article.summary %>
+
+    <a href="<%= article.url %>">Read more</a>
+  </article>
+<% end %>
