@@ -1,5 +1,5 @@
 ---
-title: Localhost - the supercharged meetup for Australian designers and developers
+title: Localhost - The supercharged meetup for Australian designers and developers
 body_classes: home
 meta_description: Connecting web, creative and digital communities &amp; unearthing local talent across Australia.
 layout: home
@@ -43,7 +43,7 @@ layout: home
 
       <h2 class="title">
         <% if data.events.nextevent.link? %>
-          <a href="<%= data.events.nextevent.link %>" title="Find out about <%= data.events.nextevent.title %>">
+          <a href="<%= data.events.nextevent.link %>" title="Find out about <%= data.events.nextevent.title %>" target="_blank">
         <% else %>
           <span class="title-link">
         <% end %>
@@ -66,7 +66,7 @@ layout: home
       <ul>
           <% data.events.events.each do |event| %>
             <li>
-							<% if event.link? %><a href="<%= event.link %>" class="title"><% end %>
+							<% if event.link? %><a href="<%= event.link %>" class="title" target="_blank"><% end %>
               <span class="date">
                 <% if event.date? %><%= event.date %><% end %>
               </span>
