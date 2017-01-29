@@ -53,7 +53,8 @@ footer {
 
   .footer-logos {
     flex-grow:1;
-    padding: 4.5% 12px 1%;
+    // padding: 4.5% 12px 1%;
+    padding: 40px 20px 10px;
 
     @media (min-width: $screen-sm-min) {
       //max-width: 900px;
@@ -103,21 +104,22 @@ footer {
   }
 
   .footer-left {
-    font-size:1.25em; //20px;
     text-transform:uppercase;
-    line-height:1em;
     padding:0;
-    letter-spacing: 0.185em;
     text-align:center;
 
     p {
       margin-bottom:0;
+	    line-height:1em;
+	    font-size:1.25em; //20px;
+	    letter-spacing: 0.185em;
     }
 
     @media (min-width: $screen-sm-min) {
       width: 33%;
       text-align:right;
-      padding: 3.8% 24px;
+      //padding: 3.8% 24px;
+			padding: 55px 25px 25px;
     }
 
     @media (min-width: $screen-md-min) {
@@ -127,7 +129,8 @@ footer {
 
   .footer-links {
     font-size:0.875em; //14px;
-    padding: 1.5% 23px 1%;
+    //padding: 1.5% 23px 1%;
+    padding: 22px 25px 12px;
     text-align:center;
 
     @media (min-width: $screen-sm-min) {
