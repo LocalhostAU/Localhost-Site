@@ -46,7 +46,7 @@ end
 activate :blog do |blog|
   blog.prefix = "blog"
   blog.layout = "blog"
-  blog.permalink = "{year}/{title}.html"
+  blog.permalink = "{year}/{month}/{title}.html"
 end
 
 configure :production do
