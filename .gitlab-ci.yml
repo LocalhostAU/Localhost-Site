@@ -34,7 +34,7 @@ deploy_staging:
   only:
   - staging
 
-  deploy_prod:
+build_prod:
   stage: build
   image: ruby:2.3
   script:
