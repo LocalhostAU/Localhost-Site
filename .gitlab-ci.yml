@@ -1,0 +1,64 @@
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+  - vendor
+
+build_staging:
+  stage: build
+  image: ruby:2.3
+  script:
+  - apt-get update -yqqq
+  - apt-get install -y nodejs
+  - bundle install --path vendor
+  - bundle exec middleman build -e staging
+  artifacts:
+    paths:
+    - build
+  only:
+    - staging
+
+deploy_staging:
+  stage: deploy
+  image: python:latest
+  script:
+    - echo "Deploy to staging server"
+    - pip install awscli
+    - aws s3 rm s3://staging.localhost.events --recursive
+    - aws s3 sync build s3://staging.localhost.events --acl public-read --cache-control "public, max-age=86400"
+  environment:
+    name: staging
+    url: http://staging.localhost.events.s3-website-ap-southeast-2.amazonaws.com
+  only:
+  - staging
+
+build_prod:
+  stage: build
+  image: ruby:2.3
+  script:
+  - apt-get update -yqqq
+  - apt-get install -y nodejs
+  - bundle install --path vendor
+  - bundle exec middleman build -e production
+  artifacts:
+    paths:
+    - build
+  only:
+    - master
+
+deploy_prod:
+  stage: deploy
+  image: python:latest
+  script:
+    - echo "Deploy to production server"
+    - pip install awscli
+    - aws s3 rm s3://localhost.events --recursive
+    - aws s3 sync build s3://localhost.events --acl public-read --cache-control "public, max-age=86400"
+  environment:
+    name: production
+    url: https://localhost.events
+  when: manual
+  only:
+  - master

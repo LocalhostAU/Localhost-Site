@@ -28,9 +28,39 @@
     <%= partial "partials/header-internal" %>
 
     <div class="main">
-      <%= yield %>
+      <h1><span>Blog</span></h1>
 
-   </div><!-- .welcome -->
+      <article>
+        <div class="article-header">
+          <h1>
+            <%= current_page.data.title %>
+          </h1>
+
+          <% if current_page.data.image? %>
+            <div class="image">
+              <img src="<%= current_page.data.image %>" alt="<%= current_page.data.title %>" />
+            </div>
+          <% end %>
+
+          <time><%= current_page.data.date.strftime('%d.%m.%Y') %></time>
+
+          <% if current_page.data.leadParagraph? %>
+            <p class="lead-paragraph"><%= current_page.data.leadParagraph %></p>
+          <% end %>
+        </div>
+        <div class="article-body">
+          <%= yield %>
+        </div>
+      </article>
+    </div><!-- .main -->
+
+    <div class="pagination">
+      <ul>
+        <li><a href="">Previous Post</a></li>
+        <li><a href="">Next Post</a></li>
+      </ul>
+    </div>
+
     <%= partial "partials/subscription-form" %>
     <%= partial "partials/footer" %>
 
