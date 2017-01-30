@@ -154,18 +154,17 @@ header {
 }
 
 
-.wf-loading {
-  .logo .block {
-    //@include transform(scale(0,0));
-    //@include transform-origin(50%);
-    opacity:0;
-  }
-}
+// .wf-loading {
+//   .logo .block {
+//     //@include transform(scale(0,0));
+//     //@include transform-origin(50%);
+//     opacity:0;
+//   }
+// }
 
-.wf-active {
   .logo .line {
   	@include animation(dash 10s linear forwards);
   }
-}
+
 
 // ------
