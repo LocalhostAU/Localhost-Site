@@ -153,18 +153,15 @@ header {
   }
 }
 
+ .logo .block {
+  visibility:hidden;
+}
 
-// .wf-loading {
-//   .logo .block {
-//     //@include transform(scale(0,0));
-//     //@include transform-origin(50%);
-//     opacity:0;
-//   }
-// }
 
+.js {
   .logo .line {
   	@include animation(dash 10s linear forwards);
   }
-
+}
 
 // ------

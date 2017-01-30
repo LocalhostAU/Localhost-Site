@@ -54,7 +54,7 @@ $(window).on('scroll', function() {
 var tlBlock = new TimelineMax({delay:3}),
 	  tlHover = new TimelineMax({paused:true}),
 	  tlActive = new TimelineMax({paused:true});
-
+TweenLite.set(".block", {visibility:"visible"});
 tlBlock.staggerFrom(".block", 1, {ease: Elastic.easeOut.config(1, 0.3), scale:0, transformOrigin:"50% 50%"}, 0.125);
 
 tlBlock.staggerTo(".block", 1, {ease: Elastic.easeOut.config(1, 0.3), scale:1, transformOrigin:"50% 50%"}, 0.125);
