@@ -85,7 +85,8 @@ var animateInit = new TimelineMax({paused:true, delay: 0}),
 
 TweenLite.set('.block', { css: { scale: 0, transformOrigin: "50% 50%", left:0, bottom:0 } });
 
-animateInit.staggerTo(".block", 1, {ease: Elastic.easeOut.config(1, 0.3), scale:1, transformOrigin:"50% 50%"}, 0.125).staggerTo(".block", 1, {ease: Elastic.easeIn.config(1, 0.3), scale:0, transformOrigin:"50% 50%"}, 0.125);
+animateInit.staggerTo(".block", 1, {ease: Elastic.easeOut.config(1, 0.3), scale:1, transformOrigin:"50% 50%"}, 0.125)
+  .staggerTo(".block", 1, {ease: Elastic.easeIn.config(1, 0.3), scale:0, transformOrigin:"50% 50%"}, 0.125);
 
 animateOn.staggerTo(".block", 1, {ease: Elastic.easeOut.config(1, 0.3), scale:1, transformOrigin:"50% 50%"}, 0.125);
 
@@ -103,6 +104,6 @@ $('.logo a').on('mouseout focusout',function(){
 });
 
 
-$(".line").on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(e){
+$(".line-12").on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(e){
     animateInit.play();
  });

@@ -152,21 +152,11 @@ header {
   }
 
   .line {
-  	stroke-dasharray: 1000;
-  	stroke-dashoffset: 1000;
+  	stroke-dasharray: 100;
+  	stroke-dashoffset: 100;
   }
 }
 
-
-// .wf-loading {
-//   .logo .block {
-//     //@include transform(scale(0,0));
-//     //@include transform-origin(50%);
-//     opacity:0;
-//   }
-// }
-
-
-  .logo .line {
-  	@include animation(dash 10s linear forwards);
-  }
+.logo .line {
+	@include animation(dash 1s linear forwards);
+}
