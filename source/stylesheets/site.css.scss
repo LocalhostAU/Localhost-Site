@@ -24,7 +24,7 @@
 }
 
 .main {
-	max-width: 1134px;
+	max-width: 1268px;
 	width:100%;
 	margin: 0 auto;
 	padding: 0 30px;
@@ -555,15 +555,21 @@ section.mission {
   }
 
   .brand-pink {
-    color: $burnt-sienna;
+    border-bottom: 4px solid $burnt-sienna;
+		line-height:1.1em;
+		display:inline-block;
   }
 
   .brand-blue {
-    color: $malibu;
+    border-bottom: 4px solid $malibu;
+		line-height:1.1em;
+		display:inline-block;
   }
 
   .brand-green {
-    color: $pastel-green;
+    border-bottom: 4px solid $pastel-green;
+		line-height:1.1em;
+		display:inline-block;
   }
 }
 
