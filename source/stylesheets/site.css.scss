@@ -105,7 +105,7 @@ section.events {
 
   .upcoming-event {
     position:relative;
-    padding-left: 12.5%;
+    padding-left: 10.5%;
     padding-top: 1.3%;
 
     &:after {
@@ -136,6 +136,7 @@ section.events {
       left: 0;
       right: 0;
       z-index:2;
+
 
       svg {
 
@@ -250,7 +251,7 @@ section.events {
 
         &.month {
           font-size:2.5em; // 40px
-          letter-spacing:0.14em;
+          letter-spacing:0.12em;
           text-transform:uppercase;
           margin-bottom: 19%;
           z-index:2;
@@ -284,9 +285,9 @@ section.events {
     h2.title {
       font-size:1.5em; // 24px
       font-weight:normal;
-      margin-top: -22.8%;
+      margin-top: -18.8%;
 			letter-spacing: 0em;
-      padding: 0 0 0 32.8%;
+      padding: 0 0 0 38.8%;
       position:relative;
       z-index:3;
       line-height:1.4em;
@@ -312,7 +313,9 @@ section.events {
         position:relative;
 
         &:hover, &:focus {
-          color: $pastel-green;
+          color: $malibu;
+          border: 1px solid $malibu;
+          padding: 10px 10px 15px 10px;
         }
 
       }
@@ -320,7 +323,7 @@ section.events {
 
     .speaker {
       text-transform:uppercase;
-      padding-left: 33.4%;
+      padding-left: 38.8%;
       //font-size:0.6875em; //11px
       font-size: 0.8em;
       //font-size:13px;
@@ -336,7 +339,7 @@ section.events {
     .location {
       font-size:0.6875em; //11px
       text-transform:uppercase;
-      margin-left:33.4%;
+      margin-left:38.8%;
 			font-weight:bold;
       line-height:14px;
       color: $burnt-sienna;
@@ -383,11 +386,12 @@ section.events {
           border-bottom:1px solid #979797;
           color: #000000;
           letter-spacing: 1.57px;
+          line-height: 1.3em;
           width:83%;
           flex-grow:1;
           text-decoration:none;
-          padding:6px 0 6px;
-					padding-right: 12px;
+          padding:6px 0 14px 6px;
+					//padding-right: 12px;
           @include transition($link-transition);
         }
 
@@ -398,12 +402,14 @@ section.events {
           margin-top:22px;
 
           &:hover, &:focus {
-            color: #fff;
-            background: #000;
+            color: $lavendar;
+            border: 1px solid $lavendar;
+            padding: 10px 10px 0 10px;
+            //font-weight:bold;
 
             span.title {
-              color: #fff;
-              border-color: #000;
+              color: $lavendar;
+              border: none;
             }
           }
 
