@@ -3,6 +3,8 @@ header {
   display:flex;
   justify-content: space-between;
   flex-direction:column;
+  flex-direction:row;
+  flex-wrap: wrap;
   max-width: 1318px;
   margin: 0 auto;
 
@@ -23,8 +25,11 @@ header {
   }
 
   > .logo {
-    max-width: 348px;
   	width:100%;
+
+    @media (min-width: $screen-sm-min) {
+      max-width: 348px;
+    }
 
     svg {
       width:100%;
@@ -51,6 +56,14 @@ header {
       left: 50%;
       max-width: 718px;
       @include transform(translateX(-50%));
+    }
+  }
+
+  .follow {
+    width:100%;
+
+    @media (min-width: $screen-sm-min) {
+      width:auto;
     }
   }
 
@@ -119,6 +132,7 @@ header {
 
 	.block {
     // @include transition(0.2s ease-in-out all);
+    visibility: hidden;
 
 		&.green {
 			fill: $pastel-green;
