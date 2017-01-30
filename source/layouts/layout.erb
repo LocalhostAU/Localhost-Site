@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="no-js">
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -20,11 +20,12 @@
 
     <script src="https://use.typekit.net/wze4wrh.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
     <%= stylesheet_link_tag :site %>
   </head>
 
-  <body class="<%= page_classes %> <%= current_page.data.body_classes %>">
+  <body class=" <%= page_classes %> <%= current_page.data.body_classes %>">
+  <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
+</script>
     <%= partial "partials/header-internal" %>
 
     <div class="main">
