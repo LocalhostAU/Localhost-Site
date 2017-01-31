@@ -1,23 +1,23 @@
 // This is where it all goes :)
 $(window).scroll(function(){
-	$introHeight = $('header').height() * 2;
-	$scrolled = $(window).scrollTop();
+  $introHeight = $('header').height() * 2;
+  $scrolled = $(window).scrollTop();
 
-	//$("header .logo").css("opacity", 1 - $scrolled / $introHeight);
-	$("header .logo").css("top", -($scrolled * 0.25));
-	$(".event-bits #bit-blue").css("top", -($scrolled * 0.04));
-	$(".event-bits #bit-green").css("top", -($scrolled * 0.035));
-	$(".event-bits #bit-purple").css("top", -($scrolled * 0.025));
-	//$(".date .month").css("margin-bottom", (60 + ($scrolled * 0.035)));
-	//$(".date .day").css("top", (-($scrolled * 0.05)));
-	//$(".date .weekday").css("top", (-($scrolled * 0.05)));
-	//$("#mc_embed_signup").css("padding-top", (0 + ($scrolled * 0.05)));
+  //$("header .logo").css("opacity", 1 - $scrolled / $introHeight);
+  $("header .logo").css("top", -($scrolled * 0.25));
+  $(".event-bits #bit-blue").css("top", -($scrolled * 0.04));
+  $(".event-bits #bit-green").css("top", -($scrolled * 0.035));
+  $(".event-bits #bit-purple").css("top", -($scrolled * 0.025));
+  //$(".date .month").css("margin-bottom", (60 + ($scrolled * 0.035)));
+  //$(".date .day").css("top", (-($scrolled * 0.05)));
+  //$(".date .weekday").css("top", (-($scrolled * 0.05)));
+  //$("#mc_embed_signup").css("padding-top", (0 + ($scrolled * 0.05)));
 
-	if ($scrolled >= $introHeight) {
-		//$('#header').addClass('sm-nav');
-	} else if ($scrolled < $introHeight) {
-		//$('#header').removeClass('sm-nav');
-	}
+  if ($scrolled >= $introHeight) {
+    //$('#header').addClass('sm-nav');
+  } else if ($scrolled < $introHeight) {
+    //$('#header').removeClass('sm-nav');
+  }
 });
 
 $(document).ready(function(){
@@ -64,15 +64,15 @@ animateOn.staggerTo(".block", 1, {ease: Elastic.easeOut.config(1, 0.3), scale:1,
 
 $('.logo a').on('mouseover focus',function(){
 
-	if(animateInit.progress() === 1){
-		animateOn.play();
-	}
+  if(animateInit.progress() === 1){
+    animateOn.play();
+  }
 });
 
 $('.logo a').on('mouseout focusout',function(){
-	if(animateInit.progress() === 1){
-		animateOn.reverse();
-	}
+  if(animateInit.progress() === 1){
+    animateOn.reverse();
+  }
 });
 
 
