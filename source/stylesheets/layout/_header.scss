@@ -171,10 +171,14 @@ header {
   }
 }
 
-.logo .line {
-	@include animation(dash 1s linear forwards);
-}
+
 
  .logo .block {
   visibility:hidden;
+}
+
+
+
+.logo .line {
+	@include animation(dash 1s linear forwards);
 }

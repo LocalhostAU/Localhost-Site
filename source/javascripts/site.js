@@ -51,39 +51,11 @@ $(window).on('scroll', function() {
   }
 });
 
-// var tlBlock = new TimelineMax({delay:3}),
-// 	  tlHover = new TimelineMax({paused:true}),
-// 	  tlActive = new TimelineMax({paused:true});
-//
-// tlBlock.staggerFrom(".block", 1, {ease: Elastic.easeOut.config(1, 0.3), scale:0, transformOrigin:"50% 50%"}, 0.125);
-//
-// tlBlock.staggerTo(".block", 1, {ease: Elastic.easeOut.config(1, 0.3), scale:1, transformOrigin:"50% 50%"}, 0.125);
-//
-// tlHover.from(".block", 0.25, {ease: Power1.easeOut, x: 0, y: 0});
-// tlHover.to(".block", 0.25, {ease: Power1.easeOut, x: '-1px', y: '1px'});
-// tlActive.to(".block", 0.25, {ease: Power1.easeOut, x: '-0.5px', y: '0.5px'});
-//
-// $('.logo a').on('mouseover focus',function(){
-// 	tlHover.play();
-// });
-//
-// $('.logo a').on('mouseout focusout',function(){
-// 	tlHover.reverse();
-// });
-//
-// $('.logo a').on('mousedown',function(){
-// 	tlActive.play();
-// });
-//
-// $('.logo a').on('mouseup',function(){
-// 	tlActive.reverse();
-// });
 
-var animateInit = new TimelineMax({paused:true, delay: 0}),
-    animateOn = new TimelineMax({paused:true}),
-	  animateOff = new TimelineMax({paused:true});
+
 
 TweenLite.set('.block', { css: { visibility:"visible", scale: 0, transformOrigin: "50% 50%", left:0, bottom:0 } });
+
 
 animateInit.staggerTo(".block", 1, {ease: Elastic.easeOut.config(1, 0.3), scale:1, transformOrigin:"50% 50%"}, 0.125)
   .staggerTo(".block", 1, {ease: Elastic.easeIn.config(1, 0.3), scale:0, transformOrigin:"50% 50%"}, 0.125);
