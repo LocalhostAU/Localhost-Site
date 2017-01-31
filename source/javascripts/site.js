@@ -51,7 +51,6 @@ $(window).on('scroll', function() {
   }
 });
 
-<<<<<<< HEAD
 // var tlBlock = new TimelineMax({delay:3}),
 // 	  tlHover = new TimelineMax({paused:true}),
 // 	  tlActive = new TimelineMax({paused:true});

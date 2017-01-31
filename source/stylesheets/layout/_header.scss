@@ -171,21 +171,10 @@ header {
   }
 }
 
-<<<<<<< HEAD
 .logo .line {
 	@include animation(dash 1s linear forwards);
 }
-=======
+
  .logo .block {
   visibility:hidden;
 }
-
-
-.js {
-  .logo .line {
-  	@include animation(dash 10s linear forwards);
-  }
-}
-
-// ------
->>>>>>> 8ce17d0357a8a9bd99101b6d69535ea3a2f32879
