@@ -52,7 +52,8 @@ $(window).on('scroll', function() {
 });
 
 
-
+var animateInit = new TimelineMax({paused:true}),
+	animateOn = new TimelineMax({paused:true});
 
 TweenLite.set('.block', { css: { visibility:"visible", scale: 0, transformOrigin: "50% 50%", left:0, bottom:0 } });
 
