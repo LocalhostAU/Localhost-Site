@@ -1,5 +1,5 @@
 <!doctype html>
-<html>
+<html class="no-js">
   <head>
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
@@ -20,15 +20,29 @@
 
     <script src="https://use.typekit.net/wze4wrh.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
     <%= stylesheet_link_tag :site %>
   </head>
 
-  <body class="<%= page_classes %> <%= current_page.data.body_classes %>">
+  <body class=" <%= page_classes %> <%= current_page.data.body_classes %>">
+  <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');
+</script>
     <%= partial "partials/header-internal" %>
 
     <div class="main">
-      <%= yield %>
+      <% if current_page.data.page_title? %>
+          <h1 class="title"><%= current_page.data.page_title %></h1>
+      <% end %>
+
+      <% if current_page.data.lead_paragraph? %>
+          <p class="subtitle"><%= current_page.data.lead_paragraph %></p>
+      <% end %>
+      <div class="column-content">
+        <%= yield %>
+      </div>
+
+      <% if current_page.data.has_team? %>
+        <%= partial "partials/your-team" %>
+      <% end %>
 
    </div><!-- .welcome -->
     <%= partial "partials/subscription-form" %>
@@ -39,7 +53,7 @@
     <% end %>
 
     <%= javascript_include_tag('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js') %>
-    <%= javascript_include_tag('https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/TweenMax-latest-beta.js') %>
+    <%= javascript_include_tag('https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js') %>
     <%= javascript_include_tag('site.js') %>
   </body>
 </html>

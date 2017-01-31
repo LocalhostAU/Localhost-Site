@@ -1,8 +1,10 @@
 header {
-  padding: 5% 30px;
+  padding: 5% 30px 12%;
   display:flex;
   justify-content: space-between;
   flex-direction:column;
+  flex-direction:row;
+  flex-wrap: wrap;
   max-width: 1318px;
   margin: 0 auto;
 
@@ -23,8 +25,11 @@ header {
   }
 
   > .logo {
-    max-width: 348px;
   	width:100%;
+
+    @media (min-width: $screen-sm-min) {
+      max-width: 348px;
+    }
 
     svg {
       width:100%;
@@ -38,9 +43,10 @@ header {
     position:relative;
     margin-top: 19.7%;
     margin-bottom: 18%;
-    padding: 30px 0;
-    padding-top: 19.7%;
-    padding-bottom: 18%;
+    padding:0;
+    //padding: 30px 0;
+    //padding-top: 19.7%;
+    //padding-bottom: 18%;
     height: 110px;
     max-width:100%;
 
@@ -50,6 +56,14 @@ header {
       left: 50%;
       max-width: 718px;
       @include transform(translateX(-50%));
+    }
+  }
+
+  .follow {
+    width:100%;
+
+    @media (min-width: $screen-sm-min) {
+      width:auto;
     }
   }
 
@@ -65,7 +79,9 @@ header {
 
       a {
         color: #000;
-        font-size: 1.42857142857143em; // 20px
+        font-size: 1.125em;
+        display: flex;
+        align-items: center;
 
         &:hover, &:focus {
           color: $burnt-sienna;
@@ -79,6 +95,7 @@ header {
 
         .sm-icon {
           padding-left:10px;
+          height:30px;
         }
       }
 
@@ -115,6 +132,7 @@ header {
 
 	.block {
     // @include transition(0.2s ease-in-out all);
+    visibility: hidden;
 
 		&.green {
 			fill: $pastel-green;
@@ -148,24 +166,19 @@ header {
   }
 
   .line {
-  	stroke-dasharray: 1000;
-  	stroke-dashoffset: 1000;
+  	stroke-dasharray: 100;
+  	stroke-dashoffset: 100;
   }
 }
 
 
-.wf-loading {
-  .logo .block {
-    //@include transform(scale(0,0));
-    //@include transform-origin(50%);
-    opacity:0;
-  }
+
+ .logo .block {
+  visibility:hidden;
 }
 
-.wf-active {
-  .logo .line {
-  	@include animation(dash 10s linear forwards);
-  }
-}
 
-// ------
+
+.logo .line {
+	@include animation(dash 1s linear forwards);
+}

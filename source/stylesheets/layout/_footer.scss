@@ -54,12 +54,13 @@ footer {
   .footer-logos {
     flex-grow:1;
     // padding: 4.5% 12px 1%;
-    padding: 40px 20px 10px;
+    padding: 10px 20px;
 
     @media (min-width: $screen-sm-min) {
       //max-width: 900px;
       border-left:1px solid #1D1D1B;
       border-right:1px solid #1D1D1B;
+      padding: 40px 20px 10px;
     }
 
     ul {
@@ -68,13 +69,15 @@ footer {
       margin:0;
       padding:0;
       list-style:none;
+			text-align:center;
 
       li {
-        padding: 0 12px 24px;
+        padding: 0 12px;
         width:100%;
 
         @media (min-width: $screen-sm-min) {
           width: 33%;
+          padding: 0 12px 24px;
         }
 
         @media (min-width: $screen-md-min) {

@@ -13,25 +13,11 @@
 }
 
 #mc_embed_signup {
-  position: relative;
   padding-top: 20%;
   width: 100%;
   max-width: 394px;
   margin: 0 auto;
   padding-left: 5.4%;
-
-  &:before {
-    background: $alabaster;
-    content:"";
-    width:92.5%;
-    //height:301px;
-    padding-bottom: 74.5%;
-    position:absolute;
-    top: -50%;
-    left: 47.7%;
-    @include transform(translateX(-50%));
-    z-index:-1;
-  }
 
   #mc_embed_signup_scroll {
     display:flex;

@@ -24,7 +24,7 @@
 }
 
 .main {
-	max-width: 1134px;
+	max-width: 1268px;
 	width:100%;
 	margin: 0 auto;
 	padding: 0 30px;
@@ -35,11 +35,10 @@
       content:"";
       width: 46.7%;
       display:block;
-      height:385px;
-      left: 12%;
+      left:50%;
       height: 0;
-      padding-bottom: 38.8%;
-      width: 24.7%;
+      width:50%;
+      padding-bottom:100%;
       background: url('../images/zig-zag.svg'), $alabaster;
       background-position: center calc(100% + 1px);
       background-repeat: repeat-x;
@@ -49,8 +48,10 @@
       z-index:-1;
 
       @media (min-width: $screen-sm-min) {
-
+        left: 12%;
         top: -20px;
+        width: 24.7%;
+        padding-bottom: 38.8%;
       }
     }
   }
@@ -94,12 +95,13 @@ section.events {
   }
 
   .upcoming-event, .future-events {
-    padding: 0 30px;
+    padding: 0 10px;
 
 
     @media (min-width: $screen-sm-min) {
       width:50%;
       flex-grow:1;
+      padding: 0 30px;
     }
   }
 
@@ -376,9 +378,13 @@ section.events {
         font-size: 0.8em;
 
         .date {
-          width: 17%;
+          width: 25%;
           padding:6px 0 6px;
 					letter-spacing:0.14em;
+
+          @media (min-width: $screen-sm-min) {
+            width: 20%;
+          }
         }
 
         span.title {
@@ -393,6 +399,10 @@ section.events {
           padding:6px 0 14px 6px;
 					//padding-right: 12px;
           @include transition($link-transition);
+
+          @media (min-width: $screen-sm-min) {
+            width:80%;
+          }
         }
 
         a.title {
@@ -515,7 +525,7 @@ section.follow {
 
 section.mission {
   text-align:center;
-  padding: 80px 30px 20px;
+  padding: 90px 0 40px;
   position:relative;
 
   .bit-line {
@@ -561,20 +571,41 @@ section.mission {
   }
 
   .brand-pink {
-    color: $burnt-sienna;
+    border-bottom: 4px solid $burnt-sienna;
+		line-height:1.1em;
+		display:inline-block;
   }
 
   .brand-blue {
-    color: $malibu;
+    border-bottom: 4px solid $malibu;
+		line-height:1.1em;
+		display:inline-block;
   }
 
   .brand-green {
-    color: $pastel-green;
+    border-bottom: 4px solid $pastel-green;
+		line-height:1.1em;
+		display:inline-block;
   }
 }
 
 section.subscribe {
-  padding: 20.74% 30px 12.4%;
+  margin: 20.74% 30px calc(30px + 12.4%);
+  position:relative;
+
+  &:before {
+    background: $alabaster;
+    content:"";
+    width: 100%;
+    max-width: 365px;
+    //height:301px;
+    height:93%;
+    position:absolute;
+    top: 63px;
+    left: 49.25%;
+    @include transform(translateX(-50%));
+    z-index:-1;
+  }
 
   .container {
     width: 100%;
