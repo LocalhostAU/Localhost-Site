@@ -139,7 +139,6 @@ section.events {
       right: 0;
       z-index:2;
 
-
       svg {
 
         .block {
@@ -378,13 +377,9 @@ section.events {
         font-size: 0.8em;
 
         .date {
-          width: 25%;
+          width: 75px;
           padding:6px 0 6px;
 					letter-spacing:0.14em;
-
-          @media (min-width: $screen-sm-min) {
-            width: 20%;
-          }
         }
 
         span.title {
@@ -393,16 +388,36 @@ section.events {
           color: #000000;
           letter-spacing: 1.57px;
           line-height: 1.3em;
-          width:83%;
+          width:calc(100% - 75px);
           flex-grow:1;
           text-decoration:none;
-          padding:6px 0 14px 6px;
+          padding:6px 20px 14px 0;
 					//padding-right: 12px;
           @include transition($link-transition);
 
-          @media (min-width: $screen-sm-min) {
-            width:80%;
-          }
+
+      		position: relative;
+      		//padding:10px 20px 10px 0;
+      		display: inline-block;
+      		-webkit-transition: -webkit-transform 0.3s;
+      		-moz-transition: -moz-transform 0.3s;
+      		transition: transform 0.3s;
+
+
+					&:before {
+						position: absolute;
+						top: 100%;
+						left:0;
+						right:0;
+						padding:10px;
+						content: attr(data-hover);
+						//font-weight: 700;
+						background: #000;
+						color:#fff;
+						-webkit-transform: translate3d(0,0,0);
+						-moz-transform: translate3d(0,0,0);
+						transform: translate3d(0,0,0);
+					}
         }
 
         a.title {
@@ -410,16 +425,26 @@ section.events {
           display:flex;
           position:relative;
           margin-top:22px;
+          overflow:hidden;
 
           &:hover, &:focus {
-            color: $lavendar;
-            border: 1px solid $lavendar;
-            padding: 10px 10px 0 10px;
+            //color: $lavendar;
+            color:#000;
+            //border: 1px solid $lavendar;
+            //padding: 10px 10px 0 10px;
             //font-weight:bold;
 
+
             span.title {
-              color: $lavendar;
-              border: none;
+      				-webkit-transform: translateY(-100%);
+      				-moz-transform: translateY(-100%);
+      				transform: translateY(-100%);
+      				//color: #fff;
+        		}
+
+            span.title {
+              //color: $lavendar;
+              //border: none;
             }
           }
 

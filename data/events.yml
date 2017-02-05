@@ -13,14 +13,17 @@ events:
     location: MEL
     date: Mon 30
     link: https://www.meetup.com/en-AU/Big-Data-Next-Gen-Hadoop-Ingest-Transform-Melbourne/events/237058528/
+    noShow: true
   - title: Tech Talks @ Pivotal Labs
     location: SYD
     date: Tues 31
     link: https://www.meetup.com/PivotalSydney-Tech-Talks/events/235721025/
+    noShow: true
   - title: SydCSS February
     location: SYD
     date: Thu 02
     link: https://www.meetup.com/SydCSS/events/236934679/
+    noShow: true
   - title: YOW! Night with Kris Howard - Knit One, Compute One
     location: PER
     date: Tues 07
@@ -41,6 +44,10 @@ events:
     location: PER
     date: Wed 15
     link: https://www.meetup.com/Front-End-Web-Developers-Perth/events/236790263/
+  - title: DevOps Perth - AWS re:Invent 2016 Summary
+    location: PER
+    date: Wed 22
+    link: https://www.meetup.com/DevOps-Perth/events/237354011/
   - title: Playgrounds Swift and Apple Developers Conference
     location: MEL
     date: Thu 23
