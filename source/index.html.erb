@@ -43,13 +43,13 @@ layout: home
         <% if data.events.nextevent.link? %>
           <a href="<%= data.events.nextevent.link %>" title="Find out about <%= data.events.nextevent.title %>" target="_blank">
         <% else %>
-          <span class="title-link">
+          <div class="title-link">
         <% end %>
-          <%= data.events.nextevent.title %>
+          <span data-hover='<%= data.events.nextevent.title %>'><%= data.events.nextevent.title %></span>
         <% if data.events.nextevent.link? %>
           </a>
         <% else %>
-          </span>
+      </div>
         <% end %>
       </h2>
       <p class="speaker"><%= data.events.nextevent.speaker %>
