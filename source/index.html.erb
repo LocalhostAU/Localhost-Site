@@ -34,30 +34,8 @@ layout: home
             </svg>
         </span>
       </div>
-      <p class="date">
-        <span class="month"><%= data.events.nextevent.month %></span>
-        <span class="weekday"><%= data.events.nextevent.weekday %></span>
-        <span class="day"><%= data.events.nextevent.day %></span>
-      </p>
-      <h2 class="title">
-        <% if data.events.nextevent.link? %>
-          <a href="<%= data.events.nextevent.link %>" title="Find out about <%= data.events.nextevent.title %>" target="_blank">
-        <% else %>
-          <div class="title-link">
-        <% end %>
-          <span data-hover='<%= data.events.nextevent.title %>'><%= data.events.nextevent.title %></span>
-        <% if data.events.nextevent.link? %>
-          </a>
-        <% else %>
-      </div>
-        <% end %>
-      </h2>
-      <p class="speaker"><%= data.events.nextevent.speaker %>
-        <span class="from"><%= data.events.nextevent.speaker_company %></span>
-      </p>
-      <p class="location"><%= data.events.nextevent.location %></p>
     </div>
-    <div class="results"></div>
+
     <div class="future-events">
       <ul>
       </ul>

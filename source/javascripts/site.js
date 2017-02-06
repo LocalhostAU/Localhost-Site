@@ -1,3 +1,17 @@
+//next Events Feed.
+ // ID of the Google Spreadsheet
+ var featuredspreadsheetID = "1tTuj1ptQhBimlp5p3AKyBtPavAKofGxn-3yMhhytv9E";
+ // Make sure it is public or set to Anyone with link can view
+ var featuredurl = "https://spreadsheets.google.com/feeds/list/" + featuredspreadsheetID + "/2/public/values?alt=json";
+ $.getJSON(featuredurl, function(data) {
+  var featuredentry = data.feed.entry;
+  $(featuredentry).each(function(){
+    // Column names are name, age, etc.
+    $('.upcoming-event').append('<p class="date"><span class="month">'+this.gsx$month.$t+'</span> <span class="weekday">'+this.gsx$day.$t+'</span> <span class="day">'+this.gsx$date.$t+'</span></p><h2 class="title">  <a href="'+this.gsx$link.$t+'" title="Find out about '+this.gsx$title.$t+'" target="_blank"><span data-hover="'+this.gsx$title.$t+'">'+this.gsx$title.$t+'</span></a></h2><p class="speaker">'+this.gsx$speaker.$t+' <span class="from">'+this.gsx$speakerfrom.$t+'</span></p> <p class="location">'+this.gsx$location.$t+'</p>');
+  });
+ });
+
+
 //Homepage Events Feed.
 // ID of the Google Spreadsheet
  var spreadsheetID = "1tTuj1ptQhBimlp5p3AKyBtPavAKofGxn-3yMhhytv9E";
