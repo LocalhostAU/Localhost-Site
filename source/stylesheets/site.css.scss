@@ -320,28 +320,28 @@ section.events {
           @include transition($link-transition);
           padding: 0 0 10px 0;
 
-          &:before {
-            content: attr(data-hover);
-            position: absolute;
-            top: 100%;
-            padding: 0 0 10px 0;
-            left:0;
-            right:0;
-            color: $lavendar;
-            //padding:10px;
-            //background: #000;
-            //color:#fff;
-            @include transform(translate3d(0,0,0));
-          }
+          // &:before {
+          //   content: attr(data-hover);
+          //   position: absolute;
+          //   top: 100%;
+          //   padding: 0 0 10px 0;
+          //   left:0;
+          //   right:0;
+          //   color: $lavendar;
+          //   //padding:10px;
+          //   //background: #000;
+          //   //color:#fff;
+          //   @include transform(translate3d(0,0,0));
+          // }
         }
 
         &:hover, &:focus {
-          //color: $malibu;
-          //border: 1px solid $malibu;
-          //padding: 10px 10px 15px 10px;
+          color: $malibu;
+          border: 1px solid $malibu;
+          padding: 10px 10px 15px 10px;
 
           span {
-            @include transform(translateY(-100%));
+            // @include transform(translateY(-100%));
           }
         }
 
@@ -429,16 +429,16 @@ section.events {
 
 
 					&:before {
-						content: attr(data-hover);
-						//font-weight: 700;
-						position: absolute;
-						top: 100%;
-						left:0;
-						right:0;
-						padding:10px;
-						background: #000;
-						color:#fff;
-						@include transform(translate3d(0,0,0));
+						// content: attr(data-hover);
+						// //font-weight: 700;
+						// position: absolute;
+						// top: 100%;
+						// left:0;
+						// right:0;
+						// padding:10px;
+						// background: #000;
+						// color:#fff;
+						// @include transform(translate3d(0,0,0));
 					}
         }
 
@@ -450,21 +450,21 @@ section.events {
           overflow:hidden;
 
           &:hover, &:focus {
-            //color: $lavendar;
-            color:#000;
-            //border: 1px solid $lavendar;
-            //padding: 10px 10px 0 10px;
+            color: $lavendar;
+            // color:#000;
+            border: 1px solid $lavendar;
+            padding: 10px 10px 0 10px;
             //font-weight:bold;
 
 
             span.title {
-      				@include transform(translateY(-100%));
+      				// @include transform(translateY(-100%));
       				//color: #fff;
         		}
 
             span.title {
-              //color: $lavendar;
-              //border: none;
+              color: $lavendar;
+              border: none;
             }
           }
 
