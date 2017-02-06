@@ -1,3 +1,20 @@
+//Homepage Events Feed.
+// ID of the Google Spreadsheet
+ var spreadsheetID = "1tTuj1ptQhBimlp5p3AKyBtPavAKofGxn-3yMhhytv9E";
+
+ // Make sure it is public or set to Anyone with link can view
+ var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
+
+ $.getJSON(url, function(data) {
+
+  var entry = data.feed.entry;
+  if(entry) {
+    $(entry).each(function(){
+      $('.future-events ul').append('<li><a href="'+this.gsx$link.$t+'" class="title" target="_blank"><span class="date">'+this.gsx$date.$t+'</span><span class="title" data-hover="'+this.gsx$title.$t+' ('+this.gsx$location.$t+')">'+this.gsx$title.$t+' <span class="location">('+this.gsx$location.$t+')</span></span></a></li>');
+    });
+  }
+ });
+
 // This is where it all goes :)
 $(window).scroll(function(){
   $introHeight = $('header').height() * 2;

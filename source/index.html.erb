@@ -57,24 +57,9 @@ layout: home
       </p>
       <p class="location"><%= data.events.nextevent.location %></p>
     </div>
+    <div class="results"></div>
     <div class="future-events">
       <ul>
-          <% data.events.events.each do |event| %>
-            <% if !event.noShow? %>
-              <li>
-                              <% if event.link? %><a href="<%= event.link %>" class="title" target="_blank"><% end %>
-                <span class="date">
-                  <% if event.date? %><%= event.date %><% end %>
-                </span>
-                <span class="title" data-hover='<%= event.title %><% if event.location? %> (<%= event.location %>)<% end %>'><%= event.title %>
-                  <% if event.location? %>
-                    <span class="location">(<%= event.location %>)</span>
-                  <% end %>
-                              </span>
-               <% if event.link? %></a><% end %>
-              </li>
-            <% end %>
-          <% end %>
       </ul>
     </div>
   </div>
