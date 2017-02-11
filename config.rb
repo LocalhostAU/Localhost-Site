@@ -52,6 +52,20 @@ activate :blog do |blog|
   blog.per_page = 6
 end
 
+activate :ogp do |ogp|
+  #
+  # register namespace with default options
+  #
+  ogp.namespaces = {
+    fb: data.ogp.fb,
+    # from data/ogp/fb.yml
+    og: data.ogp.og
+    # from data/ogp/og.yml
+  }
+  ogp.base_url = 'https://localhost.events/'
+  ogp.blog = true
+end
+
 configure :production do
   activate :minify_html
   activate :minify_css

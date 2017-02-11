@@ -22,6 +22,9 @@
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
 
     <%= stylesheet_link_tag :site %>
+    <% ogp_tags do|name, value| %>
+    <meta content="<%= value %>" property="<%= name %>"/>
+    <% end %>
   </head>
 
   <body class="<%= page_classes %> <%= current_page.data.body_classes %>">

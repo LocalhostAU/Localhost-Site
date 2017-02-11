@@ -1,0 +1,12 @@
+type: article
+image:
+  '': https://localhost.events/images/ogp.jpg
+  type: image/jpg
+  width: 560
+  height: 300
+locale:
+  '': en_us
+twitter:
+  card: summary_large_image
+  site: '@localhostAU'
+  creator: '@localhostAU'

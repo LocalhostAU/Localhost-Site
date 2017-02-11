@@ -1,0 +1,6 @@
+type: article
+image:
+  '': https://localhost.events/images/fb.jpg
+  type: image/jpg
+  width: 600
+  height: 315
