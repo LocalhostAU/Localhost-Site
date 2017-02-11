@@ -29,18 +29,23 @@
     <%= partial "partials/header-internal" %>
 
     <div class="main">
-      <% if current_page.data.page_title? %>
+      <% if current_page.data.page_title %>
           <h1 class="title"><%= current_page.data.page_title %></h1>
       <% end %>
 
-      <% if current_page.data.lead_paragraph? %>
+      <% if current_page.data.lead_paragraph %>
           <p class="subtitle"><%= current_page.data.lead_paragraph %></p>
       <% end %>
-      <div class="column-content">
-        <%= yield %>
-      </div>
 
-      <% if current_page.data.has_team? %>
+      <% if !current_page.data.noMiniColumn %>
+        <div class="column-content">
+      <% end %>
+        <%= yield %>
+      <% if !current_page.data.noMiniColumn %>
+        </div>
+      <% end %>
+
+      <% if current_page.data.has_team %>
         <%= partial "partials/your-team" %>
       <% end %>
 

@@ -800,7 +800,7 @@ section.subscribe {
   }
 }
 
-.blog {
+.blog-post {
   .main {
     padding-top: 5%;
     position:relative;
@@ -1142,4 +1142,132 @@ body.events {
       content:"";
     }
   }
+}
+
+
+article.blog-article {
+  border-bottom:2px solid #000;
+	margin-bottom:5%;
+
+  > a {
+    display:flex;
+    text-decoration:none;
+    border:0;
+    flex-direction:column;
+
+    @media (min-width: $screen-sm-min) {
+      flex-direction:row;
+    }
+
+    &:hover, &:focus {
+      .read-more span {
+        background: #000;
+        color: #fff;
+      }
+    }
+  }
+
+	.article-image {
+    position:relative;
+
+    @media (min-width: $screen-sm-min) {
+      width:47.806771263419%;
+    }
+
+		img {
+			display:block;
+      width:100%;
+		}
+	}
+
+  .article-date {
+    font-size:10.28571428571429em; // 144px
+    font-weight:bold;
+    letter-spacing:0;
+    position:absolute;
+    bottom:-30px;
+    right:0;
+    z-index: 2;
+
+    @media (min-width: $screen-sm-min) {
+      left: 100%;
+      top:50%;
+      bottom:auto;
+      right:auto;
+      @include transform(translateX(-50%) translateY(-50%));
+    }
+
+    p {
+      margin:0;
+      line-height:1em;
+    }
+
+  }
+
+	.author-line {
+		font-weight:bold;
+		font-family: FreightSansBold;
+		font-size: 14px;
+		color: #000000;
+		letter-spacing: 2px;
+    margin:0;
+
+		span {
+
+			&.article-category {
+				text-transform:uppercase;
+			}
+		}
+	}
+
+	.article-caption {
+    padding: 30px 0 0 0;
+
+    @media (min-width: $screen-sm-min) {
+  		padding: 0 0 0 30px;
+      align-self: flex-end;
+      flex-grow:1;
+    }
+	}
+
+	h2 {
+    font-weight:normal;
+		font-size: 2.57142857142857em; //36px;
+		color: #000000;
+		margin:0;
+		line-height: 1.22222222222222em; //44px;
+    text-transform: none;
+	}
+
+	.read-more {
+		margin:0;
+    text-align:right;
+
+    span {
+  		display:inline-block;
+  		padding: 10px;
+  		border: 2px solid #000;
+  		border-bottom:0;
+      @include transition($link-transition);
+      text-transform:uppercase;
+      font-weight:bold;
+      color: #272727;
+      letter-spacing: 0
+    }
+	}
+
+	&:nth-child(even) > a {
+    flex-direction:column;
+
+    @media (min-width: $screen-sm-min) {
+  		flex-direction:row-reverse;
+    }
+
+    .article-date {
+      @media (min-width: $screen-sm-min) {
+        left: 0;
+      }
+    }
+	}
+
 }
