@@ -11,10 +11,10 @@ noMiniColumn: true
   <article class="blog-article">
   	<a href="<%= article.url %>">
 
-    		<div class="article-image">
-          <div class="article-date"><p><%= article.date.strftime('%e') %> <span class="sr-only"><%= article.date.strftime('%B %Y') %></span></p></div>
-    			<img src="<% if article.data.image %><%= article.data.image %><% else %>../images/blog-placeholder.jpg<% end %>"/>
-    		</div>
+  		<div class="article-image">
+        <div class="article-date"><p><%= article.date.strftime('%e') %> <span class="sr-only"><%= article.date.strftime('%B %Y') %></span></p></div>
+  			<img src="<% if article.data.image %><%= article.data.image %><% else %>../images/blog-placeholder.jpg<% end %>"/>
+  		</div>
 
   		<div class="article-caption">
         <% if article.data.category || article.data.author %>
