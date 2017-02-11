@@ -47,6 +47,9 @@ activate :blog do |blog|
   blog.prefix = "blog"
   blog.layout = "blog"
   blog.permalink = "{year}/{month}/{title}.html"
+  blog.paginate = true
+  blog.page_link = "p{num}"
+  blog.per_page = 6
 end
 
 configure :production do

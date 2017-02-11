@@ -1,0 +1,26 @@
+---
+title: Blog
+body_classes: blog
+meta_description: Connecting web, creative and digital communities &amp; unearthing local talent across Australia.
+pageable: true
+---
+
+<% if paginate && num_pages > 1 %>
+  <p>Page <%= page_number %> of <%= num_pages %></p>
+
+  <% if prev_page %>
+    <p><%= link_to 'Previous page', prev_page %></p>
+  <% end %>
+<% end %>
+
+<% page_articles.each_with_index do |article, i| %>
+  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
+  <%= article.summary(250)  %>
+<% end %>
+
+<% if paginate %>
+  <% if next_page %>
+    <% next_page %>
+    <%= link_to 'Next page', next_page %>
+  <% end %>
+<% end %>
