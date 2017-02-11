@@ -1,16 +1,16 @@
 ---
-title: Volunteers | Localhost
+title: Team | Localhost
 body_classes: internal
 meta_description: Connecting web, creative and digital communities &amp; unearthing local talent across Australia.
-page_title: Volunteers
+page_title: The Team
 lead_paragraph: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in nisi sit amet nunc auctor commodo in id magna. Proin id scelerisque eros.
 
 ---
 
 <div class="">
 
-  <% if data.humans.volunteers %>
-    <% data.humans.volunteers.each do |member| %>
+  <% if data.humans.team %>
+    <% data.humans.team.each do |member| %>
       <h2><%= member.name %></h2>
       <p><%=  member.role %></p>
       <p><a href="https://twitter.com/<%= member.contact %>" target="_blank">@<%= member.contact %></a></p>
