@@ -31,7 +31,7 @@
     <%= partial "partials/header-internal" %>
 
     <div class="main">
-      <h1><span>Blog</span></h1>
+      <h1><a href="/blog"><span>Blog</span></a></h1>
 
       <article>
         <div class="article-header">
@@ -39,7 +39,7 @@
             <%= current_page.data.title %>
           </h1>
 
-          <% if current_page.data.image? %>
+          <% if current_page.data.image && !current_page.data.hideFeatureImage  %>
             <div class="image">
               <img src="<%= current_page.data.image %>" alt="<%= current_page.data.title %>" />
             </div>

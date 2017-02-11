@@ -800,6 +800,27 @@ section.subscribe {
   }
 }
 
+.blog {
+  .main {
+    > h1 {
+
+      a {
+        color: #000;
+        border:0;
+        border-bottom:5px solid $burnt-sienna;
+
+        span {
+          border:0;
+        }
+
+        &:hover, &:focus {
+          border-color: $pastel-green;
+        }
+      }
+    }
+  }
+}
+
 .blog-post {
   .main {
     padding-top: 5%;
@@ -1049,7 +1070,7 @@ section.subscribe {
 
     li {
       a {
-        width: 134px;
+        //width: 134px;
         font-size: 0.85714285714286em; //12px;
         color: #000000;
         letter-spacing: 0.14em;
@@ -1059,6 +1080,7 @@ section.subscribe {
 				display: block;
 				padding-bottom: 0.66666666666667em ; //8px;
 				border-color:#000;
+        padding-right:30px;
 
 				&:hover, &:focus {
 					color: $burnt-sienna;
@@ -1092,7 +1114,6 @@ section.subscribe {
 					bottom: 10px;
 					right:0;
 					z-index:1;
-
 				}
       }
 
@@ -1104,6 +1125,9 @@ section.subscribe {
         text-align:right;
 
 				a {
+          padding-right:0;
+          padding-left: 30px;
+
 					&:after {
 						right:auto;
 						left:0;
