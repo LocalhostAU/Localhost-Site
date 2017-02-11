@@ -55,10 +55,20 @@
     </div><!-- .main -->
 
     <div class="pagination">
-      <ul>
-        <li><a href="">Previous Post</a></li>
-        <li><a href="">Next Post</a></li>
-      </ul>
+        <ul>
+          <li>
+             <% prev_article = current_article.previous_article %>
+               <% if prev_article %>
+               <a href="<%= prev_article.url %>" rel="prev" title="Previous article: <%= prev_article.title %>"> Previous <br /> <%= prev_article.title %> </a>
+               <% end %>
+           </li>
+           <li>
+             <% next_article = current_article.next_article %>
+               <% if next_article %>
+               <a href="<%= next_article.url %>" rel="next" title="Next article: <%= next_article.title %>"> Next <br /> <%= next_article.title %> </a>
+               <% end %>
+           </li>
+        </ul>
     </div>
 
     <%= partial "partials/subscription-form" %>
