@@ -4,7 +4,14 @@
 <% if data.humans.team %>
 /* TEAM */
   <% data.humans.team.each do |member| %>
-    <%= "<#{member.name}> - #{member.role} - <#{member.contact}>" %>
+    <%= "<#{member.name}> - #{member.role} - <@#{member.contact}>" %>
+  <% end %>
+<% end %>
+
+<% if data.humans.volunteers %>
+/* VOLUNTEERS */
+  <% data.humans.volunteers.each do |volunteer| %>
+    <%= "<#{volunteer.name}> - <@#{volunteer.contact}>" %>
   <% end %>
 <% end %>
 

@@ -2,19 +2,31 @@
 team:
   - name: Patima Tantiprasut
     role: Founder, Host, Organiser
-    contact: "@the_patima"
+    contact: the_patima
+    bio: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in nisi sit amet nunc auctor commodo in id magna. Proin id scelerisque eros.</p>
+
   - name: Corey Ginnivan
     role: Co-organiser
-    contact: "@CoreyGinnivan"
+    contact: CoreyGinnivan
+    bio: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in nisi sit amet nunc auctor commodo in id magna. Proin id scelerisque eros.</p>
+
   - name: David (DT) Thomas
     role: Co-organiser
-    contact: "@thedavidthomas1"
+    contact: thedavidthomas1
+    bio: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in nisi sit amet nunc auctor commodo in id magna. Proin id scelerisque eros.</p>
+
   - name: Teegan Lincoln
     role: Co-organiser
-    contact: "@teeganlincoln"
+    contact: teeganlincoln
+    bio: <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in nisi sit amet nunc auctor commodo in id magna. Proin id scelerisque eros.</p>
+
+volunteers:
   - name: Urvin Seeburuth
-    role: Photography, Videography
-    contact: "@urvinseeburuth"
+    contact: urvinseeburuth
+    bio:
+  - name: Monique Tilt
+    contact: urvinseeburuth
+    bio: <p>Monique is a Production Assistant at Bam Creative, while also studying Creative Advertising and Graphic Design, with a second major in Advertising under Commerce; a complicated degree she’s undertaking at Curtin University.</p><p>In the long run, Monique aims to be a Creative Director, specifically focusing on graphic design and the new possibilities in digital marketing and web advertising. But for now, she’s happy bribing her friends into photoshoots, dreaming up advertising campaigns and drinking copious amounts of coffee.</p>
 
 shoutouts:
   - name: Bounce.js
