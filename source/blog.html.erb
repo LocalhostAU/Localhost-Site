@@ -3,7 +3,31 @@ title: Blog
 body_classes: blog
 meta_description: Connecting web, creative and digital communities &amp; unearthing local talent across Australia.
 pageable: true
+page_title: Blog
+noMiniColumn: true
 ---
+
+<% page_articles.each_with_index do |article, i| %>
+  <article class="blog-article">
+  	<a href="<%= article.url %>">
+
+    		<div class="article-image">
+          <div class="article-date"><p><%= article.date.strftime('%e') %> <span class="sr-only"><%= article.date.strftime('%B %Y') %></span></p></div>
+    			<img src="<% if article.data.image %><%= article.data.image %><% else %>../images/blog-placeholder.jpg<% end %>"/>
+    		</div>
+
+  		<div class="article-caption">
+        <% if article.data.category || article.data.author %>
+    			<p class="author-line">
+    				<% if article.data.category %><span class="article-category"><%= article.data.category %></span><% end %><% if article.data.author %> by <span class="article-author"><%= article.data.author %></span><% end %>
+    			</p>
+        <% end %>
+  			<h2><%= article.title %></h2>
+  			<p class="read-more"><span>Read more</span></p>
+  		</div>
+  	</a>
+  </article>
+<% end %>
 
 <% if paginate && num_pages > 1 %>
   <p>Page <%= page_number %> of <%= num_pages %></p>
@@ -12,12 +36,7 @@ pageable: true
     <p><%= link_to 'Previous page', prev_page %></p>
   <% end %>
 <% end %>
-<% link_to(@article) do %>
-<% page_articles.each_with_index do |article, i| %>
-  <h2><%= link_to article.title, article %> <span><%= article.date.strftime('%b %e') %></span></h2>
 
-<% end %>
-<% end %>
 
 <% if paginate %>
   <% if next_page %>
