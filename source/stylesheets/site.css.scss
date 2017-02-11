@@ -842,12 +842,13 @@ section.subscribe {
         line-height: 1.20833333333333em; //58px;
         text-transform:none;
         position:relative;
-        max-width: 924px;
-        margin-left: -30px;
-        margin-right: -30px;
+        // max-width: 924px;
+        // margin-left: -30px;
+        // margin-right: -30px;
 
         @media (min-width: $screen-sm-min) {
           margin: 0 auto;
+					margin: 0 11.78%;
         }
 
         &:after {
@@ -960,8 +961,9 @@ section.subscribe {
         }
 
         p {
-          font-family: FreightSansLightItalic;
-          font-size: 36px;
+          //font-family: FreightSansLightItalic;
+					font-style:italic;
+          font-size: 2.57142857142857em; //36px;
           color: #000000;
           letter-spacing: 5px;
           line-height: 53px;
