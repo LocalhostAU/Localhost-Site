@@ -45,10 +45,10 @@ end
 
 activate :blog do |blog|
   blog.prefix = "blog"
-  blog.layout = "blog"
+  blog.layout = "blog-post"
   blog.permalink = "{year}/{month}/{title}.html"
   blog.paginate = true
-  blog.page_link = "p{num}"
+  blog.page_link = "{num}"
   blog.per_page = 6
 end
 
