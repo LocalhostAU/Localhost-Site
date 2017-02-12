@@ -1184,28 +1184,32 @@ article.blog-article {
     }
 
     &:hover, &:focus {
-      background: #1e1e1e;
+      //background: #1e1e1e;
       //color: #fff;
+      border:2px solid #000;
+      margin: 20px;
 
       h2,p {
-        color:#fff;
+        color:#000;
+        //color:$pastel-green;
       }
 
       .article-date p {
         //color:$pastel-green;
-        color:#fff;
+        color:#000;
       }
 
       .read-more span {
-        background: $pastel-green;
+        background: $burnt-sienna;
         color: #000;
+        border-right: 0;
       }
 
       .article-image {
         background: $pastel-green;
 
         img {
-          filter:grayscale(100%);
+          //filter:grayscale(100%);
         }
       }
     }
@@ -1224,7 +1228,7 @@ article.blog-article {
 			display:block;
       width:100%;
       @include transition($link-transition);
-      mix-blend-mode:multiply;
+      //mix-blend-mode:multiply;
       //filter:grayscale(100%);
 		}
 	}
@@ -1251,6 +1255,7 @@ article.blog-article {
       color:$burnt-sienna;
       @include transition($link-transition);
       line-height:1em;
+      letter-spacing:0;
     }
 
   }
@@ -1305,11 +1310,11 @@ article.blog-article {
       text-transform:uppercase;
       font-weight:bold;
       color: #272727;
-      letter-spacing: 0
+      letter-spacing: 0;
     }
 	}
 
-	&:nth-child(even) > a {
+	&:nth-child(odd) > a {
     flex-direction:column;
 
     @media (min-width: $screen-sm-min) {
