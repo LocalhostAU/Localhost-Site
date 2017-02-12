@@ -12,7 +12,7 @@ $lavendar: #C980EA; // purple
 $tulip-tree: #EFB348; // Orange
 $alabaster: #F7F7F7; // light gray
 
-$font-family-sans-serif:"freight-sans-pro", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-sans-serif: "freight-sans-pro", "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 $link-transition: 0.2s ease-in-out all;
 
@@ -76,6 +76,7 @@ $link-transition: 0.2s ease-in-out all;
   border: 0;
 }
 
+/*
 // Type
 $font-size-h1:2.85714285714286em; //40px
 $font-size-h2:1.57142857142857em; //22px
@@ -83,3 +84,22 @@ $font-size-h3:1.42857142857143em; // 20px
 $font-size-h4:1.28571428571429em; // 18px
 $font-size-h5:1.14285714285714em; //16px
 $font-size-h6:1em; // 14px
+*/
+
+//calculating type so that we can get true sizes
+$browser-context: 16; // Default size
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+$font-size-date: em(144);
+$font-size-body: em(16);
+$font-size-sm: em(14);
+$font-large-intro: em(48);
+$font-size-h1: em(42);
+$font-size-h2: em(24);
+$font-size-h3: em(22); //need to customise still 
+$font-size-h4: em(16);
+$font-size-h5: em(25);
+$font-size-h6: em(14);
