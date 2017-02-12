@@ -40,7 +40,7 @@ activate :directory_indexes
 
 # Build-specific configuration
 configure :build do
-  activate :asset_hash
+  activate :asset_hash, :ignore => %r{^blog/.*}
 end
 
 activate :blog do |blog|
