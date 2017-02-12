@@ -24,10 +24,10 @@
 }
 
 .main {
-	max-width: 1268px;
-	width:100%;
+	max-width: 1200px;
+	width:85%; /* changed to 85% from 100% to give elements some more breathing room */
 	margin: 0 auto;
-	padding: 0 30px;
+	//padding: 0 30px;
   position:relative;
 
   .internal & {
@@ -251,8 +251,9 @@ section.events {
         position:relative;
 
         &.month {
-          font-size:2.5em; // 40px
-          letter-spacing:0.12em;
+          font-size: $font-size-h1;
+          font-weight: bold;
+          letter-spacing:0.11em;
           text-transform:uppercase;
           margin-bottom: 19%;
           z-index:2;
@@ -263,8 +264,8 @@ section.events {
         }
 
         &.weekday {
-          font-size:1.125em; // 18px
-          letter-spacing: 0.23em;
+          font-size: $font-size-h5;
+          letter-spacing: 0.11em;
 					margin-left: 2px;
 					font-weight:bold;
           text-transform:uppercase;
@@ -272,22 +273,22 @@ section.events {
         }
 
         &.day {
-          font-size:9em; // 144px
+          font-size: $font-size-date;
 					font-weight:bold;
           color: $burnt-sienna;
-					margin-top: -10.5%;
+					margin-top: -11.5%;
 			    letter-spacing: -0.01em;
-          line-height:1em;
+          line-height:1.1em;
           z-index:1;
         }
       }
     }
 
     h2.title {
-      font-size:1.5em; // 24px
+      font-size: $font-size-h2;
       font-weight:normal;
-      margin-top: -18.8%;
-			letter-spacing: 0em;
+      margin-top: -21%;
+			letter-spacing: 0.03em;
       padding: 0 0 0 38.8%;
       position:relative;
       z-index:3;
@@ -303,7 +304,7 @@ section.events {
       a {
 
 
-        &:hover, &:focus { //pastel-green;
+        &:hover, &:focus {
           color: #000;
         }
       }
@@ -311,7 +312,7 @@ section.events {
       a, .title-link {
         border-bottom:1px solid #979797;
         display:block;
-        padding-right:7%;
+        //padding-right:7%;
         padding-bottom: 6.4%;
         position:relative;
 
@@ -350,13 +351,11 @@ section.events {
     }
 
     .speaker {
-      text-transform:uppercase;
+    //  text-transform:uppercase;
       padding-left: 38.8%;
-      //font-size:0.6875em; //11px
-      font-size: 0.8em;
-      //font-size:13px;
+      font-size: $font-size-sm;
       line-height: 1.3em;
-      letter-spacing: 0.127em;
+      letter-spacing: 0.1em;
       margin-bottom: 4.5%;
 
       span {
@@ -365,13 +364,13 @@ section.events {
     }
 
     .location {
-      font-size:0.6875em; //11px
+      font-size: $font-size-sm;
       text-transform:uppercase;
       margin-left:38.8%;
 			font-weight:bold;
       line-height:14px;
       color: $burnt-sienna;
-      letter-spacing:0.127em;
+      letter-spacing:0.1em;
 
       &:before {
         content:"";
@@ -400,8 +399,9 @@ section.events {
       }
 
       li {
-        text-transform:uppercase;
-        font-size: 0.8em;
+        //text-transform:uppercase;
+        //font-size: 0.8em;
+        font-size: $font-size-sm;
 
         .date {
           width: 75px;
@@ -474,10 +474,10 @@ section.events {
             width:12px;
             height:7px;
             display: inline-block;
-            background:url('../images/arrow-green.svg');
-            background-repeat:no-repeat;
-            background-size:contain;
-            background-position:top right;
+            //background:url('../images/arrow-green.svg'); //need to change this
+            //background-repeat:no-repeat;
+            //background-size:contain;
+            //background-position:top right;
             position:absolute;
             bottom: 11px;
             right:0;
@@ -488,11 +488,11 @@ section.events {
             width:8px;
             height:8px;
             display: inline-block;
-            border: 1px solid #000;
-            border-radius:100%;
-            background-repeat:no-repeat;
-            background-size:contain;
-            background-position:top right;
+            //border: 1px solid #000;
+            //border-radius:100%;
+            //background-repeat:no-repeat;
+            //background-size:contain;
+            //background-position:top right;
             position:absolute;
             bottom: 10px;
             right:0;
@@ -546,9 +546,8 @@ section.follow {
     a {
       display:block;
 			text-transform:uppercase;
-      font-size:1.25em ;//20px;
       font-weight:bold;
-      letter-spacing: 0.18em;
+      letter-spacing: 0.14em;
       line-height:2.05em; //41px;
       overflow:hidden;
 
@@ -634,10 +633,10 @@ section.mission {
 
   p {
     line-height:1em;
-    font-size:1.75em;
+    font-size: $font-size-h1;
 
     @media (min-width: $screen-sm-min) {
-      font-size:3.5em; // 56px
+    //  font-size:3.5em; // 56px /* font calc addition */
     }
   }
 
@@ -687,19 +686,23 @@ section.subscribe {
   h2 {
     text-transform:uppercase;
     font-weight:bold;
-    letter-spacing: 0.18525em;
+    //letter-spacing: 0.18525em;
+    letter-spacing: 0.15em;
     text-align:center;
-    font-size:1.5em; // 40px
+    //font-size:1.5em; // 40px /* font calc addition */
+    font-size: $font-size-h3;
     line-height:1em;
 
     @media (min-width: $screen-sm-min) {
-      font-size:2.5em; // 40px
+      // font-size:2.5em; // 40px/* font calc addition */
+      font-size: $font-size-h2;
     }
 
     span {
-      font-size:0.5em;
+      //font-size:0.5em; /* font calc addition */
       margin-top:1.01em;
-      letter-spacing:0.3705em;
+      //letter-spacing:0.3705em;
+      letter-spacing: 0.15em;
       display:block;
       line-height:1em;
     }
@@ -731,7 +734,7 @@ section.subscribe {
   position: relative;
 
   h2 {
-    letter-spacing: 0.175em;
+    //letter-spacing: 0.1em;
     margin-bottom: -0.5em;
 
     @media (min-width: $screen-sm-min) {
@@ -789,7 +792,7 @@ section.subscribe {
           text-transform:none;
           font-weight: normal;
           margin:0;
-					font-size: 1.5em;
+					//font-size: 1.5em;/* font calc addition */
         }
 
         p {
@@ -857,7 +860,7 @@ section.subscribe {
         background: #EFEFEF;
         // padding: 14.5% 8% 15.5% 13%;
         padding: 12.8% 7% 14% 7%;
-        font-size: 3.42857142857143em; //48px;
+        //font-size: 3.42857142857143em; //48px;/* font calc addition */
         color: #000000;
         font-weight:normal;
         letter-spacing:0;
@@ -977,7 +980,7 @@ section.subscribe {
 
     .lead-paragraph {
       /* 19.01.2017 Localhost: */
-      font-size: 1.71428571428571em; //24px
+      //font-size: 1.71428571428571em; //24px/* font calc addition */
       color: #000000;
       letter-spacing: 0.12em;
       line-height: 1.5em;//36px;
@@ -1015,7 +1018,7 @@ section.subscribe {
 
         p {
 					font-style:italic;
-          font-size: 2.57142857142857em; //36px;
+          //font-size: 2.57142857142857em; //36px;/* font calc addition */
           color: #000000;
           letter-spacing: 0.13em;
           line-height: 1.47222222222222em; // 53px;
@@ -1071,7 +1074,7 @@ section.subscribe {
     li {
       a {
         //width: 134px;
-        font-size: 0.85714285714286em; //12px;
+        //font-size: 0.85714285714286em; //12px;/* font calc addition */
         color: #000000;
         letter-spacing: 0.14em;
         font-weight:bold;
@@ -1184,28 +1187,32 @@ article.blog-article {
     }
 
     &:hover, &:focus {
-      background: #1e1e1e;
+      //background: #1e1e1e;
       //color: #fff;
+      border:2px solid #000;
+      margin: 2%;
 
       h2,p {
-        color:#fff;
+        color:#000;
+        //color:$pastel-green;
       }
 
       .article-date p {
         //color:$pastel-green;
-        color:#fff;
+        color:#000;
       }
 
       .read-more span {
-        background: $pastel-green;
+        background: $burnt-sienna;
         color: #000;
+        border-right: 0;
       }
 
       .article-image {
         background: $pastel-green;
 
         img {
-          filter:grayscale(100%);
+          //filter:grayscale(100%);
         }
       }
     }
@@ -1224,13 +1231,14 @@ article.blog-article {
 			display:block;
       width:100%;
       @include transition($link-transition);
-      mix-blend-mode:multiply;
+      //mix-blend-mode:multiply;
       //filter:grayscale(100%);
 		}
 	}
 
   .article-date {
-    font-size:10.28571428571429em; // 144px
+    //font-size:10.28571428571429em; // 144px
+    font-size: $font-size-date;
     font-weight:bold;
     letter-spacing:0;
     position:absolute;
@@ -1240,7 +1248,7 @@ article.blog-article {
 
     @media (min-width: $screen-sm-min) {
       left: 100%;
-      top:50%;
+      top:40%;
       bottom:auto;
       right:auto;
       @include transform(translateX(-50%) translateY(-50%));
@@ -1251,6 +1259,7 @@ article.blog-article {
       color:$burnt-sienna;
       @include transition($link-transition);
       line-height:1em;
+      letter-spacing:0;
     }
 
   }
@@ -1258,8 +1267,8 @@ article.blog-article {
 	.author-line {
 		font-weight:bold;
 		font-family: FreightSansBold;
-		font-size: 14px;
-		color: #000000;
+		//font-size: 14px;/* font calc addition */
+		color: #000;
 		letter-spacing: 2px;
     margin:0;
     @include transition($link-transition);
@@ -1284,8 +1293,8 @@ article.blog-article {
 
 	h2 {
     font-weight:normal;
-		font-size: 2.57142857142857em; //36px;
-		color: #000000;
+		//font-size: 2.57142857142857em; //36px;/* font calc addition */
+		color: #000;
 		margin:0;
     @include transition($link-transition);
 		line-height: 1.22222222222222em; //44px;
@@ -1305,11 +1314,11 @@ article.blog-article {
       text-transform:uppercase;
       font-weight:bold;
       color: #272727;
-      letter-spacing: 0
+      letter-spacing: 0;
     }
 	}
 
-	&:nth-child(even) > a {
+	&:nth-child(odd) > a {
     flex-direction:column;
 
     @media (min-width: $screen-sm-min) {
