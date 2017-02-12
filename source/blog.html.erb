@@ -7,7 +7,15 @@ page_title: Blog
 noMiniColumn: true
 ---
 
+
+
+<% last_date = nil %>
 <% page_articles.each_with_index do |article, i| %>
+<% date_string = article.date.strftime('%b %Y')  %>
+<% if last_date != date_string %>
+  <h2><%= article.date.strftime('%B %Y') %></h2>
+<% end %>
+<% last_date = date_string %>
   <article class="blog-article">
   	<a href="<%= article.url %>">
 
