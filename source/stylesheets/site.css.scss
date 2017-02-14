@@ -981,6 +981,7 @@ section.subscribe {
     .lead-paragraph {
       /* 19.01.2017 Localhost: */
       //font-size: 1.71428571428571em; //24px/* font calc addition */
+      font-size: $font-size-h2;
       color: #000000;
       letter-spacing: 0.12em;
       line-height: 1.5em;//36px;
@@ -1266,7 +1267,7 @@ article.blog-article {
 
 	.author-line {
 		font-weight:bold;
-		font-family: FreightSansBold;
+		//font-family: FreightSansBold;
 		//font-size: 14px;/* font calc addition */
 		color: #000;
 		letter-spacing: 2px;
@@ -1304,6 +1305,7 @@ article.blog-article {
 	.read-more {
 		margin:0;
     text-align:right;
+    font-size: $font-size-h6;
 
     span {
   		display:inline-block;
@@ -1318,7 +1320,7 @@ article.blog-article {
     }
 	}
 
-	&:nth-child(odd) > a {
+	&:nth-child(even) > a {
     flex-direction:column;
 
     @media (min-width: $screen-sm-min) {
