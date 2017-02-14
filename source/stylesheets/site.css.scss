@@ -412,7 +412,7 @@ section.events {
         span.title {
           display:block;
           border-bottom:1px solid #979797;
-          color: #000000;
+          color: #000;
           letter-spacing: 1.57px;
           line-height: 1.3em;
           width:calc(100% - 75px);
@@ -861,7 +861,7 @@ section.subscribe {
         // padding: 14.5% 8% 15.5% 13%;
         padding: 12.8% 7% 14% 7%;
         //font-size: 3.42857142857143em; //48px;/* font calc addition */
-        color: #000000;
+        color: #000;
         font-weight:normal;
         letter-spacing:0;
         line-height: 1.20833333333333em; //58px;
@@ -920,7 +920,7 @@ section.subscribe {
           //margin-left:-15px;
           margin-left:10%;
           // margin-right:10%;
-          width: 80%;
+          //width: 80%;
 
           @media (min-width: $screen-sm-min) {
             width:100%;
@@ -968,13 +968,13 @@ section.subscribe {
     }
 
     time {
-      color: #000000;
+      color: #000;
       letter-spacing: 0.13857142857143em; //1.94px;
       //line-height: 2.57142857142857em; //36px;
       font-weight:bold;
       //padding-top: 3.6%;
       display: block;
-      padding-top: 45px;
+      padding-top: 50px;
       padding-bottom: 6px;
     }
 
@@ -982,7 +982,7 @@ section.subscribe {
       /* 19.01.2017 Localhost: */
       //font-size: 1.71428571428571em; //24px/* font calc addition */
       font-size: $font-size-h2;
-      color: #000000;
+      color: #000;
       letter-spacing: 0.12em;
       line-height: 1.5em;//36px;
       word-spacing: -0.09em;
@@ -1002,8 +1002,6 @@ section.subscribe {
         padding: 0 27.3% 0 33.2%;
       }
 
-
-
       blockquote {
         margin: 0;
         margin-top: 10%;
@@ -1020,7 +1018,7 @@ section.subscribe {
         p {
 					font-style:italic;
           //font-size: 2.57142857142857em; //36px;/* font calc addition */
-          color: #000000;
+          color: #000;
           letter-spacing: 0.13em;
           line-height: 1.47222222222222em; // 53px;
           margin-bottom: 0.41666666666667em; // 15px;
@@ -1076,7 +1074,7 @@ section.subscribe {
       a {
         //width: 134px;
         //font-size: 0.85714285714286em; //12px;/* font calc addition */
-        color: #000000;
+        color: #000;
         letter-spacing: 0.14em;
         font-weight:bold;
         text-transform:uppercase;
@@ -1248,6 +1246,7 @@ article.blog-article {
     z-index: 2;
 
     @media (min-width: $screen-sm-min) {
+      font-size: $font-size-date;
       left: 100%;
       top:40%;
       bottom:auto;
@@ -1296,7 +1295,7 @@ article.blog-article {
     font-weight:normal;
 		//font-size: 2.57142857142857em; //36px;/* font calc addition */
 		color: #000;
-		margin:0;
+		margin:0 80px 0 0;
     @include transition($link-transition);
 		line-height: 1.22222222222222em; //44px;
     text-transform: none;
