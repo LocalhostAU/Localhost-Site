@@ -294,7 +294,6 @@ section.events {
       z-index:3;
       line-height:1.4em;
       margin-bottom: 3%;
-
       overflow:hidden;
 
       @media (min-width: $screen-sm-min) {
@@ -421,8 +420,6 @@ section.events {
           padding:6px 20px 14px 0;
 					//padding-right: 12px;
           @include transition($link-transition);
-
-
       		position: relative;
       		//padding:10px 20px 10px 0;
       		display: inline-block;
@@ -602,7 +599,6 @@ section.mission {
     stroke-dasharray: 1000;
     stroke-dashoffset: 1000;
   }
-
 
   @media (min-width: $screen-sm-min) {
     padding: 8.7% 30px 7.13%;
@@ -857,7 +853,7 @@ section.subscribe {
       margin-bottom: 61px;
 
       > h1 {
-        background: #EFEFEF;
+        background: #efefef;
         // padding: 14.5% 8% 15.5% 13%;
         padding: 12.8% 7% 14% 7%;
         //font-size: 3.42857142857143em; //48px;/* font calc addition */
@@ -1072,7 +1068,7 @@ section.subscribe {
 
     li {
       a {
-        //width: 134px;
+        //width: 60%;
         //font-size: 0.85714285714286em; //12px;/* font calc addition */
         color: #000;
         letter-spacing: 0.14em;
@@ -1083,6 +1079,7 @@ section.subscribe {
 				padding-bottom: 0.66666666666667em ; //8px;
 				border-color:#000;
         padding-right:30px;
+        max-width: 300px;
 
 				&:hover, &:focus {
 					color: $burnt-sienna;
@@ -1193,11 +1190,9 @@ article.blog-article {
 
       h2,p {
         color:#000;
-        //color:$pastel-green;
       }
 
       .article-date p {
-        //color:$pastel-green;
         color:#000;
       }
 
@@ -1246,12 +1241,16 @@ article.blog-article {
     z-index: 2;
 
     @media (min-width: $screen-sm-min) {
-      font-size: $font-size-date;
+      font-size: $font-size-h1;
       left: 100%;
       top:40%;
       bottom:auto;
       right:auto;
       @include transform(translateX(-50%) translateY(-50%));
+    }
+
+    @media (min-width: $screen-md-min) {
+      font-size: $font-size-date;
     }
 
     p {
@@ -1288,6 +1287,7 @@ article.blog-article {
   		padding: 0 0 0 30px;
       align-self: flex-end;
       flex-grow:1;
+      width: 52.193228736581%;
     }
 	}
 
