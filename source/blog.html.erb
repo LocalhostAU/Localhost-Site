@@ -3,18 +3,15 @@ title: Blog
 body_classes: blog
 meta_description: Connecting web, creative and digital communities &amp; unearthing local talent across Australia.
 pageable: true
-page_title: Blog
+page_title: <span>Blog</span>
 noMiniColumn: true
 ---
-
-
-
 
 <% last_date = nil %>
 <% page_articles.each_with_index do |article, i| %>
 <% date_string = article.date.strftime('%b %Y')  %>
 <% if last_date != date_string %>
-  <h2><%= article.date.strftime('%B %Y') %></h2>
+  <h2 class="title-grey-block"><%= article.date.strftime('%B %Y') %></h2>
 <% end %>
 <% last_date = date_string %>
   <article class="blog-article">

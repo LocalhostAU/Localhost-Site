@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="811 1247 131 131" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style>
+    circle:hover {
+    opacity:0.5;
+    }
+  </style>
+  <circle cx="876.5" cy="1312.5" r="64.5" fill="#FFF" fill-opacity=".2" fill-rule="evenodd" stroke="#000" stroke-width="2"/>
+  <path fill="none" stroke="#000" stroke-width="2" d="M901.09 1306.522c2.712 1.905 2.71 4.994 0 6.898l-32.18 22.602c-2.712 1.905-4.91.76-4.91-2.56v-46.98c0-3.32 2.2-4.466 4.91-2.562l32.18 22.602z"/>
+</svg>

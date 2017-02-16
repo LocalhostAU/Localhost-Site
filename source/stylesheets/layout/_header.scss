@@ -10,6 +10,7 @@ header {
 
   @media (min-width: $screen-sm-min) {
     flex-direction:row;
+		flex-wrap:nowrap;
   }
 
   &.header-home {

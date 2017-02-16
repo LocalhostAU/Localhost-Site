@@ -31,12 +31,13 @@
     <%= partial "partials/header-internal" %>
 
     <div class="main">
-      <h1><a href="/blog"><span>Blog</span></a></h1>
+      <p class="h1"><a href="/blog"><span>Blog</span></a></p>
 
       <article>
         <div class="article-header">
           <h1>
             <%= current_page.data.title %>
+            <span class="author">by <%= current_page.data.author %></span>
           </h1>
 
           <% if current_page.data.image && !current_page.data.hideFeatureImage  %>
@@ -56,6 +57,28 @@
         </div>
       </article>
     </div><!-- .main -->
+
+    <div class="blog-additional">
+      <% if current_page.data.videoURL %>
+        <div class="additional-video">
+          <a href="<%= current_page.data.videoURL %>" target="_blank">
+            <div class="additional-border"><img src="<%= current_page.data.additionalImage %>" /></div>
+          </a>
+
+          <% if current_page.data.videoCaption %>
+            <p class="caption"><%= current_page.data.videoCaption %></p>
+          <% end %>
+        </div>
+      <% end %>
+      <% if current_page.data.additionalImage %>
+        <div class="additional-image">
+          <div class="additional-border"><img src="<%= current_page.data.additionalImage %>" /></div>
+          <% if current_page.data.imageCaption %>
+            <p class="caption"><%= current_page.data.imageCaption %></p>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
 
     <div class="pagination">
         <ul>
