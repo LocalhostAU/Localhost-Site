@@ -27,7 +27,6 @@
 	max-width: 1200px;
 	width:85%; /* changed to 85% from 100% to give elements some more breathing room */
 	margin: 0 auto;
-	//padding: 0 30px;
   position:relative;
 
   .internal & {
@@ -325,19 +324,6 @@ section.events {
           @include transition($link-transition);
           padding: 0 0 10px 0;
 
-          // &:before {
-          //   content: attr(data-hover);
-          //   position: absolute;
-          //   top: 100%;
-          //   padding: 0 0 10px 0;
-          //   left:0;
-          //   right:0;
-          //   color: $lavendar;
-          //   //padding:10px;
-          //   //background: #000;
-          //   //color:#fff;
-          //   @include transform(translate3d(0,0,0));
-          // }
         }
 
         &:hover, &:focus {
@@ -355,7 +341,6 @@ section.events {
     }
 
     .speaker {
-    //  text-transform:uppercase;
       padding-left: 38.8%;
       font-size: $font-size-sm;
       line-height: 1.3em;
@@ -403,8 +388,6 @@ section.events {
       }
 
       li {
-        //text-transform:uppercase;
-        //font-size: 0.8em;
         font-size: $font-size-sm;
 
         .date {
@@ -423,10 +406,8 @@ section.events {
           flex-grow:1;
           text-decoration:none;
           padding:6px 20px 14px 0;
-					//padding-right: 12px;
           @include transition($link-transition);
       		position: relative;
-      		//padding:10px 20px 10px 0;
       		display: inline-block;
       		@include transition(transform 0.3s);
 
@@ -504,7 +485,6 @@ section.events {
         }
       }
     }
-
   }
 }
 
@@ -635,10 +615,6 @@ section.mission {
   p {
     line-height:1em;
     font-size: $font-size-h1;
-
-    @media (min-width: $screen-sm-min) {
-    //  font-size:3.5em; // 56px /* font calc addition */
-    }
   }
 
   .brand-pink {
@@ -687,25 +663,21 @@ section.subscribe {
   h2 {
     text-transform:uppercase;
     font-weight:bold;
-    //letter-spacing: 0.18525em;
     letter-spacing: 0.15em;
     text-align:center;
-    //font-size:1.5em; // 40px /* font calc addition */
     font-size: $font-size-h3;
     line-height:1em;
 
     @media (min-width: $screen-sm-min) {
-      // font-size:2.5em; // 40px/* font calc addition */
       font-size: $font-size-h2;
     }
 
     span {
-      //font-size:0.5em; /* font calc addition */
-      margin-top:1.01em;
-      //letter-spacing:0.3705em;
+      margin-top:1.81em;
       letter-spacing: 0.15em;
       display:block;
       line-height:1em;
+      font-size: $font-size-h6;
     }
   }
 }
@@ -735,7 +707,6 @@ section.subscribe {
   position: relative;
 
   h2 {
-    //letter-spacing: 0.1em;
     margin-bottom: -0.5em;
 
     @media (min-width: $screen-sm-min) {
@@ -793,7 +764,6 @@ section.subscribe {
           text-transform:none;
           font-weight: normal;
           margin:0;
-					//font-size: 1.5em;/* font calc addition */
         }
 
         p {
@@ -990,9 +960,7 @@ section.subscribe {
 
       > h1 {
         background: #efefef;
-        // padding: 14.5% 8% 15.5% 13%;
         padding: 12.8% 7% 14% 7%;
-        //font-size: 3.42857142857143em; //48px;/* font calc addition */
         color: #000;
         font-weight:normal;
         letter-spacing:0;
@@ -1009,7 +977,6 @@ section.subscribe {
           letter-spacing:0.2em;
           text-transform:uppercase;
           display:block;
-          //text-align:right;
           font-weight:bold;
         }
 
@@ -1088,7 +1055,6 @@ section.subscribe {
         }
 
         &:before {
-
             position:absolute;
             top:0;
             right: 0;
@@ -1121,8 +1087,6 @@ section.subscribe {
     }
 
     .lead-paragraph {
-      /* 19.01.2017 Localhost: */
-      //font-size: 1.71428571428571em; //24px/* font calc addition */
       font-size: $font-size-h2;
       color: #000;
       letter-spacing: 0.12em;
@@ -1150,20 +1114,20 @@ section.subscribe {
         margin-bottom: 9.6%;
 
         @media (min-width:$screen-sm-min) {
-          // margin-left: -32.6766304347825%;
-          // margin-right: -32.6766304347825%;
-
           margin-left: -24.6%;
           margin-right: -24.6%;
         }
 
         p {
 					font-style:italic;
-          //font-size: 2.57142857142857em; //36px;/* font calc addition */
-          color: #000;
+          color: #666;
+          font-size: $font-size-h4;
           letter-spacing: 0.13em;
           line-height: 1.47222222222222em; // 53px;
           margin-bottom: 0.41666666666667em; // 15px;
+          border-left: 1px solid #999;
+          border-bottom: 1px solid #999;
+          padding: 0 0 20px 20px;
         }
       }
 
@@ -1226,7 +1190,6 @@ section.subscribe {
 
       a {
         //width: 60%;
-        //font-size: 0.85714285714286em; //12px;/* font calc addition */
         color: #000;
         letter-spacing: 0.14em;
         font-weight:bold;
@@ -1388,7 +1351,6 @@ article.blog-article {
 	}
 
   .article-date {
-    //font-size:10.28571428571429em; // 144px
     font-size: $font-size-date;
     font-weight:bold;
     letter-spacing:0;
@@ -1422,8 +1384,6 @@ article.blog-article {
 
 	.author-line {
 		font-weight:bold;
-		//font-family: FreightSansBold;
-		//font-size: 14px;/* font calc addition */
 		color: #000;
 		letter-spacing: 2px;
     margin:0;
@@ -1450,7 +1410,6 @@ article.blog-article {
 
 	h2 {
     font-weight:normal;
-		//font-size: 2.57142857142857em; //36px;/* font calc addition */
 		color: #000;
 		margin:0 80px 0 0;
     @include transition($link-transition);
@@ -1493,9 +1452,7 @@ article.blog-article {
 
 .title-grey-block {
   background: #efefef;
-  // padding: 14.5% 8% 15.5% 13%;
   padding: 8.6% 7% 5.75% 7%;
-  //font-size: 3.42857142857143em; //48px;/* font calc addition */
   color: #000;
   font-weight:normal;
   letter-spacing:0;
@@ -1542,7 +1499,6 @@ article.blog-article {
     &:before {
       position:absolute;
       border-bottom: 4px solid #F27959;
-
       left: -6.8%;
       top: 15.5%;
       font-weight: bold;

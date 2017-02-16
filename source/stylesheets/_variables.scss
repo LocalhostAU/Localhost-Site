@@ -93,13 +93,13 @@ $browser-context: 16; // Default size
   @return #{$pixels/$context}em;
 }
 
-$font-size-date: em(144);
+$font-size-date: em(144); // large dates
 $font-size-body: em(16);
 $font-size-sm: em(14);
 $font-large-intro: em(48);
 $font-size-h1: em(42);
 $font-size-h2: em(24);
-$font-size-h3: em(22); //need to customise still
-$font-size-h4: em(16);
+$font-size-h3: em(22); // currently used for H2 sizing - to fix up
+$font-size-h4: em(30); // used for blockquotes
 $font-size-h5: em(25);
 $font-size-h6: em(14);
