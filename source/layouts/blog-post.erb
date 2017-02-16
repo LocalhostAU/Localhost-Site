@@ -62,7 +62,9 @@
       <% if current_page.data.videoURL %>
         <div class="additional-video">
           <a href="<%= current_page.data.videoURL %>" target="_blank">
-            <div class="additional-border"><img src="<%= current_page.data.additionalImage %>" /></div>
+            <div class="additional-border">
+              <img src="<%= current_page.data.videoImage %>" />
+            </div>
           </a>
 
           <% if current_page.data.videoCaption %>
