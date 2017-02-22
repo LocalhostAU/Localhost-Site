@@ -580,30 +580,51 @@ section.mission {
   padding: 90px 0 40px;
   position:relative;
 
-  .bit-line {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-  }
-
   @media (min-width: $screen-sm-min) {
     padding: 8.7% 30px 7.13%;
   }
+	//
+  // .bit-line {
+  //   stroke-dasharray: 1000;
+  //   stroke-dashoffset: 1000;
+  // }
+	//
+  // .bits-draw {
+  //   width:77px;
+  //   height:76px;
+  //   position:absolute;
+  //   top:0;
+  //   right:43.78%;
+  // }
+	//
+  // .bit-draw {
+  //   width:38px;
+  //   height:34px;
+  //   display:block;
+  //   position:absolute;
+  //   bottom:0;
+  //   right:39%;
+  // }
 
-  .bits-draw {
-    width:77px;
-    height:76px;
-    position:absolute;
-    top:0;
-    right:43.78%;
-  }
+  .mission-bits {
+    svg {
 
-  .bit-draw {
-    width:38px;
-    height:34px;
-    display:block;
-    position:absolute;
-    bottom:0;
-    right:39%;
+      &.mission-top {
+        max-width: 125px;
+        width:100%;
+        margin-bottom:5%;
+      }
+
+      &.mission-bottom {
+        max-width: 401px;
+        width:100%;
+      }
+
+      .bit-line {
+        stroke-dasharray: 120;
+        stroke-dashoffset: 120;
+      }
+    }
   }
 
   .container {
@@ -685,19 +706,25 @@ section.subscribe {
 .inview {
 
   &.mission {
-    .bits-draw .bit-line {
-    	@include animation(dash 10s linear forwards);
+    .mission-top .bit-line {
+    	@include animation(dash 1s linear forwards);
 
-      @for $i from 1 to 2 {
+      @for $i from 0 to 2 {
   		  &:nth-child(#{$i}) {
-  				@include animation-delay($i * 1s);
+  				@include animation-delay($i * 0.5s);
     		}
       }
     }
 
-    .bit-draw .bit-line {
-      @include animation(dash 10s linear forwards);
-      @include animation-delay(2s);
+    .mission-bottom .bit-line {
+      @include animation(dash 1s linear forwards);
+      @include animation-delay(1s);
+
+      @for $i from 0 to 2 {
+  		  &:nth-child(#{$i}) {
+  				@include animation-delay(1s + ($i * 0.5s));
+    		}
+      }
     }
   }
 }
