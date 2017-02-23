@@ -255,8 +255,9 @@ section.events {
         position:relative;
 
         &.month {
-          font-size: $font-size-h1;
-          font-weight: bold;
+          //font-size: $font-size-h1;
+          //font-weight: bold;
+          color: $burnt-sienna;
           letter-spacing:0.11em;
           text-transform:uppercase;
           margin-bottom: 19%;

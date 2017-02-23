@@ -7,7 +7,7 @@
   var featuredentry = data.feed.entry;
   $(featuredentry).each(function(){
     // Column names are name, age, etc.
-    $('.upcoming-event').append('<p class="date"><span class="month">'+this.gsx$month.$t+'</span> <span class="weekday">'+this.gsx$day.$t+'</span> <span class="day">'+this.gsx$date.$t+'</span></p><h2 class="title">  <a href="'+this.gsx$link.$t+'" title="Find out about '+this.gsx$title.$t+'" target="_blank"><span data-hover="'+this.gsx$title.$t+'">'+this.gsx$title.$t+'</span></a></h2><p class="speaker">'+this.gsx$speaker.$t+' <span class="from">'+this.gsx$speakerfrom.$t+'</span></p> <p class="location">'+this.gsx$location.$t+'</p>');
+    $('.upcoming-event').append('<p class="date"><span class="title">Calendar</span> <span class="weekday">'+this.gsx$day.$t+' '+this.gsx$date.$t+'</span><span class="month">'+this.gsx$month.$t+'</span></p><h2 class="title">  <a href="'+this.gsx$link.$t+'" title="Find out about '+this.gsx$title.$t+'" target="_blank"><span data-hover="'+this.gsx$title.$t+'">'+this.gsx$title.$t+'</span></a></h2><p class="speaker">'+this.gsx$speaker.$t+' <span class="from">'+this.gsx$speakerfrom.$t+'</span></p> <p class="location">'+this.gsx$location.$t+'</p>');
   });
  });
 
@@ -23,6 +23,8 @@
 
   var entry = data.feed.entry;
   if(entry) {
+
+    $('.future-events').prepend('<p class="date"><span class="weekday">Coming Up</span></p>');
     $(entry).each(function(){
       $('.future-events ul').append('<li><a href="'+this.gsx$link.$t+'" class="title" target="_blank"><span class="date">'+this.gsx$date.$t+'</span><span class="title" data-hover="'+this.gsx$title.$t+' ('+this.gsx$location.$t+')">'+this.gsx$title.$t+' <span class="location">('+this.gsx$location.$t+')</span></span></a></li>');
     });
