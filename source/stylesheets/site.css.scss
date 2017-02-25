@@ -274,29 +274,29 @@ section.events {
           text-transform:uppercase;
           //margin-bottom: 19%;
           z-index:2;
-          font-size: $font-size-h1;
+          font-size: $font-size-h5;
           margin-left: -5px;
 
           @media (min-width: $screen-sm-min) {
-            font-size: $font-size-h5;
-            margin-left: 10%;
+            //font-size: $font-size-h5;
+            margin-left: 9%;
           }
         }
 
         &.weekday {
           font-size: $font-size-h3;
           letter-spacing: 0.2em;
-					margin-left: -4px;
+					//margin-left: -4px;
           margin-top: 30%;
-          line-height: 1.5em;
+          line-height: 2.5em;
 					font-weight:bold;
           text-transform:uppercase;
           z-index:2;
 
           @media (min-width: $screen-sm-min) {
-            margin-top: 20%;
+            //margin-top: 20%;
             margin-left: 10%;
-            line-height: 2.5em;
+            //line-height: 2.5em;
           }
         }
 
@@ -318,7 +318,9 @@ section.events {
       font-weight:normal;
       //margin-top: -21%;
 			letter-spacing: 0.03em;
-      padding: 10% 0 0 38.8%;
+      //padding: 10% 0 0 40.8%;
+      padding-top: 20%;
+      margin-left: 40.8%;
       position:relative;
       z-index:3;
       line-height:1.4em;
@@ -329,6 +331,8 @@ section.events {
       @media (min-width: $screen-sm-min) {
         padding-right:10.1%;
         margin-top: -18%;
+        margin-left: 230px;
+        padding-top: 10%;
       }
 
       a {
@@ -343,8 +347,14 @@ section.events {
         border-bottom:1px solid #979797;
         display:block;
         //padding-right:7%;
-        padding-bottom: 6.4%;
+        padding-bottom: 3.4%;
+        margin-right: 10%;
         position:relative;
+
+        @media (min-width: $screen-sm-min) {
+          border-bottom:1px solid #979797;
+          padding-bottom: 3.4%;
+        }
 
         span{
           display:block;
@@ -368,11 +378,16 @@ section.events {
     }
 
     .speaker {
-      padding-left: 38.8%;
+      //padding-left: 40.8%;
+      margin-left: 40.8%;
       font-size: $font-size-sm;
       line-height: 1.3em;
       letter-spacing: 0.1em;
       margin-bottom: 4.5%;
+
+      @media (min-width: $screen-sm-min) {
+        margin-left: 230px;
+      }
 
       span {
         display:block;
@@ -382,11 +397,16 @@ section.events {
     .location {
       font-size: $font-size-sm;
       text-transform:uppercase;
-      margin-left:38.8%;
+      //margin-left:40.8%;
+      margin-left: 40.8%;
 			font-weight:bold;
       line-height:14px;
       color: $burnt-sienna;
       letter-spacing:0.1em;
+
+      @media (min-width: $screen-sm-min) {
+        margin-left: 230px;
+      }
 
       &:before {
         content:"";
