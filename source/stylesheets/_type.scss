@@ -128,6 +128,7 @@ p.tagline {
   //font-size:1.28571428571429em; // 18px /* font calc addition */
   padding-top: 5.5%;
   padding-bottom: 10.1%;
+  font-size: $font-size-h3;
 
   @media (min-width: $screen-sm-min) {
     //font-size:2.57142857142857em; //36px; /* font calc addition */
