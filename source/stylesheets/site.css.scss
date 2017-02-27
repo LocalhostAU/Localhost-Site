@@ -359,6 +359,7 @@ section.events {
 			font-weight:bold;
       line-height:14px;
       color: $burnt-sienna;
+
       letter-spacing:0.1em;
 
       &:before {
@@ -407,6 +408,10 @@ section.events {
           text-decoration:none;
           padding:6px 20px 14px 0;
           @include transition($link-transition);
+          background:url('../images/target-blank.svg');
+          background-repeat:no-repeat;
+          background-position:right calc(100% - 14px);
+          background-size: 14px auto;
       		position: relative;
       		display: inline-block;
       		@include transition(transform 0.3s);
@@ -611,13 +616,23 @@ section.mission {
 
       &.mission-top {
         max-width: 125px;
-        width:100%;
-        margin-bottom:5%;
+        // width:100%;
+        margin-bottom:6%;
+        margin-left: 4%;
+        width:31.17206982543625%;
+
+        @media (min-width: $screen-sm-min) {
+          // width: 10.74%;
+        }
       }
 
       &.mission-bottom {
         max-width: 401px;
-        width:100%;
+        // width:100%;
+        margin-top: 0.7%;
+        width:75%;
+        // width: 35%;
+        margin-left: 15%;
       }
 
       .bit-line {
@@ -629,31 +644,38 @@ section.mission {
 
   .container {
     width:100%;
-    max-width:1000px;
+    // max-width:1000px;
+    max-width: 800px;
     margin: 0 auto;
   }
 
   p {
-    line-height:1em;
-    font-size: $font-size-h1;
+    line-height: em(52,56);
+    font-size: em(32);
+    word-spacing: -0.09em;
+
+    @media (min-width: $screen-sm-min) {
+      font-size: em(56);
+    }
+  }
+
+  .brand-pink, .brand-blue, .brand-green {
+
+      border-bottom: 4px solid #000;
+  		line-height:1em;
+  		display:inline-block;
   }
 
   .brand-pink {
-    border-bottom: 4px solid $burnt-sienna;
-		line-height:1.1em;
-		display:inline-block;
+    border-color:$burnt-sienna;
   }
 
   .brand-blue {
-    border-bottom: 4px solid $malibu;
-		line-height:1.1em;
-		display:inline-block;
+    border-color: $malibu;
   }
 
   .brand-green {
-    border-bottom: 4px solid $pastel-green;
-		line-height:1.1em;
-		display:inline-block;
+    border-color: $pastel-green;
   }
 }
 
