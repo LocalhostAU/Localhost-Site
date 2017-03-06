@@ -48,7 +48,7 @@ a {
   border-bottom:1px solid rgba($burnt-sienna, 0.5);
   @include transition(0.2s ease-in-out all);
   text-decoration:none;
-  display: inline-block;
+  display: inline;
   line-height: 1.1em;
 
   &:hover, &:focus {

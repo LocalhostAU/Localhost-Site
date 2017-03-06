@@ -14,25 +14,27 @@ noMiniColumn: true
   <h2 class="title-grey-block"><%= article.date.strftime('%B %Y') %></h2>
 <% end %>
 <% last_date = date_string %>
-  <article class="blog-article">
-  	<a href="<%= article.url %>">
+  <% if article.data.published != false %>
+    <article class="blog-article">
+    	<a href="<%= article.url %>">
 
-  		<div class="article-image">
-        <div class="article-date"><p><%= article.date.strftime('%d') %> <span class="sr-only"><%= article.date.strftime('%B %Y') %></span></p></div>
-  			<img src="<% if article.data.image %><%= article.data.image %><% else %>/images/blog-placeholder.jpg<% end %>"/>
-  		</div>
+    		<div class="article-image">
+          <div class="article-date"><p><%= article.date.strftime('%d') %> <span class="sr-only"><%= article.date.strftime('%B %Y') %></span></p></div>
+    			<img src="<% if article.data.image %><%= article.data.image %><% else %>/images/blog-placeholder.jpg<% end %>"/>
+    		</div>
 
-  		<div class="article-caption">
-        <% if article.data.category || article.data.author %>
-    			<p class="author-line">
-    				<% if article.data.category %><span class="article-category"><%= article.data.category %></span><% end %>
-    			</p>
-        <% end %>
-  			<h2><%= article.title %></h2>
-  			<p class="read-more"><span>Read more</span></p>
-  		</div>
-  	</a>
-  </article>
+    		<div class="article-caption">
+          <% if article.data.category || article.data.author %>
+      			<p class="author-line">
+      				<% if article.data.category %><span class="article-category"><%= article.data.category %></span><% end %>
+      			</p>
+          <% end %>
+    			<h2><%= article.title %></h2>
+    			<p class="read-more"><span>Read more</span></p>
+    		</div>
+    	</a>
+    </article>
+  <% end %>
 <% end %>
 
 <% if paginate && num_pages > 1 %>

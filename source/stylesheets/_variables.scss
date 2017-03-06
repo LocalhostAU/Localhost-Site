@@ -103,3 +103,56 @@ $font-size-h3: em(22); // currently used for H2 sizing - to fix up
 $font-size-h4: em(30); // used for blockquotes
 $font-size-h5: em(72); // used for homepage
 $font-size-h6: em(14);
+
+// Change scale
+
+$mod_1: 1.05;
+$mod_2: 1.15;
+
+
+// Fluid Type Mixin
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1 == $u2 and $u1 == $u3 and $u1 == $u4 {
+    & {
+      font-size: $min-font-size;
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  } @else {
+    @error "Detected mixed units. Please use the same units for all parameters. " + $u1 +", " + $u2 + ", " + $u3 +", "+ $u4;
+  }
+}
+
+// Calculate Modular Scale
+$h1-min: $mod_1*$mod_1*$mod_1*$mod_1*$mod_1 * 1rem;
+$h1-max: $mod_2*$mod_2*$mod_2*$mod_2*$mod_2 * 1rem;
+
+$h2-min: $mod_1*$mod_1*$mod_1*$mod_1 * 1rem;
+$h2-max: $mod_2*$mod_2*$mod_2*$mod_2 * 1rem;
+
+$h3-min: $mod_1*$mod_1*$mod_1 * 1rem;
+$h3-max: $mod_2*$mod_2*$mod_2 * 1rem;
+
+$h4-min: $mod_1*$mod_1 * 1rem;
+$h4-max: $mod_2*$mod_2 * 1rem;
+
+$h5-min: $mod_1 * 1rem;
+$h5-max: $mod_2 * 1rem;
+
+$h6-min: 1rem;
+$h6-max: 1rem;
