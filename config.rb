@@ -40,7 +40,7 @@ activate :directory_indexes
 
 # Build-specific configuration
 configure :build do
-  activate :asset_hash, :ignore => %r{^blog/.*}
+  activate :asset_hash, :ignore => %r{^blog/.*|ogimage.jpg}
 end
 
 activate :blog do |blog|
