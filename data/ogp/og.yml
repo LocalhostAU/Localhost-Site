@@ -1,9 +1,9 @@
 type: article
 image:
-  '': https://localhost.events/images/ogp.jpg
+  '': https://localhost.events/images/ogimage.jpg
   type: image/jpg
-  width: 560
-  height: 300
+  width: 1200
+  height: 630
 locale:
   '': en_us
 twitter:

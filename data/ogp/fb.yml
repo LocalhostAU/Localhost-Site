@@ -1,6 +1,6 @@
 type: article
 image:
-  '': https://localhost.events/images/fb.jpg
+  '': https://localhost.events/images/ogimage.jpg
   type: image/jpg
-  width: 600
-  height: 315
+  width: 1200
+  height: 630
