@@ -330,9 +330,13 @@
 
     main {
       flex-grow:1;
+      padding: 0 15px;
+
     }
 
     aside {
+      padding: 0 15px;
+
       h2 {
         display:inline-block;
         position:relative;
@@ -452,6 +456,95 @@
             transform: translateY(-50%);
 
             position:absolute;
+          }
+        }
+      }
+    }
+
+    .calendar {
+      ul {
+        padding:0;
+
+        li {
+
+          &:before {
+            content:none;
+          }
+          .calendar-event-details {
+            width:20%;
+          }
+
+          .calendar-event-details {
+            width:80%;
+            border-bottom:1px solid #979797;
+            @include transition($link-transition);
+
+            > span:first-child {
+              width:50%;
+            }
+          }
+
+          a {
+            border:0;
+            color:#ccc;
+
+            > span {
+              padding: 10px 0;
+            }
+
+            &:hover, &:focus {
+              .calendar-event-details {
+                color: $lavendar;
+                border-color:$lavendar;
+              }
+            }
+          }
+
+          a, .calendar-event-details {
+            display:flex;
+            justify-content: space-between;
+          }
+        }
+      }
+
+      &.toggle-per {
+
+        li.per-event a {
+          color:#000;
+
+          &:hover, &:focus {
+            color: $lavendar;
+          }
+        }
+      }
+
+      &.toggle-bne {
+
+        li.bne-event a {
+          color:#000;
+
+          &:hover, &:focus {
+            color: $lavendar;
+          }
+        }
+      }
+
+      &.toggle-syd {
+        li.syd-event a {
+          color:#000;
+
+          &:hover, &:focus {
+            color: $lavendar;
+          }
+        }
+      }
+
+      &.toggle-mel {
+        li.mel-event a {
+          color:#000;
+
+          &:hover, &:focus {
+            color: $lavendar;
           }
         }
       }
