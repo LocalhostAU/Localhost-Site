@@ -1,0 +1,27 @@
+<div class="event-date   <% if locals[:location] %> location-<%= location %> <% end %>">
+  <p><%= date ||= "" %></p>
+</div>
+<article class="event per-events">
+  <% if locals[:image] %>
+  <header class="image">
+    <img src="<%= image %>" />
+  </header>
+  <% end %>
+  <% if locals[:link] %><a class="btn" href="<%= link %>" target="_blank"><% end %>
+    <div class="caption">
+      <h2 class="event-name"><%= name %></h2>
+      <% if locals[:description] %>
+        <p class="event-desc"><%= description %></p>
+      <% end %>
+      <% if locals[:title] %>
+        <p class="event-title"><%= title %></p>
+      <% end %>
+    </div>
+    <footer class="details">
+      <div><button class="btn-rsvp"><%= button_text ||= "RSVP" %></button></div>
+      <% if locals[:description] %>
+        <p class="price"><%= price %></p>
+      <% end %>
+    </footer>
+  <% if locals[:link] %></a><% end %>
+</article>

@@ -4,87 +4,55 @@ body_classes: internal
 meta_description: Connecting web, creative and digital communities &amp; unearthing local talent across Australia.
 noMiniColumn: true
 ---
-<!-- <div class="future-events">
-  <ul>
-  </ul>
-</div> -->
 
 <h1><span class="title-left">Aussie <br />Events</span>
 	<span class="title-right">Localhost Calendar</span></h1>
 
 <section class="events-calendar">
 	<div class="event-column">
-		<div class="event-date location-per">
-			<p>Thurs 19 Feb</p>
-		</div>
-
-		<article class="event localhost-event per-events">
-			<header class="image">
-				<img src="../images/events/GeorgieLuhur.png" />
-			</header>
-			<div class="caption">
-				<h2 class="speaker-name">Georgie Luhur</h2>
-				<p class="speaker-role">Front End Dev @ Campaign Monitor</p>
-				<p class="event-title">Creative ways of styling figures and fig captions</p>
-			</div>
-			<footer class="details">
-				<div><a class="btn btn-rsvp" href="#">RSVP</a></div>
-				<p class="price">Free event</p>
-			</footer>
-		</article>
+		<%= partial('events/components/card', :locals => {
+			:date => "Thurs 19 Feb",
+			:name => "Georgie Luhur",
+			:description => "Front End Dev @ Campaign Monitor",
+			:title => "Creative ways of styling figures and fig captions",
+			:image => "/images/events/GeorgieLuhur.png",
+			:location => "PER",
+			:link => "https://www.meetup.com/Localhost-PER/events/238054611/",
+			:price => "Free event",
+		}) %>
 	</div>
 
 	<div class="event-column">
-		<div class="event-date location-per">
-			<p>More Upcoming</p>
-		</div>
+		<%= partial('events/components/card', :locals => {
+			:date => "More Upcoming",
+			:name => "Web and Wellness",
+			:description => "Every Wednesday.",
+			:link => "https://www.meetup.com/Localhost-PER/events/238054611/",
+			:price => "Free event",
+			:button_text => "More Info"
+		}) %>
 
-		<article class="event per-events">
-			<div class="caption">
-				<h2 class="event-name">WEB AND WELLNESS</h2>
-				<p class="event-day">Every Wednesday.</p>
-			</div>
-			<footer class="details">
-				<div><a class="btn btn-rsvp" href="#">RSVP</a></div>
-				<p class="price">Free event</p>
-			</footer>
-		</article>
-
-		<div class="event-date">
-			<p>Thurs 23 Feb</p>
-		</div>
-		<article class="event per-events">
-			<div class="caption">
-				<h2 class="event-name">Discussion Dinners</h2>
-				<p class="event-desc">Occasional dinners for 10 people.</p>
-			</div>
-			<footer class="details">
-				<div><a class="btn btn-rsvp" href="#">RSVP</a></div>
-				<p class="price">$35</p>
-			</footer>
-		</article>
+		<%= partial('events/components/card', :locals => {
+			:name => "title",
+			:date => "Thurs 23 Feb",
+			:link => "https://www.meetup.com/",
+			:description => "Occasional dinners for 10 people.",
+			:price => "$35"
+		}) %>
 	</div>
 
 
 	<div class="event-column">
-		<div class="event-date location-per">
-			<p>Thurs 03 Mar</p>
-		</div>
-
-		<article class="event localhost-event per-events">
-			<header class="image">
-				<img src="../images/events/KristyHaines.png" />
-			</header>
-			<div class="caption">
-				<h2 class="speaker-name">Kristy Haines</h2>
-				<p class="speaker-role">UI Designer @ Meerkats</p>
-				<p class="event-title">Creative ways of styling figures and fig captions</p>
-			</div>
-			<footer class="details">
-				<div><a class="btn btn-rsvp" href="#">RSVP</a></div>
-				<p class="price">Free event</p>
-			</footer>
-		</article>
+		<%= partial('events/components/card', :locals => {
+			:date => "Thurs 19 Feb",
+			:name => "Georgie Luhur",
+			:description => "Front End Dev @ Campaign Monitor",
+			:title => "Creative ways of styling figures and fig captions",
+			:image => "/images/events/KristyHaines.png",
+			:location => "PER",
+			:link => "https://www.meetup.com/Localhost-PER/events/238054611/",
+			:price => "Free event",
+		}) %>
 	</div>
 </section>
 
