@@ -96,6 +96,10 @@ $(".calendar-toggles .city-brisbane").change(function() {
   $('.calendar').toggleClass('toggle-bne');
 });
 
+$(".calendar-toggles .city-other").change(function() {
+  $('.calendar').toggleClass('toggle-other');
+});
+
 $(function() {
     var tabs = $(".calendar-future-events");
 
@@ -178,11 +182,15 @@ $(function() {
         }
     );
 
+
+    var d = new Date();
+    var n = d.getMonth() + 1;
+
     // Show the first tabPanel
-    $(tabs).find(".tabPanel:first").attr("aria-hidden", "false").show();
+    $(tabs).find(".tabPanel:nth-child(" + n + ")").attr("aria-hidden", "false").show();
 
     // Set state for the first tabsList li
-    $(tabsList).find("li:first").addClass("current").find(" > a").attr({
+    $(tabsList).find("li:nth-child(" + n + ")").addClass("current").find(" > a").attr({
         "aria-selected": "true",
         "tabindex": "0"
     });
