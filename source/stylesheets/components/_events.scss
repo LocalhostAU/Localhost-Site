@@ -384,7 +384,7 @@
               }
             }
 
-            &.active-month {
+            &.current {
               margin-top:15px;
               margin-bottom:15px;
 
@@ -462,6 +462,28 @@
     }
 
     .calendar {
+      position:relative;
+
+      > div {
+        position:absolute;
+        left:0;
+        right:0;
+        top:0;
+        padding-top:5%;
+
+        h2 {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0,0,0,0);
+          border: 0;
+
+        }
+      }
+
       ul {
         padding:0;
 
@@ -470,14 +492,18 @@
           &:before {
             content:none;
           }
-          .calendar-event-details {
-            width:20%;
+          .calendar-event-date {
+            width:10%;
+            color:#E3E3E3;
+            @include transition($link-transition);
+            transition-delay:0s;
           }
 
           .calendar-event-details {
-            width:80%;
-            border-bottom:1px solid #979797;
+            width:90%;
+            border-bottom:1px solid #E3E3E3;
             @include transition($link-transition);
+            transition-delay:0s;
 
             > span:first-child {
               width:50%;
@@ -486,7 +512,7 @@
 
           a {
             border:0;
-            color:#ccc;
+            color:#E3E3E3;
 
             > span {
               padding: 10px 0;
@@ -510,10 +536,20 @@
       &.toggle-per {
 
         li.per-event a {
-          color:#000;
+          .calendar-event-details{
+            color:#000;
+            border-color:#979797;
+          }
 
           &:hover, &:focus {
-            color: $lavendar;
+
+            .calendar-event-details{
+              color: $lavendar;
+            }
+          }
+
+          .calendar-event-date {
+            color:#000;
           }
         }
       }
@@ -521,30 +557,62 @@
       &.toggle-bne {
 
         li.bne-event a {
-          color:#000;
+          .calendar-event-details{
+            color:#000;
+            border-color:#979797;
+          }
 
           &:hover, &:focus {
-            color: $lavendar;
+
+            .calendar-event-details{
+              color: $lavendar;
+            }
+          }
+
+          .calendar-event-date {
+            color:#000;
           }
         }
       }
 
       &.toggle-syd {
         li.syd-event a {
-          color:#000;
+          .calendar-event-details{
+            color:#000;
+            border-color:#979797;
+          }
 
           &:hover, &:focus {
-            color: $lavendar;
+
+            .calendar-event-details{
+              color: $lavendar;
+              border-color:$lavendar;
+            }
+          }
+
+          .calendar-event-date {
+            color:#000;
           }
         }
       }
 
       &.toggle-mel {
         li.mel-event a {
-          color:#000;
+          .calendar-event-details{
+            color:#000;
+            border-color:#979797;
+          }
 
           &:hover, &:focus {
-            color: $lavendar;
+
+            .calendar-event-details{
+              color: $lavendar;
+              border-color:$lavendar;
+            }
+          }
+
+          .calendar-event-date {
+            color:#000;
           }
         }
       }
