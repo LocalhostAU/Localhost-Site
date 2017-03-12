@@ -84,6 +84,7 @@ noMiniColumn: true
 
   <main>
     <div class="calendar-toggles">
+      <p class="filter-by">Filter by</p>
       <label><input type="checkbox" class="city-perth" checked /> <span>Perth</span></label>
       <label><input type="checkbox" class="city-sydney" checked /> <span>Sydney</span></label>
       <label><input type="checkbox" class="city-melbourne" checked /> <span>Melbourne</span></label>
@@ -101,7 +102,7 @@ noMiniColumn: true
                 <span>This is an event somewhere Corey likes the calendar thing (PER)</span>
                 <span>Meetup</span>
                 <span>PER</span>
-                <span>Link</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
               </span>
             </a>
           </li>
@@ -113,7 +114,7 @@ noMiniColumn: true
                 <span>This is an event somewhere</span>
                 <span>Meetup</span>
                 <span>MEL</span>
-                <span>Link</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
               </span>
             </a>
           </li>
@@ -125,7 +126,7 @@ noMiniColumn: true
                 <span>This is an event somewhere</span>
                 <span>Meetup</span>
                 <span>BNE</span>
-                <span>Link</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
               </span>
             </a>
           </li>
@@ -137,7 +138,7 @@ noMiniColumn: true
                 <span>This is an event somewhere</span>
                 <span>Meetup</span>
                 <span>SYD</span>
-                <span>Link</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
               </span>
             </a>
           </li>
@@ -154,7 +155,7 @@ noMiniColumn: true
                 <span>Lorem ipsum dolor sit amet</span>
                 <span>Meetup</span>
                 <span>PER</span>
-                <span>Link</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
               </span>
             </a>
           </li>
@@ -166,31 +167,31 @@ noMiniColumn: true
                 <span>Consectetur adipiscing elit</span>
                 <span>Meetup</span>
                 <span>MEL</span>
-                <span>Link</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
               </span>
             </a>
           </li>
 
           <li class="bne-event">
             <a href="">
-              <span class="calendar-event-date">Thursday 17</span>
+              <span class="calendar-event-date">Thurs 17</span>
               <span class="calendar-event-details">
                 <span>Nam sit amet urna justo</span>
                 <span>Meetup</span>
                 <span>BNE</span>
-                <span>Link</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
               </span>
             </a>
           </li>
 
           <li class="syd-event">
             <a href="">
-              <span class="calendar-event-date">Wednesday 14</span>
+              <span class="calendar-event-date">Wed 14</span>
               <span class="calendar-event-details">
                 <span>Donec suscipit auctor eros</span>
                 <span>Meetup</span>
                 <span>SYD</span>
-                <span>Link</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
               </span>
             </a>
           </li>
@@ -198,6 +199,7 @@ noMiniColumn: true
       </div>
       <div>
         <h2 id="march">March</h2>
+        <p>No events yet!</p>
       </div>
       <div>
         <h2 id="april">April</h2>

@@ -139,7 +139,7 @@ $(function() {
                     $(tabsList).find("> li.current").removeClass("current").find("> a").attr("aria-selected", "false");
 
                     // Hide previously selected tabPanel
-                    $(tabs).find(".tabPanel:visible").attr("aria-hidden", "true").stop().fadeOut();
+                    $(tabs).find(".tabPanel:visible").attr("aria-hidden", "true").stop().hide();
 
                     // Show newly selected tabPanel
                     tabPanel = $(tabs).find(".tabPanel").eq(tab.parent().index());
