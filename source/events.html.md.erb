@@ -5,86 +5,229 @@ meta_description: Connecting web, creative and digital communities &amp; unearth
 noMiniColumn: true
 ---
 
-<h1><span class="title-left">Aussie <br />Events</span>
-	<span class="title-right">Localhost Calendar</span></h1>
+<h1>
+  <span class="title-left">Aussie <br />Events</span>
+  <span class="title-right">Localhost Calendar</span>
+</h1>
 
 <section class="events-calendar">
-	<div class="event-column">
-		<%= partial('events/components/card', :locals => {
-			:date => "Thurs 19 Feb",
-			:name => "Georgie Luhur",
-			:description => "Front End Dev @ Campaign Monitor",
-			:title => "Creative ways of styling figures and fig captions",
-			:image => "/images/events/GeorgieLuhur.png",
-			:location => "PER",
-			:link => "https://www.meetup.com/Localhost-PER/events/238054611/",
-			:price => "Free event",
-		}) %>
-	</div>
+  <div class="event-column">
+    <%= partial('events/components/card', :locals => {
+      :date => "Thurs 19 Feb",
+      :name => "Georgie Luhur",
+      :description => "Front End Dev @ Campaign Monitor",
+      :title => "Creative ways of styling figures and fig captions",
+      :image => "/images/events/GeorgieLuhur.png",
+      :location => "PER",
+      :link => "https://www.meetup.com/Localhost-PER/events/238054611/",
+      :price => "Free event",
+      }) %>
+  </div>
 
-	<div class="event-column">
-		<%= partial('events/components/card', :locals => {
-			:date => "More Upcoming",
-			:name => "Web and Wellness",
-			:description => "Every Wednesday.",
-			:link => "https://www.meetup.com/Localhost-PER/events/238054611/",
-			:price => "Free event",
-			:button_text => "More Info"
-		}) %>
+  <div class="event-column">
+    <%= partial('events/components/card', :locals => {
+      :date => "More Upcoming",
+      :name => "Web and Wellness",
+      :description => "Every Wednesday.",
+      :link => "https://www.meetup.com/Localhost-PER/events/238054611/",
+      :price => "Free event",
+      :button_text => "More Info"
+      }) %>
 
-		<%= partial('events/components/card', :locals => {
-			:name => "title",
-			:date => "Thurs 23 Feb",
-			:link => "https://www.meetup.com/",
-			:description => "Occasional dinners for 10 people.",
-			:price => "$35"
-		}) %>
-	</div>
+    <%= partial('events/components/card', :locals => {
+      :name => "title",
+      :date => "Thurs 23 Feb",
+      :link => "https://www.meetup.com/",
+      :description => "Occasional dinners for 10 people.",
+      :price => "$35"
+      }) %>
+  </div>
 
-
-	<div class="event-column">
-		<%= partial('events/components/card', :locals => {
-			:date => "Thurs 19 Feb",
-			:name => "Georgie Luhur",
-			:description => "Front End Dev @ Campaign Monitor",
-			:title => "Creative ways of styling figures and fig captions",
-			:image => "/images/events/KristyHaines.png",
-			:location => "PER",
-			:link => "https://www.meetup.com/Localhost-PER/events/238054611/",
-			:price => "Free event",
-		}) %>
-	</div>
+  <div class="event-column">
+    <%= partial('events/components/card', :locals => {
+      :date => "Thurs 19 Feb",
+      :name => "Georgie Luhur",
+      :description => "Front End Dev @ Campaign Monitor",
+      :title => "Creative ways of styling figures and fig captions",
+      :image => "/images/events/KristyHaines.png",
+      :location => "PER",
+      :link => "https://www.meetup.com/Localhost-PER/events/238054611/",
+      :price => "Free event",
+      }) %>
+  </div>
 </section>
 
 <section class="calendar-future-events">
   <aside>
-    <h2>Future <br/>
-      Events</h2>
+    <h2>
+      Future <br/>
+      Events
+    </h2>
 
-      <nav>
-        <ul>
-          <li><a href="#" class="month-january">January</a></li>
-          <li><a href="#" class="month-february">February</a></li>
-          <li class="active-month"><a href="#" class="month-march">March</a></li>
-          <li><a href="#" class="month-april">April</a></li>
-          <li><a href="#" class="month-may">May</a></li>
-          <li><a href="#" class="month-june">June</a></li>
-          <li><a href="#" class="month-july">July</a></li>
-          <li><a href="#" class="month-august">August</a></li>
-          <li><a href="#" class="month-september">September</a></li>
-          <li><a href="#" class="month-october">October</a></li>
-          <li><a href="#" class="month-november">November</a></li>
-          <li><a href="#" class="month-december">December</a></li>
-        </ul>
-      </nav>
+    <nav>
+      <ul>
+        <li><a href="#january" class="month-january">January</a></li>
+        <li><a href="#february" class="month-february">February</a></li>
+        <li><a href="#march" class="month-march">March</a></li>
+        <li><a href="#april" class="month-april">April</a></li>
+        <li><a href="#may" class="month-may">May</a></li>
+        <li><a href="#june" class="month-june">June</a></li>
+        <li><a href="#july" class="month-july">July</a></li>
+        <li><a href="#august" class="month-august">August</a></li>
+        <li><a href="#september" class="month-september">September</a></li>
+        <li><a href="#october" class="month-october">October</a></li>
+        <li><a href="#november" class="month-november">November</a></li>
+        <li><a href="#december" class="month-december">December</a></li>
+      </ul>
+    </nav>
   </aside>
 
   <main>
     <div class="calendar-toggles">
-      <label><input type="checkbox" checked /> <span>Perth</span></label>
-      <label><input type="checkbox" checked /> <span>Sydney</span></label>
-      <label><input type="checkbox" checked /> <span>Melbourne</span></label>
-      <label><input type="checkbox" checked /> <span>Brisbane</span></label>
+      <p class="filter-by">Filter by</p>
+      <label><input type="checkbox" class="city-perth" checked /> <span>Perth</span></label>
+      <label><input type="checkbox" class="city-sydney" checked /> <span>Sydney</span></label>
+      <label><input type="checkbox" class="city-melbourne" checked /> <span>Melbourne</span></label>
+      <label><input type="checkbox" class="city-brisbane" checked /> <span>Brisbane</span></label>
+    </div>
+    <div class="calendar toggle-per toggle-mel toggle-bne toggle-syd">
+      <div>
+        <h2 id="january">January</h2>
+
+        <ul>
+          <li class="per-event">
+            <a href="">
+              <span class="calendar-event-date">Fri 22</span>
+              <span class="calendar-event-details">
+                <span>This is an event somewhere Corey likes the calendar thing (PER)</span>
+                <span>Meetup</span>
+                <span>PER</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
+              </span>
+            </a>
+          </li>
+
+          <li class="mel-event">
+            <a href="">
+              <span class="calendar-event-date">Fri 22</span>
+              <span class="calendar-event-details">
+                <span>This is an event somewhere</span>
+                <span>Meetup</span>
+                <span>MEL</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
+              </span>
+            </a>
+          </li>
+
+          <li class="bne-event">
+            <a href="">
+              <span class="calendar-event-date">Fri 22</span>
+              <span class="calendar-event-details">
+                <span>This is an event somewhere</span>
+                <span>Meetup</span>
+                <span>BNE</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
+              </span>
+            </a>
+          </li>
+
+          <li class="syd-event">
+            <a href="">
+              <span class="calendar-event-date">Fri 22</span>
+              <span class="calendar-event-details">
+                <span>This is an event somewhere</span>
+                <span>Meetup</span>
+                <span>SYD</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 id="february">February</h2>
+
+        <ul>
+          <li class="per-event">
+            <a href="">
+              <span class="calendar-event-date">Sun 19</span>
+              <span class="calendar-event-details">
+                <span>Lorem ipsum dolor sit amet</span>
+                <span>Meetup</span>
+                <span>PER</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
+              </span>
+            </a>
+          </li>
+
+          <li class="mel-event">
+            <a href="">
+              <span class="calendar-event-date">Mon 03</span>
+              <span class="calendar-event-details">
+                <span>Consectetur adipiscing elit</span>
+                <span>Meetup</span>
+                <span>MEL</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
+              </span>
+            </a>
+          </li>
+
+          <li class="bne-event">
+            <a href="">
+              <span class="calendar-event-date">Thurs 17</span>
+              <span class="calendar-event-details">
+                <span>Nam sit amet urna justo</span>
+                <span>Meetup</span>
+                <span>BNE</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
+              </span>
+            </a>
+          </li>
+
+          <li class="syd-event">
+            <a href="">
+              <span class="calendar-event-date">Wed 14</span>
+              <span class="calendar-event-details">
+                <span>Donec suscipit auctor eros</span>
+                <span>Meetup</span>
+                <span>SYD</span>
+                <span class="calendar-event-link"><%= partial "partials/target-blank" %></span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h2 id="march">March</h2>
+        <p>No events yet!</p>
+      </div>
+      <div>
+        <h2 id="april">April</h2>
+      </div>
+      <div>
+        <h2 id="may">May</h2>
+      </div>
+      <div>
+        <h2 id="june">June</h2>
+      </div>
+      <div>
+        <h2 id="july">July</h2>
+      </div>
+      <div>
+        <h2 id="august">August</h2>
+      </div>
+      <div>
+        <h2 id="september">September</h2>
+      </div>
+      <div>
+        <h2 id="october">October</h2>
+      </div>
+      <div>
+        <h2 id="november">November</h2>
+      </div>
+      <div>
+        <h2 id="december">December</h2>
+      </div>
     </div>
   </main>
 </section>
