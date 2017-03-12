@@ -331,10 +331,15 @@
 
     @media (min-width: $screen-sm-min) {
       flex-direction: row;
+      justify-content: space-between;
     }
 
     main {
-      flex-grow: 1;
+      //flex-grow: 1;
+
+      @media (min-width: $screen-sm-min) {
+        width:80%;
+      }
       padding: 0 15px;
     }
 
