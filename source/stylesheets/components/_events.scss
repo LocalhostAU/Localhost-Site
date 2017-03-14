@@ -17,7 +17,7 @@
     justify-content: space-between;
     font-weight:normal;
     position:relative;
-    margin-bottom: 15%;
+    margin-bottom: 10%;
     @include fluid-type(37.5rem, 80rem, 1.75rem, 3rem);
     z-index:1;
 
@@ -176,12 +176,12 @@
     background: #FFFFFF;
     box-shadow: 0 0 4px 1px rgba(0,0,0,0.11);
     transition:0.2s ease-in-out all;
-    margin-bottom:54px;
+    margin-bottom:64px;
 
     .image {
       height:0;
       padding-bottom:57%;
-      margin-top: 15%;
+      margin-top: 17%;
       display:block;
       position:relative;
 
@@ -328,17 +328,30 @@
   .calendar-future-events {
     display: flex;
     flex-direction: column;
-
+    margin: 0 60px;
     @media (min-width: $screen-sm-min) {
       flex-direction: row;
       justify-content: space-between;
     }
     main {
-      //flex-grow: 1;
-
       @media (min-width: $screen-sm-min) {
         width:80%;
+        margin-top: 6.6%;
       }
+
+      ul.february {
+        margin-top: 2.9%;
+      }
+      ul.march {
+        margin-top: 5.7%;
+      }
+      ul.april {
+        margin-top: 7.7%;
+      }
+      ul.may {
+        margin-top: 12.3%;
+      }
+
       padding: 0 15px;
     }
 
@@ -388,9 +401,14 @@
               letter-spacing: 3.7px;
               border-bottom: 0;
               font-size: em(14);
-
+              display: inline-block;
               &:hover, &:focus {
-                color: $burnt-sienna;
+                font-size: em(20);
+                line-height: 1.05em;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                position: relative;
+
               }
             }
 
@@ -405,6 +423,11 @@
                 letter-spacing: 3.7px;
                 line-height: 1.05em;
                 position: relative;
+
+                  &:hover, &:focus {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                  }
 
                 &:after {
                   content: "";
@@ -501,13 +524,6 @@
       > div {
         padding-top: 5%;
 
-        @media (min-width: $screen-sm-min) {
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 0;
-        }
-
         h2 {
           position: absolute;
           width: 1px;
@@ -588,7 +604,26 @@
         }
       }
 
+
+      li.past-event a{
+        .calendar-event-date {
+          color: #E3E3E3 !important;
+        }
+        .calendar-event-details{
+          color: #E3E3E3 !important;
+          border-color: #E3E3E3 !important;
+        }
+        .calendar-event-link {
+          rect, path {
+            @include transition($link-transition);
+            stroke: #E3E3E3 !important;
+          }
+        }
+      }
+
+
       &.toggle-per {
+
 
         li.per-event a {
           .calendar-event-details{
@@ -691,6 +726,39 @@
 
       &.toggle-mel {
         li.mel-event a {
+          .calendar-event-details{
+            color: #000;
+            border-color: #979797;
+
+            .calendar-event-link {
+              rect, path {
+                stroke:#000000;
+              }
+            }
+          }
+
+          &:hover, &:focus {
+
+            .calendar-event-details{
+              color: $lavendar;
+              border-color: $lavendar;
+
+              .calendar-event-link {
+                rect, path {
+                  stroke:$lavendar;
+                }
+              }
+            }
+          }
+
+          .calendar-event-date {
+            color: #000;
+          }
+        }
+      }
+
+      &.toggle-other {
+        li.other-event a {
           .calendar-event-details{
             color: #000;
             border-color: #979797;
