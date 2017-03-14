@@ -1,3 +1,6 @@
+.hidden {
+  display: none;
+}
 .events_index {
   .main {
     max-width: 1354px;
@@ -523,7 +526,8 @@
 
       > div {
         padding-top: 5%;
-
+        height: 500px;
+        overflow: scroll;
         h2 {
           position: absolute;
           width: 1px;

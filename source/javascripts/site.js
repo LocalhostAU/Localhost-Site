@@ -107,7 +107,7 @@ $(function() {
     $(tabs).find("main .calendar div").attr({
         "class": "tabPanel",
         "aria-hidden": "true"
-    }).hide();
+    }).addClass("hidden");
 
     // Get the list of tab links
     var tabsList = tabs.find("nav ul:first").attr({
@@ -143,11 +143,11 @@ $(function() {
                     $(tabsList).find("> li.current").removeClass("current").find("> a").attr("aria-selected", "false");
 
                     // Hide previously selected tabPanel
-                    $(tabs).find(".tabPanel:visible").attr("aria-hidden", "true").stop().hide();
+                    $(tabs).find(".tabPanel:visible").attr("aria-hidden", "true").stop().addClass("hidden");;
 
                     // Show newly selected tabPanel
                     tabPanel = $(tabs).find(".tabPanel").eq(tab.parent().index());
-                    tabPanel.attr("aria-hidden", "false").stop().fadeIn();
+                    tabPanel.attr("aria-hidden", "false").stop().removeClass("hidden").addClass("animated fadeInUp");
 
                     // Set state of newly selected tab list item
                     tab.attr("aria-selected", "true").parent().addClass("current");
@@ -187,7 +187,7 @@ $(function() {
     var n = d.getMonth() + 1;
 
     // Show the first tabPanel
-    $(tabs).find(".tabPanel:nth-child(" + n + ")").attr("aria-hidden", "false").show();
+    $(tabs).find(".tabPanel:nth-child(" + n + ")").attr("aria-hidden", "false").removeClass("hidden").addClass("animated fadeInUp");
 
     // Set state for the first tabsList li
     $(tabsList).find("li:nth-child(" + n + ")").addClass("current").find(" > a").attr({
