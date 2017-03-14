@@ -72,12 +72,10 @@ footer {
 			text-align:center;
 
       li {
-        padding: 0 12px;
         width:100%;
 
         @media (min-width: $screen-sm-min) {
           width: 33%;
-          padding: 0 12px 24px;
         }
 
         @media (min-width: $screen-md-min) {
@@ -85,22 +83,10 @@ footer {
         }
 
         img {
-          width:50%;
+          width: 150px;
           height:auto;
-          //opacity:0.5;
           @include transition($link-transition);
-
-          @media (min-width: $screen-sm-min) {
-            width:100%;
-          }
-
-          @media (min-width: $screen-md-min) {
-            width:100%;
-          }
-
-          &:hover {
-            //opacity:0.8;
-          }
+          
         }
       }
     }
@@ -119,7 +105,7 @@ footer {
     }
 
     @media (min-width: $screen-sm-min) {
-      width: 33%;
+      width: 27%;
       text-align:right;
       //padding: 3.8% 24px;
 			padding: 55px 25px 25px;

@@ -138,6 +138,7 @@ $(function() {
 
                     // Prevent default click event
                     e.preventDefault();
+                    //window.location.hash = $(this).attr('href');
 
                     // Change state of previously selected tabList item
                     $(tabsList).find("> li.current").removeClass("current").find("> a").attr("aria-selected", "false");

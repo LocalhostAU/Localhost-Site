@@ -175,16 +175,19 @@
     }
   }
 
+  .middle .event .caption{
+    min-height: 136px;
+  }
   .event {
     background: #FFFFFF;
     box-shadow: 0 0 4px 1px rgba(0,0,0,0.11);
     transition:0.2s ease-in-out all;
-    margin-bottom:64px;
+    margin-bottom:44px;
 
     .image {
       height:0;
       padding-bottom:57%;
-      margin-top: 17%;
+      margin-top: 20%;
       display:block;
       position:relative;
 
@@ -199,8 +202,12 @@
       }
     }
 
+
+
     .caption {
-      padding: 48px 22px 4px;
+      padding: 40px 22px 4px;
+
+      min-height: 183px;
 
       .speaker-name, .event-name {
         font-size: 20px;
@@ -331,8 +338,9 @@
   .calendar-future-events {
     display: flex;
     flex-direction: column;
-    margin: 0 60px;
+    margin: 0 10px;
     @media (min-width: $screen-sm-min) {
+      margin: 0 30px;
       flex-direction: row;
       justify-content: space-between;
     }
@@ -346,7 +354,7 @@
         margin-top: 2.9%;
       }
       ul.march {
-        margin-top: 5.7%;
+        margin-top: 5.6%;
       }
       ul.april {
         margin-top: 7.7%;
