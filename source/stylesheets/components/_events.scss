@@ -339,6 +339,7 @@
       @media (min-width: $screen-sm-min) {
         width:80%;
       }
+
       padding: 0 15px;
     }
 
@@ -500,13 +501,6 @@
 
       > div {
         padding-top: 5%;
-
-        @media (min-width: $screen-sm-min) {
-          position: absolute;
-          left: 0;
-          right: 0;
-          top: 0;
-        }
 
         h2 {
           position: absolute;
@@ -691,6 +685,39 @@
 
       &.toggle-mel {
         li.mel-event a {
+          .calendar-event-details{
+            color: #000;
+            border-color: #979797;
+
+            .calendar-event-link {
+              rect, path {
+                stroke:#000000;
+              }
+            }
+          }
+
+          &:hover, &:focus {
+
+            .calendar-event-details{
+              color: $lavendar;
+              border-color: $lavendar;
+
+              .calendar-event-link {
+                rect, path {
+                  stroke:$lavendar;
+                }
+              }
+            }
+          }
+
+          .calendar-event-date {
+            color: #000;
+          }
+        }
+      }
+
+      &.toggle-other {
+        li.other-event a {
           .calendar-event-details{
             color: #000;
             border-color: #979797;
