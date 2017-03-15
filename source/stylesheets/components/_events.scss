@@ -359,7 +359,11 @@
       flex-direction: row;
       justify-content: space-between;
     }
+    main, nav {
+        margin-top: 20px;
+    }
     main {
+
       @media (min-width: $screen-sm-min) {
 
         ul {
