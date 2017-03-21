@@ -23,15 +23,14 @@
  var url = "https://spreadsheets.google.com/feeds/list/" + spreadsheetID + "/od6/public/values?alt=json";
 
  $.getJSON(url, function(data) {
-
   var entry = data.feed.entry;
   if(entry) {
-
     $('.future-events').prepend('<p class="date"><span class="weekday">Coming Up</span></p>');
     var newmonth = null;
-    $(entry).each(function(){
+    $(entry).each(function(i){
+      if(i>6) return false;
       var month = this.gsx$month.$t;
-      if(month != newmonth && newmonth != null) {
+      if(month != newmonth | i == 0) {
         $('.future-events ul').append('<li class="date-title"><p class="date month">'+month+'</p></li>')
       }
       $('.future-events ul').append('<li><a href="'+this.gsx$link.$t+'" class="title" target="_blank"><span class="date">'+this.gsx$date.$t+'</span><span class="title" data-hover="'+this.gsx$title.$t+' ('+this.gsx$location.$t+')">'+this.gsx$title.$t+' <span class="location">('+this.gsx$location.$t+')</span></span></a></li>');
