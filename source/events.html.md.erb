@@ -3,6 +3,7 @@ title: Events | Localhost
 body_classes:
 meta_description: Connecting web, creative and digital communities &amp; unearthing local talent across Australia.
 noMiniColumn: true
+layout: events
 ---
 
 <h1>
@@ -68,10 +69,10 @@ noMiniColumn: true
 
     <nav>
       <ul>
-        <li><a href="#january" class="month-january">January</a></li>
-        <li><a href="#february" class="month-february">February</a></li>
-        <li><a href="#march" class="month-march">March</a></li>
-        <li><a href="#april" class="month-april">April</a></li>
+        <li><a href="#jan" class="month-jan">January</a></li>
+        <li><a href="#feb" class="month-feb">February</a></li>
+        <li><a href="#mar" class="month-mar">March</a></li>
+        <li><a href="#apr" class="month-apr">April</a></li>
         <li><a href="#may" class="month-may">May</a></li>
 <!--        <li><a href="#june" class="month-june">June</a></li>
         <li><a href="#july" class="month-july">July</a></li>
@@ -94,7 +95,7 @@ noMiniColumn: true
       <label><input type="checkbox" class="city-other" checked /> <span>Other</span></label>
     </div>
     <div class="calendar toggle-per toggle-mel toggle-bne toggle-syd toggle-other">
-      <div style="display:none">
+    <% if false %>  <div style="display:none">
         <h2 id="january">January</h2>
 
         <ul class="january">
@@ -586,7 +587,7 @@ noMiniColumn: true
       <div>
         <h2 id="december">December</h2>
         <p>There are no events!</p>
-      </div>
+      </div> <% end %>
     </div>
   </main>
 </section>
