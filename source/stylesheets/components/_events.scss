@@ -185,6 +185,7 @@
           background-size:auto 100%;
           background-repeat:no-repeat;
           background-position:center bottom;
+          z-index: 2;
         }
       }
     }
@@ -376,7 +377,7 @@
 
 
         ul.january {
-          margin-top: 29px;
+          margin-top: 12px;
         }
         ul.february {
           margin-top: 52px;
