@@ -27,14 +27,19 @@
   if(entry) {
     $('.future-events').prepend('<p class="date"><span class="weekday">Coming Up</span></p>');
     var newmonth = null;
-    $(entry).each(function(i){
-      if(i>9) return false;
-      var month = this.gsx$month.$t;
-      if(month != newmonth | i == 0) {
-        $('.future-events ul').append('<li class="date-title"><p class="date month">'+month+'</p></li>')
+    var i=1;
+    $(entry).each(function(){
+      if(moment(this.gsx$startdate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").isSameOrAfter(new Date().setHours(0, 0, 0, 0))){
+        if(i>10) return false;
+        var month = this.gsx$month.$t;
+        if(month != newmonth | i == 0) {
+          $('.future-events ul').append('<li class="date-title"><p class="date month">'+moment(this.gsx$startdate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").format("MMM")+'</p></li>');
+        }
+        console.log(moment(this.gsx$startdate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").isSameOrAfter(new Date()));
+        $('.future-events ul').append('<li><a href="'+this.gsx$link.$t+'" class="title" target="_blank"><span class="date">'+ moment(this.gsx$startdate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").format("ddd DD")+'</span><span class="title">'+this.gsx$title.$t+' <span class="location">('+this.gsx$location.$t+')</span></span></a></li>');
+        newmonth = this.gsx$month.$t;
+        i++;
       }
-      $('.future-events ul').append('<li><a href="'+this.gsx$link.$t+'" class="title" target="_blank"><span class="date">'+this.gsx$date.$t+'</span><span class="title">'+this.gsx$title.$t+' <span class="location">('+this.gsx$location.$t+')</span></span></a></li>');
-      newmonth = this.gsx$month.$t;
     });
     $('.future-events ul').append('<li><a href="/events/" class="title"><span class="title">View more events</span></a></li>');
 
