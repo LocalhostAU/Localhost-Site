@@ -35,8 +35,17 @@
         if(month != newmonth | i == 0) {
           $('.future-events ul').append('<li class="date-title"><p class="date month">'+moment(this.gsx$startdate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").format("MMM")+'</p></li>');
         }
-        console.log(moment(this.gsx$startdate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").isSameOrAfter(new Date()));
-        $('.future-events ul').append('<li><a href="'+this.gsx$link.$t+'" class="title" target="_blank"><span class="date">'+ moment(this.gsx$startdate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").format("ddd DD")+'</span><span class="title">'+this.gsx$title.$t+' <span class="location">('+this.gsx$location.$t+')</span></span></a></li>');
+        var endDate = "";
+        if(this.gsx$enddate.$t){
+          var endDate = " - "+moment(this.gsx$enddate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").format("ddd DD");
+        }
+        //console.log(moment(this.gsx$enddate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").isSameOrAfter(new Date()));
+        $('.future-events ul').append('<li>\
+          <a href="'+this.gsx$link.$t+'" class="title" target="_blank">\
+            <span class="date">'+ moment(this.gsx$startdate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").format("ddd DD")+endDate+'</span>\
+            <span class="title">'+this.gsx$title.$t+' <span class="location">('+this.gsx$location.$t+')</span></span>\
+          </a>\
+        </li>');
         newmonth = this.gsx$month.$t;
         i++;
       }

@@ -376,19 +376,19 @@
         width:80%;
 
 
-        ul.jan {
+        ul.month-01 {
           margin-top: 12px;
         }
-        ul.feb {
+        ul.month-02 {
           margin-top: 52px;
         }
-        ul.mar {
+        ul.month-03 {
           margin-top: 76px;
         }
-        ul.apr {
+        ul.month-04 {
           margin-top: 102px;
         }
-        ul.may {
+        ul.month-05 {
           margin-top: 126px;
         }
       }
@@ -445,7 +445,7 @@
               font-size: em(14);
               display: inline-block;
 
-              &#tab-jan, &#tab-feb {
+              &.past-month {
                 color: #E3E3E3;
               }
               &:hover, &:focus {
@@ -588,7 +588,7 @@
           }
 
           .calendar-event-date {
-            color: #E3E3E3;
+            color: #000;
             @include transition($link-transition);
             transition-delay: 0s;
             width: 100%;
@@ -597,7 +597,7 @@
 
           .calendar-event-details {
             flex-grow:1;
-            border-bottom: 1px solid #E3E3E3;
+            border-bottom: 1px solid #000;
             @include transition($link-transition);
             transition-delay: 0s;
 
@@ -612,14 +612,14 @@
 
               rect, path {
                 @include transition($link-transition);
-                stroke: #E3E3E3;
+                stroke: #000;
               }
             }
           }
 
           a {
             border: 0;
-            color: #E3E3E3;
+            color: #000;
 
             > span {
               padding: 10px 0;
