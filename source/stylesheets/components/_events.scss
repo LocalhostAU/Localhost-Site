@@ -163,6 +163,10 @@
         padding-right:82px;
         margin-bottom:26px;
 
+				&:first-child {
+					// margin-bottom: 76px;
+				}
+
         p {
           margin:0;
           font-size: 14px;
@@ -188,17 +192,56 @@
           z-index: 2;
         }
       }
+
+			&.middle {
+        width:calc(100% - 60px);
+        order: 3;
+
+        @media (min-width: $screen-md-min) {
+          order: 2;
+          width:calc(33.33% - 68px);
+        }
+
+				.event-date:first-of-type {
+          @media (min-width: $screen-md-min) {
+  					margin-bottom:76px;
+          }
+				}
+			}
     }
   }
 
-  .middle .event .caption{
-    min-height: 136px;
-  }
+  .middle {
+
+		.event {
+			margin-bottom:53px;
+			min-height:204px;
+			display:flex;
+
+			> a {
+				display:flex;
+				flex-direction:column;
+				justify-content: space-between;
+				border:0;
+				width:100%;
+			}
+
+			.caption{
+		    min-height: 121px;
+				padding: 47px 22px 0;
+			}
+
+			.details {
+				padding: 0 22px 13px;
+			}
+		}
+	}
   .event {
     background: #FFFFFF;
     box-shadow: 0 0 4px 1px rgba(0,0,0,0.11);
     transition:0.2s ease-in-out all;
     margin-bottom:44px;
+		min-height: 508px;
 
     .image {
       height:0;
@@ -206,6 +249,10 @@
       margin-top: 20%;
       display:block;
       position:relative;
+
+      @media (min-width: $screen-md-min) {
+			margin-top: 76px;
+      }
 
       img {
         width: 100%;
@@ -218,10 +265,8 @@
       }
     }
 
-
-
     .caption {
-      padding: 40px 22px 4px;
+      padding: 38px 22px 4px;
 
       min-height: 183px;
 
@@ -255,13 +300,13 @@
     }
 
     .details {
-      padding: 36px 22px 15px;
+      padding: 44px 22px 15px;
       display: flex;
       justify-content: space-between;
       font-size: 14px;
       flex-direction:column;
 
-      @media (min-width: $screen-md-min) {
+      @media (min-width: $screen-sm-min) {
         flex-direction:row;
       }
 
@@ -564,6 +609,20 @@
     .calendar {
       position: relative;
 
+      &:after {
+        content:"☝️ Pick your city up there to see events near you. ☝️";
+        text-align:center;
+        display:block;
+        opacity:0;
+        @include transition($link-transition);
+      }
+
+      &.toggle-empty {
+        &:after {
+          opacity:1;
+        }
+      }
+
       > div {
         padding-top: 12px;
         h2 {
@@ -588,7 +647,7 @@
           }
 
           .calendar-event-date {
-            color: #000;
+            color: #eee;
             @include transition($link-transition);
             transition-delay: 0s;
             width: 100%;
@@ -597,7 +656,7 @@
 
           .calendar-event-details {
             flex-grow:1;
-            border-bottom: 1px solid #979797;
+            border-bottom: 1px solid #eee;
             @include transition($link-transition);
             transition-delay: 0s;
 
@@ -612,14 +671,14 @@
 
               rect, path {
                 @include transition($link-transition);
-                stroke: #000;
+                stroke: #eee;
               }
             }
           }
 
           a {
             border: 0;
-            color: #000;
+            color: #eee;
 
             > span {
               padding: 10px 0;
