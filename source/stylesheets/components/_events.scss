@@ -154,6 +154,11 @@
         flex-grow:1;
       }
 
+      .event > a {
+        // display:block;
+        border:0;
+      }
+
       .event-date {
         color: #272727;
         line-height: 1em;
@@ -195,11 +200,11 @@
 
 			&.middle {
         width:calc(100% - 60px);
-        order: 3;
+        order:2;
 
         @media (min-width: $screen-md-min) {
-          order: 2;
           width:calc(33.33% - 68px);
+          order:initial;
         }
 
 				.event-date:first-of-type {
@@ -552,13 +557,14 @@
 
       label {
         cursor: pointer;
-        display: block;
-        padding: 0.25em 0;
+        display: inline-block;
+        // margin-right:10px;
 
         @media (min-width: $screen-sm-min) {
           display: inline-block;
           margin-left: 17px;
           padding:0;
+          min-width:0;
         }
 
         input {
@@ -610,7 +616,7 @@
       position: relative;
 
       &:after {
-        content:"☝️ Pick your city up there to see events near you. ☝️";
+        content:"☝️ Pick your city up there and check out events near you. ☝️";
         text-align:center;
         display:block;
         opacity:0;
