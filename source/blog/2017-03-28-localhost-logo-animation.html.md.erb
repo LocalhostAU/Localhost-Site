@@ -1,0 +1,35 @@
+---
+title: Animating the Localhost logo
+date: 2017-03-28
+author: Teegan
+category: Behind the scenes
+image: /blog/2017-02-25-localhost-interviews-february/logo-animation.gif
+leadParagraph: The brief was simple; "I want it to draw on, then go 'Bloop, bloop, bloop, bloop'" - Patima, 2017.
+tags: localhost, animation, behind the scenes, website, frontend devlopment
+---
+
+Animation has always been a side interest of mine, and one that I've hardly dedicated enough time to. Apart from playing around with simple CSS keyframe animations, I hadn't really ventured into learning some of the more sophisticated ways of making things move.
+
+With a little research, I discovered a number of great CSS animation tutorials and even Javascript libraries dedicated to animating DOM elements. I also discovered that SVGs are flippin' sweet, and go hand-in-hand with these animation libraries.
+
+At first, I stuck to what I knew. During one of the Localhost Weekend Hack sessions, I had mocked up the animation in CSS keyframes.
+
+<p data-height="265" data-theme-id="dark" data-slug-hash="09e8f96489935c069d2dab8d3b011969" data-default-tab="css,result" data-user="teeganlincoln" data-embed-version="2" data-pen-title="Localhost Logo: Min bloop" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/teeganlincoln/pen/09e8f96489935c069d2dab8d3b011969/">Localhost Logo: Min bloop</a> by Teegan Lincoln (<a href="http://codepen.io/teeganlincoln">@teeganlincoln</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+The draw-on line animation is a really cool effect and was surprisingly easy to achieve. The lines are drawn on by setting a stroke-dasharray to the length of the path stroke, then animating the stroke-dashoffset from the path length to zero. For a more in-depth description, check out ["How SVG Line Animation Works"](https://css-tricks.com/svg-line-animation-works/) on CSS Tricks.
+
+It was simple, but I quickly discovered some cross browser issues. So I had to go back to the drawing board, which lead me to the direction of a Javascript animation framework.
+
+I started by looking at a few exisiting javascript animation frameworks available, such as mo.js, and anime.js. Everything seemed so flashy, and complex, I was very overwhelmed. I wanted to start off simple, and I quickly discovered GreenSock. It was perfect, because I found their documentation very easy-to-understand and comprehensive.
+
+I recreated the animation using GreenSock, and was able to make the SVG element more interactive, like moving the coloured background blocks on hover.
+
+<p data-height="265" data-theme-id="dark" data-slug-hash="814b309a7508f7e36f48dc6962abed14" data-default-tab="html,result" data-user="teeganlincoln" data-embed-version="2" data-pen-title="814b309a7508f7e36f48dc6962abed14" data-preview="true" class="codepen">See the Pen <a href="http://codepen.io/teeganlincoln/pen/814b309a7508f7e36f48dc6962abed14/">814b309a7508f7e36f48dc6962abed14</a> by Teegan Lincoln (<a href="http://codepen.io/teeganlincoln">@teeganlincoln</a>) on <a href="http://codepen.io">CodePen</a>.</p>
+<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+
+After implementing the code on the production site, I noticed some serious lag on the animation. The page would load and ~6 seconds later the logo would finally draw on. As it turned out, the Javascript for our website fonts was blocking the GreenSock JS from rendering right away causing a confusing delay.
+
+To manage this, I split out the animation into 2 methods. CSS keyframe animations for the draw on, and Greensock for the background colour blocks and mouse interactions. It's been a great solution because the logo draws on right away with CSS animation, then after the JS has loaded the coloured blocks animate in.
+
+I hope to keep furthering my animation learns and improve the Localhost logo animation. Maybe even add some sweet interactions as well. In the meantime, watch this space!
