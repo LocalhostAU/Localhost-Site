@@ -20,7 +20,7 @@ noMiniColumn: true
 
     		<div class="article-image">
           <div class="article-date"><p><%= article.date.strftime('%d') %> <span class="sr-only"><%= article.date.strftime('%B %Y') %></span></p></div>
-    			<img src="<% if article.data.image %><%= article.data.image %><% else %>/images/blog-placeholder.jpg<% end %>"/>
+    			<img src="<% if article.data.image %><%= article.data.image %><% else %>/images/blog-placeholder.jpg<% end %>" alt="<%= article.data.imageAlt %>" />
     		</div>
 
     		<div class="article-caption">
