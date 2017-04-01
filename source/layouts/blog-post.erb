@@ -42,7 +42,7 @@
 
           <% if current_page.data.image && !current_page.data.hideFeatureImage  %>
             <div class="image">
-              <img src="<%= current_page.data.image %>" alt="<%= current_page.data.title %>" />
+              <img src="<%= current_page.data.image %>" alt="<%= current_page.data.imageAlt %>" />
             </div>
           <% end %>
 
@@ -63,7 +63,7 @@
         <div class="additional-video">
           <a href="<%= current_page.data.videoURL %>" target="_blank">
             <div class="additional-border">
-              <img src="<%= current_page.data.videoImage %>" />
+              <img src="<%= current_page.data.videoImage %>" alt="videoImageAlt" />
             </div>
           </a>
 
@@ -74,7 +74,7 @@
       <% end %>
       <% if current_page.data.additionalImage %>
         <div class="additional-image">
-          <div class="additional-border"><img src="<%= current_page.data.additionalImage %>" /></div>
+          <div class="additional-border"><img src="<%= current_page.data.additionalImage %>" alt="<%= current_page.data.additionalImageAlt %>" /></div>
           <% if current_page.data.imageCaption %>
             <p class="caption"><%= current_page.data.imageCaption %></p>
           <% end %>
