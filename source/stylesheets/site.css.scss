@@ -891,19 +891,20 @@ section.subscribe {
     flex-direction: column;
     width:100%;
     padding: 0 30px;
+    flex-wrap:wrap;
 
     @media (min-width:$screen-sm-min) {
       flex-direction: row;
       padding:0;
     }
 
-    > div {
+    > .additional-image, > .additional-video {
       width:100%;
-      margin-bottom:30px;
+      padding-bottom:30px;
 
       @media (min-width:$screen-sm-min) {
         width:50%;
-        margin: 0 30px;
+        padding: 0 30px;
       }
     }
 
@@ -992,6 +993,26 @@ section.subscribe {
             opacity:1;
           }
         }
+      }
+    }
+
+
+
+    > .additional-image-full {
+      width:100%;
+      margin-bottom:30px;
+
+      .additional-border:before {
+        border-color: $malibu;
+
+        @media (min-width:$screen-sm-min) {
+          top: -2.5%;
+          left: -2.5%;
+        }
+      }
+
+      img {
+        width: 100%;
       }
     }
   }
