@@ -80,6 +80,15 @@
           <% end %>
         </div>
       <% end %>
+
+      <% if current_page.data.additionalImageFull %>
+        <div class="additional-image additional-image-full">
+          <div class="additional-border"><img src="<%= current_page.data.additionalImageFull %>" /></div>
+          <% if current_page.data.imageFullCaption %>
+            <p class="caption"><%= current_page.data.imageFullCaption %></p>
+          <% end %>
+        </div>
+      <% end %>
     </div>
 
     <div class="pagination">
