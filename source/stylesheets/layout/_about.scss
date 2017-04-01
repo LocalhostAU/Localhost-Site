@@ -353,6 +353,14 @@ body.about.internal {
   				margin-top:0;
           margin-bottom: em(37, 40);
 
+  				@media (min-width: $screen-sm-min) {
+            font-size: em(26);
+          }
+
+  				@media (min-width: $screen-md-min) {
+            font-size: em(40);
+          }
+
   			}
 
   			&:nth-child(1) {
