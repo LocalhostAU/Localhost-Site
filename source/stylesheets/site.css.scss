@@ -5,6 +5,7 @@
 
 @import "layout/header";
 @import "layout/footer";
+@import "layout/about";
 
 @import "components/form";
 @import "components/animations";
@@ -740,6 +741,7 @@ section.subscribe {
 
 .your-team {
   margin-top: 15.4%;
+  max-width:100% !important;
   position: relative;
 
   h2 {
