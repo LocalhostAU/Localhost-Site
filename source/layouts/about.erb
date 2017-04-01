@@ -31,32 +31,40 @@
 </script>
     <%= partial "partials/header-internal" %>
 
-    <div class="main">
-      <% if current_page.data.page_title %>
-          <h1 class="title"><%= current_page.data.page_title %></h1>
-      <% end %>
+    <main class="main about">
+      <div class="page-title">
+        <% if current_page.data.page_title %>
+            <div class="title"><h1><%= current_page.data.page_title %></h1></div>
+        <% end %>
 
-      <% if current_page.data.lead_paragraph %>
-          <p class="subtitle"><%= current_page.data.lead_paragraph %></p>
-      <% end %>
+        <div class="">
+          <% if current_page.data.video_thumb %>
+            <figure>
+              <% if current_page.data.video_url %>
+                <a href="<%= current_page.data.video_url %>" target="_blank">
+              <% end %>
 
-      <h1>video</h1>
-      <% if !current_page.data.noMiniColumn %>
-        <div class="column-content">
-      <% end %>
-        <%= yield %>
-      <% if !current_page.data.noMiniColumn %>
+          		  <img src="<%= current_page.data.video_thumb %>" />
+
+              <% if current_page.data.video_url %>
+                </a>
+              <% end %>
+
+              <% if current_page.data.video_caption %>
+          		  <figcaption><%= current_page.data.video_caption %></figcaption>
+              <% end %>
+          	</figure>
+          <% end %>
+
+          <% if current_page.data.lead_paragraph %>
+              <p class="subtitle"><%= current_page.data.lead_paragraph %></p>
+          <% end %>
         </div>
-      <% end %>
+    </div>
 
-      <h1>the consept</h1>
-      <h1>local branches</h1>
-      <h1>chasing the unicorn</h1>
-      <h1>backstage</h1>
-      <%= partial "partials/your-team" %>
+    <%= yield %>
 
-   </div><!-- .welcome -->
-    <%= partial "partials/subscription-form" %>
+   </main><!-- .welcome -->
     <%= partial "partials/footer" %>
 
     <% if build? %>

@@ -16,6 +16,9 @@ $font-family-sans-serif: "freight-sans-pro", "Lato", "Helvetica Neue", Helvetica
 
 $link-transition: 0.2s ease-in-out all;
 
+$font-weight-regular: 400;
+$font-weight-bold: 700;
+
 
 @mixin transform($transforms) {
 	-moz-transform: $transforms;
