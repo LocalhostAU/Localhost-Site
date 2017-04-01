@@ -10,7 +10,7 @@ layout: events
   <span class="title-left">Aussie <br />Events</span>
   <span class="title-right">Localhost Calendar</span>
 </h1>
-
+<% if false %>
 <section class="events-calendar">
   <div class="event-column">
     <%= partial('events/components/card', :locals => {
@@ -59,7 +59,7 @@ layout: events
       }) %>
   </div>
 </section>
-
+<% end %>
 <section class="calendar-future-events">
   <aside>
     <h2>
