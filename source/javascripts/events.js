@@ -171,10 +171,22 @@ $.getJSON(url, function(data) {
    var newmonth = null;
    $(entry).each(function(i){
     if(!moment(this.gsx$startdate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").isSameOrAfter(new Date().setHours(0, 0, 0, 0))){
+      if(moment(this.gsx$enddate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").isSameOrAfter(new Date().setHours(0, 0, 0, 0))){
+       var statusClass = "upcoming-event";
+      } else {
        var statusClass = "past-event";
+      }
      } else {
        var statusClass = "upcoming-event";
      }
+
+     if(this.gsx$localhostevent.$t == "1"){
+      var featuredClass = "featured-event";
+     } else {
+      var featuredClass = "";
+     }
+
+
      var month = this.gsx$month.$t;
      if(month != newmonth | i == 0) {
        $('.calendar #tab-'+month).append('<ul class="month-'+month.toLowerCase()+'">')
@@ -189,7 +201,7 @@ $.getJSON(url, function(data) {
      if(this.gsx$enddate.$t){
        var endDate = " - "+moment(this.gsx$enddate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").format("ddd DD");
      }
-     $('.calendar .month-'+month.toLowerCase()+'').append('<li class="'+$locationEvent+'-event '+statusClass+'"><a href="'+this.gsx$link.$t+'" target="_blank"><span class="calendar-event-date calendar-past-date">'+moment(this.gsx$startdate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").format("ddd DD")+endDate+'</span><span class="calendar-event-details"><span>'+this.gsx$title.$t+'</span><span>'+this.gsx$type.$t+'</span><span>'+this.gsx$location.$t+'</span><span class="calendar-event-link"><svg width="15px" height="14px" viewBox="1309 2041 15 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="translate(1309.000000, 2042.000000)"><rect stroke-width="1" fill="none" stroke="#000000" x="0" y="3" width="11" height="10"></rect><path d="M4.5,8.5 L11.5,2.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path><path d="M12.5,1.5 L10.5,1.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path><path d="M12.5,2.5 L12.5,3.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path></g></svg></span></span></a></li>');
+     $('.calendar .month-'+month.toLowerCase()+'').append('<li class="'+$locationEvent+'-event '+statusClass+' '+featuredClass+'"><a href="'+this.gsx$link.$t+'" target="_blank"><span class="calendar-event-date calendar-past-date">'+moment(this.gsx$startdate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").format("ddd DD")+endDate+'</span><span class="calendar-event-details"><span>'+this.gsx$title.$t+'</span><span>'+this.gsx$type.$t+'</span><span>'+this.gsx$location.$t+'</span><span class="calendar-event-link"><svg width="15px" height="14px" viewBox="1309 2041 15 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="translate(1309.000000, 2042.000000)"><rect stroke-width="1" fill="none" stroke="#000000" x="0" y="3" width="11" height="10"></rect><path d="M4.5,8.5 L11.5,2.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path><path d="M12.5,1.5 L10.5,1.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path><path d="M12.5,2.5 L12.5,3.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path></g></svg></span></span></a></li>');
      newmonth = this.gsx$month.$t;
      if(month != newmonth) {
        $('.calendar .tab-'+month).append('</ul>');
@@ -203,6 +215,8 @@ $.getJSON(url, function(data) {
 ];
   var currentMonth = monthNames[d.getMonth()];
   $('div.tab-'+currentMonth).show();
+  $('ul.month-'+currentMonth).addClass('currentMonth');
+
 
    $(monthNames).each(function(i){
      if(currentMonth > monthNames[i]) {
@@ -210,4 +224,13 @@ $.getJSON(url, function(data) {
      }
    });
    $('#month-tabs').fadeIn();
+
+   var countcurrentPastevents = $('ul.currentMonth li.past-event').length
+   if(countcurrentPastevents > 3) {
+     $('ul.currentMonth li.past-event').hide();
+     $('ul.currentMonth li.past-event:nth-child('+countcurrentPastevents+')').show();
+     $('ul.currentMonth li.past-event:nth-child('+ (countcurrentPastevents - 1) +')').show();
+     $('ul.currentMonth li.past-event:nth-child('+ (countcurrentPastevents - 2) +')').show();
+   }
+
 });
