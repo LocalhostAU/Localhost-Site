@@ -380,7 +380,8 @@ body.about.internal {
   			display:flex;
   			justify-content:center;
   			flex-direction: column;
-        margin: 10% 0 3.7%;
+        margin: 10% auto 3.7%;
+        max-width:1440px;
 
   			@media (min-width: $screen-sm-min) {
   				flex-direction: row;
@@ -400,6 +401,10 @@ body.about.internal {
   				@media (min-width: $screen-md-min) {
   					width: 25%;
   				}
+
+          img {
+            width: 100%;
+          }
 
           .team-caption {
             padding: em(35) em(10) em(35) em(23);
