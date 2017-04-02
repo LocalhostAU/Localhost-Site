@@ -57,3 +57,17 @@ layout: home
   </div>
 </section><!-- mission section -->
 </div><!-- .welcome -->
+
+<% blog.articles[0...3].each do |article| %>
+  <article>
+    <a href="<%= article.url %>">
+    <% if article.data.category || article.data.author %>
+      <p class="author-line">
+        <% if article.data.category %><span class="article-category"><%= article.data.category %></span><% end %>
+      </p>
+    <% end %>
+    <h2><%= article.title %></h2>
+    <p class="read-more"><span>Read more</span></p>
+    </a>
+  </article>
+<% end %>
