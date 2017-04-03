@@ -1159,7 +1159,9 @@ section.subscribe {
         margin-bottom: 15px;
         text-transform: none;
         font-weight: bold;
-        margin-left: -80px;
+        @media (min-width: $screen-sm-min) {
+          margin-left: -80px;
+        }
       }
 
       @media (min-width:$screen-sm-min) {
