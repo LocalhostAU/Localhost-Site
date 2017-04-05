@@ -47,6 +47,7 @@ footer {
         height:61px;
         margin-bottom: -9px;
 
+
       }
     }
   }
@@ -86,7 +87,7 @@ footer {
           width: 150px;
           height:auto;
           @include transition($link-transition);
-          
+
         }
       }
     }
