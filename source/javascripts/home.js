@@ -11,10 +11,10 @@ $.getJSON(featuredurl, function(data) {
   var featuredentry = data.feed.entry;
   $(featuredentry).each(function(i){
     if( i == 0) {
-      $('.upcoming-event').append('<p class="date"><span class="weekday">'+this.gsx$day.$t+' '+this.gsx$date.$t+'</span><span class="month">'+this.gsx$month.$t+'</span></p>');
+      $('.localhost-upcoming-event').append('<p class="date"><span class="weekday">'+this.gsx$day.$t+' '+this.gsx$date.$t+'</span><span class="month">'+this.gsx$month.$t+'</span></p>');
     }
 
-    $('.upcoming-event').append('<div class="localhost-event"><h2 class="title">  <a href="'+this.gsx$link.$t+'" title="Find out about '+this.gsx$title.$t+'" target="_blank"><span data-hover="'+this.gsx$title.$t+'">'+this.gsx$title.$t+'</span></a></h2><p class="speaker">'+this.gsx$speaker.$t+' <span class="from">'+this.gsx$speakerfrom.$t+'</span></p> <p class="location">'+this.gsx$location.$t+'</p></div>');
+    $('.localhost-upcoming-event').append('<div class="localhost-event"><h2 class="title">  <a href="'+this.gsx$link.$t+'" title="Find out about '+this.gsx$title.$t+'" target="_blank"><span data-hover="'+this.gsx$title.$t+'">'+this.gsx$title.$t+'</span></a></h2><p class="speaker">'+this.gsx$speaker.$t+' <span class="from">'+this.gsx$speakerfrom.$t+'</span></p> <p class="location">'+this.gsx$location.$t+'</p></div>');
   });
 });
 
