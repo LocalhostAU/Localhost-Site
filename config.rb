@@ -70,7 +70,6 @@ configure :production do
   activate :minify_html
   activate :minify_css
   activate :minify_javascript
-  activate :asset_host, :host => '//d2jh1s85ct6v2r.cloudfront.net'
 end
 
 configure :staging do
