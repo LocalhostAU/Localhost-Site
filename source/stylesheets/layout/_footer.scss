@@ -56,7 +56,7 @@ footer {
     flex-grow:1;
     // padding: 4.5% 12px 1%;
     padding: 10px 20px;
-    opacity: 0.3;
+    opacity: 0.8;
 
     @media (min-width: $screen-sm-min) {
       //max-width: 900px;
@@ -84,7 +84,7 @@ footer {
         }
 
         img {
-          width: 100px;
+          max-width: 120px;
           height:auto;
           @include transition($link-transition);
 
