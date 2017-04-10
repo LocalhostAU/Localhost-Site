@@ -100,18 +100,18 @@ section.events {
     margin: 0 auto;
     display:flex;
     flex-direction: column;
-
-    @media (min-width: $screen-sm-min) {
-      flex-direction: row;
-    }
+    //
+    // @media (min-width: $screen-sm-min) {
+    //   flex-direction: row;
+    // }
   }
 
   .upcoming-event, .future-events {
 
-    @media (min-width: $screen-sm-min) {
-      width:50%;
-      flex-grow:1;
-    }
+    // @media (min-width: $screen-sm-min) {
+    //   width:50%;
+    //   flex-grow:1;
+    // }
   }
 
   .upcoming-event {
@@ -434,10 +434,10 @@ section.events {
       list-style:none;
       padding:0;
 
-      @media (min-width: $screen-sm-min) {
-        margin-left: 12.2%;
-        max-width: 367px;
-      }
+      // @media (min-width: $screen-sm-min) {
+      //   margin-left: 12.2%;
+      //   max-width: 367px;
+      // }
 
       li {
         font-size: $font-size-sm;

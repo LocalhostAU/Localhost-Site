@@ -7,7 +7,8 @@ layout: home
 <div class="welcome">
 <section class="events">
   <div class="container">
-    <div class="upcoming-event">
+    <div class="upcoming-event localhost-upcoming-event">
+      <span class="title">Calendar</span>
       <div class="event-bits">
         <span id="bit-blue">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="20 -1 20 19">
@@ -37,6 +38,8 @@ layout: home
     </div>
 
     <div class="future-events">
+      <p class="date"><span class="weekday">Coming Up</span></p>
+      <a href="/events/" class="title" title="View More Events"><span class="title">View All</span></a>
       <ul>
       </ul>
     </div>
@@ -57,7 +60,6 @@ layout: home
   </div>
 </section><!-- mission section -->
 </div><!-- .welcome -->
-<% if false %>
 <% blog.articles[0...3].each do |article| %>
   <article>
     <a href="<%= article.url %>">
@@ -67,8 +69,6 @@ layout: home
       </p>
     <% end %>
     <h2><%= article.title %></h2>
-    <p class="read-more"><span>Read more</span></p>
     </a>
   </article>
-<% end %>
 <% end %>
