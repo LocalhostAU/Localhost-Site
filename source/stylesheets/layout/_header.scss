@@ -296,7 +296,7 @@ header {
 		}
 
     .icon-bar {
-      width: 22px;
+      width: 25px;
       height:2px;
       background: #000;
       transform-origin: 50% 50%;
@@ -304,7 +304,7 @@ header {
       @include transition($link-transition);
 
       + .icon-bar {
-        margin-top:4px;
+        margin-top:8px;
       }
     }
   }
