@@ -4,71 +4,56 @@ body_classes: home
 meta_description: Connecting web, creative and digital communities &amp; unearthing local talent across Australia.
 layout: home
 ---
-<div class="welcome">
 <section class="events">
-  <div class="container">
-    <div class="upcoming-event localhost-upcoming-event">
-      <span class="title">Calendar</span>
-      <div class="event-bits">
-        <span id="bit-blue">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="20 -1 20 19">
-            <g fill="none" fill-rule="evenodd">
-              <path class="block" fill="#79B9F6" d="M28 2c4.42 0 8 3.57 8 7.97s-3.58 7.97-8 7.97-8-3.57-8-7.97S23.58 2 28 2z"/>
-              <path class="line" stroke="#1D1D1B" stroke-width="2" d="M30 0c4.42 0 8 3.57 8 7.97s-3.58 7.97-8 7.97-8-3.57-8-7.97S25.58 0 30 0z" stroke-linecap="round"/>
-            </g>
-          </svg>
-        </span>
-        <span id="bit-green">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 25 19 20">
-            <g fill="none" fill-rule="evenodd">
-              <path class="block" fill="#74DE7D" d="M10.35 37.6l5.3 5.28c.47.47.47 1.24 0 1.7-.23.23-.53.36-.85.36H1.2c-.66 0-1.2-.54-1.2-1.2v-13.6c0-1.06 1.3-1.53 2.05-.76l5.3 5.2"/>
-              <path class="line" stroke="#1D1D1B" stroke-width="2" d="M11.35 35.6l5.3 5.28c.47.47.47 1.24 0 1.7-.23.23-.53.36-.85.36H2.2c-.66 0-1.2-.54-1.2-1.2v-13.6c0-1.06 1.3-1.53 2.05-.76l5.3 5.2" stroke-linecap="round" stroke-linejoin="round"/>
-            </g>
-          </svg>
-        </span>
-        <span id="bit-purple">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="55 42 22 19">
-              <g fill="none" fill-rule="evenodd">
-                <path class="block" fill="#C980EA" d="M59.26 53.9l3.68 6.5c.33.57 1.07.77 1.65.44.17-.1.32-.26.43-.44l7.84-13.57c.33-.58.13-1.32-.45-1.64-.18-.1-.38-.17-.58-.17L56.2 45c-.66 0-1.2.54-1.2 1.2 0 .22.05.42.16.6l1.64 2.8c.2.36.6.6 1.03.6h2.9"/>
-                <path class="line" stroke="#1D1D1B" stroke-width="2" d="M61.26 51.9l3.68 6.5c.33.57 1.07.77 1.65.44.17-.1.32-.26.43-.44l7.84-13.57c.33-.58.13-1.32-.45-1.64-.18-.1-.38-.17-.58-.17L58.2 43c-.66 0-1.2.54-1.2 1.2 0 .22.05.42.16.6l1.64 2.8c.2.36.6.6 1.03.6h2.9" stroke-linecap="round" stroke-linejoin="round"/>
-              </g>
-            </svg>
-        </span>
-      </div>
-    </div>
+  <div class="upcoming-event localhost-upcoming-event">
+    <h2 class="title">Calendar</h2>
 
-    <div class="future-events">
-      <p class="date"><span class="weekday">Coming Up</span></p>
-      <a href="/events/" class="title" title="View More Events"><span class="title">View All</span></a>
-      <ul>
-      </ul>
+    <div class="container-fluid">
+
     </div>
   </div>
+
+  <div class="future-events">
+    <p class="date">
+      <span class="weekday">Coming Up</span>
+
+      <a href="/events/" class="view-all" title="View More Events">
+        View All
+      </a>
+    </p>
+    <ul>
+    </ul>
+  </div>
 </section><!-- events section -->
-<section class="follow">
-    <%= partial "partials/social-links" %>
-</section><!-- follow section i -->
+
 <section class="mission">
   <div class="mission-bits">
     <%= partial "images/bits/home-mission-top.svg" %>
   </div>
   <div class="container">
-    <p>Connecting <span class="brand-pink">web</span>, <span class="brand-blue">creative</span> &amp; <span class="brand-green">digital </span> communities and unearthing local talent across Australia.</p>
+    <p>Connecting web, creative &amp; digital communities and unearthing local talent across Australia.</p>
   </div>
   <div class="mission-bits">
     <%= partial "images/bits/home-mission-bottom.svg" %>
   </div>
 </section><!-- mission section -->
-</div><!-- .welcome -->
-<% blog.articles[0...3].each do |article| %>
-  <article>
-    <a href="<%= article.url %>">
-    <% if article.data.category || article.data.author %>
-      <p class="author-line">
-        <% if article.data.category %><span class="article-category"><%= article.data.category %></span><% end %>
-      </p>
+
+<section class="blog-section-home">
+  <div class="article-list">
+    <h2><span>We've been writing words</span></h2>
+    <% blog.articles[0...3].each do |article| %>
+      <article>
+        <a href="<%= article.url %>">
+          <% if article.data.category || article.data.author %>
+          <p class="author-line">
+            <% if article.data.category %><span class="article-category"><%= article.data.category %></span><% end %>
+          </p>
+          <% end %>
+          <h2><%= article.title %></h2>
+        </a>
+      </article>
     <% end %>
-    <h2><%= article.title %></h2>
-    </a>
-  </article>
-<% end %>
+  </div>
+
+   <%= partial "partials/subscription-form" %>
+</section>

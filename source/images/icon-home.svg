@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="65 41 23 18" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g fill="none" fill-rule="evenodd" stroke="#000" stroke-width="2" stroke-linecap="square">
+    <path d="M69 47.5v10"/>
+    <path d="M84 47.5v10"/>
+    <path d="M66.5 48.5l10-6"/>
+    <path d="M86.5 48.5l-10-6"/>
+  </g>
+</svg>
