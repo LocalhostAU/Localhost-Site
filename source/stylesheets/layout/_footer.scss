@@ -11,33 +11,77 @@ footer {
     border:0;
   }
 
+    .footer-details {
+    	border-top:1px solid #ccc;
+    	border-bottom:1px solid #ccc;
+
+    	.container-fluid {
+    		display:flex;
+    		width: 100%;
+        max-width: 1083px;
+        margin: 30px auto;
+    		padding: 0 30px;
+    		justify-content:space-between;
+    		flex-direction:column;
+
+    		@media (min-width: $screen-sm-min) {
+          margin: 46px auto 63px;
+        }
+
+    		@media (min-width: $screen-md-min) {
+    			flex-direction:row;
+    		}
+
+    		.partners, .sponsors {
+    			// flex-grow:1;
+    			display:flex;
+    			align-items:center;
+    		}
+
+    		.title {
+    			border-right: 1px solid #ccc;
+    			display:inline-block;
+    			padding: 8px 10px 8px 0;
+    			margin-right:10px;
+    			text-align:right;
+          line-height:1em;
+    			width: 40%;
+
+          font-weight:$font-weight-bold;
+          font-size: em(14);
+          text-transform:uppercase;
+          letter-spacing: em(2,14);
+
+    			@media (min-width: $screen-sm-min) {
+      			width: 25%;
+          }
+    			@media (min-width: $screen-md-min) {
+    				width:auto;
+    			}
+    		}
+
+    		.logos {
+    			ul {
+    				padding:0;
+
+    				li {
+    					list-style:none;
+              padding: 0 14px;
+    					display:inline-block;
+    				}
+    			}
+    		}
+
+    	}
+    }
+
+
   .footer-container {
-    display:flex;
     font-weight:bold;
-    flex-direction:column;
-
-    @media (min-width: $screen-sm-min) {
-      flex-direction:row;
-    }
-
-    &.details {
-      justify-content: space-between;
-      border-top:1px solid #D9D9D9;
-      border-bottom:1px solid #D9D9D9;
-      padding: 30px 30px 0;
-
-      @media (min-width: $screen-sm-min) {
-        padding:0;
-      }
-    }
 
     &.locations {
       justify-content: center;
       align-items: baseline;
-      //background: url('../images/icon-locations.svg');
-      //background-repeat:no-repeat;
-      //background-position:center bottom;
-      //background-size: 90% 100%;
       height: 50px;
       margin-bottom: -10px;
       z-index: 2;
@@ -54,38 +98,29 @@ footer {
   }
 
   .footer-logos {
-    flex-grow:1;
-    // padding: 4.5% 12px 1%;
-    padding: 10px 20px;
     opacity: 0.8;
+    width:75%;
 
-    @media (min-width: $screen-sm-min) {
-      //max-width: 900px;
-      border-left:1px solid #D9D9D9;
-      padding: 40px 20px 20px;
+    @media (min-width: $screen-md-min) {
+      width:auto;
+      flex-grow:1;
     }
 
     ul {
       display:flex;
-      flex-wrap:wrap;
+      // flex-wrap:wrap;
       margin:0;
       padding:0;
       list-style:none;
 			text-align:center;
+      align-items: center;
 
       li {
-        width:100%;
-
-        @media (min-width: $screen-sm-min) {
-          width: 33%;
-        }
-
-        @media (min-width: $screen-md-min) {
-          width:16.66666666666667%;
-        }
+        margin-bottom:0;
+        padding: 0 10px;
 
         img {
-          max-width: 120px;
+          // max-width: 120px;
           height:auto;
           @include transition($link-transition);
 
@@ -104,31 +139,38 @@ footer {
 	    line-height:1em;
 	    font-size:0.875em; //14px;
 	    letter-spacing: 0.185em;
+			border-right:1px solid #D9D9D9;
+      padding-right:10px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      margin-right: 18px;
     }
 
-    @media (min-width: $screen-sm-min) {
-      width: 27%;
-      text-align:right;
-      //padding: 3.8% 24px;
-			padding: 55px 25px 25px;
-    }
+    width: 25%;
+    text-align:right;
 
     @media (min-width: $screen-md-min) {
-      width: 19%;
+      // width: 23%;
+      width:auto;
     }
   }
 
   .footer-links {
     font-size:0.875em; //14px;
     //padding: 1.5% 23px 1%;
-    padding: 42px;
+    padding: 27px 15px;
     text-align:center;
     font-weight:bold;
     text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 
     @media (min-width: $screen-sm-min) {
       width: 100%;
       text-align:left;
+      flex-direction: row;
     }
 
     @media (min-width: $screen-md-min) {
@@ -142,9 +184,34 @@ footer {
 
       li {
         line-height:1em;
-        margin-bottom:1em;
-        display: inline;
-        padding-right: 20px;
+        // margin-bottom:1em;
+        margin-bottom:0;
+        padding: 10px;
+
+        @media (min-width: $screen-sm-min) {
+          display: inline-block;
+          padding: 0 10px;
+        }
+
+        @media (min-width: $screen-md-min) {
+          padding: 0 18px;
+        }
+      }
+    }
+
+    .social-links {
+      li {
+        padding: 0 8px;
+
+        a {
+          span {
+            @include sr-only;
+          }
+
+          &:before {
+            margin:0;
+          }
+        }
       }
     }
   }

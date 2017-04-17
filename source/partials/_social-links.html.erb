@@ -1,12 +1,17 @@
-<ul class="social">
+<ul class="social-links">
   <li>
-    <% link_to 'https://twitter.com/localhostau' do %>
-      <span class="label" data-hover="Twitter">Twitter</span> <span class="sm-icon"><%= image_tag 'social/logo-twitter.svg', alt: "Twitter" %></span>
-    <% end %>
+    <a href="https://twitter.com/localhostau" target="_blank" class="social-twitter" title="Follow Localhost on Twitter">
+    <span data-hover="Twitter">Twitter</span>
+  </a>
   </li>
-  <li class="meetup">
-    <% link_to 'https://www.meetup.com/web-industry-meetup/' do %>
-      <span class="label" data-hover="Meetup">Meetup</span> <span class="sm-icon meetup"><%= image_tag 'social/logo-meetup.svg', alt: "Meetup" %></span>
-    <% end %>
+  <li>
+    <a href="https://www.meetup.com/web-industry-meetup/" class="social-meetup" target="_blank" title="Follow Localhost on Meetup">
+      <span data-hover="Meetup">Meetup</span>
+    </a>
+  </li>
+  <li>
+    <a href="https://www.youtube.com/channel/UCXzGRpaB_MUVQAXZN894avg" class="social-youtube" target="_blank" title="Follow Localhost on YouTube">
+      <span data-hover="YouTube">YouTube</span>
+    </a>
   </li>
 </ul>

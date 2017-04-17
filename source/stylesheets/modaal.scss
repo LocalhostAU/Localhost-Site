@@ -7,10 +7,10 @@
 // Modaal Variables
 // --------------------------------------------------------
 
-$modaal-overlay-color: rgba(0,0,0, 0.8);
+$modaal-overlay-color: rgba(255,255,255, 0.95);
 
 $modaal-radius: 0px; //5px
-$modaal-main-bg: #fff;
+$modaal-main-bg: transparent;
 $modaal-main-text: #000;
 $modaal-max-width: 1000px;
 $modaal-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
@@ -43,6 +43,10 @@ $modaal-grey: #afb7bc;
 // --------------------------------------------------------
 .modaal-noscroll {
 	overflow: hidden;
+
+  .primary-nav, .header-home, .main {
+    filter:blur(5px) grayscale(100%);
+  }
 }
 .modaal-accessible-hide {
 	@include modaal-hidetext;
@@ -56,6 +60,7 @@ $modaal-grey: #afb7bc;
 	height: 100%;
 	z-index: 999;
 	opacity: 0;
+  background:$modaal-overlay-color !important;
 }
 .modaal-wrapper {
 	display: block;
@@ -161,7 +166,7 @@ $modaal-grey: #afb7bc;
 	opacity: 1;
 	width: 50px;
 	height: 50px;
-	background: rgba(0,0,0, 0);
+	background: transparent;
 	border-radius: 100%;
 	@include modaal-transition(all);
 	&:focus,
@@ -169,7 +174,7 @@ $modaal-grey: #afb7bc;
 		outline: none;
 		background: #fff;
 		&:before,
-		&:after { background: #b93d0c; }
+		&:after { background: $burnt-sienna; }
 	}
 	span {
 		@include modaal-hidetext;
@@ -181,10 +186,10 @@ $modaal-grey: #afb7bc;
 		position: absolute;
 		top: 14px;
 		left: 23px;
-		width: 4px;
+		width: 2px;
 		height: 22px;
-		border-radius: 4px;
-		background: #fff;
+		border-radius: 0;
+		background: #000;
 		@include modaal-transition(background);
 	}
 	&:before {
@@ -194,7 +199,7 @@ $modaal-grey: #afb7bc;
 		transform: rotate(45deg);
 	}
 	.modaal-fullscreen & {
-		background: $modaal-grey;
+		background: transparent;
 		right: 10px;
 		top: 10px;
 	}

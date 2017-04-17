@@ -54,7 +54,11 @@
       <% end %>
 
    </div><!-- .welcome -->
-    <%= partial "partials/subscription-form" %>
+    <section class="subscribe">
+      <div class="container">
+        <%= partial "partials/subscription-form" %>
+      </div><!--container -->
+    </section><!-- subscribe section -->
     <%= partial "partials/footer" %>
 
     <% if build? %>
@@ -64,6 +68,7 @@
     <%= javascript_include_tag('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js') %>
     <%= javascript_include_tag('https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js') %>
     <%= javascript_include_tag('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js') %>
+    <%= javascript_include_tag('modaal.min.js') %>
     <%= javascript_include_tag('events.js') %>
     <%= javascript_include_tag('site.js') %>
   </body>

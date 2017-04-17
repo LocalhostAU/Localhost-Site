@@ -6,12 +6,26 @@
     <li><a href="/blog" title="Blog">Blog</a></li>
   </ul>
 
-  <button class="navbar-toggle">
+  <a href="#navbar-toggle" class="navbar-toggle">
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
     <span class="icon-bar"></span>
     <span class="sr-only">Toggle Navigation Menu</span>
-  </button>
+  </a>
+
+  <div id="navbar-toggle" style="display:none;">
+    <div></div>
+    <ul class="modal-menu">
+      <li><a href="/" title="Home"><span>Home</span></a></li>
+      <li><a href="/about" title="About"><span>About</span></a></li>
+      <li><a href="/events" title="Events Calendar"><span>Events Calendar</span></a></li>
+      <li><a href="/code-of-conduct" title="Code of Conduct"><span>Code of Conduct</span></a></li>
+      <li><a href="/call-for-speakers" title="Submit a talk"><span>Submit a talk</span></a></li>
+      <li><a href="/contact" title="Contact"><span>Contact</span></a></li>
+    </ul>
+
+    <%= partial "partials/social-links" %>
+  </div>
 </nav>
 
 <header class="header-home">

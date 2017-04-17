@@ -108,7 +108,11 @@
         </ul>
     </div>
 
-    <%= partial "partials/subscription-form" %>
+		 <section class="subscribe">
+			 <div class="container">
+				 <%= partial "partials/subscription-form" %>
+			 </div><!--container -->
+		 </section><!-- subscribe section -->
     <%= partial "partials/footer" %>
 
     <% if build? %>
@@ -117,6 +121,7 @@
 
     <%= javascript_include_tag('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js') %>
     <%= javascript_include_tag('https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/TweenMax-latest-beta.js') %>
+    <%= javascript_include_tag('modaal.min.js') %>
     <%= javascript_include_tag('site.js') %>
   </body>
 </html>

@@ -67,3 +67,11 @@ $('.logo a').on('mouseout focusout',function(){
 $(".line-12").on("animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd", function(e){
     animateInit.play();
  });
+
+ $('.navbar-toggle').on('click', function(){
+  //  $(this).toggleClass('active');
+ });
+
+ $('.navbar-toggle').modaal({
+   fullscreen: true
+ });

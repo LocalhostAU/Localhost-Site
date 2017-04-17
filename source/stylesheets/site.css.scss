@@ -10,6 +10,7 @@
 @import "components/form";
 @import "components/animations";
 @import "components/events";
+@import "modaal";
 
 
 * {
@@ -577,7 +578,7 @@ section.follow {
 
 section.mission {
   text-align:center;
-  padding: 30px 0;
+  padding: 30px;
   position:relative;
 
   @media (min-width: $screen-sm-min) {
@@ -651,7 +652,7 @@ section.mission {
 .blog-section-home {
   display:flex;
   width: 100%;
-  max-width: 1246px;
+  max-width: 1306px;
   margin: 0 auto;
   justify-content: space-between;
   flex-direction:column;
@@ -666,7 +667,7 @@ section.mission {
     // padding: 0 0 0 36px;
     padding-left: 48px;
     flex-grow: 1;
-    max-width: 698px;
+    max-width: 728px;
     margin-bottom:30px;
 
     @media (min-width: $screen-sm-min) {
@@ -736,12 +737,16 @@ section.mission {
 
 .subscription-form {
   width: 100%;
-  max-width: 387px;
   padding-left: 18px;
   position:relative;
   padding-bottom:42px;
-  margin-right: 12px;
   margin-bottom:30px;
+	margin-right: 12px;
+	margin-left:0;
+
+	@media (min-width: $screen-sm-min) {
+  	max-width: 387px;
+	}
 
   &:after {
     content:"";
@@ -835,6 +840,15 @@ section.mission {
   		}
   	}
   }
+}
+
+.subscribe {
+	padding: 30px 30px;
+
+	.subscription-form {
+		margin-left:auto;
+		margin-right:auto;
+	}
 }
 
 // section.subscribe {
