@@ -29,7 +29,13 @@
   <body class="<%= page_classes %> <%= current_page.data.body_classes %>">
   <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>
     <%= partial "partials/header" %>
-
+    <header class="header-home">
+      <div class="logo">
+        <% link_to '/' do %>
+          <%= partial "partials/logo-2" %>
+        <% end %>
+      </div>
+    </header>
     <div class="main">
       <%= yield %>
 

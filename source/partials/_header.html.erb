@@ -1,9 +1,10 @@
 <nav class="primary-nav">
   <ul>
-    <li class="home"><a href="/" title="Home"><span class="sr-only">Home</span></a></li>
-    <li><a href="/about" title="About">About</a></li>
-    <li><a href="/events" title="Calendar">Calendar</a></li>
-    <li><a href="/blog" title="Blog">Blog</a></li>
+
+    <li class="home"><a href="/" class="<%= is_page_selected('/') %>" title="Home"><span class="sr-only">Home</span></a></li>
+    <li><a href="/about" class="<%= is_page_selected('/about/') %>" title="About">About</a></li>
+    <li><a href="/events" class="<%= is_page_selected('/events/') %>" title="Calendar">Calendar</a></li>
+    <li><a href="/blog" class="<%= is_page_selected('/blog/') %>" title="Blog">Blog</a></li>
   </ul>
 
   <a href="#navbar-toggle" class="navbar-toggle">
@@ -27,11 +28,3 @@
     <%= partial "partials/social-links" %>
   </div>
 </nav>
-
-<header class="header-home">
-  <div class="logo">
-    <% link_to '/' do %>
-      <%= partial "partials/logo-2" %>
-    <% end %>
-  </div>
-</header>

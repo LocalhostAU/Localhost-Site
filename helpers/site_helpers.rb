@@ -9,3 +9,7 @@ module SiteHelpers
     title
   end
 end
+
+def is_page_selected(page)
+  current_page.url == page ? "active" : ''
+end

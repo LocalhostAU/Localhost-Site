@@ -217,11 +217,11 @@ header {
       margin:0;
 
       a {
-        padding: 10px 10px;
+        margin: 10px 10px;
         border:0;
         display:block;
 
-        /* ABOUT: */
+
         font-weight:$font-weight-bold;
         font-size: em(14);
         color: #272727;
@@ -230,9 +230,13 @@ header {
         line-height: 1em;
 
         @media (min-width: $screen-sm-min) {
-          padding: 10px 32px;
+          margin: 10px 32px;
         }
-
+        &.active {
+          border-bottom: 4px solid $burnt-sienna;
+          display: inline-block;
+          padding-bottom: 13px;
+        }
         &:hover, &:focus {
           color: $burnt-sienna;
         }
@@ -240,11 +244,12 @@ header {
 
       &.home {
         a {
-          padding: 10px 10px 10px 0px;
+          margin: 10px 10px 10px 0px;
 
           @media (min-width: $screen-sm-min) {
-            padding: 10px 20px 10px 0px;
+            margin: 10px 20px 10px 0px;
           }
+
 
           &:before {
             content:"";
