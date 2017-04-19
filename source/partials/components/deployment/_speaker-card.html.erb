@@ -1,7 +1,5 @@
 <% if locals[:image] %>
-<header class="image">
-  <img src="<%= image %>" />
-</header>
+<img src="<%= image %>" />
 <% end %>
 <p><%= name ||= "" %></p>
 <p><%= position ||= "" %></p>
@@ -9,3 +7,4 @@
 <p><%= link ||= "" %></p>
 <p><%= title ||= "" %></p>
 <%= long_text ||= "" %>
+<%= location ||= "" %>
