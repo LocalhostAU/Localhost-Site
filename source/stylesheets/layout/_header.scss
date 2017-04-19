@@ -16,7 +16,7 @@ header {
   &.header-home {
     display:block;
 
-    > .logo {
+    > .logo, > .deployment-logo {
       margin: 0 auto;
     }
   }
@@ -25,7 +25,7 @@ header {
     border:0;
   }
 
-  > .logo {
+  > .logo, > .deployment-logo {
   	width:100%;
 
     @media (min-width: $screen-sm-min) {
@@ -39,8 +39,14 @@ header {
 			overflow:visible;
     }
   }
+  > .deployment-logo {
+    @media (min-width: $screen-sm-min) {
+      max-width:  560px;
+    }
+  }
 
-  .home & {
+
+  .home &, .projects_deployment & {
     position:relative;
     padding:0;
     height: 110px;

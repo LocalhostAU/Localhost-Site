@@ -1,0 +1,9 @@
+<div class="event-date   <% if locals[:location] %> location-<%= location %> <% end %>">
+  <p><%= date ||= "" %></p>
+  <p><%= day ||= "" %></p>
+</div>
+<article class="event per-events">
+  <% if locals[:link] %><a class="btn" href="<%= link %>" target="_blank"><% end %>
+    <%= button_text ||= "Get Tickets" %>
+  <% if locals[:link] %></a><% end %>
+</article>

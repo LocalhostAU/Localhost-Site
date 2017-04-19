@@ -1,34 +1,12 @@
 <!doctype html>
-<html>
+<html class="no-js">
   <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-
-    <title><%= current_page.data.title || "Middleman" %></title>
-    <meta content="<%= current_page.data.meta_description %>" name="description"/>
-
-    <link href='//fonts.googleapis.com/css?family=Lato:300,400' rel='stylesheet' type='text/css'>
-
-
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/manifest.json">
-    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#74de7d">
-    <meta name="theme-color" content="#ffffff">
-
-    <script src="https://use.typekit.net/wze4wrh.js"></script>
-    <script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-    <%= stylesheet_link_tag :site %>
-    <% ogp_tags do|name, value| %>
-    <meta content="<%= value %>" property="<%= name %>"/>
-    <% end %>
+    <%= partial "partials/head/head" %>
   </head>
 
   <body class="<%= page_classes %> <%= current_page.data.body_classes %> blog-post">
-    <%= partial "partials/header" %>
+  <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>
+  <%= partial "partials/header/header" %>
 
     <div class="main">
       <p class="h1"><a href="/blog"><span>Blog</span></a></p>
@@ -113,15 +91,7 @@
 				 <%= partial "partials/subscription-form" %>
 			 </div><!--container -->
 		 </section><!-- subscribe section -->
-    <%= partial "partials/footer" %>
-
-    <% if build? %>
-      <%= partial "partials/tracking" %>
-    <% end %>
-
-    <%= javascript_include_tag('https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js') %>
-    <%= javascript_include_tag('https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/TweenMax-latest-beta.js') %>
-    <%= javascript_include_tag('modaal.min.js') %>
-    <%= javascript_include_tag('site.js') %>
+    <%= partial "partials/footer/footer" %>
+    <%= partial "partials/footer/scripts" %>
   </body>
 </html>

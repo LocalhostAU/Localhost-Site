@@ -1,0 +1,11 @@
+<% if locals[:image] %>
+<header class="image">
+  <img src="<%= image %>" />
+</header>
+<% end %>
+<p><%= name ||= "" %></p>
+<p><%= position ||= "" %></p>
+<p><%= twiter ||= "" %></p>
+<p><%= link ||= "" %></p>
+<p><%= title ||= "" %></p>
+<%= long_text ||= "" %>

@@ -7,10 +7,12 @@
 @import "layout/footer";
 @import "layout/about";
 
+@import "components/global";
 @import "components/form";
 @import "components/animations";
 @import "components/events";
 @import "components/highlight-menu";
+@import "components/deployment";
 @import "modaal";
 
 
@@ -325,26 +327,10 @@ section.events {
 		}
 
     .view-all {
-      border: 1px solid #000;
-      padding: 13px 28px 14px;
       margin-top: 4px;
-      text-transform:uppercase;
-      font-weight:$font-weight-bold;
-      font-size: em(14);
-      color: #272727;
-      letter-spacing: 4px;
-      line-height: em(14, 14);
-      display:block;
-      text-align:center;
 
   		@media (min-width: $screen-sm-min) {
         float:right;
-      }
-
-      &:hover, &:focus {
-        background:$pastel-green;
-        border-color:$pastel-green;
-        color:#fff;
       }
     }
 

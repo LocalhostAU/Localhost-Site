@@ -216,10 +216,6 @@ body.about.internal {
     max-width:100%;
     padding: 0 15px;
 
-    img {
-      max-width:100%;
-      height:auto;
-    }
 
   	.paragraph-skinny {
   		margin: 0 auto;
@@ -229,16 +225,6 @@ body.about.internal {
   			max-width:480px;
   		}
   	}
-
-    .paragraph-image {
-      width:100%;
-      max-width:670px;
-      margin: 0 auto 5%;
-
-      &.full {
-        max-width:1120px;
-      }
-    }
 
     .deploy-chart {
       margin: 9.3% 0;
