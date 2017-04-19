@@ -224,7 +224,6 @@ body.about.internal {
   	.paragraph-skinny {
   		margin: 0 auto;
   		width:100%;
-      // margin-bottom: 6.5%;
 
   		@media (min-width: $screen-sm-min) {
   			max-width:480px;
@@ -246,7 +245,6 @@ body.about.internal {
     }
 
     .paragraph-full {
-      // margin-bottom: 9.2%;
         width:100%;
         max-width:1310px;
         margin: 0 auto;
@@ -501,7 +499,6 @@ body.about.internal {
 
   				li {
   					letter-spacing: em(1.53);
-  					// line-height: em(22);
   					list-style: none;
             margin-bottom: 5px;
 

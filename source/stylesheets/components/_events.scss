@@ -16,7 +16,7 @@
 .hidden {
   display: none;
 }
-.events_index {
+.calendar_index {
   .main {
     max-width: 1354px;
     width: 100%;
@@ -427,19 +427,19 @@
 
 
         ul.month-01 {
-          margin-top: 12px;
+          margin-top: 2px;
         }
         ul.month-02 {
-          margin-top: 52px;
+          margin-top: 43px;
         }
         ul.month-03 {
-          margin-top: 76px;
+          margin-top: 69px;
         }
         ul.month-04 {
-          margin-top: 102px;
+          margin-top: 92px;
         }
         ul.month-05 {
-          margin-top: 126px;
+          margin-top: 119px;
         }
       }
 
@@ -540,7 +540,7 @@
     .calendar-toggles {
       @media (min-width: $screen-sm-min) {
         text-align: right;
-        margin-top: 60px;
+        margin-top: 49px;
       }
 
       .filter-by {
@@ -612,7 +612,7 @@
     }
 
 
-    .calendar {
+    .page-calendar {
       position: relative;
 
       &:after {
@@ -630,7 +630,7 @@
       }
 
       > div {
-        padding-top: 12px;
+        padding-top: 10px;
         h2 {
           position: absolute;
           width: 1px;

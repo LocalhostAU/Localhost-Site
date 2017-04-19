@@ -10,6 +10,7 @@
 @import "components/form";
 @import "components/animations";
 @import "components/events";
+@import "components/highlight-menu";
 @import "modaal";
 
 
@@ -122,25 +123,19 @@ section.events {
         padding-bottom: 74px;
         background-size:calc(66.5% - 30px) 100%;
         background-position:10% bottom;
-        // padding-bottom: 76px;
       }
       @media (min-width: $screen-md-min) {
         background-size:40% 100%;
         background-position:left bottom;
-        // padding-bottom: 76px;
       }
 
 
 
       .location {
         letter-spacing:0.1em;
-        // font-size: $font-size-sm;
         text-transform:uppercase;
         font-weight:$font-weight-bold;
         line-height:14px;
-        // color: $burnt-sienna;
-
-        // letter-spacing:0.1em;
         position:relative;
 
         font-size: em(11);
@@ -178,7 +173,6 @@ section.events {
       width:100%;
       margin: 0 auto;
       padding: 0 30px;
-      // padding: 0 30px;
 
       @media (min-width: $screen-sm-min) {
         flex-direction:row;
@@ -294,7 +288,6 @@ section.events {
           &:after {
             content:"";
             width:14px;
-            // height:13px;
             background: url('../images/')
           }
         }
@@ -302,10 +295,6 @@ section.events {
     }
 
     .speaker {
-      // font-size: $font-size-sm;
-      // line-height: 1.3em;
-      // letter-spacing: 0.1em;
-
       font-size: em(11);
       color: #000000;
       letter-spacing: 1.57px;
@@ -664,7 +653,6 @@ section.mission {
   }
 
   .article-list {
-    // padding: 0 0 0 36px;
     padding-left: 48px;
     flex-grow: 1;
     max-width: 728px;
@@ -703,7 +691,6 @@ section.mission {
     }
 
     article {
-      // padding:  0px 0px;
       margin-bottom:25px;
 
       .author-line {
@@ -851,50 +838,6 @@ section.mission {
 	}
 }
 
-// section.subscribe {
-//   margin: 5.74% 30px calc(30px + 12.4%);
-//   position:relative;
-//
-//   &:before {
-//     background: $alabaster;
-//     content:"";
-//     width: 100%;
-//     max-width: 365px;
-//     height:93%;
-//     position:absolute;
-//     top: 63px;
-//     left: 49.25%;
-//     @include transform(translateX(-50%));
-//     z-index:-1;
-//   }
-//
-//   .container {
-//     width: 100%;
-//     max-width: 600px;
-//     margin: 0 auto;
-//   }
-//
-//   h2 {
-//     text-transform:uppercase;
-//     font-weight:bold;
-//     letter-spacing: 0.15em;
-//     text-align:center;
-//     font-size: $font-size-h3;
-//     line-height:1em;
-//
-//     @media (min-width: $screen-sm-min) {
-//       font-size: $font-size-h2;
-//     }
-//
-//     span {
-//       margin-top:1.81em;
-//       letter-spacing: 0.15em;
-//       display:block;
-//       line-height:1em;
-//       font-size: $font-size-h6;
-//     }
-//   }
-// }
 
 .inview {
 
@@ -1518,20 +1461,6 @@ section.mission {
           }
         }
       }
-    }
-  }
-}
-
-body.events {
-  h1.title {
-    display:inline-block;
-
-    &:after {
-      display:block;
-      width:30%;
-      height:3px;
-      background: $pastel-green;
-      content:"";
     }
   }
 }

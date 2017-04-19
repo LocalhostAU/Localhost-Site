@@ -1,58 +1,58 @@
 $(".calendar-toggles .city-perth").change(function() {
-  $('.calendar').toggleClass('toggle-per');
+  $('.page-calendar').toggleClass('toggle-per');
 
-	if ($('.calendar').hasClass('toggle-per')) {
-		$('.calendar ul li.per-event').slideDown();
+	if ($('.page-calendar').hasClass('toggle-per')) {
+		$('.page-calendar ul li.per-event').slideDown();
 	} else {
-		$('.calendar ul li.per-event').slideUp();
+		$('.page-calendar ul li.per-event').slideUp();
 	}
 });
 
 $(".calendar-toggles .city-sydney").change(function() {
-  $('.calendar').toggleClass('toggle-syd');
+  $('.page-calendar').toggleClass('toggle-syd');
 
-	if ($('.calendar').hasClass('toggle-syd')) {
-		$('.calendar ul li.syd-event').stop().slideDown();
+	if ($('.page-calendar').hasClass('toggle-syd')) {
+		$('.page-calendar ul li.syd-event').stop().slideDown();
 	} else {
-		$('.calendar ul li.syd-event').stop().slideUp();
+		$('.page-calendar ul li.syd-event').stop().slideUp();
 	}
 });
 
 $(".calendar-toggles .city-melbourne").change(function() {
-  $('.calendar').toggleClass('toggle-mel');
+  $('.page-calendar').toggleClass('toggle-mel');
 
-	if ($('.calendar').hasClass('toggle-mel')) {
-		$('.calendar ul li.mel-event').stop().slideDown();
+	if ($('.page-calendar').hasClass('toggle-mel')) {
+		$('.page-calendar ul li.mel-event').stop().slideDown();
 	} else {
-		$('.calendar ul li.mel-event').stop().slideUp();
+		$('.page-calendar ul li.mel-event').stop().slideUp();
 	}
 });
 
 $(".calendar-toggles .city-brisbane").change(function() {
-  $('.calendar').toggleClass('toggle-bne');
+  $('.page-calendar').toggleClass('toggle-bne');
 
-	if ($('.calendar').hasClass('toggle-bne')) {
-		$('.calendar ul li.bne-event').stop().slideDown();
+	if ($('.page-calendar').hasClass('toggle-bne')) {
+		$('.page-calendar ul li.bne-event').stop().slideDown();
 	} else {
-		$('.calendar ul li.bne-event').stop().slideUp();
+		$('.page-calendar ul li.bne-event').stop().slideUp();
 	}
 });
 
 $(".calendar-toggles .city-other").change(function() {
-  $('.calendar').toggleClass('toggle-other');
+  $('.page-calendar').toggleClass('toggle-other');
 
-	if ($('.calendar').hasClass('toggle-other')) {
-		$('.calendar ul li.other-event').stop().slideDown();
+	if ($('.page-calendar').hasClass('toggle-other')) {
+		$('.page-calendar ul li.other-event').stop().slideDown();
 	} else {
-		$('.calendar ul li.other-event').stop().slideUp();
+		$('.page-calendar ul li.other-event').stop().slideUp();
 	}
 });
 
 $(".calendar-toggles input").change(function() {
-  if (!$('.calendar').hasClass('toggle-other') && !$('.calendar').hasClass('toggle-bne') && !$('.calendar').hasClass('toggle-mel') && !$('.calendar').hasClass('toggle-syd') && !$('.calendar').hasClass('toggle-per')) {
-    $('.calendar').addClass('toggle-empty');
+  if (!$('.page-calendar').hasClass('toggle-other') && !$('.calendar').hasClass('toggle-bne') && !$('.calendar').hasClass('toggle-mel') && !$('.calendar').hasClass('toggle-syd') && !$('.calendar').hasClass('toggle-per')) {
+    $('.page-calendar').addClass('toggle-empty');
   } else {
-    $('.calendar').removeClass('toggle-empty');
+    $('.page-calendar').removeClass('toggle-empty');
   }
 });
 
@@ -61,7 +61,7 @@ $(function() {
     var tabs = $(".calendar-future-events");
 
     // For each individual tab DIV, set class and aria-hidden attribute, and hide it
-    $(tabs).find("main .calendar div").attr({
+    $(tabs).find("main .page-calendar div").attr({
         "class": "tabPanel",
         "aria-hidden": "true"
     }).hide();
@@ -189,7 +189,7 @@ $.getJSON(url, function(data) {
 
      var month = this.gsx$month.$t;
      if(month != newmonth | i == 0) {
-       $('.calendar #tab-'+month).append('<ul class="month-'+month.toLowerCase()+'">')
+       $('.page-calendar #tab-'+month).append('<ul class="month-'+month.toLowerCase()+'">')
      }
 
      var $locationEvent = this.gsx$location.$t.toLowerCase();
@@ -201,10 +201,10 @@ $.getJSON(url, function(data) {
      if(this.gsx$enddate.$t){
        var endDate = " - "+moment(this.gsx$enddate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").format("ddd DD");
      }
-     $('.calendar .month-'+month.toLowerCase()+'').append('<li class="'+$locationEvent+'-event '+statusClass+' '+featuredClass+'"><a href="'+this.gsx$link.$t+'" target="_blank"><span class="calendar-event-date calendar-past-date">'+moment(this.gsx$startdate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").format("ddd DD")+endDate+'</span><span class="calendar-event-details"><span>'+this.gsx$title.$t+'</span><span>'+this.gsx$type.$t+'</span><span>'+this.gsx$location.$t+'</span><span class="calendar-event-link"><svg width="15px" height="14px" viewBox="1309 2041 15 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="translate(1309.000000, 2042.000000)"><rect stroke-width="1" fill="none" stroke="#000000" x="0" y="3" width="11" height="10"></rect><path d="M4.5,8.5 L11.5,2.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path><path d="M12.5,1.5 L10.5,1.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path><path d="M12.5,2.5 L12.5,3.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path></g></svg></span></span></a></li>');
+     $('.page-calendar .month-'+month.toLowerCase()+'').append('<li class="'+$locationEvent+'-event '+statusClass+' '+featuredClass+'"><a href="'+this.gsx$link.$t+'" target="_blank"><span class="calendar-event-date calendar-past-date">'+moment(this.gsx$startdate.$t+"-"+this.gsx$month.$t+"-"+this.gsx$year.$t, "DD-MM-YYYY").format("ddd DD")+endDate+'</span><span class="calendar-event-details"><span>'+this.gsx$title.$t+'</span><span>'+this.gsx$type.$t+'</span><span>'+this.gsx$location.$t+'</span><span class="calendar-event-link"><svg width="15px" height="14px" viewBox="1309 2041 15 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g transform="translate(1309.000000, 2042.000000)"><rect stroke-width="1" fill="none" stroke="#000000" x="0" y="3" width="11" height="10"></rect><path d="M4.5,8.5 L11.5,2.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path><path d="M12.5,1.5 L10.5,1.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path><path d="M12.5,2.5 L12.5,3.5" id="Line" stroke="#4A4A4A" stroke-linecap="square"></path></g></svg></span></span></a></li>');
      newmonth = this.gsx$month.$t;
      if(month != newmonth) {
-       $('.calendar .tab-'+month).append('</ul>');
+       $('.page-calendar .tab-'+month).append('</ul>');
      }
    });
  }

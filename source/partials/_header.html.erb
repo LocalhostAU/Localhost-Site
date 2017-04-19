@@ -1,10 +1,9 @@
 <nav class="primary-nav">
   <ul>
-
-    <li class="home"><a href="/" class="<%= is_page_selected('/') %>" title="Home"><span class="sr-only">Home</span></a></li>
-    <li><a href="/about" class="<%= is_page_selected('/about/') %>" title="About">About</a></li>
-    <li><a href="/events" class="<%= is_page_selected('/events/') %>" title="Calendar">Calendar</a></li>
-    <li><a href="/blog" class="<%= is_page_selected('/blog/') %>" title="Blog">Blog</a></li>
+    <li class="home"><%= current_link_to "<span>Home</span>", "/" %></li>
+    <li><%= current_link_to "About", "/about/" %></li>
+    <li><%= current_link_to "Calendar", "/calendar/" %></li>
+    <li><%= current_link_to "Blog", "/blog/" %></li>
   </ul>
 
   <a href="#navbar-toggle" class="navbar-toggle">
@@ -15,15 +14,7 @@
   </a>
 
   <div id="navbar-toggle" style="display:none;">
-    <div></div>
-    <ul class="modal-menu">
-      <li><a href="/" title="Home"><span>Home</span></a></li>
-      <li><a href="/about" title="About"><span>About</span></a></li>
-      <li><a href="/events" title="Events Calendar"><span>Events Calendar</span></a></li>
-      <li><a href="/blog" title="Blog"><span>Blog</span></a></li>
-      <li><a href="/code-of-conduct" title="Code of Conduct"><span>Code of Conduct</span></a></li>
-      <li><a href="/call-for-speakers" title="Submit a talk"><span>Submit a talk</span></a></li>
-    </ul>
+    <%= partial "partials/nav" %>
 
     <%= partial "partials/social-links" %>
   </div>

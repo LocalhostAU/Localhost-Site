@@ -2,6 +2,8 @@
 # Page options, layouts, aliases and proxies
 ###
 
+activate :aria_current
+
 # Per-page layout changes:
 #
 # With no layout
@@ -71,6 +73,7 @@ configure :production do
   activate :minify_html
   activate :minify_css
   activate :minify_javascript
+  ignore 'drafts/*'
 end
 
 configure :staging do

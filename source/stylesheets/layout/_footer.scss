@@ -33,7 +33,6 @@ footer {
     		}
 
     		.partners, .sponsors {
-    			// flex-grow:1;
     			display:flex;
     			align-items:center;
     		}
@@ -108,7 +107,6 @@ footer {
 
     ul {
       display:flex;
-      // flex-wrap:wrap;
       margin:0;
       padding:0;
       list-style:none;
@@ -120,7 +118,6 @@ footer {
         padding: 0 10px;
 
         img {
-          // max-width: 120px;
           height:auto;
           @include transition($link-transition);
 
@@ -150,14 +147,12 @@ footer {
     text-align:right;
 
     @media (min-width: $screen-md-min) {
-      // width: 23%;
       width:auto;
     }
   }
 
   .footer-links {
     font-size:0.875em; //14px;
-    //padding: 1.5% 23px 1%;
     padding: 27px 15px;
     text-align:center;
     font-weight:bold;
@@ -184,17 +179,10 @@ footer {
 
       li {
         line-height:1em;
-        // margin-bottom:1em;
         margin-bottom:0;
-        padding: 10px;
 
         @media (min-width: $screen-sm-min) {
           display: inline-block;
-          padding: 0 10px;
-        }
-
-        @media (min-width: $screen-md-min) {
-          padding: 0 18px;
         }
       }
     }

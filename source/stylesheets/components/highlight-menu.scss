@@ -1,0 +1,84 @@
+.highlight-menu {
+  padding:0;
+  margin-bottom:30px;
+
+  li {
+    list-style:none;
+    text-align:center;
+
+    a {
+      font-weight:$font-weight-bold;
+      color: #000000;
+      letter-spacing: em(5.3, 40);
+      line-height: em(43, 40);
+      text-transform:uppercase;
+      border:0;
+      display: block;
+      padding: 14px 0;
+      .modaal-content-container & {
+        @media (min-width: $screen-sm-min) {
+          font-size: em(40);
+        }
+      }
+
+      span {
+        display:inline-block;
+        position:relative;
+        padding: 0 10px;
+
+        &:after {
+          position:absolute;
+          display:block;
+          content:"";
+          top:0;
+          bottom:0;
+          left:0;
+          right:100%;
+          background: $burnt-sienna;
+          @include transition($link-transition);
+          z-index: -1;
+        }
+      }
+
+      &:hover, &:focus {
+        // color:#fff;
+
+        span {
+          &:after {
+            right:0;
+          }
+        }
+      }
+    }
+
+    &:nth-child(5n+1) {
+      a span:after {
+        background:$pastel-green;
+      }
+    }
+
+    &:nth-child(5n+2) {
+      a span:after {
+        background:$turbo;
+      }
+    }
+
+    &:nth-child(5n+3) {
+      a span:after {
+        background:$lavendar;
+      }
+    }
+
+    &:nth-child(5n+4) {
+      a span:after {
+        background:$tulip-tree;
+      }
+    }
+
+    &:nth-child(5n+5) {
+      a span:after {
+        background:$malibu;
+      }
+    }
+  }
+}

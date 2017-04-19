@@ -1,9 +1,7 @@
 body {
   font-family: $font-family-sans-serif;
-  //font-size:14px; /* font calc addition */
   font-size: $font-size-body;
   &.home {
-    //font-size: 16px; /* font calc addition */
     font-size: $font-size-body;
   }
 }
@@ -14,12 +12,6 @@ p {
   margin-bottom:1.42857142857143em; // 20px
   letter-spacing:0.05em;
   font-size: $font-size-body;
-	//letter-spacing: 0.14em;
-	//word-spacing: -0.1em;
-
-  &.lead-paragraph {
-    //font-size: 1.125em; /* font calc addition */
-  }
 
   .home & {
     margin-bottom:15px;
@@ -70,7 +62,6 @@ a {
 // Headings
 h1, .h1 {
   font-size: $font-size-h1; /* font calc addition */
-  //letter-spacing: 0.05em;
 }
 
 h2, .h2 {
@@ -94,14 +85,12 @@ h6, .h6 {
 }
 
 p.subtitle {
-  //font-size:2em;/* font calc addition */
   font-size: $font-large-intro;
   line-height:1.20833333333333em; // 58px
   padding: 8.1% 0 1.3% 16.3%;
   letter-spacing:0;
 
   @media (min-width: $screen-sm-min) {
-    //font-size: 3.42857142857143em; // 48px /* font calc addition */
     padding: 8.1% 16.3% 1.3%;
   }
 
@@ -125,14 +114,9 @@ p.subtitle {
 }
 
 p.tagline {
-  //font-size:1.28571428571429em; // 18px /* font calc addition */
   padding-top: 5.5%;
   padding-bottom: 10.1%;
   font-size: $font-size-h3;
-
-  @media (min-width: $screen-sm-min) {
-    //font-size:2.57142857142857em; //36px; /* font calc addition */
-  }
 }
 
 .image {
@@ -141,52 +125,6 @@ p.tagline {
     width: 100%;
   }
 }
-
-// blockquote {
-//   font-size: $font-size-h3;
-//   text-align:center;
-//   position:relative;
-//   margin: 0;
-//   padding: 30px 60px 50px;
-//
-//   &:before {
-//     content:"";
-//     display:block;
-//     background: url('../images/bits-color.svg'), url('../images/bits-color-2.svg');
-//     background-position: top right, bottom left;
-//     background-repeat: no-repeat, no-repeat;
-//     background-size: 13% auto, 14% auto;
-//     position: absolute;
-//     top: -20px;
-//     left:0;
-//     right:0;
-//     bottom:0;
-//     z-index:2;
-//     right: 5px;
-//   }
-//
-//   &:after {
-//     content:"";
-//     width: 95%;
-//     display:block;
-//     bottom:0;
-//     background: $alabaster;
-//     position: absolute;
-//     top:0;
-//     left:50%;
-//     @include transform(translateX(-50%));
-//     z-index:-1;
-//     margin-bottom:30px;
-//   }
-//
-//   p {
-//     font-size:1em;
-//
-//     &:last-child {
-//       //margin-bottom:0;
-//     }
-//   }
-// }
 
 // List
 ol, ul {
@@ -260,7 +198,6 @@ ol {
     li {
       line-height:1.42857142857143em; // 20px
       margin-bottom:1.42857142857143em; // 20px
-      //letter-spacing:0.14em;
     }
 
     &.questions {
@@ -277,9 +214,5 @@ ol {
         padding-left: 6px;
       }
     }
-  }
-
-  .home .main & {
-
   }
 }
