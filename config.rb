@@ -28,6 +28,8 @@ configure :development do
 end
 
 activate :directory_indexes
+page "/404.html", :directory_index => false
+
 
 ###
 # Helpers
