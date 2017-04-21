@@ -54,11 +54,13 @@
       <% end %>
 
    </div><!-- .welcome -->
+   <% if !current_page.data.noSubscribe %>
     <section class="subscribe">
       <div class="container">
         <%= partial "partials/subscription-form" %>
       </div><!--container -->
     </section><!-- subscribe section -->
+    <% end %>
     <%= partial "partials/footer" %>
 
     <% if build? %>
