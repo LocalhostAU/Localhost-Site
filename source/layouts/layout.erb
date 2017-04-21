@@ -38,6 +38,10 @@
       </div><!--container -->
     </section><!-- subscribe section -->
     <% end %>
+
+    <% if build? %>
+      <%= partial "partials/tracking" %>
+    <% end %>
     <%= partial "partials/footer/footer" %>
     <%= partial "partials/footer/scripts" %>
     <%= yield_content :additional_scripts %>
