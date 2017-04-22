@@ -1,10 +1,12 @@
-<% if locals[:image] %>
-<img src="<%= image %>" />
-<% end %>
-<p><%= name ||= "" %></p>
-<p><%= position ||= "" %></p>
-<p><%= twiter ||= "" %></p>
-<p><%= link ||= "" %></p>
-<p><%= title ||= "" %></p>
-<%= long_text ||= "" %>
-<%= location ||= "" %>
+<div class="deployment-speaker">
+      <% if locals[:image] %>
+      <img src="<%= image %>" />
+      <% end %>
+      <p><%= name ||= "" %></p>
+      <p><%= position ||= "" %></p>
+      <p><%= twiter ||= "" %></p>
+      <p><%= link ||= "" %></p>
+      <p><%= title ||= "" %></p>
+      <%= long_text ||= "" %>
+      <%= location ||= "" %>
+</div>

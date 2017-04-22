@@ -3,6 +3,7 @@
     display: block;
     text-align: center;
     font-size: em(24);
+    margin-bottom: 200px;
   }
 
   .title {
@@ -11,14 +12,14 @@
     margin-bottom:3.6%;
     padding-left: 8.1%;
     display: inline-block;
-
-
   }
 
   h1 {
     font-size: em(40);
     line-height:em(40,40);
     padding-bottom:0.53em;
+    letter-spacing: 5.3px;
+    margin-top: -50px;
     &:after {
       content: "";
       max-width: 111px;
@@ -49,5 +50,65 @@
     font-size: em(40);
   }
 
+}
+
+.deployment-line-up {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: $screen-sm-min) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $screen-md-min) {
+    flex-direction: row;
+  }
+
+  .deployment-speaker {
+    flex: 1 0 25%;
+    padding: 10px;
+
+    @media (max-width: $screen-md-min) {
+      flex-direction: column;
+      flex: 1 0 50%;
+    }
+
+  }
+
+  img {
+    width: 100%;
+  }
+
+}
+
+.deployment-ticket-group {
+  padding-top: 200px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @media (min-width: $screen-sm-min) {
+    flex-direction: row;
+  }
+
+  @media (min-width: $screen-md-min) {
+    flex-direction: row;
+  }
+
+  .deployment-tickets {
+    flex: 1 0 25%;
+    padding: 10px;
+
+    @media (max-width: $screen-md-min) {
+      flex-direction: column;
+      flex: 1 0 50%;
+    }
+
+  }
+
+  img {
+    width: 100%;
+  }
 
 }

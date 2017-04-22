@@ -20,42 +20,44 @@ layout: layout
   </header>
 <% end %>
 
-<%= partial('partials/components/deployment/deployment-day', :locals => {
-:date => "Tues 6 June",
-:day => "Day One",
-:location => "PER",
-:link => "https://www.meetup.com/Localhost-PER/events/236983451/"
-}) %>
-<%= partial('partials/components/deployment/deployment-day', :locals => {
-:date => "Wed 7 June",
-:day => "Day Two",
-:location => "MEL",
-:link => "https://www.meetup.com/Localhost-PER/events/236983451/"
-}) %>
-<%= partial('partials/components/deployment/deployment-day', :locals => {
-:date => "Thur 8 June",
-:day => "Day Three",
-:location => "SYD",
-:link => "https://www.meetup.com/Localhost-PER/events/236983451/"
-}) %>
-<%= partial('partials/components/deployment/deployment-day', :locals => {
-:date => "Fri 9 June",
-:day => "Day Four",
-:location => "BNE",
-:link => "https://www.meetup.com/Localhost-PER/events/236983451/"
-}) %>
+<div class="deployment-ticket-group">
+  <%= partial('partials/components/deployment/deployment-day', :locals => {
+  :date => "Tues 6 June",
+  :day => "Day One",
+  :location => "PER",
+  :link => "https://www.meetup.com/Localhost-PER/events/236983451/"
+  }) %>
+  <%= partial('partials/components/deployment/deployment-day', :locals => {
+  :date => "Wed 7 June",
+  :day => "Day Two",
+  :location => "MEL",
+  :link => "https://www.meetup.com/Localhost-PER/events/236983451/"
+  }) %>
+  <%= partial('partials/components/deployment/deployment-day', :locals => {
+  :date => "Thur 8 June",
+  :day => "Day Three",
+  :location => "SYD",
+  :link => "https://www.meetup.com/Localhost-PER/events/236983451/"
+  }) %>
+  <%= partial('partials/components/deployment/deployment-day', :locals => {
+  :date => "Fri 9 June",
+  :day => "Day Four",
+  :location => "BNE",
+  :link => "https://www.meetup.com/Localhost-PER/events/236983451/"
+  }) %>
+</div>
 
-
-<h2>Dear community peeps who love all things creative, web & digital,</h2>
+<h2>Dear community peeps who love all things creative, web &amp; digital,</h2>
 
 <p>Yep, you’ve heard correctly; we’re picking up 4 speakers from destinations across Australia and bringing them to your city on a touring meetup roadshow.</p>
 
-<p>We’ll bring them & their awesome talk topics to you, along with some great food, drinks and friendly company; all you need to do is come along and enjoy. Whhhaatttt?</p>
+<p>We’ll bring them &amp; their awesome talk topics to you, along with some great food, drinks and friendly company; all you need to do is come along and enjoy. Whhhaatttt?</p>
 
 <p>It all sounds a bit awesome, doesn’t it? Yeah, we think so too. Read the back-story here or grab your tickets now (limited spots, so get in quick!).</p>
 
-<h2>Who’s Repr’sentin’,
-& what are they pr’sentin’?</h2>
+<h3>Who’s Representin’,
+&amp;<br /> what are they presentin’?</h3>
+<div class="deployment-line-up">
 <%= partial('partials/components/deployment/speaker-card', :locals => {
   :name => "Brett Jones",
   :position => "Front End Dev @ Campaign Monitor",
@@ -119,6 +121,7 @@ Furthermore, that the 'seriousness and effort' that has gone into Localhost has 
 <p>“Swag and stickers and dedication”<br/>
 Look out for Tim Oliver at future Localhost events to have a chat, he’s not hard to spot, he looks like Steve Jobs.</p>"
   }) %>
+</div>
 
 <div class="paragraph-image">
 	<%= partial "partials/components/deployment/deployment-map" %>
