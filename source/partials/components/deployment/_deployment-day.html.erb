@@ -1,8 +1,11 @@
 <div class="deployment-tickets">
-  <p><%= date ||= "" %></p>
-  <p><%= day ||= "" %></p>
+  <p>
+    <span class="deployment-date"><%= date ||= "" %></span>
+    <span class="deployment-day"><%= day ||= "" %></span>
+  </p>
+  <div class="deployment-location deployment-location-<%= location %>"></div>
   <% if locals[:link] %><a class="btn" href="<%= link %>" target="_blank"><% end %>
     <%= button_text ||= "Get Tickets" %>
     <% if locals[:link] %></a><% end %>
-    <p><%= location ||= "" %></p>
+    <!-- <p><%= location ||= "" %></p> -->
 </div>

@@ -2,11 +2,14 @@
       <% if locals[:image] %>
       <img src="<%= image %>" />
       <% end %>
-      <p><%= name ||= "" %></p>
-      <p><%= position ||= "" %></p>
-      <p><%= twiter ||= "" %></p>
-      <p><%= link ||= "" %></p>
-      <p><%= title ||= "" %></p>
-      <%= long_text ||= "" %>
-      <%= location ||= "" %>
+      <div class="speaker-details">
+        <p class="speaker-name"><%= name ||= "" %></p>
+        <p><%= position ||= "" %></p>
+        <p><%= twitter ||= "" %></p>
+        <p><%= link ||= "" %></p>
+      </div>
+      <div class="talk-details">
+        <h4><%= title ||= "" %></h4>
+        <%= long_text ||= "" %>
+      </div>
 </div>
