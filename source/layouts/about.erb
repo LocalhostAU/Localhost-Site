@@ -42,6 +42,10 @@
     <%= yield %>
 
    </main><!-- .welcome -->
+
+     <% if build? %>
+       <%= partial "partials/footer/tracking" %>
+     <% end %>
     <%= partial "partials/footer/footer" %>
     <%= partial "partials/footer/scripts" %>
   </body>

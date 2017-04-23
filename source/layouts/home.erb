@@ -18,6 +18,10 @@
       <%= yield %>
 
    </div><!-- .welcome -->
+
+     <% if build? %>
+       <%= partial "partials/footer/tracking" %>
+     <% end %>
     <%= partial "partials/footer/footer" %>
     <%= partial "partials/footer/scripts" %>
     <%= javascript_include_tag('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js') %>

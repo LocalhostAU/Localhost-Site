@@ -23,9 +23,11 @@ proxy "_redirects", "netlify-redirects", ignore: true
 
 # Reload the browser automatically whenever files change
 configure :development do
-  activate :livereload
-  activate :autoprefixer
+  activate :livereload do |reload|
+    reload.no_swf = true
+  end
 end
+
 
 activate :directory_indexes
 page "/404.html", :directory_index => false
@@ -76,10 +78,4 @@ configure :production do
   activate :minify_css
   activate :minify_javascript
   ignore 'drafts/*'
-end
-
-configure :staging do
-  activate :minify_html
-  activate :minify_css
-  activate :minify_javascript
 end

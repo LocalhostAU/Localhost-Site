@@ -91,6 +91,10 @@
 				 <%= partial "partials/subscription-form" %>
 			 </div><!--container -->
 		 </section><!-- subscribe section -->
+
+     <% if build? %>
+       <%= partial "partials/footer/tracking" %>
+     <% end %>
     <%= partial "partials/footer/footer" %>
     <%= partial "partials/footer/scripts" %>
   </body>
