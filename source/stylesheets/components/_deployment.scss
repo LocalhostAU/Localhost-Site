@@ -247,22 +247,26 @@
 
         &.deployment-location-BNE {
           background-image: url("../images/icon-localhostBne.svg");
-          background-size: 180px 100%;
+          background-size: 100% 80px;
+          background-position: bottom;
         }
 
         &.deployment-location-PER {
           background-image: url("../images/icon-localhostPer.svg");
-          background-size: 180px 100%;
+          background-size: 100% 80px;
+          background-position: bottom;
         }
 
         &.deployment-location-MEL {
           background-image: url("../images/icon-localhostMel.svg");
-          background-size: 180px 100%;
+          background-size: 100% 80px;
+          background-position: bottom;
         }
 
         &.deployment-location-SYD {
           background-image: url("../images/icon-localhostSyd.svg");
-          background-size: 130px 100%;
+          background-size: 100% 62px;
+          background-position: bottom;
         }
       }
 
@@ -457,7 +461,6 @@
 
   .deployment-line-up {
     @media (min-width: $screen-md-min) {
-      margin-bottom: 354px;
     }
 
     img {
