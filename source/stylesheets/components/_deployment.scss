@@ -192,7 +192,7 @@
 
   .deployment-ticket-group {
     padding-top: 0;
-    padding-bottom:60px;
+    //padding-bottom:60px;
 
     @media (min-width: $screen-sm-min) {
       flex-direction: row;
@@ -209,6 +209,8 @@
       flex: 1 0 25%;
       padding: 10px;
       text-align:center;
+      margin-bottom: 50px;
+
 
       @media (max-width: $screen-md-min) {
         flex-direction: column;
@@ -374,6 +376,10 @@
       }
 
       @media (min-width: $screen-md-min) {
+        margin-bottom: 28px;
+      }
+
+      @media (min-width: $screen-lg-min) {
         margin-left: -23%;
         margin-bottom: 28px;
       }
