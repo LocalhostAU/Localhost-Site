@@ -263,6 +263,38 @@ header {
     }
   }
 
+  .deployment-shapes {
+    content:"";
+    z-index:3;
+    background: url('../images/deployment_shapes.svg');
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+    a {
+
+      &[aria-current]:not([aria-current="false"])  {
+        border-bottom: none;
+      }
+
+    }
+
+    a:hover {
+        background: url('../images/deployment_shapes.svg');
+        background-repeat: no-repeat;
+        background-position: top center;
+        background-size: 80%;
+        color: black;
+    }
+  }
+
+  .hide {
+    display: inline;
+
+    @media (max-width: $screen-xs-min) {
+    display: none;
+    }
+  }
+
   .navbar-toggle {
     background:transparent;
     border:0;
