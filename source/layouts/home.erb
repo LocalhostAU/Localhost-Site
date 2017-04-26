@@ -2,9 +2,15 @@
 <html class="no-js">
   <head>
     <%= partial "partials/head/head" %>
+    <% if build? %>
+      <%= partial "partials/footer/tracking-head" %>
+    <% end %>
   </head>
 
   <body class="<%= page_classes %> <%= current_page.data.body_classes %>">
+  <% if build? %>
+    <%= partial "partials/footer/tracking-body" %>
+  <% end %>
   <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>
     <%= partial "partials/header/header" %>
     <header class="header-home">
@@ -19,9 +25,6 @@
 
    </div><!-- .welcome -->
 
-     <% if build? %>
-       <%= partial "partials/footer/tracking" %>
-     <% end %>
     <%= partial "partials/footer/footer" %>
     <%= partial "partials/footer/scripts" %>
     <%= javascript_include_tag('https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js') %>
