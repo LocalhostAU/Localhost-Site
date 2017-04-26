@@ -3,13 +3,13 @@
   <head>
     <%= partial "partials/head/head" %>
     <% if build? %>
-      <%= partial "partials/footer/tracking-head" %>
+      <%= partial "partials/tracking/tracking-head" %>
     <% end %>
   </head>
 
   <body class=" <%= page_classes %> <%= current_page.data.body_classes %>">
     <% if build? %>
-      <%= partial "partials/footer/tracking-body" %>
+      <%= partial "partials/tracking/tracking-body" %>
     <% end %>
   <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>
     <%= partial "partials/header/header" %>
