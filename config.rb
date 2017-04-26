@@ -66,15 +66,18 @@ activate :ogp do |ogp|
   ogp.namespaces = {
     fb: data.ogp.fb,
     # from data/ogp/fb.yml
-    og: data.ogp.og
+    og: data.ogp.og,
+    twitter: data.ogp.twitter
     # from data/ogp/og.yml
   }
-  ogp.base_url = 'https://localhost.events/'
+  ogp.base_url = 'https://www.localhost.events/'
   ogp.blog = true
 end
 
 configure :production do
-  activate :minify_html
+  activate :minify_html do |html|
+    html.remove_quotes = false   # Preserve quotes
+  end
   activate :minify_css
   activate :minify_javascript
   ignore 'drafts/*'

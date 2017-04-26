@@ -1,4 +1,5 @@
 type: article
+description: Connecting web, creative and digital communities &amp; unearthing local talent across Australia.
 image:
   '': https://www.localhost.events/images/ogimage.jpg
   type: image/jpg
@@ -6,7 +7,3 @@ image:
   height: 630
 locale:
   '': en_us
-twitter:
-  card: summary_large_image
-  site: '@localhostAU'
-  creator: '@localhostAU'
