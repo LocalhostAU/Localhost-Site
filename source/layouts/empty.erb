@@ -2,9 +2,15 @@
 <html>
   <head>
     <%= partial "partials/head/head" %>
+    <% if build? %>
+      <%= partial "partials/footer/tracking-head" %>
+    <% end %>
   </head>
 
   <body class="<%= page_classes %> <%= current_page.data.body_classes %>">
+  <% if build? %>
+    <%= partial "partials/footer/tracking-body" %>
+  <% end %>
       <%= yield %>
       <%= javascript_include_tag :all %>
 

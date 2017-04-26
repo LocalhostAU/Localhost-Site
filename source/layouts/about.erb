@@ -2,9 +2,15 @@
 <html class="no-js">
   <head>
     <%= partial "partials/head/head" %>
+    <% if build? %>
+      <%= partial "partials/footer/tracking-head" %>
+    <% end %>
   </head>
 
   <body class=" <%= page_classes %> <%= current_page.data.body_classes %>">
+    <% if build? %>
+      <%= partial "partials/footer/tracking-body" %>
+    <% end %>
   <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>
     <%= partial "partials/header/header" %>
 
@@ -43,9 +49,7 @@
 
    </main><!-- .welcome -->
 
-     <% if build? %>
-       <%= partial "partials/footer/tracking" %>
-     <% end %>
+
     <%= partial "partials/footer/footer" %>
     <%= partial "partials/footer/scripts" %>
   </body>
