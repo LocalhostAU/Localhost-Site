@@ -43,14 +43,17 @@
     </div><!-- .main -->
 
     <div class="blog-additional">
-      <% if current_page.data.videoURL %>
+      <% if current_page.data.videoImage %>
         <div class="additional-video">
-          <a href="<%= current_page.data.videoURL %>" target="_blank">
+          <% if current_page.data.videoURL %>
+            <a href="<%= current_page.data.videoURL %>" target="_blank">
+          <% end %>
             <div class="additional-border">
               <img src="<%= current_page.data.videoImage %>" alt="videoImageAlt" />
             </div>
-          </a>
-
+          <% if current_page.data.videoURL %>
+            </a>
+          <% end %>
           <% if current_page.data.videoCaption %>
             <p class="caption"><%= current_page.data.videoCaption %></p>
           <% end %>
