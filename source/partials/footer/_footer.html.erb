@@ -2,31 +2,31 @@
   	<div class="footer-details">
   		<div class="container-fluid">
         <% if content_for?(:sponsors) %>
-            <div><%= yield_content :sponsors %></div>
+            <%= yield_content :sponsors %>
         <% else %>
-          <div class="partners">
-            <p class="title">
-              Our Major<br/> Partners
-            </p>
-            <div class="logos">
-              <ul>
-                <li><img src="/images/logos/logo-awia-bnw-2.png" alt="AWIA Logo" /></li>
-              </ul>
-            </div>
-          </div>
-          <div class="sponsors">
-            <p class="title">
-              Our Community<br /> Sponsors
-            </p>
-            <div class="logos">
-              <ul>
-                <li><img src="/images/logos/young-henrys-logo.png" alt="Young Henry's Logo" /></li>
-                <li><img src="/images/logos/logo-sketch.png" alt="Sketch Logo" /></li>
-              </ul>
-            </div>
+        <div class="partners">
+          <p class="title">
+            Our Major<br/> Partners
+          </p>
+          <div class="logos">
+            <ul>
+              <li><img src="/images/logos/logo-awia-bnw-2.png" alt="AWIA Logo" /></li>
+            </ul>
           </div>
         </div>
-      <% end %>
+        <div class="sponsors">
+          <p class="title">
+            Our Community<br /> Sponsors
+          </p>
+          <div class="logos">
+            <ul>
+              <li><img src="/images/logos/young-henrys-logo.png" alt="Young Henry's Logo" /></li>
+              <li><img src="/images/logos/logo-sketch.png" alt="Sketch Logo" /></li>
+            </ul>
+          </div>
+        </div>
+        <% end %>
+      </div>
   	</div>
     <div class="footer-links">
       <%= partial "partials/nav" %>

@@ -7,6 +7,23 @@ lead_paragraph: Introducing a multi-city - supercharged - touring meetup -  road
 noSubscribe: true
 noMiniColumn: true
 layout: layout
+ogp:
+  og:
+    description: 'Introducing a multi-city - supercharged - touring meetup -  roadshow. Actually.'
+    image:
+      '': https://localhost.events/images/ogimage-deployment.jpg
+      secure_url: https://localhost.events/images/ogimage-deployment.jpg
+      type: image/jpg
+      width: 400
+      height: 300
+  fb:
+    description: 'Introducing a multi-city - supercharged - touring meetup -  roadshow. Actually.'
+    image:
+      '': https://localhost.events/images/ogimage-deployment.jpg
+      secure_url: https://localhost.events/images/ogimage-deployment.jpg
+      type: image/jpg
+      width: 400
+      height: 300
 ---
 <% content_for :header do %>
 <header class="header-home">
@@ -21,7 +38,7 @@ layout: layout
 
 <div class="deployment-ticket-group">
   <%= partial('partials/components/deployment/deployment-day', :locals => {
-  :date => "Tues 6<br/>June",
+  :date => "Tues<br/>6 June",
   :day => "Day One",
   :location => "PER",
   :link => "https://www.eventbrite.com.au/e/localhost-deployment-tickets-33542351075"
@@ -61,79 +78,84 @@ layout: layout
   </div>
 </div>
 
-<h3>Who’s Representin’, <br />
-&amp; what are they <br />
-presentin’?</h3>
+
 
 <div class="deployment-line-up">
-<%= partial('partials/components/deployment/speaker-card', :locals => {
-  :name => "Brett Jones",
-  :position => "Designer &amp; Developer @ <br />Pin Payments",
-  :location => "PER",
-  :image => "/images/events/Brett.jpg",
-  :title => "The Not–So–Glamorous Aspects of Design",
-  :long_text => "<p>In \“The Not–So–Glamorous Aspects of Design\”, I will explore some of the insights from my time as a designer and what I’ve learned, specifically around self–learning in user interface and visual design.</p>
+  <h3>Who’s Representin’, <br />
+  &amp; what are they <br />
+  presentin’?</h3>
 
-  <p>Self-learning is more important in our industry now than ever, but actually knowing what to learn is difficult. There are the known unknowns — perhaps I know that I don’t know how to use Sketch. But what’s more important is the unknown unknowns — facets of design which Behance, Dribbble or Google don’t necessarily surface — unless you know *exactly what* to search for.</p>
-  <p>The surface–level aesthetic layer of design is the easiest layer for everyone to appreciate and comment on, though having a level of familiarity with adjacent skills and techniques will help them on teams, and enable them to reason about their work in more varied and expressive ways.</p>
-  <p><strong>About Brett</strong></p>
-  <p>Brett is a designer and developer at Pin Payments, where he specialises in visual design. He enjoys brewing (and drinking) coffee, photography, grids of the exploded variety, and drawing rectangles in a range of fidelities.</p>
-  <p>In 2016 Brett helped organise the inaugural Mixin conference, encouraging collaboration between designers and developers, alongside other local passionate web folk.</p>"
-  }) %>
+  <div class="row">
+  <%= partial('partials/components/deployment/speaker-card', :locals => {
+    :name => "Brett Jones",
+    :position => "Designer &amp; Developer @ <br />Pin Payments",
+    :location => "PER",
+    :image => "/images/events/Brett.jpg",
+    :title => "The Not–So–Glamorous Aspects of Design",
+    :long_text => "<p>With the rate of change in our industry, self-learning is more important than ever. Yet actually knowing what to learn as a designer can be difficult. Especially since there are important, fundamental elements of design which many corners of the internet do not surface — unless you already know exactly what to look for.</p>
 
-<%= partial('partials/components/deployment/speaker-card', :locals => {
-  :name => "Glen Maddern",
-  :position => "Independent Front End Developer &amp; Consultant",
-  :location => "MEL",
-  :image => "/images/events/Glen.jpg",
-  :title => "Styled Components and the Road to Unification",
-  :long_text => "<p>It seems inevitable. As we've moved to a more component-centric UI architecture, we've moved our JS and HTML and CSS closer and closer together. Surely they'll eventually end up all in a single file, right?</p>
+    <p>It is often the surface–level, aesthetic layer of design which is given prominent focus — it is easiest aspect of design to appreciate, understand, and recognise as a valuable skill to cultivate. It is also what attracts many young aspiring designers to the industry in the first place.</p>
 
-  <p>Not long ago, this idea was unthinkable—our units of composition were too large and divided along language boundaries. But things are changing.</p>
+    <p>In \"Less Glamorous Elements of Design\", I will explore some important, yet easily overlooked elements of design, which can help designers to grow, and allow us to reason about our work on teams in more varied and expressive ways.</p>
 
-  <p>This is a talk about the dream of a unified development language for components, and the progress one library, Styled Components, has made towards that goal.</p>
+    <p><strong>About Brett</strong></p>
+    <p>Brett is a designer and developer at Pin Payments, where he specialises in visual design. He enjoys brewing (and drinking) coffee, photography, grids of the exploded variety, and drawing rectangles in a range of fidelities.</p>
+    <p>In 2016 Brett helped organise the inaugural Mixin conference, encouraging collaboration between designers and developers, alongside other local passionate web folk.</p>"
+    }) %>
 
-  <p><strong>About Glen</strong></p>
-  <p>Glen is an independent Front-End Engineer and Consultant, the creator of Front End Center, and the co-creator of styled-components, CSS Modules.</p>"
-  }) %>
+  <%= partial('partials/components/deployment/speaker-card', :locals => {
+    :name => "Glen Maddern",
+    :position => "Independent Front End Developer &amp; Consultant",
+    :location => "MEL",
+    :image => "/images/events/Glen.jpg",
+    :title => "Styled Components and the Road to Unification",
+    :long_text => "<p>It seems inevitable. As we've moved to a more component-centric UI architecture, we've moved our JS and HTML and CSS closer and closer together. Surely they'll eventually end up all in a single file, right?</p>
 
-<%= partial('partials/components/deployment/speaker-card', :locals => {
-  :name => "Simon Wright",
-  :position => "UX Designer &amp; enabler of coffee",
-  :location => "SYD",
-  :image => "/images/events/Simon.jpg",
-  :title => "Caffeinated design",
-  :long_text => "<p>I’ve spent the last couple of years designing and building things about/with/for coffee and the web.</p>
-  <p>In the process, lots of learning new things, with an interesting pattern of:</p>
-  <p>
-  – I have no idea what I’m doing; <br />
-  – I’m working this new thing out; <br />
-  – Wait, my old skills are suddenly uber-relevant in this new thing!</p>
-  <p>For example:</p>
-  <p>
-  – a web designer making print things (labels, cards) in Indesign;<br />
-  – maybe I can make print things using web technologies?;<br />
-  – the wonderful moment I got nerdy and made print things using web tech, then making them smarter (because: web!)</p>
+    <p>Not long ago, this idea was unthinkable—our units of composition were too large and divided along language boundaries. But things are changing.</p>
 
-  <p><strong>About Simon</strong></p>
-  <p>Simon Wright is a roving UX designer who's been making things for the web since the 90s working with governments, media companies and startups. In that time he's taken on design, front-end and UX roles. But lately, he's been wearing all the hats at once with a coffee subscription business that's equal parts design, code and customer service (the coffee picking hat is worn by the coffee roaster).</p>"
-  }) %>
+    <p>This is a talk about the dream of a unified development language for components, and the progress one library, Styled Components, has made towards that goal.</p>
 
-<%= partial('partials/components/deployment/speaker-card', :locals => {
-  :name => "Anna Harrison",
-  :position => "Director of UX @ <br />Ephox",
-  :location => "BNE",
-  :image => "/images/events/Anna.jpg",
-  :title => "Decisions Considered Harmful to Product Love",
-  :long_text => "<p>Software developers love flexibility. At their very core, engineers value choices and options above all else (possibly even pizza). Yet, these same choices and flexibility, when viewed through the eyes of product users, look more like unasked for homework and cognitive overload.</p>
+    <p><strong>About Glen</strong></p>
+    <p>Glen is an independent Front-End Engineer and Consultant, the creator of Front End Center, and the co-creator of styled-components, CSS Modules.</p>"
+    }) %>
 
-  <p>In an era where experiences are coveted more highly than products, and product loyalties are made and broken at the touch of a download button, can we expect to deliver Product Love if we do not change the core beliefs of those who develop our software?</p>
+  <%= partial('partials/components/deployment/speaker-card', :locals => {
+    :name => "Simon Wright",
+    :position => "UX Designer &amp; enabler of coffee",
+    :location => "SYD",
+    :image => "/images/events/Simon.jpg",
+    :title => "Caffeinated design",
+    :long_text => "<p>As we get more experience we specialise and focus our skills on an ever-narrowing area and industry. I've been designing for web and digital for a long time, but lately I've become \"the coffee guy\" to long-time web friends, and \"the web guy\" to coffee people. And somehow I've ended up making all sorts of unfamiliar print things using familiar web skills.</p>
 
-  <p>A fun and example packed presentation explores this conflict, and presents practical ways for addressing it in your place of work. The success of your next app could hinge on what you learn in this 20-minute presentation!</p>
+    <p>Along the way I've noticed a pattern of:</p>
+    <ul>
+      <li>I have no idea what I'm doing;</li>
+      <li>I'm working this new thing out;</li>
+      <li>Wait, my old skills are now weirdly relevant in this new area.</li>
+    </ul>
 
-  <p><strong>About Anna</strong></p>
-  <p>Dr Anna Harrison is an award-winning speaker, author and designer. She currently leads the UX design and innovation practice at Ephox, makers of TinyMCE. Anna’s passion for people, design and technology is fuelled by her travels and work abroad, where she has helped organisations like IBM, Oracle, NICTA, Unisys and major airports convert dreams and visions into tangible products. Anna regularly contributes to the local Australian Design + Technology scene through speaking engagements and her From Scholar to Dollar and Think Fast, Look Good and Influence series of QUT based workshops.</p>"
-  }) %>
+    <p>This is a talk about reapplying what you know in unfamiliar worlds, and in the process discovering new ways to do things (like using millimeters in your stylesheet)</p>
+
+    <p><strong>About Simon</strong></p>
+    <p>Simon Wright is a roving UX designer who's been making things for the web since the 90s working with governments, media companies and startups. In that time he's taken on design, front-end and UX roles. But lately, he's been wearing all the hats at once with a coffee subscription business that's equal parts design, code and customer service (the coffee picking hat is worn by the coffee roaster).</p>"
+    }) %>
+
+  <%= partial('partials/components/deployment/speaker-card', :locals => {
+    :name => "Anna Harrison",
+    :position => "Director of UX @ <br />Ephox",
+    :location => "BNE",
+    :image => "/images/events/Anna.jpg",
+    :title => "Decisions Considered Harmful to Product Love",
+    :long_text => "<p>Software developers love flexibility. At their very core, engineers value choices and options above all else (possibly even pizza). Yet, these same choices and flexibility, when viewed through the eyes of product users, look more like unasked for homework and cognitive overload.</p>
+
+    <p>In an era where experiences are coveted more highly than products, and product loyalties are made and broken at the touch of a download button, can we expect to deliver Product Love if we do not change the core beliefs of those who develop our software?</p>
+
+    <p>A fun and example packed presentation explores this conflict, and presents practical ways for addressing it in your place of work. The success of your next app could hinge on what you learn in this 20-minute presentation!</p>
+
+    <p><strong>About Anna</strong></p>
+    <p>Dr Anna Harrison is an award-winning speaker, author and designer. She currently leads the UX design and innovation practice at Ephox, makers of TinyMCE. Anna’s passion for people, design and technology is fuelled by her travels and work abroad, where she has helped organisations like IBM, Oracle, NICTA, Unisys and major airports convert dreams and visions into tangible products. Anna regularly contributes to the local Australian Design + Technology scene through speaking engagements and her From Scholar to Dollar and Think Fast, Look Good and Influence series of QUT based workshops.</p>"
+    }) %>
+  </div>
 </div>
 
 <div class="paragraph-image">
@@ -164,6 +186,5 @@ presentin’?</h3>
       <li><img src="/images/logos/logo-sketch.png" alt="Sketch Logo" /></li>
     </ul>
   </div>
-</div>
 </div>
 <% end %>

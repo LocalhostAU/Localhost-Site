@@ -60,6 +60,8 @@ footer {
     		}
 
     		.logos {
+					flex-grow:1;
+
     			ul {
     				padding:0;
 
@@ -67,6 +69,7 @@ footer {
     					list-style:none;
               padding: 0 14px;
     					display:inline-block;
+							margin:0;
     				}
     			}
     		}

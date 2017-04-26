@@ -213,12 +213,21 @@ header {
 
     li {
       list-style:none;
-      margin:0;
+      margin:0 10px;
+
+      @media (min-width: $screen-sm-min) {
+        margin:0 32px;
+      }
 
       a {
-        margin: 10px 10px;
+        padding: 10px 0;
         border:0;
         display:block;
+        height:100%;
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items:center;
 
 
         font-weight:$font-weight-bold;
@@ -229,13 +238,16 @@ header {
         line-height: 1em;
 
         @media (min-width: $screen-sm-min) {
-          margin: 10px 32px;
+          padding: 10px 0;
+          margin:0;
         }
+
         &[aria-current]:not([aria-current="false"])  {
           border-bottom: 4px solid $burnt-sienna;
-          display: inline-block;
-          padding-bottom: 13px;
+          // display: inline-block;
+          // padding-bottom: 6px;
         }
+
         &:hover, &:focus {
           color: $burnt-sienna;
         }
@@ -243,10 +255,10 @@ header {
 
       &.home {
         a {
-          margin: 10px 10px 10px 0px;
+          // margin: 10px 10px 10px 0px;
 
           @media (min-width: $screen-sm-min) {
-            margin: 10px 20px 10px 0px;
+            // margin: 10px 20px 10px 0px;
           }
           span {
             @include sr-only;
@@ -268,30 +280,32 @@ header {
     z-index:3;
     background: url('../images/deployment_shapes.svg');
     background-repeat: no-repeat;
-    background-position: bottom center;
+    background-position: center center;
+		background-size: auto 100%;
 
     a {
 
       &[aria-current]:not([aria-current="false"])  {
         border-bottom: none;
+				// padding: 0;
       }
 
     }
 
-    a:hover {
-        background: url('../images/deployment_shapes.svg');
-        background-repeat: no-repeat;
-        background-position: top center;
-        background-size: 80%;
+    &:hover {
+        background: url('../images/deployment_shapes-rotated.svg');
+		    background-repeat: no-repeat;
+		    background-position: center center;
+				background-size: auto 100%;
         color: black;
     }
   }
 
   .hide {
-    display: inline;
-
-    @media (max-width: $screen-xs-min) {
     display: none;
+
+    @media (min-width: $screen-sm-min) {
+      display: inline-block;
     }
   }
 

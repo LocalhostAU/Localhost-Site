@@ -155,39 +155,42 @@
   }
 
   .deployment-line-up {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    max-width: 1346px;
-    margin: 0 auto;
+    padding: 0 24px;
 
     @media (min-width: $screen-sm-min) {
-      flex-direction: row;
+      max-width: 1346px;
+      margin: 0 auto;
     }
 
-    @media (min-width: $screen-md-min) {
-      flex-direction: row;
+    .row {
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      margin: 0 -24px;
+
+      @media (min-width: $screen-sm-min) {
+        flex-direction: row;
+      }
     }
 
     .deployment-speaker {
-      flex: 1 0 25%;
-      padding: 0 24px 0;
+      padding: 24px;
+      flex-direction: column;
+      flex: 1 0 50%;
 
-      @media (max-width: $screen-sm-min) {
-        padding: 24px;
+      @media (min-width: $screen-sm-min) {
+        padding: 0 24px 0;
       }
 
-      @media (max-width: $screen-md-min) {
-        flex-direction: column;
-        flex: 1 0 50%;
+      @media (min-width: $screen-lg-min) {
+        flex: 1 0 25%;
+        flex-direction: row;
       }
-
     }
 
     img {
       width: 100%;
     }
-
   }
 
   .deployment-ticket-group {
@@ -377,9 +380,10 @@
 
       @media (min-width: $screen-md-min) {
         margin-bottom: 28px;
+        margin-left:-65px;
       }
 
-      @media (min-width: $screen-lg-min) {
+      @media (min-width: 1360px) {
         margin-left: -23%;
         margin-bottom: 28px;
       }
@@ -441,6 +445,7 @@
     margin-top:30px;
     margin-left:30px;
     margin-right:30px;
+
 
     @media (min-width: $screen-sm-min) {
       font-size: em(41);
