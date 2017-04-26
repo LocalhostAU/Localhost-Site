@@ -75,9 +75,9 @@ activate :ogp do |ogp|
 end
 
 configure :production do
-  activate :minify_html do |html|
-    html.remove_quotes = false   # Preserve quotes
-  end
+  # activate :minify_html do |html|
+  #   html.remove_quotes = false   # Preserve quotes
+  # end
   activate :minify_css
   activate :minify_javascript
   ignore 'drafts/*'
