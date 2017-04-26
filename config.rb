@@ -47,7 +47,7 @@ page "/404.html", :directory_index => false
 
 # Build-specific configuration
 configure :build do
-  activate :asset_hash, :ignore => %r{^blog/.*|ogimage.jpg}
+  activate :asset_hash, :ignore => %r{^blog/.*|ogimage.*.jpg}
 end
 
 activate :blog do |blog|
