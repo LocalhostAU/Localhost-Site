@@ -163,7 +163,7 @@ header {
 		}
 	}
 
-  .lines g {
+  .lines > g {
   	@for $i from 1 to 10 {
   		&:nth-child(#{$i}) {
   			.line {
@@ -174,8 +174,8 @@ header {
   }
 
   .line {
-  	stroke-dasharray: 100;
-  	stroke-dashoffset: 100;
+  	stroke-dasharray: 250;
+  	stroke-dashoffset: 250;
   }
 }
 
