@@ -22,6 +22,9 @@
           <h1>
             <%= current_page.data.title %>
             <span class="author">by <%= current_page.data.author %></span>
+            <% if current_page.data.category %>
+              <span class="author"><a href="<%=  category_path(current_page.data.category) %>" title="View more posts in <%= current_page.data.category %>"><%= current_page.data.category %></a>
+            <% end %>
           </h1>
 
           <% if current_page.data.image && !current_page.data.hideFeatureImage  %>
