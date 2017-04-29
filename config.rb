@@ -57,12 +57,6 @@ activate :blog do |blog|
   blog.paginate = true
   blog.page_link = "{num}"
   blog.per_page = 6
-  blog.custom_collections = {
-  category: {
-    link: 'category/{category}.html',
-    template: '/blog.html'
-  }
-}
 end
 
 activate :ogp do |ogp|
