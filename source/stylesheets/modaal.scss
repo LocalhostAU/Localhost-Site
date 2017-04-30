@@ -44,7 +44,7 @@ $modaal-grey: #afb7bc;
 .modaal-noscroll {
 	overflow: hidden;
 
-  .primary-nav, .header-home, .main {
+  .primary-nav, .header-home, .main, .page-title, .page-hero {
     filter:blur(5px) grayscale(100%);
   }
 }

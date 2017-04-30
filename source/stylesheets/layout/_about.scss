@@ -1,60 +1,6 @@
 body.about.internal {
 
   .page-title {
-    max-width: 1200px;
-    margin: 0 auto;
-
-    @media (min-width: $screen-sm-min) {
-      padding-bottom: 13.7%;
-    }
-
-
-    .title {
-      position:relative;
-      padding-bottom: 9.6%;
-      margin-bottom:3.6%;
-      margin-top: 7%;
-      padding-left: 8.1%;
-
-      h1 {
-        font-size: em(40);
-        line-height:em(40,40);
-        padding-bottom:0.53em;
-      }
-
-      h2 {
-        padding-bottom: em(13, 40);
-        font-size: em(40);
-      }
-
-      &:before {
-        content:"";
-        width:77%;
-        position:absolute;
-        right: 9.3%;
-        top:27px;
-        background: #F0F0F0;
-        bottom:0;
-        z-index:-1;
-      }
-
-      &:after {
-        position:absolute;
-        top: 50.7%;
-        right: 6.3%;
-        width: 13.5%;
-        padding-bottom: 11%;
-        display:block;
-        content:"";
-        z-index:3;
-        background: url('../images/bits-color.svg');
-        background-repeat: no-repeat;
-
-        @media (min-width:$screen-sm-min) {
-          width: 6.5%;
-        }
-      }
-    }
 
     > div {
       display:flex;
@@ -63,21 +9,6 @@ body.about.internal {
 
       @media (min-width: $screen-sm-min) {
         flex-direction: row;
-      }
-
-      .subtitle {
-        padding:0;
-        font-size: em(26);
-        line-height: em(58, 48);
-        letter-spacing:0;
-        width:100%;
-        max-width:530px;
-        margin-right: 4%;
-        padding-top: 5.2%;
-
-        @media (min-width: $screen-sm-min) {
-          font-size: em(48);
-        }
       }
 
       figure {
@@ -197,11 +128,6 @@ body.about.internal {
     }
   }
 
-  p {
-  	letter-spacing: em(1.53);
-  	line-height: em(22);
-  }
-
   .page-details {
   	display:flex;
   	flex-direction:column;
@@ -214,7 +140,7 @@ body.about.internal {
   .main {
     width:100%;
     max-width:100%;
-    padding: 0 15px;
+    padding: 0 30px;
 
 
   	.paragraph-skinny {

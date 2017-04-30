@@ -1,0 +1,22 @@
+<div class="page-hero">
+
+  <% if locals[:thumbnail] %>
+    <div class="thumbnail">
+      <% if locals[:url] %><a href="<%= locals[:url] %>" <% if locals[:isVideo] %>class="hero-video"<% end %>><% end %>
+        <img src="<%= locals[:thumbnail] %>" title="<%= locals[:caption] %>" />
+      <% if locals[:url] %></a><% end %>
+
+      <% if locals[:caption] %>
+        <div class="caption">
+          <%= locals[:caption] %>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if locals[:leadParagraph] %>
+    <div class="subtitle">
+      <%= locals[:leadParagraph] %>
+    </div>
+  <% end %>
+</div>

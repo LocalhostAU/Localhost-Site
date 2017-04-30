@@ -15,6 +15,10 @@ footer {
     	border-top:1px solid #ccc;
     	border-bottom:1px solid #ccc;
 
+      + .footer-details {
+        border-top:0;
+      }
+
     	.container-fluid {
     		display:flex;
     		width: 100%;
@@ -75,6 +79,39 @@ footer {
     		}
 
     	}
+
+      .community-love {
+        // border-top:1px solid #ccc;
+        border-top:0;
+        flex-direction:row;
+
+        .logos > ul {
+          display:flex;
+          align-items:flex-end;
+          justify-content: space-between;
+          flex-wrap:wrap;
+
+          li {
+            // width: 12.5%;
+            width:100%;
+            max-width: 50%;
+            padding-bottom:30px;
+
+            @media (min-width: $screen-sm-min) {
+              max-width: 25%;
+            }
+
+            @media (min-width: $screen-md-min) {
+              max-width:12.5%;
+              padding-bottom:0;
+            }
+
+            > img {
+              width:100%;
+            }
+          }
+        }
+      }
     }
 
 
