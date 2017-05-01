@@ -22,7 +22,7 @@ footer {
     	.container-fluid {
     		display:flex;
     		width: 100%;
-        max-width: 1083px;
+        max-width: 1150px;
         margin: 30px auto;
     		padding: 0 30px;
     		justify-content:space-between;
@@ -93,7 +93,7 @@ footer {
 
           li {
             // width: 12.5%;
-            width:100%;
+            //width:100%;
             max-width: 50%;
             padding-bottom:30px;
 
@@ -107,7 +107,10 @@ footer {
             }
 
             > img {
-              width:100%;
+              //width:100%;
+              max-width: 100px;
+              max-height: 50px;
+              opacity: 0.8;
             }
           }
         }
