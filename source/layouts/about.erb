@@ -14,37 +14,9 @@
   <script>document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/,'js');</script>
     <%= partial "partials/header/header" %>
 
+    <%= partial "partials/components/content/page-title" %>
+
     <main class="main about">
-      <div class="page-title">
-        <% if current_page.data.page_title %>
-            <div class="title"><h1><%= current_page.data.page_title %></h1></div>
-        <% end %>
-
-        <div>
-          <% if current_page.data.video_thumb %>
-            <figure>
-              <% if current_page.data.video_url %>
-                <a href="<%= current_page.data.video_url %>" target="_blank">
-              <% end %>
-
-          		  <img src="<%= current_page.data.video_thumb %>" />
-
-              <% if current_page.data.video_url %>
-                </a>
-              <% end %>
-
-              <% if current_page.data.video_caption %>
-          		  <figcaption><%= current_page.data.video_caption %></figcaption>
-              <% end %>
-          	</figure>
-          <% end %>
-
-          <% if current_page.data.lead_paragraph %>
-              <p class="subtitle"><%= current_page.data.lead_paragraph %></p>
-          <% end %>
-        </div>
-    </div>
-
     <%= yield %>
 
    </main><!-- .welcome -->

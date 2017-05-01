@@ -1,0 +1,14 @@
+<div class="page-title<% if !current_page.data.lead_paragraph %> full-title<% end %>">
+	<h1>
+    <span>
+      <% if current_page.data.page_title %>
+        <%= current_page.data.page_title %>
+      <% else %>
+        <%= current_page.data.title || "Localhost" %>
+      <% end %>
+    </span>
+  </h1>
+  <% if current_page.data.lead_paragraph %>
+    <p class="subtitle"><%= current_page.data.lead_paragraph %></p>
+  <% end %>
+</div>

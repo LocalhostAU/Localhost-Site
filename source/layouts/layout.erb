@@ -16,12 +16,8 @@
     <%= partial "partials/header/header" %>
     <%= yield_content :header %>
     <div class="main">
-      <% if current_page.data.page_title %>
-          <h1 class="title"><%= current_page.data.page_title %></h1>
-      <% end %>
-
-      <% if current_page.data.lead_paragraph %>
-          <p class="subtitle"><%= current_page.data.lead_paragraph %></p>
+      <% if !current_page.data.noPageTitle %>
+        <%= partial "partials/components/content/page-title" %>
       <% end %>
 
       <% if !current_page.data.noMiniColumn %>
