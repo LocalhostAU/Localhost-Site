@@ -10,6 +10,44 @@ $(window).scroll(function(){
 
 });
 
+
+$('.map-embed .embed-container iframe').css("pointer-events", "none");
+
+$('.map-embed .embed-container').click(function () {
+    $('.map-embed .embed-container iframe').css("pointer-events", "auto");
+});
+
+$( ".map-embed .embed-container" ).mouseleave(function() {
+  $('.map-embed .embed-container iframe').css("pointer-events", "none");
+});
+
+// to top right away
+if ( window.location.hash ) scroll(0,0);
+// void some browsers issue
+setTimeout( function() { scroll(0,0); }, 1);
+
+$(function() {
+
+    // your current click function
+    $('.scroll').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $($(this).attr('href')).offset().top + 'px'
+        }, 2000);
+    });
+
+    // *only* if we have anchor on the url
+    if(window.location.hash) {
+
+        // smooth scroll to the anchor id
+        $('html, body').animate({
+            scrollTop: $(window.location.hash).offset().top + 'px'
+        }, 2000);
+    }
+
+});
+
+
 $(document).ready(function(){
   $('section.mission').bind('inview', function (event, visible) {
     if (visible == true) {

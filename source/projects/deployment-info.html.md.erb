@@ -1,5 +1,5 @@
 ---
-title: Deployment | Localhost
+title: Deployment Details | Localhost
 body_classes: internal
 meta_description: Connecting web, creative and digital communities &amp; unearthing local talent across Australia.
 noSubscribe: true
@@ -35,40 +35,49 @@ ogp:
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 627.43 68.35" aria-role="img">
       <title>Localhost Deployment</title>
       <defs><style>.cls-1{fill:#ede600;}.cls-2{fill:#79b9f6;}.cls-3{fill:#f27959;}.cls-4{fill:#1d1d1b;}.cls-5{fill:#74de7d;}</style></defs><title>deploymend-logo</title><g id="Layer_2" data-name="Layer 2"><g id="Assets"><rect class="cls-1" x="440.05" y="6.4" width="45" height="61.95"/><rect class="cls-2" x="582.72" y="6.4" width="16.05" height="61.95"/><circle class="cls-3" cx="259.1" cy="37.55" r="30.8"/><path class="cls-4" d="M58,30.8a34.75,34.75,0,0,1-2.35,13,27.2,27.2,0,0,1-6.85,10,30.7,30.7,0,0,1-11.15,6.4A47.52,47.52,0,0,1,22.4,62.5H0V0H23.5A45.17,45.17,0,0,1,38.2,2.2,30.22,30.22,0,0,1,49,8.45a26.71,26.71,0,0,1,6.7,9.7A33.3,33.3,0,0,1,58,30.8Zm-16,.6q0-9.65-4.85-14.12T22.5,12.8H15.9V49.7h7.4q8.7,0,13.7-4.48T42,31.4Z"/><path class="cls-4" d="M446.65,0h45.6V10.45h-45.6Z"/><path class="cls-4" d="M446.65,51.9h45.6V62.35h-45.6Z"/><path class="cls-4" d="M447.11,26.08h45.6V36.53h-45.6Z"/><rect class="cls-5" x="62.57" y="6.4" width="45" height="61.95"/><path class="cls-4" d="M69.17,0h45.6V10.45H69.17Z"/><path class="cls-4" d="M69.17,51.9h45.6V62.35H69.17Z"/><path class="cls-4" d="M69.63,26.08h45.6V36.53H69.63Z"/><path class="cls-4" d="M174.4,21.7q0,11-7.15,16.8T146.6,44.3l-6.1.1V62.5H124.6V0h23.1a37.67,37.67,0,0,1,11.55,1.6A24.65,24.65,0,0,1,167.6,6a18.07,18.07,0,0,1,5.1,6.85A22.28,22.28,0,0,1,174.4,21.7Zm-15.8.4q0-9.5-12.1-9.5h-6.4V32.1l6.4-.1q6.2-.1,9.15-2.6T158.6,22.1Z"/><path class="cls-4" d="M184,62.5V0h15.9V49.2h26.2V62.5Z"/><path class="cls-4" d="M333.1,38.8V62.5H317.6V38.7L295.8,0h16.9l12.85,24.7L338,0h16.8Z"/><path class="cls-4" d="M420,14.3,406.3,61.5h-17L375.6,14.4l-.4,48.1H360.4L362.6,0h22.5l13,46.9L411.1,0h22.2l2.1,62.5H420.3Z"/><path class="cls-4" d="M546.7,0h14.9V63.1H544.7L518.4,22V62.5H503.5V0h17.2l26,40.6Z"/><path class="cls-4" d="M264.1,12.75a18.8,18.8,0,1,1-18.8,18.8,18.82,18.82,0,0,1,18.8-18.8m0-12a30.8,30.8,0,1,0,30.8,30.8A30.8,30.8,0,0,0,264.1.75Z"/><path class="cls-4" d="M607.53,13.3V62.5h-15.9V13.3h-19.9V0h55.7V13.3Z"/></g></g></svg>
-      4 speakers. 4 locations. 4 days.
+      4 speakers. 4 cities. 4 days.
   </div>
 </header>
 <% end %>
 
 <div class="deployment-ticket-group">
-  <%= partial('partials/components/deployment/deployment-day', :locals => {
-  :date => "Tues<br/>6 June",
-  :day => "Day One",
-  :location => "PER",
-  :button_text => "See deets",
-  :link => "https://www.eventbrite.com.au/e/localhost-deployment-tickets-33542351075"
-  }) %>
-  <%= partial('partials/components/deployment/deployment-day', :locals => {
-  :date => "Wed<br/>7 June",
-  :day => "Day Two",
-  :location => "MEL",
-  :button_text => "See deets",
-  :link => "https://www.eventbrite.com.au/e/localhost-deployment-tickets-33542351075"
-  }) %>
-  <%= partial('partials/components/deployment/deployment-day', :locals => {
-  :date => "Thur<br/>8 June",
-  :day => "Day Three",
-  :location => "SYD",
-  :button_text => "See deets",
-  :link => "https://www.eventbrite.com.au/e/localhost-deployment-tickets-33542351075"
-  }) %>
-  <%= partial('partials/components/deployment/deployment-day', :locals => {
-  :date => "Fri<br/>9 June",
-  :day => "Day Four",
-  :location => "BNE",
-  :button_text => "See deets",
-  :link => "https://www.eventbrite.com.au/e/localhost-deployment-tickets-33542351075"
-  }) %>
+
+  <div class="city">
+    <%= partial('partials/components/deployment/deployment-day', :locals => {
+    :date => "Tues<br/>6 June",
+    :day => "Day One",
+    :location => "PER",
+    :button_text => "See deets",
+    :link => "#deployment-city-details-per"
+    }) %>
+  </div>
+  <div class="city">
+    <%= partial('partials/components/deployment/deployment-day', :locals => {
+    :date => "Wed<br/>7 June",
+    :day => "Day Two",
+    :location => "MEL",
+    :button_text => "See deets",
+    :link => "#deployment-city-details-mel"
+    }) %>
+  </div>
+  <div class="city">
+    <%= partial('partials/components/deployment/deployment-day', :locals => {
+    :date => "Thur<br/>8 June",
+    :day => "Day Three",
+    :location => "SYD",
+    :button_text => "See deets",
+    :link => "#deployment-city-details-syd"
+    }) %>
+  </div>
+  <div class="city">
+    <%= partial('partials/components/deployment/deployment-day', :locals => {
+    :date => "Fri<br/>9 June",
+    :day => "Day Four",
+    :location => "BNE",
+    :button_text => "See deets",
+    :link => "#deployment-city-details-bne"
+    }) %>
+  </div>
 </div>
 
 <div class="deployment-schedule">
@@ -167,30 +176,48 @@ ogp:
   <p><span class="emoji">📷</span> There will be videographers and photographers capturing as much of the event memories as possible. While our crew will do their bes to ask for permission from you first for posted shots, there may be incidental candid snaps that may include you. Please let us know if you prefer your face to be excluded from published material and we'll ensure that this happens.</p>
 </div>
 
+
 <% content_for :sponsors do %>
-    <div class="partners">
-      <p class="title">
-        Deployment<br /> Event Sponsors
-      </p>
-      <div class="logos">
-        <ul>
-          <li><img src="/images/logos/logo-awia-bnw-2.png" alt="AWIA Logo" /></li>
-            <li><img src="/images/logos/logo-sketch.png" alt="Sketch Logo" /></li>
-            <li><img src="/images/logos/young-henrys-logo.png" alt="Young Henry's Logo" /></li>
-        </ul>
-      </div>
-    </div>
+<div class="partners">
+  <p class="title">
+    Made<br/>Possible By
+  </p>
+  <div class="logos">
+    <ul>
+      <li><img src="/images/logos/logo-awia-bnw-2.png" alt="AWIA Logo" /></li>
+    </ul>
   </div>
 </div>
-<div class="footer-details">
-  <div class="container-fluid community-love">
-    <p class="title">
-      Community<br /> Supporters
-    </p>
-    <div class="logos">
-      <ul>
-        <li><img src="/images/logos/logo-awia-bnw-2.png" alt="AWIA Logo" /></li>
-      </ul>
-    </div>
+
+<div class="sponsors">
+  <p class="title">
+    Our Awesome<br /> Supporters
+  </p>
+  <div class="logos">
+    <ul>
+      <li><img src="/images/logos/logo-sketch.png" alt="Sketch Logo" /></li>
+      <li><img src="/images/logos/young-henrys-logo.png" alt="Young Henry's Logo" /></li>
+    </ul>
   </div>
+</div>
+</div>
+</div>
+<div class="footer-details">
+<div class="container-fluid community-love">
+  <p class="title">
+    Community,<br />We Love You
+  </p>
+  <div class="logos">
+    <ul>
+      <!--<li><img src="/images/logos/community/agda-logo.png" alt="Young Henry's Logo" /></li>-->
+      <li><img src="/images/logos/community/fenders-logo.png" alt="Fenders Perth Logo" /></li>
+      <li><img src="/images/logos/community/melbCSS-logo.png" alt="MelbCSS Logo" /></li>
+      <li><img src="/images/logos/community/mixin-logo.png" alt="Mixin Logo" /></li>
+      <li><img src="/images/logos/community/product-of-bne-logo.png" alt="Product of BNE Logo" /></li>
+      <li><img src="/images/logos/community/product-of-syd-logo.png" alt="Product of SYD Logo" /></li>
+      <li><img src="/images/logos/community/sydcss-logo.png" alt="SydCSS Logo" /></li>
+      <li><img src="/images/logos/community/the-design-kids-logo.png" alt="TDK Logo" /></li>
+    </ul>
+  </div>
+</div>
 <% end %>

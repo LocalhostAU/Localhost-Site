@@ -212,16 +212,59 @@
   .deployment-ticket-group {
     padding-top: 0;
     //padding-bottom:60px;
+    max-width: 1360px;
+    margin: 0 auto;
+
+
+    .city {
+      flex-grow:1;
+      // padding-top: 120px;
+
+      @media (min-width: $screen-sm-min) {
+        width: 50%;
+      }
+
+      @media (min-width: $screen-md-min) {
+        width: auto;
+      }
+
+      &.city-past {
+        opacity: 0.45;
+        // -webkit-filter: grayscale(100%);
+        // filter: grayscale(100%);
+        background:url('../images/deploy-plane.svg');
+        background-repeat:repeat-x;
+        background-size:100% auto;
+        background-position: 164px 0;
+
+
+        + .city:not(.city-past):not(:last-child) {
+          background:url('../images/deploy-plane.svg');
+          background-repeat:repeat-x;
+          background-size:100% auto;
+          background-position: -175px 0;
+          background-repeat:no-repeat;
+        }
+
+        &:first-child {
+          background-repeat:no-repeat;
+        }
+      }
+    }
 
     @media (min-width: $screen-sm-min) {
       flex-direction: row;
       display: flex;
       flex-wrap: wrap;
+      justify-content:space-around;
     }
 
     @media (min-width: $screen-md-min) {
-      padding-top: 232px;
-      padding-bottom: 168px;
+      // padding-top: 232px;
+      // padding-bottom: 168px;
+
+      padding-top: 16%;
+      padding-bottom: 8%;
     }
 
     .deployment-tickets {
@@ -255,27 +298,36 @@
         letter-spacing: 0.13em;
         line-height: 1.1em;
         font-size: em(19);
+        color: #9B9B9B;
         display:block;
       }
 
       .deployment-location {
-        padding-bottom: 36%;
+        padding-bottom: 80px;
         background-position:center center;
         background-size: contain;
         background-repeat:no-repeat;
-        margin-top: 42px;
+        margin-top: 46px;
         margin-bottom: 59px;
 
         &.deployment-location-BNE {
           background-image: url("../images/icon-localhostBne.svg");
-          background-size: 100% 80px;
+          // background-size: 100% 80px;
           background-position: bottom;
+          background-size: 100% 86px;
+          background-position: bottom;
+          padding-bottom: 86px;
+          margin-top: 40px;
         }
 
         &.deployment-location-PER {
           background-image: url("../images/icon-localhostPer.svg");
-          background-size: 100% 80px;
+          // background-size: 100% 80px;
           background-position: bottom;
+          background-size: 100% 95px;
+          background-position: bottom;
+          padding-bottom: 95px;
+          margin-bottom: 44px;
         }
 
         &.deployment-location-MEL {
@@ -293,7 +345,7 @@
 
       .btn {
         display: inline-block;
-        padding: 15px 12px;
+        padding: 15px 22px;
         font-size: em(18);
         letter-spacing: 0.2em;
 
@@ -544,6 +596,7 @@
         letter-spacing: 0.14em;
         position:relative;
         padding-bottom: 14px;
+        display:block;
 
         &:after {
           content: "";
@@ -582,6 +635,11 @@
       font-weight: bold;
       font-size: em(24);
       letter-spacing: 0.12em;
+      background-image: url('../images/deployment-shapes-burst.svg');
+      background-repeat: no-repeat;
+      background-size: auto 100%;
+      display:inline-block;
+      background-position: center center;
 
       @media (min-width: $screen-md-min) {
         margin-top: em(52, 24);
@@ -628,15 +686,6 @@
     padding:0;
     padding-top:10px;
 
-    a span {
-      // position: absolute;
-      // top: auto;
-      // width: 1px;
-      // height: 1px;
-      // overflow: hidden;
-      // opacity: 0;
-    }
-
     li {
       position: relative; /*for z-index*/
       width:25%;
@@ -666,14 +715,6 @@
 
       @media (min-width:$screen-sm-min) {
         margin: 0 16px;
-      }
-
-      &:first-child {
-        // margin-left: 10px;
-      }
-
-      &:last-child {
-        // margin-right: 10px;
       }
 
       a {
@@ -709,28 +750,36 @@
         &[href="#deployment-city-details-per"] {
           &:hover,
           &:focus {
-            color: $pastel-green;
+            &:before {
+              background: $pastel-green;
+            }
           }
         }
 
         &[href="#deployment-city-details-syd"] {
           &:hover,
           &:focus {
-            color: $malibu;
+            &:before {
+              background: $malibu;
+            }
           }
         }
 
         &[href="#deployment-city-details-mel"] {
           &:hover,
           &:focus {
-            color: $burnt-sienna;
+            &:before {
+              background: $burnt-sienna;
+            }
           }
         }
 
         &[href="#deployment-city-details-bne"] {
           &:hover,
           &:focus {
-            color: $tulip-tree;
+            &:before {
+              background: $tulip-tree;
+            }
           }
         }
 
@@ -923,6 +972,15 @@
 }
 
 .projects_deployment-info {
+  header {
+    margin-top: 13%;
+    margin-bottom: 5%;
+
+    .deployment-logo {
+      max-width: 594px;
+    }
+  }
+
   &.internal .main {
     max-width: 100%;
   }
@@ -969,7 +1027,7 @@
         @media (min-width: $screen-sm-min) {
           display: flex;
           justify-content: flex-start;
-          align-items: flex-start;
+          // align-items: flex-start;
           width: 51.5%;
           // width:66.66%;
           flex-wrap: wrap;
@@ -978,6 +1036,8 @@
 
         .venue-image {
           margin-bottom:15px;
+          flex: 1;
+          overflow: hidden;
 
           @media (min-width: $screen-sm-min) {
             width:50%;
@@ -991,7 +1051,9 @@
           }
 
           > img {
-            height: auto;
+            min-height: 100%;/* again , tallest should set the rythm */
+            min-width: 100%; /* unless one doesn't fit the width */
+            display: block;
 
             @media (min-width: $screen-sm-min) {
               // width: 50%;
@@ -1139,6 +1201,11 @@
     overflow: visible;
     margin-bottom: 5px;
 
+    iframe {
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%);
+    }
+
     &:before {
       display:block;
       position:absolute;
@@ -1213,7 +1280,7 @@
       max-width: 116px;
       position: absolute;
       bottom: 0;
-      background: $pastel-green;
+      background: $lavendar;
       left: 0;
     }
   }
@@ -1226,6 +1293,16 @@
     li {
       display: flex;
       margin-bottom:9px;
+
+      a {
+        border:0;
+        color:#000;
+
+        &:hover,
+        &:focus {
+          color: $lavendar;
+        }
+      }
 
       &:before {
         background: none;

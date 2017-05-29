@@ -13,12 +13,12 @@ slots:
     isTalk: true
 
   - time: '6:30 PM'
-    activity: '🎤 "Less Glamorous Elements of Design", with [Brett Jones]'
+    activity: '🎤 <a href="/projects/deployment#Brett-Jones" title="Read about Bretts talk">"Less Glamorous Elements of Design", with [Brett Jones]</a>'
     duration: '10 mins'
     isTalk: true
 
   - time: '6:55 PM'
-    activity: '🎤 "Styled Components and the Road to Unification", with [Glen Maddern]'
+    activity: '🎤 <a href="/projects/deployment#Glen-Maddern" title="Read about Glens talk">"Styled Components and the Road to Unification", with [Glen Maddern]</a>'
     duration: '20 mins'
     isTalk: true
 
@@ -27,12 +27,12 @@ slots:
     duration: '10 mins'
 
   - time: '7:30 PM'
-    activity: '🎤 "Decisions Considered Harmful to Product Love", with [Anna Harrison]'
+    activity: '🎤 <a href="/projects/deployment#Anna-Harrison" title="Read about Annas talk">"Decisions Considered Harmful to Product Love", with [Anna Harrison]</a>'
     duration: '20 mins'
     isTalk: true
 
   - time: '7:55 PM'
-    activity: '🎤 "Caffeinated design", with [Simon Wright]'
+    activity: '🎤 <a href="/projects/deployment#Simon-Wright" title="Read about Simons talk">"Caffeinated design", with [Simon Wright]</a>'
     duration: '20 mins'
     isTalk: true
 
