@@ -1,0 +1,50 @@
+slots:
+  - time: '5:30 PM'
+    activity: 'Registration open (get in early to avoid lining up!)'
+    duration: '30 mins'
+
+  - time: '6:00 PM'
+    activity: '🍻 Doors open, food, mingles and drinks'
+    duration: '30 mins'
+
+  - time: '6:20 PM'
+    activity: '🎤 A big warm welcome, with Patima Tantiprasut'
+    duration: '10 mins'
+    isTalk: true
+
+  - time: '6:30 PM'
+    activity: '🎤 "Less Glamorous Elements of Design", with [Brett Jones]'
+    duration: '10 mins'
+    isTalk: true
+
+  - time: '6:55 PM'
+    activity: '🎤 "Styled Components and the Road to Unification", with [Glen Maddern]'
+    duration: '20 mins'
+    isTalk: true
+
+  - time: '7:20 PM'
+    activity: 'Interlude'
+    duration: '10 mins'
+
+  - time: '7:30 PM'
+    activity: '🎤 "Decisions Considered Harmful to Product Love", with [Anna Harrison]'
+    duration: '20 mins'
+    isTalk: true
+
+  - time: '7:55 PM'
+    activity: '🎤 "Caffeinated design", with [Simon Wright]'
+    duration: '20 mins'
+    isTalk: true
+
+  - time: '8:20 PM'
+    activity: '🎤 A final wrap up, with Patima Tantiprasut'
+    duration: '10 mins'
+    isTalk: true
+
+  - time: '8:30 PM'
+    activity: '🍻 Mingles and drinks'
+    duration: '30 mins'
+
+  - time: '9:00 PM'
+    activity: 'Event finish... onto the after party!'
+    duration: '-'

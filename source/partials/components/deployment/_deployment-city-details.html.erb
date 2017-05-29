@@ -1,0 +1,79 @@
+<div class="flex-row deployment-event-details">
+  <div class="flex-col deets-col">
+    <% if locals[:deploymentCityDetailsTitle] %>
+    <h2 class="deployment-city-details-title"><%= deploymentCityDetailsTitle %></h2>
+    <% end %>
+
+    <% if locals[:deploymentCityDetailsHashtag] %>
+    <p class="deployment-city-details-hashtag"><%= deploymentCityDetailsHashtag %></p>
+    <% end %>
+  </div>
+
+  <% if locals[:deploymentCityDetailsMap] %>
+    <div class="flex-col map-embed">
+      <div class="embed-container">
+        <iframe src="<%= deploymentCityDetailsMap %>" frameborder="0" style="border:0;" allowfullscreen></iframe>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="flex-col">
+    <h4>Location</h4>
+    <% if locals[:deploymentCityDetailsLocation] %>
+    <p class="deployment-city-details-venue"><%= deploymentCityDetailsLocation %></p>
+    <% end %>
+
+    <% if locals[:deploymentCityDetailsAddress] %>
+    <address>
+      <%= deploymentCityDetailsAddress %>
+    </address>
+    <% end %>
+  </div>
+</div>
+
+<h3>Venue</h3>
+
+<div class="flex-row venue-row">
+
+  <% if locals[:deploymentCityDetailsVenuePhotos] %>
+    <div class="flex-col venue-images">
+      <% locals[:deploymentCityDetailsVenuePhotos].each do |venuePhoto| %>
+			<div class="venue-image">
+	      <img src="<%= venuePhoto %>" />
+			</div>
+      <% end %>
+    </div>
+  <% end %>
+
+  <% if locals[:deploymentCityDetailsVenueTips] %>
+    <div class="flex-col">
+      <ul>
+        <% locals[:deploymentCityDetailsVenueTips].each do |venueTip| %>
+        <li><%= venueTip %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+</div>
+
+<div class="flex-row food-sponsors-row">
+  <% if locals[:deploymentCityDetailsCatering] %>
+    <div class="flex-col food-col">
+      <h3>Food &amp; Drinks</h3>
+      <%= deploymentCityDetailsCatering %>
+    </div>
+  <% end %>
+
+  <% if locals[:deploymentCityDetailsEventSponsors] %>
+    <div class="flex-col">
+      <h3><%= deploymentCity %> Event <br/>Sponsors</h3>
+      <div class="sponsor-images">
+        <% locals[:deploymentCityDetailsEventSponsors].each do |eventSponsors| %>
+        <div class="sponsor-image">
+          <img src="<%= eventSponsors %>" />
+        </div>
+        <% end %>
+      </div>
+    </div>
+  <% end %>
+</div>
