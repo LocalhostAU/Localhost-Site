@@ -75,7 +75,7 @@ ogp:
   <h2>Schedule</h2>
   <ul>
     <% data.deploymentSchedule.slots.each do |slot| %>
-      <li>
+      <li<% if slot.isTalk %> class="talk"<% end %>>
         <span class="slot-time"><%= slot.time %></span>
         <span class="slot-activity"><%= slot.activity %></span>
         <span class="slot-duration"><%= slot.duration %></span>

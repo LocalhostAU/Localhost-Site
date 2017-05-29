@@ -1,4 +1,5 @@
-.projects_deployment, .projects_deployment-info {
+.projects_deployment,
+.projects_deployment-info {
 
   header {
     margin-top: 100px;
@@ -88,7 +89,8 @@
       margin-bottom: 1.75%;
     }
 
-    &:after, &:before {
+    &:after,
+    &:before {
       @media (min-width: $screen-sm-min) {
         left: calc(12% - 30px);
         width: 36%;
@@ -160,7 +162,8 @@
         font-size: em(17);
         @include transform(translateX(-50%));
 
-        &:hover, &:focus {
+        &:hover,
+        &:focus {
           border-color: $pastel-green;
         }
       }
@@ -296,7 +299,8 @@
 
         &.btn-BNE {
 
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             background: $tulip-tree;
             border-color: $tulip-tree;
           }
@@ -304,7 +308,8 @@
 
         &.btn-PER {
 
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             background: $pastel-green;
             border-color: $pastel-green;
           }
@@ -312,7 +317,8 @@
 
         &.btn-MEL {
 
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             background: $burnt-sienna;
             border-color: $burnt-sienna;
           }
@@ -320,7 +326,8 @@
 
         &.btn-SYD {
 
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             background: $malibu;
             border-color: $malibu;
           }
@@ -409,7 +416,8 @@
       margin-bottom:em(34,20);
     }
 
-    .content, .image {
+    .content,
+    .image {
       @media (min-width: $screen-md-min) {
         width: 50%;
       }
@@ -699,25 +707,29 @@
         }
 
         &[href="#deployment-city-details-per"] {
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             color: $pastel-green;
           }
         }
 
         &[href="#deployment-city-details-syd"] {
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             color: $malibu;
           }
         }
 
         &[href="#deployment-city-details-mel"] {
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             color: $burnt-sienna;
           }
         }
 
         &[href="#deployment-city-details-bne"] {
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             color: $tulip-tree;
           }
         }
@@ -764,7 +776,8 @@
             background: #ccc;
           }
 
-          &:hover, &:focus {
+          &:hover,
+          &:focus {
             color: #000;
           }
 
@@ -773,7 +786,8 @@
               background: $pastel-green;
             }
 
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
               &:before {
                 background: lighten($pastel-green, 5%);
               }
@@ -785,7 +799,8 @@
               background: $malibu;
             }
 
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
               &:before {
                 background: lighten($malibu, 5%);
               }
@@ -797,7 +812,8 @@
               background: $burnt-sienna;
             }
 
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
               &:before {
                 background: lighten($burnt-sienna, 5%);
               }
@@ -809,7 +825,8 @@
               background: $tulip-tree;
             }
 
-            &:hover, &:focus {
+            &:hover,
+            &:focus {
               &:before {
                 background: lighten($tulip-tree, 5%);
               }
@@ -840,7 +857,8 @@
       }
 
       &.deployment-city-per {
-        h2, h3 {
+        h2,
+        h3 {
           &:after {
             background: $pastel-green;
           }
@@ -851,7 +869,8 @@
       }
 
       &.deployment-city-mel {
-        h2, h3 {
+        h2,
+        h3 {
           &:after {
             background: $burnt-sienna;
           }
@@ -864,7 +883,8 @@
 
       &.deployment-city-syd {
 
-        h2, h3 {
+        h2,
+        h3 {
           &:after {
             background: $malibu;
           }
@@ -876,7 +896,8 @@
 
       &.deployment-city-bne {
 
-        h2, h3 {
+        h2,
+        h3 {
           &:after {
             background: $tulip-tree;
           }
@@ -1176,36 +1197,69 @@
 .deployment-schedule {
   padding: 0 30px;
   max-width: 1240px;
-  margin: 0 auto;
+  margin: 0 auto 10%;
+
+  h2 {
+    letter-spacing: 0.13em;
+    position: relative;
+    padding-bottom:em(15, 40);
+    margin-bottom: 6%;
+
+    &:after {
+      content: "";
+      display: block;
+      height: 4px;
+      width: 100%;
+      max-width: 116px;
+      position: absolute;
+      bottom: 0;
+      background: $pastel-green;
+      left: 0;
+    }
+  }
 
   ul {
-    padding:0;
-    max-width:800px;
+    padding: 0;
+    max-width: 970px;
     margin: 0 auto;
 
     li {
       display: flex;
+      margin-bottom:9px;
 
       &:before {
-        background:none;
-        content:none;
+        background: none;
+        content: none;
+      }
+
+      &.talk {
+        span.slot-activity {
+          padding-left:10%;
+        }
       }
 
       span {
-        padding: 10px 0;
+        padding: 11px 0 6px;
 
         &.slot-time {
-          width: 10%;
+          width: 21%;
+          text-align: center;
+          font-weight: bold;
+          letter-spacing: 0.17em;
+          margin-right:5%;
         }
 
         &.slot-activity {
           flex-grow: 1;
           width: 80%;
           border-bottom: 1px solid #ccc;
+          padding-left: 3px;
+          padding-right: 3px;
+          letter-spacing: 0.07em;
         }
 
         &.slot-duration {
-          width: 10%;
+          width: 68px;
           border-bottom: 1px solid #ccc;
         }
       }
