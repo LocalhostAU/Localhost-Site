@@ -254,18 +254,12 @@
   }
 
   .deployment-ticket-group {
-    // padding-top: 0;
-    // max-width: 1360px;
-    // margin: 0 auto;
-    //
-    // @media (min-width: $screen-sm-min) {
-      flex-direction: row;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content:space-around;
-      padding-top: 16%;
-      padding-bottom: 8%;
-  //  }
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+    padding-top: 16%;
+    padding-bottom: 8%;
 
     @media (min-width: $screen-lg-min) {
       padding-top: 190px;
@@ -1011,6 +1005,8 @@
         width:auto;
       }
     }
+
+
   }
 
   .venue-row {
@@ -1118,7 +1114,10 @@
 
       .sponsor-image {
         padding: 0 15px 30px;
-        max-width: 33.33%;
+        width: 50%;
+        @media (min-width: $screen-sm-min) {
+          max-width: 33.33%;
+        }
         align-self: center;
         &:first-child {
           padding-left:0;
