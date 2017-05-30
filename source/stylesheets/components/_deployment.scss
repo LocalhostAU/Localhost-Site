@@ -175,6 +175,7 @@
   .btn {
     padding: 15px 22px;
     font-size: em(18);
+    margin-bottom: 1.08333em;
     letter-spacing: 0.2em;
 
     &.btn-BNE {
@@ -1030,30 +1031,33 @@
   .venue-row {
     margin-bottom:10%;
     justify-content: space-between;
+    display: block;
+    @media (min-width: $screen-md-min) {
+      display: flex;
+    }
 
     > .flex-col {
 
       &.venue-images {
+        display: flex;
+        flex-wrap: wrap;
+        margin-right: 38px;
 
-        @media (min-width: $screen-sm-min) {
-          display: flex;
-          // align-items: flex-start;
-          width: 51.5%;
-          // width:66.66%;
-          flex-wrap: wrap;
-          margin-right: 38px;
+
+        @media (min-width: $screen-md-min) {
+            width: 51.5%;
         }
 
         .venue-image {
           margin-bottom:15px;
           flex: 1;
 
-          @media (min-width: $screen-sm-min) {
+          //@media (min-width: $screen-sm-min) {
             width:50%;
             padding-right: 30px;
             padding-bottom: 30px;
             margin-bottom:0;
-          }
+          //}
 
           &:last-child {
             padding-right:0;
@@ -1074,7 +1078,9 @@
       }
 
       &.venue-tips-col {
-        width: 45%;
+        @media (min-width: $screen-md-min) {
+          width: 45%;
+        }
       }
 
       ul {
