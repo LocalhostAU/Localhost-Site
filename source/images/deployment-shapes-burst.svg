@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="167px" height="87px" viewBox="0 0 167 87" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Deployment-info" transform="translate(-157.000000, -2526.000000)">
+            <g id="Group" transform="translate(128.000000, 2523.000000)">
+                <g id="Group-2" transform="translate(30.000000, 0.000000)">
+                    <path d="M148.5,20.5 L164.5,12.5" id="Line" stroke="#74DE7D" stroke-width="2" stroke-linecap="square"></path>
+                    <path d="M99,80 L104.5,67.5" id="Line" stroke="#74DE7D" stroke-width="2" stroke-linecap="square"></path>
+                    <path d="M0.5,64 L12,70.5" id="Line" stroke="#C980EA" stroke-width="2" stroke-linecap="square"></path>
+                    <path d="M45.8,13 L51,6.5" id="Line" stroke="#79B9F6" stroke-width="2" stroke-linecap="square"></path>
+                    <path d="M30.7,76 L43.2,68.5" id="Line" stroke="#F27959" stroke-width="2" stroke-linecap="square"></path>
+                    <polygon id="Triangle-5" fill="#F27959" transform="translate(122.000000, 8.500000) rotate(30.000000) translate(-122.000000, -8.500000) " points="122 3 129 14 115 14"></polygon>
+                    <polygon id="Triangle-5" fill="#EDE600" transform="translate(75.744837, 67.283599) rotate(-16.000000) translate(-75.744837, -67.283599) " points="75.7448373 61.7835992 82.7448373 72.7835992 68.7448373 72.7835992"></polygon>
+                    <circle id="Oval-6" stroke="#79B9F6" stroke-width="2" cx="128" cy="70.5" r="3.5"></circle>
+                    <circle id="Oval-6" stroke="#C980EA" stroke-width="2" cx="78" cy="17.5" r="3.5"></circle>
+                    <circle id="Oval-6" fill="#C980EA" cx="55" cy="86" r="3.5"></circle>
+                    <rect id="Rectangle-21" fill="#74DE7D" x="1" y="10" width="7" height="7"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
