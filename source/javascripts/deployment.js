@@ -16,7 +16,6 @@ $(function() {
     $(tabsList).find("li > a").each(
         function(a){
             var tab = $(this);
-
             // Create a unique id using the tab link's href
             var tabId = "tab-" + tab.attr("href").slice(1);
 
@@ -33,10 +32,8 @@ $(function() {
             tab.click(
                 function(e){
                     var tabPanel;
-
                     // Prevent default click event
                     e.preventDefault();
-
                     // Change state of previously selected tabList item
                     $(tabsList).find("> li.current").removeClass("current").find("> a").attr("aria-selected", "false");
 
@@ -61,53 +58,10 @@ $(function() {
       $('html, body').animate({
         scrollTop: $("#deployment-city-details").offset().top
       }, 1000);
+      var tab = $(this);
+      var tabId = "tab-" + tab.attr("href").slice(1);
+      $( "#"+tabId ).trigger( "click" );
     });
-
-    $('.deployment-tickets').find("a.btn-deployment-tickets").each(
-        function(a){
-            var tab = $(this);
-
-            // Create a unique id using the tab link's href
-            var tabId = "tab-" + tab.attr("href").slice(1);
-
-            // Assign tab id and aria-selected attribute to the tab control, but do not remove the href
-            tab.attr({
-                "id": tabId,
-                "aria-selected": "false",
-            }).parent().attr("role", "presentation");
-
-            // Assign aria attribute to the relevant tab panel
-            $(tabs).find(".tabPanel").eq(a).attr("aria-labelledby", tabId);
-
-            // Set the click event for each tab link
-            tab.click(
-                function(e){
-                    var tabPanel;
-
-                    // Prevent default click event
-                    e.preventDefault();
-
-                    // Change state of previously selected tabList item
-                    $(tabsList).find("> li.current").removeClass("current").find("> a").attr("aria-selected", "false");
-
-                    // Hide previously selected tabPanel
-                    $(tabs).find(".tabPanel:visible").attr("aria-hidden", "true").hide();
-
-                    // Show newly selected tabPanel
-                    tabPanel = $(tabs).find(".tabPanel").eq(tab.parent().index());
-                    tabPanel.attr("aria-hidden", "false").show();
-
-                    // Set state of newly selected tab list item
-                    $(tabsList).find("li > a#" + tabId).attr("aria-selected", "true").parent().addClass("current");
-
-                    console.log(tabId);
-
-                    // Set focus to the first heading in the newly revealed tab content
-                    tabPanel.children("h2").attr("tabindex", -1).focus();
-                }
-            );
-        }
-    );
 
     // Set keydown events on tabList item for navigating tabs
     $(tabsList).delegate("a", "keydown",
@@ -140,4 +94,10 @@ $(function() {
         "aria-selected": "true",
         "tabindex": "0"
     });
+
+    if(window.location.hash) {
+      var tabId = "tab-" + window.location.hash.slice(1);
+      $( "#"+tabId ).trigger( "click" );
+    }
+
 });
