@@ -59,7 +59,9 @@
     <div class="flex-col venue-images">
       <% if locals[:deploymentCityDetailsVenuePhoto1] %>
       <div class="venue-image">
-        <img src="<%= deploymentCityDetailsVenuePhoto1 %>" />
+        <div class="venue-image-container">
+          <img src="<%= deploymentCityDetailsVenuePhoto1 %>" />
+        </div>
         <% if locals[:deploymentCityDetailsVenuePhoto1Caption] %>
           <p class="caption"><%= deploymentCityDetailsVenuePhoto1Caption %></p>
         <% end %>
@@ -67,7 +69,9 @@
       <% end %>
       <% if locals[:deploymentCityDetailsVenuePhoto2] %>
       <div class="venue-image">
-        <img src="<%= deploymentCityDetailsVenuePhoto2 %>" />
+        <div class="venue-image-container">
+          <img src="<%= deploymentCityDetailsVenuePhoto2 %>" />
+        </div>
         <% if locals[:deploymentCityDetailsVenuePhoto2Caption] %>
           <p class="caption"><%= deploymentCityDetailsVenuePhoto2Caption %></p>
         <% end %>

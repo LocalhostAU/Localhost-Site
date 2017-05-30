@@ -1047,7 +1047,6 @@
         .venue-image {
           margin-bottom:15px;
           flex: 1;
-          overflow: hidden;
 
           @media (min-width: $screen-sm-min) {
             width:50%;
@@ -1139,7 +1138,7 @@
       .sponsor-image {
         padding: 0 15px 30px;
         max-width: 33.33%;
-
+        align-self: center;
         &:first-child {
           padding-left:0;
         }
