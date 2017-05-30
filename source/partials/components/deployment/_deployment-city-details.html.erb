@@ -44,12 +44,34 @@
 
 <div class="flex-row venue-row">
 
-  <% if locals[:deploymentCityDetailsVenuePhotos] %>
+  <!-- <% if locals[:deploymentCityDetailsVenuePhotos] %>
     <div class="flex-col venue-images">
       <% locals[:deploymentCityDetailsVenuePhotos].each do |venuePhoto| %>
 			<div class="venue-image">
-	      <img src="<%= venuePhoto %>" />
+	      <img src="<%= venuePhoto.image %>" />
+        <p class="caption"><%= venuePhoto.caption %></p>
 			</div>
+      <% end %>
+    </div>
+  <% end %> -->
+
+  <% if locals[:deploymentCityDetailsVenuePhoto1] %>
+    <div class="flex-col venue-images">
+      <% if locals[:deploymentCityDetailsVenuePhoto1] %>
+      <div class="venue-image">
+        <img src="<%= deploymentCityDetailsVenuePhoto1 %>" />
+        <% if locals[:deploymentCityDetailsVenuePhoto1Caption] %>
+          <p class="caption"><%= deploymentCityDetailsVenuePhoto1Caption %></p>
+        <% end %>
+      </div>
+      <% end %>
+      <% if locals[:deploymentCityDetailsVenuePhoto2] %>
+      <div class="venue-image">
+        <img src="<%= deploymentCityDetailsVenuePhoto2 %>" />
+        <% if locals[:deploymentCityDetailsVenuePhoto2Caption] %>
+          <p class="caption"><%= deploymentCityDetailsVenuePhoto2Caption %></p>
+        <% end %>
+      </div>
       <% end %>
     </div>
   <% end %>
