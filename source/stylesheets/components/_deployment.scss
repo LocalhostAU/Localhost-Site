@@ -1329,7 +1329,12 @@
 
       &.talk {
         span.slot-activity {
-          padding-left:10%;
+          padding-left:0;
+
+          @media (min-width: $screen-sm-min) {
+            padding-left:10%;
+          }
+
         }
       }
 
@@ -1338,7 +1343,7 @@
 
         &.slot-time {
           width: 21%;
-          text-align: center;
+          text-align: right;
           font-weight: bold;
           letter-spacing: 0.17em;
           margin-right:5%;

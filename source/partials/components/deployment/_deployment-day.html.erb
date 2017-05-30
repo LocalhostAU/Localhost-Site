@@ -4,8 +4,8 @@
     <span class="deployment-day"><%= day ||= "" %></span>
   </p>
   <div class="deployment-location deployment-location-<%= location %>"></div>
-  <% if locals[:link] %><a class="btn btn-deployment-tickets btn-<%= location %> scrollTo" href="<%= link %>"<% if locals[:isExternalLink] %> target="_blank"<% end %>><% end %>
+  <!--<% if locals[:link] %><a class="btn btn-deployment-tickets btn-<%= location %> scrollTo" href="<%= link %>"<% if locals[:isExternalLink] %> target="_blank"<% end %>><% end %>
     <%= button_text ||= "button_text" %>
     <% if locals[:link] %></a><% end %>
-    <!-- <p><%= location ||= "" %></p> -->
+     <p><%= location ||= "" %></p> -->
 </div>
