@@ -335,7 +335,7 @@
         background-position:center center;
         background-size: contain;
         background-repeat:no-repeat;
-        margin-top: 46px;
+        //margin-top: 46px;
         margin-bottom: 59px;
 
         &.deployment-location-BNE {
@@ -345,7 +345,8 @@
           background-size: 100% 86px;
           background-position: bottom;
           padding-bottom: 86px;
-          margin-top: 40px;
+          padding-top: 2px;
+          //margin-top: 40px;
         }
 
         &.deployment-location-PER {
@@ -355,18 +356,21 @@
           background-position: bottom;
           padding-bottom: 95px;
           margin-bottom: 44px;
+          padding-top: 6px;
         }
 
         &.deployment-location-MEL {
           background-image: url("../images/icon-localhostMel.svg");
-          background-size: 100% 80px;
+          background-size: 100% 87px;
           background-position: bottom;
+          padding-top: 8px;
         }
 
         &.deployment-location-SYD {
           background-image: url("../images/icon-localhostSyd.svg");
-          background-size: 100% 62px;
+          background-size: 100% 68px;
           background-position: bottom;
+          padding-top: 8px;
         }
       }
 
