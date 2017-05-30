@@ -1,5 +1,5 @@
 .projects_deployment,
-.projects_deployment-info {
+.projects_deployment_info {
 
   header {
     margin-top: 100px;
@@ -170,6 +170,50 @@
     }
   }
 
+
+
+  .btn {
+    padding: 15px 22px;
+    font-size: em(18);
+    letter-spacing: 0.2em;
+
+    &.btn-BNE {
+
+      &:hover,
+      &:focus {
+        background: $tulip-tree;
+        border-color: $tulip-tree;
+      }
+    }
+
+    &.btn-PER {
+
+      &:hover,
+      &:focus {
+        background: $pastel-green;
+        border-color: $pastel-green;
+      }
+    }
+
+    &.btn-MEL {
+
+      &:hover,
+      &:focus {
+        background: $burnt-sienna;
+        border-color: $burnt-sienna;
+      }
+    }
+
+    &.btn-SYD {
+
+      &:hover,
+      &:focus {
+        background: $malibu;
+        border-color: $malibu;
+      }
+    }
+  }
+
   .deployment-line-up {
     padding: 0 24px;
 
@@ -215,6 +259,20 @@
     max-width: 1360px;
     margin: 0 auto;
 
+    @media (min-width: $screen-sm-min) {
+      flex-direction: row;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content:space-around;
+      padding-top: 16%;
+      padding-bottom: 8%;
+    }
+
+    @media (min-width: $screen-lg-min) {
+      // padding-top: 232px;
+      // padding-bottom: 168px;
+      padding-top: 190px;
+    }
 
     .city {
       flex-grow:1;
@@ -250,21 +308,6 @@
           background-repeat:no-repeat;
         }
       }
-    }
-
-    @media (min-width: $screen-sm-min) {
-      flex-direction: row;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content:space-around;
-    }
-
-    @media (min-width: $screen-md-min) {
-      // padding-top: 232px;
-      // padding-bottom: 168px;
-
-      padding-top: 16%;
-      padding-bottom: 8%;
     }
 
     .deployment-tickets {
@@ -345,45 +388,6 @@
 
       .btn {
         display: inline-block;
-        padding: 15px 22px;
-        font-size: em(18);
-        letter-spacing: 0.2em;
-
-        &.btn-BNE {
-
-          &:hover,
-          &:focus {
-            background: $tulip-tree;
-            border-color: $tulip-tree;
-          }
-        }
-
-        &.btn-PER {
-
-          &:hover,
-          &:focus {
-            background: $pastel-green;
-            border-color: $pastel-green;
-          }
-        }
-
-        &.btn-MEL {
-
-          &:hover,
-          &:focus {
-            background: $burnt-sienna;
-            border-color: $burnt-sienna;
-          }
-        }
-
-        &.btn-SYD {
-
-          &:hover,
-          &:focus {
-            background: $malibu;
-            border-color: $malibu;
-          }
-        }
       }
     }
 
@@ -971,10 +975,16 @@
   }
 }
 
-.projects_deployment-info {
+.projects_deployment_info {
   header {
-    margin-top: 13%;
+    margin-top: 18%;
     margin-bottom: 5%;
+    height:auto;
+
+    @media (min-width: $screen-lg-min) {
+      margin-top: 263px;
+      margin-bottom: 60px;
+    }
 
     .deployment-logo {
       max-width: 594px;
@@ -1019,6 +1029,7 @@
 
   .venue-row {
     margin-bottom:10%;
+    justify-content: space-between;
 
     > .flex-col {
 
@@ -1026,7 +1037,6 @@
 
         @media (min-width: $screen-sm-min) {
           display: flex;
-          justify-content: flex-start;
           // align-items: flex-start;
           width: 51.5%;
           // width:66.66%;
@@ -1062,6 +1072,10 @@
             }
           }
         }
+      }
+
+      &.venue-tips-col {
+        width: 45%;
       }
 
       ul {
@@ -1104,7 +1118,7 @@
       padding-bottom: em(13,24);
 
       @media (min-width: $screen-sm-min) {
-        margin-bottom:em(53,24);
+        margin-bottom:1em;
       }
     }
 
@@ -1118,12 +1132,13 @@
     .sponsor-images {
       display:flex;
       align-items: center;
-      padding-top: 30px;
+      // padding-top: 30px;
       flex-wrap:wrap;
+      justify-content: space-around;
 
       .sponsor-image {
-        padding: 0 15px;
-        width: 33.33%;
+        padding: 0 15px 30px;
+        max-width: 33.33%;
 
         &:first-child {
           padding-left:0;
@@ -1158,6 +1173,12 @@
         @media (min-width: $screen-md-min) {
           max-width: 420px;
           margin-bottom:0;
+        }
+      }
+
+      &.sponsor-col {
+        @media (min-width: $screen-sm-min) {
+          width: 45%;
         }
       }
     }

@@ -7,6 +7,11 @@
     <% if locals[:deploymentCityDetailsHashtag] %>
     <p class="deployment-city-details-hashtag"><%= deploymentCityDetailsHashtag %></p>
     <% end %>
+    <% if locals[:deploymentCityTicketsLink] %>
+      <a class="btn btn-deployment-tickets btn-<%= deploymentCityCode %> scrollTo" href="https://www.eventbrite.com.au/e/localhost-deployment-tickets-33542351075" target="_blank">
+        Buy tickets
+      </a>
+    <% end %>
   </div>
 
   <% if locals[:deploymentCityDetailsMap] %>
@@ -20,12 +25,16 @@
   <div class="flex-col">
     <h4>Location</h4>
     <% if locals[:deploymentCityDetailsLocation] %>
-    <p class="deployment-city-details-venue"><%= deploymentCityDetailsLocation %></p>
+    <p class="deployment-city-details-venue">
+      <%= deploymentCityDetailsLocation %>
+    </p>
     <% end %>
 
     <% if locals[:deploymentCityDetailsAddress] %>
     <address>
-      <%= deploymentCityDetailsAddress %>
+      <a href="<%= deploymentCityAddressURL %>" title="Find <%= deploymentCityDetailsLocation %> on Google Maps" target="_blank">
+        <%= deploymentCityDetailsAddress %>
+      </a>
     </address>
     <% end %>
   </div>
@@ -46,7 +55,7 @@
   <% end %>
 
   <% if locals[:deploymentCityDetailsVenueTips] %>
-    <div class="flex-col">
+    <div class="flex-col venue-tips-col">
       <ul>
         <% locals[:deploymentCityDetailsVenueTips].each do |venueTip| %>
         <li><%= venueTip %></li>
@@ -65,7 +74,7 @@
   <% end %>
 
   <% if locals[:deploymentCityDetailsEventSponsors] %>
-    <div class="flex-col">
+    <div class="flex-col sponsor-col">
       <h3><%= deploymentCity %> Event <br/>Made Possible By</h3>
       <div class="sponsor-images">
         <% locals[:deploymentCityDetailsEventSponsors].each do |eventSponsors| %>
