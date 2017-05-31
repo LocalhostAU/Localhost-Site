@@ -22,8 +22,10 @@ $( ".map-embed .embed-container" ).mouseleave(function() {
   $('.map-embed .embed-container iframe').css("pointer-events", "none");
 });
 
+
 // to top right away
 if ( window.location.hash ) scroll(0,0);
+
 // void some browsers issue
 setTimeout( function() { scroll(0,0); }, 1);
 
