@@ -14,7 +14,7 @@ slots:
 
   - time: '6:30 PM'
     activity: '🎤 <a href="/projects/deployment#Brett-Jones" title="Read about Bretts talk">"Less Glamorous Elements of Design", with Brett Jones</a>'
-    duration: '10 mins'
+    duration: '20 mins'
     isTalk: true
 
   - time: '6:55 PM'
