@@ -1026,11 +1026,24 @@
       &.venue-images {
         display: flex;
         flex-wrap: wrap;
-        margin-right: 38px;
 
+        @media (min-width: $screen-sm-min) {
+          margin-right: 38px;
+        }
 
         @media (min-width: $screen-md-min) {
             width: 51.5%;
+        }
+
+        .caption {
+          font-size: em(14);
+          margin-top:6px;
+          padding: 5px 0;
+
+          text-align: center;
+          border-top: 1px solid #979797;
+          border-bottom: 1px solid #979797;
+          font-style: italic;
         }
 
         .venue-image {
