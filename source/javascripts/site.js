@@ -1,3 +1,4 @@
+
 // This is where it all goes :)
 $(window).scroll(function(){
   $introHeight = $('header').height() * 2;
@@ -32,16 +33,15 @@ $(function() {
     $('.scroll').on('click', function(e) {
         e.preventDefault();
         $('html, body').animate({
-            scrollTop: $($(this).attr('href')).offset().top + 'px'
+            scrollTop: $($(this).attr('href')).offset().top
         }, 2000);
     });
 
     // *only* if we have anchor on the url
     if(window.location.hash) {
-
         // smooth scroll to the anchor id
         $('html, body').animate({
-            scrollTop: $(window.location.hash).offset().top + 'px'
+            scrollTop: $(window.location.hash).offset().top
         }, 2000);
     }
 
